@@ -1,0 +1,737 @@
+
+    <div id="content">
+    <div class="col">
+ <!--<img src="multimedia/logo-naranja.png" class="fixed-righ"  width="200" height="200">-->
+<center>
+<br>
+<h1 class="fixed-center" > ACTA DE REUNIÓN</h1>
+</center>
+</div>
+<br>
+<input name="id_ficha" id='id_ficha' type="hidden" maxlength="25" oninput="maxlengthNumber(this);" required  class="form-control" value="<?=$p->getId_ficha()?>">
+<div class="card w-100">
+<div class="card-body">
+<form action="?c=acta&a=save" id="acta" name="acta" class="sign-up-form" method="post">
+  <br>
+  <center>
+  <div class="row">
+    <div class="col">
+    <H5 for="">Acta no:</H5>
+    <input name="acta_no" id='acta_no' type="text" style="width:250px;" oninput="maxlengthNumber(this);" required  class="" value="" >
+    </div>
+  </div>
+</center>
+<br>
+<br>
+  <div class="row">
+    <div class="col">
+  
+      <?php 
+      $c=0;
+      $c=$this->modelo->obtenercontador($_GET['ficha']);
+      ?>
+      <input type="hidden"  value=" <?php   $c = $c->acta_contador; ?>">
+    <input name="acta_contador" id='ficha' type="hidden"  oninput="maxlengthNumber(this);" required  class="" value="<?=$c+1; ?>" >
+      <H5 for="">Ficha:</H5>
+
+
+      <input name="ficha" id='ficha' type="text"  oninput="maxlengthNumber(this);" required  class="" value="<?=$p->getN_ficha()?>" >
+      
+
+    </div>
+
+
+    <div class="col">
+      <H5 for="">  Programa:</H5>
+      
+
+      <input name="programa" id='programa' type="text"  oninput="maxlengthNumber(this);" required  class="" placeholder="programa" value=" <?=$p->getPrograma()?>">
+
+    </div>
+
+
+    <div class="col">
+    <H5 for=""> Nombre comité:</H5>
+    
+    <select  name="nom_rev" id='nom_rev' type="text"  oninput="maxlengthNumber(this);" required  class="" placeholder="programa"> 
+
+      <option>Seleccione el comité</option>
+      <option value="Comité Académico">Comité Académico</option>
+      <option value="Comité Étapa Productiva">Comité Etapa Productiva</option>
+      <option value="Comité de Seguimiento">Comité de Seguimiento</option>
+      <option value="Comité Extraordinarios">Comité Extraordinarios</option>
+  
+  
+  </select>
+    </div>
+
+
+    </div>
+
+    <div class="row">
+    <div class="col">
+    <br>
+      <H5 for="">  Fecha:</H5>
+      <input name="fecha" id='fecha' type="date"  oninput="maxlengthNumber(this);" required  class="" placeholder="fecha">
+    </div>
+
+    <div class="col">
+    <br>
+      <H5 for="">  Hora Inicio:</H5>
+      <input name="hora_in" id='hora_in' type="time"  oninput="maxlengthNumber(this);" required  class="" placeholder="Hora inicio">
+    </div>
+    <br>
+    <div class="col">
+    <br>
+      <H5 for="">  Hora Fin:</H5>
+      <input name="hora_fin" id='hora_fin' type="time"  oninput="maxlengthNumber(this);" required  class="" placeholder="hora fin">
+    </div>
+
+
+  </div>
+
+  <div class="row">
+    <div class="col">
+    <br>
+      <H5 for=""> Lugar/Enlace:</H5>
+      <input name="lu_en" id='lu_en' type="text"  oninput="maxlengthNumber(this);" required  class="" placeholder="Lugar/Enlace">
+    </div>
+
+    <div class="col">
+    <br>
+      <H5 for="">  Dirección:</H5>
+      <input name="direccion" id='direccion' type="text"  oninput="maxlengthNumber(this);" required  class="" placeholder="Dirección" value="Cl. 15 #31-42" >
+    </div>
+
+    <div class="col">
+    <br>
+      <H5 for="">  Ciudad:</H5>
+      <input name="ciudad" id='ciudad' type="text"  oninput="maxlengthNumber(this);" required  class="" placeholder="Ciudad" value="Bogotá D.C.">
+    </div>
+
+
+  </div>
+
+
+
+
+
+    <div class="row">
+    <div class="col">
+    <br>
+      <H5 for="">  Agenda o puntos a desarrollar:</H5>   
+      <textarea name="agenda" id='agenda' type="text" placeholder="Agenda o puntos a desarrollar"  cols="60" rows="10" oninput="maxlengthNumber(this);" required  class="" value="">Comité de evaluación y seguimiento aprendices ficha - <?=$p->getN_ficha()?> de <?=$p->getPrograma()?>
+    </textarea >
+    </div>
+<div>
+  
+
+    <div class="row">
+    <div class="col">
+    <br>
+    <H5 for="">  Objetivos</H5>
+      <textarea name="objetivos" id='objetivos' type="text"  cols="60" rows="10" oninput="maxlengthNumber(this);" required  class="" value="">Se reúne el ________________________________________, como instancia competente para investigar y analizar los casos tanto académicos como disciplinarios de los aprendices de la ficha- <?=$p->getN_ficha()?> de <?=$p->getPrograma()?>.</textarea >
+    </div>
+  </div>
+
+  <!--inicio participantes-->
+
+
+  <!--inicio participantes-->
+
+
+
+ <!-- <form action="?c=acta&a=save" id="acta" name="acta" class="sign-up-form" method="post">-->
+
+ <?php 
+$zz= 0;
+$r=1;
+
+  foreach
+
+  
+
+($this->modelo->ListarActas() as $r):
+
+
+
+?>
+
+
+
+<?php
+
+
+$r->n_acta+1;
+endforeach;
+
+
+
+  ?>
+<br>
+
+<p>
+  <div class="row">
+    <div class="participantes">
+    <br>
+    <center>
+    <h3>Participantes:</h3>
+    </center>
+   
+    <div class="part">
+
+<center>
+
+<table   class="tablas" id="table">
+<p>
+<thead class="t-head">
+<p>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">Nombres y Apellidos</th>
+      <th scope="col">Cargo</th>
+      <th scope="col">Asistencia</th>
+    </tr>
+  </thead>
+  <tbody  class="t-body">
+  <p>
+    <center>
+    <tr id="tr">
+    <input type="hidden"  value=" <?php   $zz = $r->n_acta; ?>">
+  <td><input  class='form-control' type='hidden' name='n_acta[]'  id='n_acta' placeholder='acta' required value="<?=$zz+1?>"/></td>    
+  <td><select name='nombre[]' style="width:350px; height:50px;" id='nombre' type="text"  oninput="maxlengthNumber(this);" required  class="form-control" >
+    <?php foreach($funco as $fun): ?>
+ 
+    <option value="<?=$fun->getNombre(),$fun->getApellido()?>" <?=$fun->getId_funcionario() == $fun->getId_funcionario() ? 
+    '' : ''?> > 
+     <?=$fun->getNombre(),$fun->getApellido()?></option>
+    <?php endforeach;?>
+  </select></td> 
+  <td> <select   name='cargo[]' style="width:320px; height:50px;" id='cargo'   class='form-control' >  <option value='instructor jefe de taller'>instructor jefe de taller</option> <option value='instructora jefe de taller'>instructora jefe de taller</option> <option value='Instructor tecnico'>Instructor tecnico</option> <option value='Instructora tecnica'>Instructora tecnica</option> <option value='Instructora'>Instructora</option> <option value='Instructor'>Instructor</option> </select></td>
+  <td> <select   name='asistencia[]' id='asistencia' style="width:250px; height:50px;"   class='form-control' >  <option value='Asistio'>Asistio</option>  <option value='No Asistio'>No Asistio</option> </select></td>
+
+</tr>
+
+<tr id="tr">
+
+<td><input  class='form-control' type='hidden' name='n_acta[]'  id='n_acta' placeholder='acta' required value="<?=$zz+1?>"/></td>    
+<td><select name='nombre[]' id='nombre' style="width:350px; height:50px;" type="text"  oninput="maxlengthNumber(this);" required  class="form-control" >
+    <?php foreach($funco as $fun): ?>
+ 
+    <option value="<?=$fun->getNombre(),$fun->getApellido()?>" <?=$fun->getId_funcionario() == $fun->getId_funcionario() ? 
+    '' : ''?> > 
+     <?=$fun->getNombre(),$fun->getApellido()?></option>
+    <?php endforeach;?>
+  </select></td> 
+<td> <select   name='cargo[]' id='cargo' style="width:320px; height:50px;"   class='form-control' >  <option value='instructor jefe de taller'>instructor jefe de taller</option> <option value='instructora jefe de taller'>instructora jefe de taller</option> <option value='Instructor tecnico'>Instructor tecnico</option> <option value='Instructora tecnica'>Instructora tecnica</option> <option value='Instructora'>Instructora</option> <option value='Instructor'>Instructor</option> </select></td>
+<td> <select   name='asistencia[]' id='asistencia' style="width:250px; height:50px;"   class='form-control' >  <option value='Asistio'>Asistio</option>  <option value='No Asistio'>No Asistio</option> </select></td>
+
+</tr>
+<tr id="tr">
+
+<td><input  class='form-control' type='hidden' name='n_acta[]'  id='n_acta' placeholder='acta' required value="<?=$zz+1?>"/></td>    
+<td><select name='nombre[]' style="width:350px; height:50px;" id='nombre' type="text"  oninput="maxlengthNumber(this);" required  class="form-control" >
+    <?php foreach($funco as $fun): ?>
+ 
+    <option value="<?=$fun->getNombre(), $fun->getApellido()?>" <?=$fun->getId_funcionario() == $fun->getId_funcionario() ? 
+    '' : ''?> > 
+     <?=$fun->getNombre(), $fun->getApellido()?></option>
+    <?php endforeach;?>
+  </select></td> 
+<td> <select   name='cargo[]' id='cargo' style="width:320px; height:50px;"  class='form-control' >  <option value='instructor jefe de taller'>instructor jefe de taller</option> <option value='instructora jefe de taller'>instructora jefe de taller</option> <option value='Instructor tecnico'>Instructor tecnico</option> <option value='Instructora tecnica'>Instructora tecnica</option> <option value='Instructora'>Instructora</option> <option value='Instructor'>Instructor</option> </select></td>
+<td> <select   name='asistencia[]' id='asistencia' style="width:250px; height:50px;"  class='form-control' >  <option value='Asistio'>Asistio</option>  <option value='No Asistio'>No Asistio</option> </select></td>
+
+</tr>
+</center>
+<p>
+</tbody>
+</table>
+<br /><br />
+<bootom id="add" class="bt" style="background-color: #ff671d; color:white;"  >Agregar</bootom>
+<bootom id="del" class="bt" style="background-color: #ff671d; color:white;">Eliminar</bootom>
+<br /><br />
+
+    </div>
+   
+
+    <script type="text/javascript">
+
+$(document).ready(function(){                                                           
+
+$("#add").click(function(){
+// Obtenemos el numero de columnas (td) que tiene la primera fila
+// (tr) del id "tabla"
+var tds=$("#table tr:first td").length;
+// Obtenemos el total de filas (tr) del id "tabla"
+var trs=$("#table tr").length;
+var nuevaFila="<tr>";
+cant = $('#contador-filas').val();
+cant++;
+$('#contador-filas').val(cant)
+nuevaFila+="<td><input class='form-control' type='hidden' name='n_acta[]'  id='n_acta' placeholder='acta"+ " ' required value='<?=$zz+1?>'/> </td>"+
+"<td><select name='nombre[]' id='nombre' type='text' style='width:350px; height:50px;' oninput='maxlengthNumber(this);' required  class='form-control' ><?php foreach($funco as $fun): ?><option value='<?=$fun->getNombre(),$fun->getApellido()?>' <?=$fun->getId_funcionario() == $fun->getId_funcionario() ? '' : ''?> > <?=$fun->getNombre(),$fun->getApellido()?></option> <?php endforeach;?> </select> </td>"+
+"<td> <select  name='cargo[]' id='cargo' style='width:320px; height:50px;'  class='form-control' >  <option value='instructor jefe de taller'>instructor jefe de taller</option> <option value='instructora jefe de taller'>instructora jefe de taller</option> <option value='Instructor tecnico'>Instructor tecnico</option> <option value='Instructora tecnica'>Instructora tecnica</option> <option value='Instructora'>Instructora</option> <option value='Instructor'>Instructor</option> </select></td>"+
+"<td> <select  name='asistencia[]' id='asistencia' style='width:250px; height:50px;'   class='form-control' >  <option value='Asistio'>Asistio</option>  <option value='No Asistio'>No Asistio</option> </select></td>";
+// Añadimos una columna con el numero total de columnas.
+// Añadimos uno al total, ya que cuando cargamos los valores para la
+// columna, todavia no esta añadida
+nuevaFila+="</tr>";
+$("#table").append(nuevaFila);
+});
+/**
+* Funcion para eliminar la ultima columna de la tabla.
+* Si unicamente queda una columna, esta no sera eliminada
+*/
+$("#del").click(function(){
+// Obtenemos el total de filas (tr) del id "tabla"
+var trs=$("#table tr").length;
+if(trs>0)
+{
+// Eliminamos la ultima fila
+cant--;
+$('#contador-filas').val(cant)
+$("#table tr:last").remove();
+
+}
+});
+});
+</script>
+
+  </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col">
+    <br>
+      <H5 for="">Información conformación de la ficha</H5>
+   
+     <div  class="">
+      <div class="">
+<br>
+    <table class="table" id="tabla">
+     
+  <thead class="thead-dark">
+    <tr>
+     
+     <th scope="col" class="text-center">ESTADO DEL APRENDIZ</th> 
+      <th scope="col" class="text-center">CUENTA</th> 
+      </tr>
+  </thead>
+  
+  <tbody>
+  <tr>
+    <td > <H5>TRANSLADO</H5>  </td>
+    <?php $a=$this->modelo->ObtenerTranslado($_GET['ficha']) ?>
+    <td  ><H5><?=$a->Translado ?></H5></td>
+    </tr>
+    <tr>
+    <td>  <H5>EN FORMACION</H5> </td>
+
+    <?php $b=$this->modelo->ObtenerFormacion($_GET['ficha']) ?>
+    <td ><H5><?=$b->Formacion ?></H5> 
+    </tr>
+    <tr>
+    <td s> <H5> CANCELADO  </H5>   </td>
+    <?php $c=$this->modelo->ObtenerCancelado($_GET['ficha']) ?>
+    <td style="background-color: rgb(255, 255, 255 );"><H5><?=$c->Cancelado ?></H5> </td>
+    </tr>
+    <tr>
+    <td >  <H5>RETIRO VOLUNTARIO</H5> </td>
+
+    <?php $d=$this->modelo->ObtenerRetiro($_GET['ficha']) ?>
+    <td><H5><?=$d->Retiro ?> </H5>  </td>
+    </tr>
+    <tr>
+    <td > <H5>SUMA TOTAL</H5></td>
+
+    <td ><H5><?=  $total=$d->Retiro + $c->Cancelado + $b->Formacion + $a->Translado ?></H5> </td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+   
+
+  </div>
+  <p>
+
+  <div  class="row">
+      <div class="">
+        <h4>3.Casos anterior al comité</h4>
+
+<br>
+
+
+
+<table class="table" id="tabla" >
+<thead class="thead-dark">
+    <tr>
+      </tr>
+  </thead>
+  <tbody>
+  <tr class="back-head">
+    <td><input type="hidden"></td>
+    <td><input type="hidden"></td>
+    <td><input type="hidden"></td>
+    <td><center><h5>Aprendiz</h5></center></td>
+    <td><center><h5>Instructor</h5></center></td>
+    <td><center><h5>Descripción</h5></center></td>
+     <td><center><h5>Cumplimiento</h5></center></td>
+  </tr>
+  <?php foreach
+  ($this->modelo->casosAnteriores($_GET['ficha'], $_GET['acta_contador']) as $ww):?>
+    <tr>
+    <td><input  class='form-control' type='hidden' name='A_ficha[]'  id='A_ficha' placeholder='acta' required value="<?=$ww->n_ficha?>"/></td>
+    <td><input  class='form-control' type='hidden' name='A_contador[]'  id='A_contador' placeholder='acta' required value="<?=$ww->c_contador?>"/></td>
+    <td><input  class='form-control' type='hidden' name='A_acta[]'  id='A_acta' placeholder='acta' required value="<?=$ww->q_acta+1?>"/></td>
+    <td><input  class="parti" type='text' name='A_aprendiz[]'  id='A_aprendiz' placeholder='acta' required value="<?=$ww->Aprendiz?>"/></td>
+    <td><input  class="parti" type='text' name='A_instructor[]'  id='A_instructor' placeholder='acta' required value="<?=$ww->instructor?>"/></td>
+    <td><input  class="parti" type='text' name='A_descripcion[]'  id='A_descripcion' placeholder='acta' required value="<?=$ww->descripcion?>"/></td>
+    <td> <select   name='A_cumplimiento[]'  id='A_cumplimiento'  class="parti" > <option><?=$ww->cumplimiento?></option> <option value="Cumplio">N/A</option> <option value="Cumplio">Cumplio</option>  <option value='No cumplio'>No cumplio</option></select></td>
+  </tr>
+
+  <?php endforeach; ?>
+    </tr>
+</tbody>
+</table>
+    </div>
+   
+
+  </div>
+
+  <p>  <p>
+  
+  <p>
+
+
+ <!--casos particulares-->
+ <div class="row">
+    <div class="col">
+    <br>
+    <div style="">
+
+<center>
+<h2>Casos Particulares</h2>
+<table class="tablas" id="table3">
+<tr>
+<input type="hidden"  value=" <?php   $zz = $r->n_acta; ?>">
+<td><input class="parti" type="hidden" name="C_ficha[]" style="width:50px; height:50px;" id="n_ficha" placeholder="ficha" required value="<?=$p->getN_ficha()?>"/> </td>
+<td><input class="parti" type="hidden" name="C_acta[]"  style="width:50px; height:50px;" id="C_acta" placeholder="acta" required value="<?=$zz+1?>"/> </td>
+<td><input class="parti"  type="text" name="nombre_aprendiz[]"  id=" nombre_aprendiz" placeholder="Aprendiz" required /> </td>
+<td><input class="parti"  type="text" name="nombre_its[]" id="nombre_its" placeholder="instructor" required /> </td>
+<td><textarea class="area"  type="text" name="description[]" style="width:310px; height:55px;" id="description" placeholder="descripcion" required></textarea></td>
+<td>
+   <select   name="falta[]" id="falta"   class="parti" >  
+    <option value="Académica">Académica</option> 
+    <option value="disciplinaria">disciplinaria</option>  
+    <option value="Académica y Disciplinaria">Académica y Disciplinaria</option>
+  </select>
+  </td>
+  <td>  <select name="reglamento[]" id='reglamento' class="parti" type="text"  oninput="maxlengthNumber(this);" required  class="" >
+      <option selected>Seleccione</option>
+  <?php foreach($reca as $reg): ?>
+ 
+    <option value="<?=$reg->getNombre_falta()?>" <?=$reg->getId_regla() == $reg->getId_regla() ? 
+    '' : ''?> > 
+     <?=$reg->getNombre_falta()?> </option>
+    <?php endforeach;?>
+</select></td>
+<!--regla 2-->
+<td>  <select name="reglamento_a[]" id='reglamento_a' class="parti" type="text"  oninput="maxlengthNumber(this);" required  class="" >
+      <option selected>Seleccione</option>
+  <?php foreach($reca as $reg): ?>
+ 
+    <option value="<?=$reg->getNombre_falta()?>" <?=$reg->getId_regla() == $reg->getId_regla() ? 
+    '' : ''?> > 
+     <?=$reg->getNombre_falta()?> </option>
+    <?php endforeach;?>
+</select></td>
+</tr>
+<tr>
+<td><input class="parti" type="hidden" name="C_ficha[]"  id="n_ficha" placeholder="ficha" required value="<?=$p->getN_ficha()?>"/> </td>
+<td><input class="parti" type="hidden" name="C_acta[]"  id="C_acta" placeholder="acta" required value="<?=$zz+1?>"/> </td>
+<td><input class="parti"  type="text" name="nombre_aprendiz[]"  id=" nombre_aprendiz" placeholder="Aprendiz" required /> </td>
+<td><input class="parti"  type="text" name="nombre_its[]" id="nombre_its" placeholder="instructor" required /> </td>
+<td><textarea class="area"  type="text" name="description[]" style="width:310px; height:55px;" id="description" placeholder="descripcion" required></textarea></td>
+<td>
+   <select   name="falta[]" id="falta"   class="parti" >  
+    <option value="Académica">Académica</option> 
+    <option value="disciplinaria">disciplinaria</option>  
+    <option value="Académica y Disciplinaria">Académica y Disciplinaria</option>
+  </select>
+  </td>
+  <td>  <select name="reglamento[]" id='reglamento' class="parti" type="text"  oninput="maxlengthNumber(this);" required  class="" >
+      <option selected>Seleccione</option>
+  <?php foreach($reca as $reg): ?>
+ 
+    <option value="<?=$reg->getNombre_falta()?>" <?=$reg->getId_regla() == $reg->getId_regla() ? 
+    '' : ''?> > 
+     <?=$reg->getNombre_falta()?> </option>
+    <?php endforeach;?>
+</select></td>
+<td>  <select name="reglamento_a[]" id='reglamento_a' class="parti" type="text"  oninput="maxlengthNumber(this);" required  class="" >
+      <option selected>Seleccione</option>
+  <?php foreach($reca as $reg): ?>
+ 
+    <option value="<?=$reg->getNombre_falta()?>" <?=$reg->getId_regla() == $reg->getId_regla() ? 
+    '' : ''?> > 
+     <?=$reg->getNombre_falta()?> </option>
+    <?php endforeach;?>
+</select></td>
+</tr>
+<tr>
+<td><input class="parti"  type="hidden" name="C_ficha[]"  id="n_ficha" placeholder="ficha" required value="<?=$p->getN_ficha()?>"/> </td>
+<td><input class="parti"  type="hidden" name="C_acta[]"  id="C_acta" placeholder="acta" required value="<?=$zz+1?>"/> </td>
+<td><input class="parti"   type="text" name="nombre_aprendiz[]"  id=" nombre_aprendiz" placeholder="Aprendiz" required /> </td>
+<td><input class="parti"  type="text" name="nombre_its[]" id="nombre_its" placeholder="instructor" required /> </td>
+<td><textarea class="area"  type="text" name="description[]" style="width:310px; height:55px;" id="description" placeholder="descripcion" required></textarea></td>
+<td>
+   <select   name="falta[]" id="falta"   class="parti" >  
+    <option value="Académica">Académica</option> 
+    <option value="disciplinaria">disciplinaria</option>  
+    <option value="Académica y Disciplinaria">Académica y Disciplinaria</option>
+  </select>
+  </td>
+  <td>  <select name="reglamento[]" id='reglamento' class="parti" type="text"  oninput="maxlengthNumber(this);" required  class="" >
+      <option selected>Seleccione</option>
+  <?php foreach($reca as $reg): ?>
+ 
+    <option value="<?=$reg->getNombre_falta()?>" <?=$reg->getId_regla() == $reg->getId_regla() ? 
+    '' : ''?> > 
+     <?=$reg->getNombre_falta()?> </option>
+    <?php endforeach;?>
+</select></td>
+<td>  <select name="reglamento_a[]" id='reglamento_a' class="parti" type="text"  oninput="maxlengthNumber(this);" required  class="" >
+      <option selected>Seleccione</option>
+  <?php foreach($reca as $reg): ?>
+ 
+    <option value="<?=$reg->getNombre_falta()?>" <?=$reg->getId_regla() == $reg->getId_regla() ? 
+    '' : ''?> > 
+     <?=$reg->getNombre_falta()?> </option>
+    <?php endforeach;?>
+</select></td>
+</tr>
+</tbody>
+</table>
+<br>
+<bootom id="add3" class="bt" style="background-color: #ff671d; color:white;" >Agregar</bootom>
+<bootom id="del3" class="bt" style="background-color: #ff671d; color:white;" >Eliminar</bootom>
+<br /><br />
+
+    </div>
+   
+
+    <script type="text/javascript">
+
+$(document).ready(function(){
+
+$("#add3").click(function(){
+// Obtenemos el numero de columnas (td) que tiene la primera fila
+// (tr) del id "tabla"
+var tds=$("#table3 tr:first td").length;
+// Obtenemos el total de filas (tr) del id "tabla"
+var trs=$("#table3 tr").length;
+var nuevaFila="<tr>";
+cant = $('#contador-filas').val();
+cant++;
+$('#contador-filas').val(cant)
+nuevaFila+="<td><input class='parti' type='hidden' name='C_ficha[]'  id='n_ficha' placeholder='ficha"+ " ' required value='<?=$p->getN_ficha()?>'/> </td>"+
+"<td><input class='parti' type='hidden' name='C_acta[]'  id='C_acta' placeholder='acta"+ " ' required value='<?=$zz+1?>'/> </td>"+
+"<td><input class='parti' type='text' name='nombre_aprendiz[]'  id='nombre_aprendiz' placeholder='Aprendiz"+ " ' required /> </td>"+
+"<td><input class='parti' type='text' name='nombre_its[]' id='nombre_its' placeholder='instructor" +"' required /> </td>"+
+"<td><textarea class='area' type='text' name='description[]' style='width:310px; height:55px;' id='description' placeholder='descripcion" +"' required></textarea> </td>"+
+"<td><select   name='falta[]' id='falta'   class='parti' >  <option value='Académica'>Académica</option> <option value='disciplinaria'>disciplinaria</option>  <option value='Académica y Disciplinaria'>Académica y Disciplinaria</option></select> </td>"+
+"<td> <select name='reglamento[]' id='reglamento' class='parti' type='text'  oninput='maxlengthNumber(this);' required  class='' ><option selected>Seleccione</option><?php foreach($reca as $reg): ?><option value='<?=$reg->getNombre_falta()?>' <?=$reg->getId_regla() == $reg->getId_regla() ?  '' : ''?> > <?=$reg->getNombre_falta()?> </option><?php endforeach;?></select></td>"+
+"<td> <select name='reglamento_a[]' id='reglamento_a' class='parti' type='text'  oninput='maxlengthNumber(this);' required  class='' ><option selected>Seleccione</option><?php foreach($reca as $reg): ?><option value='<?=$reg->getNombre_falta()?>' <?=$reg->getId_regla() == $reg->getId_regla() ?  '' : ''?> > <?=$reg->getNombre_falta()?> </option><?php endforeach;?></select></td>";
+// Añadimos una columna con el numero total de columnas.
+// Añadimos uno al total, ya que cuando cargamos los valores para la
+// columna, todavia no esta añadida
+nuevaFila+="</tr>";
+$("#table3").append(nuevaFila);
+});
+/**
+* Funcion para eliminar la ultima columna de la tabla.
+* Si unicamente queda una columna, esta no sera eliminada
+*/
+$("#del3").click(function(){
+// Obtenemos el total de filas (tr) del id "tabla"
+var trs=$("#table3 tr").length;
+if(trs>0)
+{
+// Eliminamos la ultima fila
+cant--;
+$('#contador-filas').val(cant)
+$("#table3 tr:last").remove();
+
+}
+});
+});
+</script>
+
+    </div>
+  </div>
+
+   
+
+  </div>
+  <p>
+
+  <div class="row">
+    <div class="col">
+    <br>
+      <H5 for="">Desarrollo del comité</H5>
+      <textarea name="desarrollo" id='desarrollo' type="text" cols="60" rows="10" oninput="maxlengthNumber(this);" required  class="" placeholder="Desarrollo del comité"></textarea >
+    </div>
+   
+
+  </div>
+  
+
+
+ <!-- <form id="conclu" name="conclu" method="post" action="?c=acta&a=save">-->
+<br>
+
+<p>
+<?php 
+      $c=0;
+      $c=$this->modelo->obtenercontador($_GET['ficha']);
+  ?>
+  <div class="row">
+    <div class="col">
+    <br>
+    <div>
+
+<center>
+<h2>Conclusiones</h2>
+<table class="tablas" id="table2">
+<tr>
+<input type="hidden"  value=" <?php   $zz = $r->n_acta; ?>">
+<input type="hidden"  value=" <?php   $c = $c->acta_contador; ?>">
+<td><input class="parti" type="hidden" name="c_contador[]"  id="acta_contador"  required value="<?=$c+1; ?>"/> </td>
+<td><input class="parti" type="hidden" name="n_ficha[]"  id="n_ficha" placeholder="ficha " required value="<?=$p->getN_ficha()?>"/> </td>
+<td><input class="parti" type="hidden" name="q_acta[]"  id="#_acta" placeholder="acta " required value="<?=$zz+1?>"/> </td>
+<td><input class="parti" type="text" name="Aprendiz[]"  id="Aprendiz" placeholder="Aprendiz " required /> </td>
+<td><input class="parti" type="text" name="instructor[]" id="instructor" placeholder="instructor" required /> </td>
+<td><textarea class="area" type="text" name="descripcion[]" id="descripcion" placeholder="descripcion" required /></textarea> </td>
+<td> <select   name="cumplimiento[]" id="cumplimiento"   class="parti" >  <option value="N/A">N/A</option> <option value="Cumplio">Cumplio</option>  <option value='No cumplio'>No cumplio</option></select></td>
+</tr>
+<tr>
+<td><input class="parti" type="hidden" name="c_contador[]"  id="acta_contador"  required value="<?=$c+1; ?>"/> </td>
+<td><input class="parti" type="hidden" name="n_ficha[]"  id="n_ficha" placeholder="ficha " required value="<?=$p->getN_ficha()?>"/> </td>
+<td><input class="parti" type="hidden" name="q_acta[]"  id="#_acta" placeholder="acta " required value="<?=$zz+1?>"/> </td>
+<td><input class="parti" type="text" name="Aprendiz[]"  id="Aprendiz" placeholder="Aprendiz " required /> </td>
+<td><input class="parti" type="text" name="instructor[]" id="instructor" placeholder="instructor" required /> </td>
+<td><textarea class="area" type="text" name="descripcion[]" id="descripcion" placeholder="descripcion" required /></textarea> </td>
+<td> <select   name="cumplimiento[]" id="cumplimiento"   class="parti" > <option value="N/A">N/A</option>  <option value="Cumplio">Cumplio</option>  <option value='No cumplio'>No cumplio</option></select></td>
+</tr>
+<tr>
+<td><input class="parti" type="hidden" name="c_contador[]"  id="acta_contador"  required value="<?=$c+1; ?>"/> </td>
+<td><input class="parti" type="hidden" name="n_ficha[]"  id="n_ficha" placeholder="ficha " required value="<?=$p->getN_ficha()?>"/> </td>
+<td><input class="parti" type="hidden" name="q_acta[]"  id="#_acta" placeholder="acta " required value="<?=$zz+1?>"/> </td>
+<td><input class="parti" type="text" name="Aprendiz[]"  id="Aprendiz" placeholder="Aprendiz " required /> </td>
+<td><input class="parti" type="text" name="instructor[]" id="instructor" placeholder="instructor" required /> </td>
+<td><textarea class="area" type="text" name="descripcion[]" id="descripcion" placeholder="descripcion" required /></textarea></td>
+<td> <select   name="cumplimiento[]" id="cumplimiento"   class="parti" > <option value="N/A">N/A</option>  <option value="Cumplio">Cumplio</option>  <option value='No cumplio'>No cumplio</option></select></td>
+</tr>
+</tbody>
+</table>
+<br>
+<bootom id="add2" class="bt"  style="background-color: #ff671d; color:white;" >Agregar</bootom>
+<bootom id="del2" class="bt"  style="background-color: #ff671d; color:white;" >Eliminar</bootom>
+<br /><br />
+
+    </div>
+   
+
+    <script type="text/javascript">
+
+$(document).ready(function(){
+
+$("#add2").click(function(){
+// Obtenemos el numero de columnas (td) que tiene la primera fila
+// (tr) del id "tabla"
+var tds=$("#table2 tr:first td").length;
+// Obtenemos el total de filas (tr) del id "tabla"
+var trs=$("#table2 tr").length;
+var nuevaFila="<tr>";
+cant = $('#contador-filas').val();
+cant++;
+$('#contador-filas').val(cant)
+nuevaFila+="<td><input class='parti' type='hidden' name='c_contador[]'  id='acta_contador' placeholder='ficha"+ " ' required value='<?=$c+1; ?>'/> </td>"+
+"<td><input class='parti' type='hidden' name='n_ficha[]'  id='n_ficha' placeholder='ficha"+ " ' required value='<?=$p->getN_ficha()?>'/> </td>"+
+"<td><input class='parti' type='hidden' name='q_acta[]'  id='#_acta' placeholder='acta"+ " ' required value='<?=$zz+1?>'/> </td>"+
+"<td><input class='parti' type='text' name='Aprendiz[]'  id='Aprendiz' placeholder='Aprendiz"+ " ' required /> </td>"+
+"<td><input class='parti' type='text' name='instructor[]' id='instructor' placeholder='instructor" +"' required /> </td>"+
+"<td><textarea class='area' type='text' name='descripcion[]' id='descripcion' placeholder='descripcion" +"' required /></textarea></td>"+
+"<td> <select   name='cumplimiento[]' id='cumplimiento'   class='parti' >  <option value='N/A'>N/A</option>  <option value='Cumplio'>Cumplio</option>  <option value='No cumplio'>No cumplio</option></select></td>";
+// Añadimos una columna con el numero total de columnas.
+// Añadimos uno al total, ya que cuando cargamos los valores para la
+// columna, todavia no esta añadida
+nuevaFila+="</tr>";
+$("#table2").append(nuevaFila);
+});
+/**
+* Funcion para eliminar la ultima columna de la tabla.
+* Si unicamente queda una columna, esta no sera eliminada
+*/
+$("#del2").click(function(){
+// Obtenemos el total de filas (tr) del id "tabla"
+var trs=$("#table2 tr").length;
+if(trs>0)
+{
+// Eliminamos la ultima fila
+cant--;
+$('#contador-filas').val(cant)
+$("#table2 tr:last").remove();
+
+}
+});
+});
+</script>
+
+    </div>
+  </div>
+
+
+
+  <p>
+
+
+    <div class="row">
+    <div class="col">
+    <br>
+    <center>
+     
+    <button type="submit" name="insertar"  style="background-color: #ff671d; color:white;"   onclick='return enviarFormulario();'  class="bt"> Guardar</button>
+    </center>
+    </div>
+    </div>
+  
+
+
+    <script>
+
+
+
+
+function enviarFormulario() {
+
+
+
+    
+conclu.submit();
+
+
+
+
+} 
+
+
+
+</script>
+</form>
+</div>
+</div>
+
+</div>

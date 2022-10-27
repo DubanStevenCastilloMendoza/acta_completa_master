@@ -1,0 +1,1272 @@
+<?php
+
+require_once "modelo/ficha.php";
+require_once "modelo/acta.php";
+
+class acta{
+
+    private $contador = null;
+
+
+    private   $e=null;
+
+private   $n_acta=null;
+private   $acta_no=null;
+private  $acta_contador =null;
+private  $nom_rev =null;
+private   $ciudad =null;
+private  $fecha =null ;
+private  $hora_in =null;
+private  $hora_fin =null;
+private  $lu_en =null;
+private  $direccion =null ;
+private  $agenda =null ;
+private  $objetivos =null ;
+private  $participantes =null ;
+private  $inf_ficha =null ;
+private  $casos_ant =null ;
+private  $casos_part =null ;
+private  $desarrollo =null ;
+private  $conclusion=null;
+private  $ficha =null ;
+private  $programa =null;
+
+
+private $PDO;
+public function __CONSTRUCT(){
+    $this->PDO = BaseDeDatos::conectar();
+
+}
+
+public function Actualizar(acta $acta){
+    try{
+        $consulta="UPDATE acta SET
+            nom_rev=?,
+            ciudad=?,
+            fecha=?,
+            ficha=?,
+            programa=?,
+            hora_in=?,
+            hora_fin=?,
+            lu_en=?,
+            direccion=?,
+            agenda=?,
+            objetivos=?,
+            participantes=?,
+            inf_ficha=?,
+            casos_ant=?,
+            casos_part=?,
+            desarrollo=?,
+            conclusion=?
+            WHERE n_acta=?;
+        ";
+        $this->PDO->prepare($consulta)
+                ->execute(array(
+                     $acta->getNom_rev(),
+                     $acta->getCiudad(),
+                     $acta->getFecha(),
+                     $acta->getFicha(),
+                     $acta->getPrograma(),
+                     $acta->getHora_in(),
+                     $acta->getHora_fin(),
+                     $acta->getLu_en(),
+                     $acta->getDireccion(),
+                     $acta->getAgenda(),
+                     $acta->getObjetivos(),
+                     $acta->getParticipantes(),
+                     $acta->getInf_ficha(),
+                     $acta->getCasos_ant(),
+                     $acta->getCasos_part(),
+                     $acta->getDesarrollo(),
+                     $acta->getConclusion(),
+                     $acta->getN_acta()
+
+
+                ));
+    }catch(Exception$e){
+   
+         header("location:?c=vistas&a=ConsultarFicha");
+    }
+
+}
+
+
+
+/*inicio prueba*/
+public function insertarparti(){
+    $host = 'localhost';
+    $basededatos = 'acta_completas';
+    $usuario = 'root';
+    $contraseña = '';
+    
+    
+    
+    $conexion = new mysqli($host, $usuario,$contraseña, $basededatos);
+    if ($conexion -> connect_errno) {
+    die( "Fallo la conexión : (" . $conexion -> mysqli_connect_errno() 
+    . ") " . $conexion -> mysqli_connect_error());
+    }
+      ///////////////////CONSULTA DE LOS ALUMNOS///////////////////////
+    
+    
+            if(isset($_POST['insertar']))
+            {
+            $items0=($_POST['n_acta']);
+            $items1=($_POST['nombre']);
+            $items2=($_POST['cargo']);
+            $items3=($_POST['asistencia']);
+            
+            while(true){
+            
+            $item0 = current($items0);  
+            $item1 = current($items1);
+            $item2 = current($items2);
+            $item3 = current($items3);
+            ////// ASIGNARLOSAVARIABLES ////
+            $n_acta=(( $item0 !== false) ? $item0 :",&nbsp;");
+            $nombre=(( $item1 !== false) ? $item1 :",&nbsp;");
+            $cargo=(( $item2 !== false) ? $item2 : ",&nbsp;");
+            $asistencia=(( $item3 !== false) ? $item3 : ",&nbsp;");
+            
+            //$valores= '('.$nombre.',"'.$apellido.'","'.$cargo.'","'.$asistencia.'"),';
+            $valores= "('$n_acta','$nombre','$cargo','$asistencia'),";
+            
+            $valoresQ =substr($valores,0,-1);
+            ///////// QUERY DE INSERCIÓN /////
+            
+            $query = "INSERT INTO participantes (n_acta,nombre,cargo,asistencia) VALUES $valoresQ ";
+            $sqlRes=$conexion->query($query) ;
+            
+                                    $item0 = next( $items0 );
+                                    $item1 = next( $items1 );
+                                    $item2= next($items2);
+                                    $item3 = next($items3);
+            
+            //$this->envioMail();
+            // $this->envioMail($Correo_Electronico,$Contrasena_participantes$participantes$participantes);
+            if($item0 === false && $item1 === false && $item2 === false && $item3 === false)break;
+            
+            //$this->envioMail();
+            // $this->envioMail($Correo_Electronico,$Contrasena_participantes$participantes$participantes);
+            }
+            if ($query) {
+             header("location:../?c=vistas&a=Particulares");
+            }
+
+            /*prueba2*/
+            
+            /*fin prueba2*/
+            }
+    
+
+}
+public function insertCasosEspeciales(){
+    
+      $usuario        = "root";
+      $password       = "";
+      $servidor       = "localhost";
+      $basededatos    = "acta_completas";
+      $con            = mysqli_connect($servidor, $usuario, $password) or die("No se ha podido conectar al Servidor");
+      $db             = mysqli_select_db($con, $basededatos) or die("Upps! Error en conectar a la Base de Datos");
+      
+
+      $C_FICHA      = $_REQUEST['C_ficha'];
+      $C_ACTA      = $_REQUEST['C_acta'];
+      $C_APRENDIZ       = $_REQUEST['nombre_aprendiz'];
+      $C_INSTRUCTOR    = $_REQUEST['nombre_its'];
+      $C_DESCRIPCION         = $_REQUEST['description'];
+      $C_FALTA         = $_REQUEST['falta'];
+      $C_REGLAMENTO         = $_REQUEST['reglamento'];
+      $C_REGLAMENTO_A         = $_REQUEST['reglamento_a'];
+      
+      
+      /*function codAleatorio($length = 5) {
+          return substr(str_shuffle(str_repeat($x='0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ', ceil($length/strlen($x)) )),1,$length);
+      }
+      $CODE_REFERENCIA  = codAleatorio();*/
+      
+      
+      for ($i=0; $i < count($C_APRENDIZ); $i++){
+      
+      $InserData =("INSERT INTO casos_especiales (C_ficha, C_acta, nombre_aprendiz,nombre_its,description,falta,reglamento,reglamento_a) VALUES ('".$C_FICHA[$i]."','".$C_ACTA[$i]."','".$C_APRENDIZ[$i]."','".$C_INSTRUCTOR[$i]."','".$C_DESCRIPCION[$i]."','".$C_FALTA[$i]."','".$C_REGLAMENTO[$i]."','".$C_REGLAMENTO_A[$i]."')");
+      $resultadoInsertUser = mysqli_query($con, $InserData);
+        
+        }
+      
+        header("location:?c=vistas&a=ConsultarFicha");
+    
+    }
+
+
+
+public function insertarConclusiones(){
+    $usuario        = "root";
+    $password       = "";
+    $servidor       = "localhost";
+    $basededatos    = "acta_completas";
+    $con            = mysqli_connect($servidor, $usuario, $password) or die("No se ha podido conectar al Servidor");
+    $db             = mysqli_select_db($con, $basededatos) or die("Upps! Error en conectar a la Base de Datos");
+    
+    $C_CONTADOR      = $_REQUEST['c_contador'];
+    $FICHA      = $_REQUEST['n_ficha'];
+    $N_ACTA      = $_REQUEST['q_acta'];
+    $APRENDIZ       = $_REQUEST['Aprendiz'];
+    $INSTRUCTOR    = $_REQUEST['instructor'];
+    $DESCRIPCION         = $_REQUEST['descripcion'];
+    $CUMPLIMIENTO         = $_REQUEST['cumplimiento'];
+    
+    
+    /*function codAleatorio($length = 5) {
+        return substr(str_shuffle(str_repeat($x='0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ', ceil($length/strlen($x)) )),1,$length);
+    }
+    $CODE_REFERENCIA  = codAleatorio();*/
+    
+    
+    for ($i=0; $i < count($APRENDIZ); $i++){
+    
+    $InserData =("INSERT INTO conclusiones (c_contador,n_ficha, q_acta, Aprendiz,instructor,descripcion,cumplimiento) VALUES ('".$C_CONTADOR[$i]."','".$FICHA[$i]."','".$N_ACTA[$i]."','".$APRENDIZ[$i]."','".$INSTRUCTOR[$i]."','".$DESCRIPCION[$i]."','".$CUMPLIMIENTO[$i]."')");
+    $resultadoInsertUser = mysqli_query($con, $InserData);
+      
+      }
+    
+      header("location:?c=vistas&a=ConsultarFicha");
+}
+
+
+
+public function insertarCasosAnteriores(){
+    $usuario        = "root";
+    $password       = "";
+    $servidor       = "localhost";
+    $basededatos    = "acta_completas";
+    $con            = mysqli_connect($servidor, $usuario, $password) or die("No se ha podido conectar al Servidor");
+    $db             = mysqli_select_db($con, $basededatos) or die("Upps! Error en conectar a la Base de Datos");
+    
+    $A_FICHA      = $_REQUEST['A_ficha'];
+    $A_CONTADOR      = $_REQUEST['A_contador'];
+    $A_ACTA      = $_REQUEST['A_acta'];
+    $A_APRENDIZ       = $_REQUEST['A_aprendiz'];
+    $A_INSTRUCTOR    = $_REQUEST['A_instructor'];
+    $A_DESCRIPCION         = $_REQUEST['A_descripcion'];
+    $A_CUMPLIMIENTO         = $_REQUEST['A_cumplimiento'];
+    
+    
+    /*function codAleatorio($length = 5) {
+        return substr(str_shuffle(str_repeat($x='0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ', ceil($length/strlen($x)) )),1,$length);
+    }
+    $CODE_REFERENCIA  = codAleatorio();*/
+    
+    
+    for ($i=0; $i < count($A_APRENDIZ); $i++){
+    
+    $InserData =("INSERT INTO  casos_anteriores (A_ficha,A_contador,A_acta,A_aprendiz,A_instructor,A_descripcion,A_cumplimiento) VALUES ('".$A_FICHA[$i]."','".$A_CONTADOR[$i]."','".$A_ACTA[$i]."','".$A_APRENDIZ[$i]."','".$A_INSTRUCTOR[$i]."','".$A_DESCRIPCION[$i]."','".$A_CUMPLIMIENTO[$i]."')");
+    $resultadoInsertUser = mysqli_query($con, $InserData);
+      
+      }
+    
+      header("location:?c=vistas&a=ConsultarFicha");
+}
+/*fin prueba*/
+
+/*inicio prueba2*/
+
+
+/*fin prueba2*/
+
+
+public function Listarusu(){
+    try{
+         $consulta=$this->PDO->prepare("SELECT * FROM usuario;");
+        $consulta->execute();
+        return $consulta->fetchALL(PDO::FETCH_OBJ);
+    }catch(Exception $e){
+        die($e->getMessage());
+    }
+
+}
+
+
+
+
+
+public function estados($id)
+{
+    try{ 
+        
+        $contador = $this->PDO->prepare("SELECT COUNT(Estado_forma) FROM aprendiz WHERE ficha =$id  AND Estado_forma='Cancelado';");
+        $contador->execute(array($id));
+        return $contador->fetch(PDO::FETCH_OBJ);
+       
+
+    }catch (Exception $e){
+        die ($e->getMessage());
+    }
+}
+
+
+
+public function listUnic($id)
+{
+    try{ 
+        
+        $query = $this->PDO->prepare("SELECT * FROM acta where  ficha = $id");
+        $query->execute(array($id));
+        return $query->fetchAll(PDO::FETCH_CLASS,__CLASS__);
+    }catch (Exception $e){
+        die ($e->getMessage());
+    }
+}
+
+public function ListarPrograma(){
+    try{
+         $consulta=$this->PDO->prepare("SELECT * FROM programa;");
+        $consulta->execute();
+        return $consulta->fetchALL(PDO::FETCH_OBJ);
+    }catch(Exception $e){
+        die($e->getMessage());
+    }
+
+}
+
+public function Listar($id){
+    try{
+         $consulta=$this->PDO->prepare("SELECT acta  from n_acta where  id = id ;");
+        $consulta->execute();
+        return $consulta->fetchALL(PDO::FETCH_OBJ);
+    }catch(Exception $e){
+        die($e->getMessage());
+    }
+
+}
+
+
+public function ListarApre(){
+    try{
+         $consulta=$this->PDO->prepare("SELECT * FROM aprendiz;");
+        $consulta->execute();
+        return $consulta->fetchALL(PDO::FETCH_OBJ);
+    }catch(Exception $e){
+        die($e->getMessage());
+    }
+
+}
+
+
+
+
+public function Listarinstrustor(){
+    try{
+         $consulta=$this->PDO->prepare("SELECT * FROM instructor;");
+        $consulta->execute();
+        return $consulta->fetchALL(PDO::FETCH_OBJ);
+    }catch(Exception $e){
+        die($e->getMessage());
+    }
+
+}
+
+
+public function Listarfuncionario(){
+    try{
+         $consulta=$this->PDO->prepare("SELECT * FROM funcionario;");
+        $consulta->execute();
+        return $consulta->fetchALL(PDO::FETCH_OBJ);
+    }catch(Exception $e){
+        die($e->getMessage());
+    }
+
+}
+
+
+
+
+public function ListarFicha(){
+    try{
+         $consulta=$this->PDO->prepare("SELECT * FROM ficha;");
+        $consulta->execute();
+        return $consulta->fetchALL(PDO::FETCH_OBJ);
+    }catch(Exception $e){
+        die($e->getMessage());
+    }
+
+}
+
+
+
+
+
+
+
+public function Obtener($id){
+    try{
+         $consulta=$this->PDO->prepare("SELECT * FROM acta where n_acta=?;");
+        $consulta->execute(array($id));
+       $r= $consulta->fetch(PDO::FETCH_OBJ);
+       $p= new acta();
+       $p ->setN_acta($r->n_acta);
+       $p ->setActa_no($r->acta_no);
+       $p ->setNom_rev($r->nom_rev);
+       $p ->setCiudad($r->ciudad);
+       $p ->setFecha($r->fecha);
+       $p ->setHora_fin($r->hora_fin);
+       $p ->setHora_in($r->hora_in);
+       $p ->setLu_en($r->lu_en);
+       $p ->setDireccion($r->direccion);
+       $p ->setAgenda($r->agenda);
+       $p ->setObjetivos($r->objetivos);
+       /*$p ->setParticipantes($r->participantes);*/
+       /*$p ->setInf_ficha($r->inf_ficha);*/
+       $p ->setCasos_ant($r->casos_ant);
+       $p ->setCasos_part($r->casos_part);
+       $p ->setDesarrollo($r->desarrollo);
+       $p ->setConclusion($r->conclusion);
+       $p ->setFicha($r->ficha);
+       $p ->setPrograma($r->programa);
+     return $p;
+
+
+    }catch(Exception $e){
+        die($e->getMessage());
+    }
+
+}
+
+
+
+public function insertarparticipantes()
+{
+    try{
+    $query = "INSERT INTO participantes (nombres,apellidos,cargo,asistencia) VALUES (?,?,?,?);";
+    $this -> PDO-> prepare($query)
+                        ->execute(array(
+                            $this->nombres,
+                            $this->apellidos,
+                            $this->cargo,
+                            $this->asistencia
+                           
+                        ));
+                        $this->n_acta=$this->PDO->lastInsertId();
+                        return $this;
+                    }catch(Exception $e){
+                        die($e->getMessage());
+                    }
+                        
+}
+
+
+
+
+public function insertar()
+{
+    try{
+    $query = "INSERT INTO acta (acta_no,acta_contador,nom_rev,ciudad,fecha,hora_in,hora_fin,lu_en,direccion,agenda,objetivos,inf_ficha,casos_ant,casos_part,desarrollo,conclusion,ficha,programa) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);";
+    $this -> PDO-> prepare($query)
+                        ->execute(array(
+                            $this->acta_no,
+                            $this->acta_contador,
+                            $this->nom_rev,
+                            $this->ciudad,
+                            $this->fecha,
+                            $this->hora_in,
+                            $this->hora_fin,
+                            $this->lu_en,
+                            $this->direccion,
+                            $this->agenda,
+                            $this->objetivos,
+                            $this->inf_ficha,
+                            $this->casos_ant,
+                            $this->casos_part,
+                            $this->desarrollo,
+                            $this->conclusion,
+                            $this->ficha,
+                            $this->programa
+                        ));
+                        $this->n_acta=$this->PDO->lastInsertId();
+                        return $this;
+
+
+                        
+                            $query = "INSERT INTO participantes (nombres,apellidos,cargo,asistencia) VALUES (?,?,?,?);";
+                            $this -> PDO-> prepare($query)
+                                                ->execute(array(
+                                                    $this->nombres,
+                                                    $this->apellidos,
+                                                    $this->cargo,
+                                                    $this->asistencia
+                                                   
+                                                ));
+                                                $this->n_acta=$this->PDO->lastInsertId();
+                                                return $this;
+                                            
+
+
+                    }catch(Exception $e){
+                        die($e->getMessage());
+                    }
+                        
+}
+
+public function Eliminar($id){
+    try{
+        $consulta="DELETE FROM acta WHERE n_acta=?;";
+        $this->PDO->prepare($consulta)
+                ->execute(array($id));
+    }catch(Exception$e){
+        die($e->getMessage());
+   }
+}
+
+public function ListarActas(){
+    try{
+         $consulta=$this->PDO->prepare("SELECT * FROM acta;");
+        $consulta->execute();
+        return $consulta->fetchALL(PDO::FETCH_OBJ);
+    }catch(Exception $e){
+        die($e->getMessage());
+    }
+
+}
+
+
+
+public function Obtenercontenido($id){
+    try{
+
+
+
+      
+
+         $consulta=$this->PDO->prepare("SELECT * FROM ficha where id_ficha=?;");
+        $consulta->execute(array($id));
+      $r= $consulta->fetch(PDO::FETCH_OBJ);
+       $p= new ficha();
+ 
+
+       $p ->setId_ficha($r->id_ficha);
+       $p ->setN_ficha($r->N_ficha);
+       $p ->setCantidad_apre($r->cantidad_apre);
+       $p ->setPrograma($r->programa);
+       $p ->setJornada($r->jornada);
+       $p ->setTipo_forma($r->tipo_forma);
+       $p ->setFecha_inicio($r->fecha_inicio);
+       $p ->setFecha_fin($r->fecha_fin);
+    
+     return $p ;
+     echo($contador);
+
+    }catch(Exception $e){
+        die($e->getMessage());
+    }
+
+}
+
+
+
+public function ObtenerParticipantes($ficha){
+
+ 
+
+    try{ 
+        
+        $query = $this->PDO->prepare("SELECT * FROM participantes where  n_acta = $ficha");
+        $query->execute(array($ficha));
+        return $query->fetchAll(PDO::FETCH_CLASS,__CLASS__);
+    }catch (Exception $e){
+        die ($e->getMessage());
+    }
+}
+
+public function ObtenerCasosP($ficha){
+    try{ 
+        
+        $query = $this->PDO->prepare("SELECT * FROM casos_especiales where C_acta = $ficha");
+        $query->execute(array($ficha));
+        return $query->fetchAll(PDO::FETCH_CLASS,__CLASS__);
+    }catch (Exception $e){
+        die ($e->getMessage());
+    }
+}
+
+public function obtenercontador($ficha)
+{
+    try{ 
+        $contador=0;
+        $contador = $this->PDO->prepare("SELECT acta_contador FROM acta WHERE ficha= $ficha ORDER BY n_acta DESC LIMIT 1;");
+        $contador->execute(array($ficha));
+        return $contador->fetch(PDO::FETCH_OBJ);
+
+    }catch (Exception $e){
+        die ($e->getMessage());
+    }
+}
+public function obtenercontadors($id)
+{
+    try{ 
+        $contador=0;
+        $contador = $this->PDO->prepare("SELECT acta_contador FROM acta WHERE ficha= $id ORDER BY n_acta DESC LIMIT 1;");
+        $contador->execute(array($id));
+        return $contador->fetch(PDO::FETCH_OBJ);
+
+    }catch (Exception $e){
+        die ($e->getMessage());
+    }
+}
+public function casosAnteriores($ficha, $acta_contador){
+    try{ 
+        
+        $query = $this->PDO->prepare("SELECT * FROM conclusiones WHERE n_ficha = $ficha AND c_contador = $acta_contador-1");
+        $query->execute(array($ficha, $acta_contador));
+        return $query->fetchAll(PDO::FETCH_CLASS,__CLASS__);
+    }catch (Exception $e){
+        die ($e->getMessage());
+    }
+}
+
+public function obtenerAnteriores($ficha, $acta_contador){
+    try{ 
+        
+        $query = $this->PDO->prepare("SELECT * FROM casos_anteriores WHERE A_ficha = $ficha AND A_contador = $acta_contador-1");
+        $query->execute(array($ficha, $acta_contador));
+        return $query->fetchAll(PDO::FETCH_CLASS,__CLASS__);
+    }catch (Exception $e){
+        die ($e->getMessage());
+    }
+}
+
+
+
+public function ObtenerConclusiones($ficha){
+    try{ 
+        
+        $query = $this->PDO->prepare("SELECT * FROM conclusiones where q_acta = $ficha");
+        $query->execute(array($ficha));
+        return $query->fetchAll(PDO::FETCH_CLASS,__CLASS__);
+    }catch (Exception $e){
+        die ($e->getMessage());
+    }
+}
+public function ObtenerPrueba($ficha){
+    try{ 
+        
+        $query = $this->PDO->prepare("SELECT * FROM casos_anteriores where  A_acta = $ficha");
+        $query->execute(array($ficha));
+        return $query->fetchAll(PDO::FETCH_CLASS,__CLASS__);
+    }catch (Exception $e){
+        die ($e->getMessage());
+    }
+}
+ public function ObtenerTranslado($ficha){
+
+ 
+
+            $consulta=$this->PDO->prepare("SELECT COUNT(Estado) as Translado FROM aprendiz WHERE ficha = $ficha  AND Estado='Transladado'");
+            $consulta->execute();
+             return $consulta->fetch(PDO :: FETCH_OBJ);
+
+
+
+}
+
+public function ObtenerCancelado($ficha){
+
+ 
+
+        $consulta=$this->PDO->prepare("SELECT COUNT(Estado) as Cancelado FROM aprendiz WHERE ficha = $ficha  AND Estado='Cancelado'");
+        $consulta->execute();
+         return $consulta->fetch(PDO :: FETCH_OBJ);
+
+
+
+}
+
+
+public function ObtenerFormacion($ficha){
+
+        $consulta=$this->PDO->prepare("SELECT COUNT(Estado) as Formacion FROM aprendiz WHERE ficha = $ficha  AND Estado='En formación'");
+        $consulta->execute();
+         return $consulta->fetch(PDO :: FETCH_OBJ);
+
+
+
+}
+
+public function ObtenerRetiro($ficha){
+
+ 
+
+        $consulta=$this->PDO->prepare("SELECT COUNT(Estado) as Retiro FROM aprendiz WHERE ficha = $ficha  AND Estado='Retiro voluntario'");
+        $consulta->execute();
+         return $consulta->fetch(PDO :: FETCH_OBJ);
+
+
+}
+
+//
+
+public function getActa_no()
+{
+    return $this->acta_no;
+}
+
+public function setActa_no($acta_no)
+{
+    $this->acta_no = $acta_no;
+
+    return $this;
+}
+public function getActa_contador()
+{
+    return $this->acta_contador;
+}
+
+public function setActa_contador($acta_contador)
+{
+    $this->acta_contador = $acta_contador;
+
+    return $this;
+}
+
+public function getN_acta()
+{
+    return $this->n_acta;
+}
+
+public function setN_acta($n_acta)
+{
+    $this->n_acta = $n_acta;
+
+    return $this;
+}
+
+
+public function getNom_rev()
+{
+    return $this->nom_rev;
+}
+
+public function setNom_rev($nom_rev)
+{
+    $this->nom_rev = $nom_rev;
+
+    return $this;
+}
+
+
+public function getCiudad()
+{
+    return $this->ciudad;
+}
+
+public function setCiudad($ciudad)
+{
+    $this->ciudad = $ciudad;
+
+    return $this;
+}
+
+
+public function getFecha()
+{
+    return $this->fecha;
+}
+
+public function setFecha($fecha)
+{
+    $this->fecha = $fecha;
+
+    return $this;
+}
+
+
+
+public function getHora_in()
+{
+    return $this->hora_in;
+}
+
+public function setHora_in($hora_in)
+{
+    $this->hora_in = $hora_in;
+
+    return $this;
+}
+
+
+public function getHora_fin()
+{
+    return $this->hora_fin;
+}
+
+public function setHora_fin($hora_fin)
+{
+    $this->hora_fin = $hora_fin;
+
+    return $this;
+}
+
+
+public function getLu_en()
+{
+    return $this->lu_en;
+}
+
+public function setLu_en($lu_en)
+{
+    $this->lu_en = $lu_en;
+
+    return $this;
+}
+
+
+public function getDireccion()
+{
+    return $this->direccion;
+}
+
+public function setDireccion($direccion)
+{
+    $this->direccion = $direccion;
+
+    return $this;
+}
+
+
+public function getAgenda()
+{
+    return $this->agenda;
+}
+
+public function setAgenda($agenda)
+{
+    $this->agenda = $agenda;
+
+    return $this;
+}
+
+public function getObjetivos()
+{
+    return $this->objetivos;
+}
+
+public function setObjetivos($objetivos)
+{
+    $this->objetivos = $objetivos;
+
+    return $this;
+}
+
+
+public function getParticipantes()
+{
+    return $this->participantes;
+}
+
+
+public function setParticipantes($participantes)
+{
+    $this->participantes = $participantes;
+
+    return $this;
+}
+
+
+
+public function getInf_ficha()
+{
+    return $this->inf_ficha;
+}
+
+
+public function setInf_ficha($inf_ficha)
+{
+    $this-> inf_ficha = $inf_ficha;
+
+    return $this;
+}
+
+
+
+public function getCasos_ant()
+{
+    return $this->casos_ant;
+}
+
+
+public function setCasos_ant($casos_ant)
+{
+    $this-> casos_ant = $casos_ant;
+
+    return $this;
+}
+
+
+public function getCasos_part()
+{
+    return $this->casos_part;
+}
+
+
+public function setCasos_part($casos_part)
+{
+    $this-> casos_part = $casos_part;
+
+    return $this;
+}
+
+
+
+
+public function getDesarrollo()
+{
+    return $this->desarrollo;
+}
+
+
+public function setDesarrollo($desarrollo)
+{
+    $this-> desarrollo = $desarrollo;
+
+    return $this;
+}
+
+
+
+public function getConclusion()
+{
+    return $this->conclusion;
+}
+
+public function setConclusion($conclusion)
+{
+    $this->conclusion = $conclusion;
+
+    return $this;
+}
+
+public function getFicha()
+{
+    return $this->ficha;
+}
+
+public function setFicha($ficha)
+{
+    $this->ficha = $ficha;
+
+    return $this;
+}
+
+public function getPrograma()
+{
+    return $this->programa;
+}
+
+public function setPrograma($programa)
+{
+    $this->programa = $programa;
+
+    return $this;
+}
+
+
+
+
+
+
+public function getNombre()
+{
+    return $this->nombre;
+}
+
+public function setNombre($nombre)
+{
+    $this->nombre = $nombre;
+
+    return $this;
+}
+
+
+public function getApellido()
+{
+    return $this->apellido;
+}
+
+public function setApellido($apellido)
+{
+    $this->apellido = $apellido;
+
+    return $this;
+}
+
+
+public function getCargo()
+{
+    return $this->cargo;
+}
+
+public function setCargo($cargo)
+{
+    $this->cargo = $cargo;
+
+    return $this;
+}
+
+
+
+public function getAsistencia()
+{
+    return $this->asistencia;
+}
+
+public function setAsistencia($asistencia)
+{
+    $this->asistencia = $asistencia;
+
+    return $this;
+}
+
+
+
+
+/*casos*/
+
+public function getC_ficha()
+{
+    return $this->C_ficha;
+}
+
+public function setC_ficha($C_ficha)
+{
+    $this->C_ficha = $C_ficha;
+
+    return $this;
+}
+
+
+public function getC_acta()
+{
+    return $this->C_acta;
+}
+
+public function setC_acta($C_acta)
+{
+    $this->C_acta = $C_acta;
+
+    return $this;
+}
+
+
+public function getNombre_aprendiz()
+{
+    return $this->nombre_aprendiz;
+}
+
+public function setNombre_aprendiz($nombre_aprendiz)
+{
+    $this->nombre_aprendiz = $nombre_aprendiz;
+
+    return $this;
+}
+
+
+
+public function getNombre_its()
+{
+    return $this->nombre_its;
+}
+
+public function setNombre_its($nombre_its)
+{
+    $this->nombre_its = $nombre_its;
+
+    return $this;
+}
+
+
+public function getDescription()
+{
+    return $this->description;
+}
+
+public function setDescription($description)
+{
+    $this->description = $description;
+
+    return $this;
+}
+
+
+/*conclusiones*/
+public function getNf_ficha()
+{
+    return $this->n_ficha;
+}
+
+public function setNf_ficha($n_ficha)
+{
+    $this->n_ficha = $n_ficha;
+
+    return $this;
+}
+
+
+public function getQ_acta()
+{
+    return $this->Q_acta;
+}
+
+public function setQ_acta($Q_acta)
+{
+    $this->Q_acta = $Q_acta;
+
+    return $this;
+}
+
+
+public function getAprendiz()
+{
+    return $this->Aprendiz;
+}
+
+public function setAprendiz($Aprendiz)
+{
+    $this->Aprendiz = $Aprendiz;
+
+    return $this;
+}
+
+public function getInstructor()
+{
+    return $this->instructor;
+}
+
+public function setInstructor($instructor)
+{
+    $this->instructor = $instructor;
+
+    return $this;
+}
+
+
+
+
+public function getDescripcion()
+{
+    return $this->descripcion;
+}
+
+public function setDescricion($descripcion)
+{
+    $this->descripcion = $descripcion;
+
+    return $this;
+}
+
+
+public function getCumplimiento()
+{
+    return $this->cumplimiento;
+}
+
+public function setCumplimiento($cumplimiento)
+{
+    $this->cumplimiento = $cumplimiento;
+
+    return $this;
+}
+
+
+/*anteriores*/
+public function getId_a()
+{
+    return $this->id;
+}
+
+public function setId_a($id)
+{
+    $this->id = $id;
+
+    return $this;
+}
+
+
+public function getA_ficha()
+{
+    return $this->A_ficha;
+}
+
+public function setA_ficha($A_ficha)
+{
+    $this->A_ficha = $A_ficha;
+
+    return $this;
+}
+
+
+public function getA_acta()
+{
+    return $this->A_acta;
+}
+
+public function setA_acta($A_acta)
+{
+    $this->A_acta = $A_acta;
+
+    return $this;
+}
+
+
+public function getAAprendiz()
+{
+    return $this->A_aprendiz;
+}
+
+public function setAAprendiz($A_aprendiz)
+{
+    $this->A_aprendiz = $A_aprendiz;
+
+    return $this;
+}
+
+
+
+public function getA_instructor()
+{
+    return $this->A_instructor;
+}
+
+public function setA_instructor($A_instructor)
+{
+    $this->A_instructor = $A_instructor;
+
+    return $this;
+}
+
+
+public function getA_descripcion()
+{
+    return $this->A_descripcion;
+}
+
+public function setA_descricion($A_descripcion)
+{
+    $this->A_descripcion = $A_descripcion;
+
+    return $this;
+}
+
+
+public function getA_cumplimiento()
+{
+    return $this->A_cumplimiento;
+}
+
+public function setA_cumplimiento($A_cumplimiento)
+{
+    $this->A_cumplimiento = $A_cumplimiento;
+
+    return $this;
+}
+
+
+
+}
