@@ -260,6 +260,7 @@
       <th scope="col">   <i class="fa-solid fa-list-ol"></i>nombre </th>
       <th scope="col">  <i class="fa-solid fa-hashtag"></i>instructor</th>
       <th scope="col">   <i class="fa-solid fa-calendar"></i>Descripción</th>
+      <th scope="col">   <i class="fa-solid fa-calendar"></i>Cumplimiento</th>
       </tr>
   </thead>
   <tbody>
@@ -269,7 +270,7 @@
     <tr>
     <td><?=$r->A_aprendiz?></td>
       <td><?=$r->A_instructor?></td>
-      <td><?=$r->A_descripcion?></td>+
+      <td><?=$r->A_descripcion?></td>
       <td><?=$r->A_cumplimiento?></td>
   </tr>
 

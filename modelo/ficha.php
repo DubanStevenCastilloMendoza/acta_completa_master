@@ -6,6 +6,7 @@ class ficha{
 
     private   $e=null;
 private  $id_ficha=null;
+private  $ficha_contador=null;
 private  $N_ficha =null;
 private  $cantidad_apre =null;
 private  $programa =null ;
@@ -27,9 +28,10 @@ public function insertar()
 
 {
     try{
-    $query = "INSERT INTO ficha (N_ficha,cantidad_apre,programa,jornada,tipo_forma,fecha_inicio,fecha_fin) VALUES (?,?,?,?,?,?,?);";
+    $query = "INSERT INTO ficha (ficha_contador,N_ficha,cantidad_apre,programa,jornada,tipo_forma,fecha_inicio,fecha_fin) VALUES (?,?,?,?,?,?,?,?);";
     $this -> PDO-> prepare($query)
                         ->execute(array(
+                            $this->ficha_contador,
                             $this->N_ficha,
                             $this->cantidad_apre,
                             $this->programa,
@@ -49,6 +51,7 @@ public function insertar()
 
 
 }
+
 
 public function list($ficha)
 {
@@ -120,7 +123,49 @@ public function Actualizarficha(ficha $ficha){
 
 }
 
+public function ActualizarFichaContador(ficha $ficha){
+    try{
+        $consulta="UPDATE ficha SET
+    
+            ficha_contador=?
 
+            WHERE id_ficha=?;
+        ";
+        $this->PDO->prepare($consulta)
+                ->execute(array(
+
+                     $ficha->getFicha_contador(),
+                     $ficha->getId_ficha()
+
+
+                ));
+    }catch(Exception$e){
+    }
+
+   header("location:?c=vistas&a=ConsultarFicha");
+       
+ 
+
+}
+public function ObtenerFichaContador($id){
+    try{
+         $consulta=$this->PDO->prepare("SELECT * FROM ficha where id_ficha=?;");
+        $consulta->execute(array($id));
+      $r= $consulta->fetch(PDO::FETCH_OBJ);
+       $p= new ficha();
+
+       $p ->setId_ficha($r->id_ficha);
+       $p ->setFicha_contador($r->ficha_contador);
+
+    
+     return $p;
+
+
+    }catch(Exception $e){
+        die($e->getMessage());
+    }
+
+}
 
 
 
@@ -181,6 +226,17 @@ public function getId_ficha()
 public function setId_ficha($id_ficha)
 {
     $this->id_ficha = $id_ficha;
+
+    return $this;
+}
+public function getFicha_contador()
+{
+    return $this->ficha_contador;
+}
+
+public function setFicha_contador($ficha_contador)
+{
+    $this->ficha_contador = $ficha_contador;
 
     return $this;
 }

@@ -18,6 +18,7 @@
 
 <div class="col">
   <label for=""> Número Ficha</label>
+  <input name="ficha_contador" id='ficha_contador' type="hidden" maxlength="25" oninput="maxlengthNumber(this);" required  class="" value="1">
   <input name="N_ficha" id='N_ficha' type="number" maxlength="25" oninput="maxlengthNumber(this);" required  class="" placeholder="Número ficha">
   </div>
 

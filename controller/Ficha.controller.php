@@ -48,6 +48,27 @@ class FichaController{
   
   
   }
+  public function GuardarFichaContador(){
+
+      
+    $ficha=new ficha();
+
+    $ficha->setId_ficha($_POST['id_ficha']);
+    $ficha->setFicha_contador($_POST['ficha_contador']);
+
+
+
+
+    $ficha ->getId_ficha() > 0 ?
+
+    $this ->modelo->ActualizarFichaContador($ficha):
+
+    
+    header("location:?c=vistas&a=Consultarficha");
+
+
+}
+
 
 
 
@@ -57,7 +78,7 @@ function save()//aqui se insertan los datos del registro
        
         $ficha= new ficha();
 
-
+        $ficha->setFicha_contador($_POST['ficha_contador']);
         $ficha->setN_ficha($_POST['N_ficha']);
         $ficha->setCantidad_apre($_POST['cantidad_apre']);
         $ficha->setPrograma($_POST['programa']);
@@ -86,7 +107,6 @@ function save()//aqui se insertan los datos del registro
 
     
     }
-
     public function Borrarficha(){
         $this->modelo->Eliminarfi ($_GET["id"]);
         header("location:?c=vistas&a=ConsultarFicha");
@@ -115,6 +135,28 @@ function save()//aqui se insertan los datos del registro
     
     
     }
+
+    
+    public function FormFichaContador(){
+
+
+      if(isset($_GET['id'])){
+  
+       
+      
+        $l=$this ->modelo -> ObtenerFichaContador($_GET['id']);
+       
+        require_once "vista/admin/cabecera/cabecera.php";
+        require_once "vista/admin/contenido/FichaContador.php";
+      
+        require_once "vista/admin/footer/footer.php";
+      
+      }
+  
+  
+      
+      
+      }
 
 
 

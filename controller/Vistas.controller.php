@@ -52,6 +52,15 @@ class VistasController{
                require_once "vista/admin/contenido/actas.php";
                require_once "vista/admin/footer/footer.php";
             }
+
+            public function FichaContador(){
+
+
+                require_once "vista/admin/cabecera/cabecera.php";
+               require_once "vista/admin/contenido/FichaContador.php";
+               require_once "vista/admin/footer/footer.php";
+            }
+            
             public function Particulares(){
 
                 require_once "vista/admin/cabecera/cabecera.php";
