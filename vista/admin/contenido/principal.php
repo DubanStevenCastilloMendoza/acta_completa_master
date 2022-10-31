@@ -60,6 +60,7 @@
       <option value="Comité Étapa Productiva">Comité Etapa Productiva</option>
       <option value="Comité de Seguimiento">Comité de Seguimiento</option>
       <option value="Comité Extraordinarios">Comité Extraordinarios</option>
+      <option value="Comité de Cierre">Comité de Cierre</option>
   
   
   </select>
@@ -413,7 +414,8 @@ $("#table tr:last").remove();
 
 <center>
 <h2>Casos Particulares</h2>
-<table class="tablas" id="table3">
+<table class="tablas" id="table3" style="width:100px">
+<tbody >
 <tr>
 <input type="hidden"  value=" <?php   $zz = $r->n_acta; ?>">
 <td><input class="parti" type="hidden" name="C_ficha[]" style="width:50px; height:50px;" id="n_ficha" placeholder="ficha" required value="<?=$p->getN_ficha()?>"/> </td>
@@ -422,13 +424,13 @@ $("#table tr:last").remove();
 <td><input class="parti"  type="text" name="nombre_its[]" id="nombre_its" placeholder="instructor" required /> </td>
 <td><textarea class="area"  type="text" name="description[]" style="width:310px; height:55px;" id="description" placeholder="descripcion" required></textarea></td>
 <td>
-   <select   name="falta[]" id="falta"   class="parti" >  
+   <select  name="falta[]" id="falta"   class="parti" >  
     <option value="Académica">Académica</option> 
     <option value="disciplinaria">disciplinaria</option>  
     <option value="Académica y Disciplinaria">Académica y Disciplinaria</option>
   </select>
-  </td>
-  <td>  <select name="reglamento[]" id='reglamento' class="parti" type="text"  oninput="maxlengthNumber(this);" required  class="" >
+</td>
+  <td><select name="reglamento[]" id='reglamento' class="parti" type="text"  oninput="maxlengthNumber(this);" required  class="" >
       <option selected>Seleccione</option>
   <?php foreach($reca as $reg): ?>
  
@@ -447,8 +449,29 @@ $("#table tr:last").remove();
      <?=$reg->getNombre_falta()?> </option>
     <?php endforeach;?>
 </select></td>
+<!--regla 3-->
+<td>  <select name="reglamento_b[]" id='reglamento_b' class="parti" type="text"  oninput="maxlengthNumber(this);" required  class="" >
+      <option selected>Seleccione</option>
+  <?php foreach($reca as $reg): ?>
+ 
+    <option value="<?=$reg->getNombre_falta()?>" <?=$reg->getId_regla() == $reg->getId_regla() ? 
+    '' : ''?> > 
+     <?=$reg->getNombre_falta()?> </option>
+    <?php endforeach;?>
+</select></td>
+<!--regla 4-->
+<td>  <select name="reglamento_c[]" id='reglamento_c' class="parti" type="text"  oninput="maxlengthNumber(this);" required  class="" >
+      <option selected>Seleccione</option>
+  <?php foreach($reca as $reg): ?>
+ 
+    <option value="<?=$reg->getNombre_falta()?>" <?=$reg->getId_regla() == $reg->getId_regla() ? 
+    '' : ''?> > 
+     <?=$reg->getNombre_falta()?> </option>
+    <?php endforeach;?>
+</select></td>
 </tr>
 <tr>
+  
 <td><input class="parti" type="hidden" name="C_ficha[]"  id="n_ficha" placeholder="ficha" required value="<?=$p->getN_ficha()?>"/> </td>
 <td><input class="parti" type="hidden" name="C_acta[]"  id="C_acta" placeholder="acta" required value="<?=$zz+1?>"/> </td>
 <td><input class="parti"  type="text" name="nombre_aprendiz[]"  id=" nombre_aprendiz" placeholder="Aprendiz" required /> </td>
@@ -471,6 +494,26 @@ $("#table tr:last").remove();
     <?php endforeach;?>
 </select></td>
 <td>  <select name="reglamento_a[]" id='reglamento_a' class="parti" type="text"  oninput="maxlengthNumber(this);" required  class="" >
+      <option selected>Seleccione</option>
+  <?php foreach($reca as $reg): ?>
+ 
+    <option value="<?=$reg->getNombre_falta()?>" <?=$reg->getId_regla() == $reg->getId_regla() ? 
+    '' : ''?> > 
+     <?=$reg->getNombre_falta()?> </option>
+    <?php endforeach;?>
+</select></td>
+<!--regla 3-->
+<td>  <select name="reglamento_b[]" id='reglamento_b' class="parti" type="text"  oninput="maxlengthNumber(this);" required  class="" >
+      <option selected>Seleccione</option>
+  <?php foreach($reca as $reg): ?>
+ 
+    <option value="<?=$reg->getNombre_falta()?>" <?=$reg->getId_regla() == $reg->getId_regla() ? 
+    '' : ''?> > 
+     <?=$reg->getNombre_falta()?> </option>
+    <?php endforeach;?>
+</select></td>
+<!--regla 4-->
+<td>  <select name="reglamento_c[]" id='reglamento_c' class="parti" type="text"  oninput="maxlengthNumber(this);" required  class="" >
       <option selected>Seleccione</option>
   <?php foreach($reca as $reg): ?>
  
@@ -511,6 +554,26 @@ $("#table tr:last").remove();
      <?=$reg->getNombre_falta()?> </option>
     <?php endforeach;?>
 </select></td>
+<!--regla 3-->
+<td>  <select name="reglamento_b[]" id='reglamento_b' class="parti" type="text"  oninput="maxlengthNumber(this);" required  class="" >
+      <option selected>Seleccione</option>
+  <?php foreach($reca as $reg): ?>
+ 
+    <option value="<?=$reg->getNombre_falta()?>" <?=$reg->getId_regla() == $reg->getId_regla() ? 
+    '' : ''?> > 
+     <?=$reg->getNombre_falta()?> </option>
+    <?php endforeach;?>
+</select></td>
+<!--regla 4-->
+<td>  <select name="reglamento_c[]" id='reglamento_c' class="parti" type="text"  oninput="maxlengthNumber(this);" required  class="" >
+      <option selected>Seleccione</option>
+  <?php foreach($reca as $reg): ?>
+ 
+    <option value="<?=$reg->getNombre_falta()?>" <?=$reg->getId_regla() == $reg->getId_regla() ? 
+    '' : ''?> > 
+     <?=$reg->getNombre_falta()?> </option>
+    <?php endforeach;?>
+</select></td>
 </tr>
 </tbody>
 </table>
@@ -543,7 +606,9 @@ nuevaFila+="<td><input class='parti' type='hidden' name='C_ficha[]'  id='n_ficha
 "<td><textarea class='area' type='text' name='description[]' style='width:310px; height:55px;' id='description' placeholder='descripcion" +"' required></textarea> </td>"+
 "<td><select   name='falta[]' id='falta'   class='parti' >  <option value='Académica'>Académica</option> <option value='disciplinaria'>disciplinaria</option>  <option value='Académica y Disciplinaria'>Académica y Disciplinaria</option></select> </td>"+
 "<td> <select name='reglamento[]' id='reglamento' class='parti' type='text'  oninput='maxlengthNumber(this);' required  class='' ><option selected>Seleccione</option><?php foreach($reca as $reg): ?><option value='<?=$reg->getNombre_falta()?>' <?=$reg->getId_regla() == $reg->getId_regla() ?  '' : ''?> > <?=$reg->getNombre_falta()?> </option><?php endforeach;?></select></td>"+
-"<td> <select name='reglamento_a[]' id='reglamento_a' class='parti' type='text'  oninput='maxlengthNumber(this);' required  class='' ><option selected>Seleccione</option><?php foreach($reca as $reg): ?><option value='<?=$reg->getNombre_falta()?>' <?=$reg->getId_regla() == $reg->getId_regla() ?  '' : ''?> > <?=$reg->getNombre_falta()?> </option><?php endforeach;?></select></td>";
+"<td> <select name='reglamento_a[]' id='reglamento_a' class='parti' type='text'  oninput='maxlengthNumber(this);' required  class='' ><option selected>Seleccione</option><?php foreach($reca as $reg): ?><option value='<?=$reg->getNombre_falta()?>' <?=$reg->getId_regla() == $reg->getId_regla() ?  '' : ''?> > <?=$reg->getNombre_falta()?> </option><?php endforeach;?></select></td>"+
+"<td> <select name='reglamento_b[]' id='reglamento_b' class='parti' type='text'  oninput='maxlengthNumber(this);' required  class='' ><option selected>Seleccione</option><?php foreach($reca as $reg): ?><option value='<?=$reg->getNombre_falta()?>' <?=$reg->getId_regla() == $reg->getId_regla() ?  '' : ''?> > <?=$reg->getNombre_falta()?> </option><?php endforeach;?></select></td>"+
+"<td> <select name='reglamento_c[]' id='reglamento_c' class='parti' type='text'  oninput='maxlengthNumber(this);' required  class='' ><option selected>Seleccione</option><?php foreach($reca as $reg): ?><option value='<?=$reg->getNombre_falta()?>' <?=$reg->getId_regla() == $reg->getId_regla() ?  '' : ''?> > <?=$reg->getNombre_falta()?> </option><?php endforeach;?></select></td>";
 // Añadimos una columna con el numero total de columnas.
 // Añadimos uno al total, ya que cuando cargamos los valores para la
 // columna, todavia no esta añadida

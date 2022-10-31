@@ -104,12 +104,12 @@ tr .form-control{
     width: 180px;
     border: 1px solid #ff671d;
     border-radius: 5px;
-    margin:20px;
+  
     height: 58px;
 }
 #table2 tr .area{
     width: 380px;
-    margin:20px;
+   
     border-radius: 5px;
     height: 62px;
 }
@@ -126,15 +126,14 @@ tr .form-control{
 }
 
 #table3 tr .parti{
-    width: 180px;
+    width: 100px;
     border: 1px solid #ff671d;
     border-radius: 5px;
-    margin:20px;
+   margin:5px;
     height: 58px;
 }
 #table3 tr .area{
-    width: 380px;
-    margin:20px;
+    width: 340px;
     border-radius: 5px;
     height: 62px;
 }

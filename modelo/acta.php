@@ -178,6 +178,8 @@ public function insertCasosEspeciales(){
       $C_FALTA         = $_REQUEST['falta'];
       $C_REGLAMENTO         = $_REQUEST['reglamento'];
       $C_REGLAMENTO_A         = $_REQUEST['reglamento_a'];
+      $C_REGLAMENTO_B         = $_REQUEST['reglamento_b'];
+      $C_REGLAMENTO_C         = $_REQUEST['reglamento_c'];
       
       
       /*function codAleatorio($length = 5) {
@@ -188,7 +190,7 @@ public function insertCasosEspeciales(){
       
       for ($i=0; $i < count($C_APRENDIZ); $i++){
       
-      $InserData =("INSERT INTO casos_especiales (C_ficha, C_acta, nombre_aprendiz,nombre_its,description,falta,reglamento,reglamento_a) VALUES ('".$C_FICHA[$i]."','".$C_ACTA[$i]."','".$C_APRENDIZ[$i]."','".$C_INSTRUCTOR[$i]."','".$C_DESCRIPCION[$i]."','".$C_FALTA[$i]."','".$C_REGLAMENTO[$i]."','".$C_REGLAMENTO_A[$i]."')");
+      $InserData =("INSERT INTO casos_especiales (C_ficha, C_acta, nombre_aprendiz,nombre_its,description,falta,reglamento,reglamento_a,reglamento_b,reglamento_c) VALUES ('".$C_FICHA[$i]."','".$C_ACTA[$i]."','".$C_APRENDIZ[$i]."','".$C_INSTRUCTOR[$i]."','".$C_DESCRIPCION[$i]."','".$C_FALTA[$i]."','".$C_REGLAMENTO[$i]."','".$C_REGLAMENTO_A[$i]."','".$C_REGLAMENTO_B[$i]."','".$C_REGLAMENTO_C[$i]."')");
       $resultadoInsertUser = mysqli_query($con, $InserData);
         
         }
