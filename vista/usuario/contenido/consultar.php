@@ -269,7 +269,7 @@
   ($this->modelo->obtenerAnteriores($_GET['ficha'], $_GET['acta_contador']) as $r):?>
     <tr>
     <td><?=$r->A_aprendiz?></td>
-      <td><?=$r->A_instructor?></td>
+      <td><?=$r->A_medida?></td>
       <td><?=$r->A_descripcion?></td>
       <td><?=$r->A_cumplimiento?></td>
   </tr>
@@ -302,9 +302,14 @@
 <table class="table" id="tabla">
   <thead class="thead-dark">
     <tr>
-      <th scope="col">   <i class="fa-solid fa-list-ol"></i>nombre </th>
-      <th scope="col">  <i class="fa-solid fa-hashtag"></i>instructor</th>
-      <th scope="col">   <i class="fa-solid fa-calendar"></i>Descripción</th>
+      <th scope="col">nombre </th>
+      <th scope="col">instructor</th>
+      <th scope="col">Descripción</th>
+      <th scope="col">Falta</th>
+      <th scope="col">Reglamento</th>
+      <th scope="col">Reglamento</th>
+      <th scope="col">Reglamento</th>
+      <th scope="col">Reglamento</th>
       </tr>
   </thead>
   <tbody>
@@ -317,6 +322,11 @@
         <td> <?= $particulares->getNombre_aprendiz()?></td>
         <td> <?= $particulares->getNombre_its() ?> </td>
         <td> <?= $particulares->getDescription() ?> </td>
+        <td> <?= $particulares->getFalta() ?> </td>
+        <td> <?= $particulares->getReglamento() ?> </td>
+        <td> <?= $particulares->getReglamento_a() ?> </td>
+        <td> <?= $particulares->getReglamento_b() ?> </td>
+        <td> <?= $particulares->getReglamento_c() ?> </td>
 
 
 
@@ -365,9 +375,8 @@
   <thead class="thead-dark">
     <tr>
       <th scope="col">   <i class="fa-solid fa-list-ol"></i>Aprendiz</th>
-      <th scope="col">  <i class="fa-solid fa-hashtag"></i>Instructor</th>
+      <th scope="col">  <i class="fa-solid fa-hashtag"></i>Medida</th>
       <th scope="col">   <i class="fa-solid fa-calendar"></i>Descripción</th>
-      <th scope="col">   <i class="fa-solid fa-calendar"></i>Cumplimiento</th>
       </tr>
   </thead>
   <tbody>
@@ -378,9 +387,8 @@
 
         <tr>
         <td> <?= $conclusiones->getAprendiz()?></td>
-        <td> <?= $conclusiones->getInstructor() ?> </td>
-        <td> <?= $conclusiones->getDescripcion() ?> </td>
-        <td> <?= $conclusiones->getCumplimiento() ?> </td>
+        <td> <?= $conclusiones->getMedida() ?> </td>
+        <td> <?= $conclusiones->getDescripcion_m() ?> </td>
 
 
     

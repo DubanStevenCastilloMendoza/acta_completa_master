@@ -261,7 +261,7 @@ public function insertarCasosAnteriores(){
     
     for ($i=0; $i < count($A_APRENDIZ); $i++){
     
-    $InserData =("INSERT INTO  casos_anteriores (A_ficha,A_contador,A_acta,A_aprendiz,A_instructor,A_medida,A_cumplimiento) VALUES ('".$A_FICHA[$i]."','".$A_CONTADOR[$i]."','".$A_ACTA[$i]."','".$A_APRENDIZ[$i]."','".$A_MEDIDA[$i]."','".$A_DESCRIPCION[$i]."','".$A_CUMPLIMIENTO[$i]."')");
+    $InserData =("INSERT INTO  casos_anteriores (A_ficha,A_contador,A_acta,A_aprendiz,A_medida,A_descripcion,A_cumplimiento) VALUES ('".$A_FICHA[$i]."','".$A_CONTADOR[$i]."','".$A_ACTA[$i]."','".$A_APRENDIZ[$i]."','".$A_MEDIDA[$i]."','".$A_DESCRIPCION[$i]."','".$A_CUMPLIMIENTO[$i]."')");
     $resultadoInsertUser = mysqli_query($con, $InserData);
       
       }
@@ -1096,6 +1096,64 @@ public function setDescription($description)
     return $this;
 }
 
+public function getFalta()
+{
+    return $this->falta;
+}
+
+public function setFalta($falta)
+{
+    $this->falta = $falta;
+
+    return $this;
+}
+
+public function getReglamento()
+{
+    return $this->reglamento;
+}
+
+public function setReglamento($reglamento)
+{
+    $this->reglamento = $reglamento;
+
+    return $this;
+}
+
+public function getReglamento_a()
+{
+    return $this->reglamento_a;
+}
+
+public function setReglamento_a($reglamento_a)
+{
+    $this->reglamento_a = $reglamento_a;
+
+    return $this;
+}
+public function getReglamento_b()
+{
+    return $this->reglamento_b;
+}
+
+public function setReglamento_b($reglamento_b)
+{
+    $this->reglamento_b = $reglamento_b;
+
+    return $this;
+}
+
+public function getReglamento_c()
+{
+    return $this->reglamento_c;
+}
+
+public function setReglamento_c($reglamento_c)
+{
+    $this->reglamento_c = $reglamento_c;
+
+    return $this;
+}
 
 /*conclusiones*/
 public function getNf_ficha()
@@ -1136,14 +1194,14 @@ public function setAprendiz($Aprendiz)
     return $this;
 }
 
-public function getInstructor()
+public function getMedida()
 {
-    return $this->instructor;
+    return $this->medida;
 }
 
-public function setInstructor($instructor)
+public function setMedida($medida)
 {
-    $this->instructor = $instructor;
+    $this->medida = $medida;
 
     return $this;
 }
@@ -1151,14 +1209,14 @@ public function setInstructor($instructor)
 
 
 
-public function getDescripcion()
+public function getDescripcion_m()
 {
-    return $this->descripcion;
+    return $this->descripcion_m;
 }
 
-public function setDescricion($descripcion)
+public function setDescricion_m($descripcion_m)
 {
-    $this->descripcion = $descripcion;
+    $this->descripcion_m = $descripcion_m;
 
     return $this;
 }

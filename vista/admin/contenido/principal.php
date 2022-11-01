@@ -431,7 +431,7 @@ $("#table tr:last").remove();
   </select>
 </td>
   <td><select name="reglamento[]" id='reglamento' class="parti" type="text"  oninput="maxlengthNumber(this);" required  class="" >
-      <option selected>Seleccione</option>
+      <option selected>N/A</option>
   <?php foreach($reca as $reg): ?>
  
     <option value="<?=$reg->getNombre_falta()?>" <?=$reg->getId_regla() == $reg->getId_regla() ? 
@@ -441,7 +441,7 @@ $("#table tr:last").remove();
 </select></td>
 <!--regla 2-->
 <td>  <select name="reglamento_a[]" id='reglamento_a' class="parti" type="text"  oninput="maxlengthNumber(this);" required  class="" >
-      <option selected>Seleccione</option>
+      <option selected>N/A</option>
   <?php foreach($reca as $reg): ?>
  
     <option value="<?=$reg->getNombre_falta()?>" <?=$reg->getId_regla() == $reg->getId_regla() ? 
@@ -451,7 +451,7 @@ $("#table tr:last").remove();
 </select></td>
 <!--regla 3-->
 <td>  <select name="reglamento_b[]" id='reglamento_b' class="parti" type="text"  oninput="maxlengthNumber(this);" required  class="" >
-      <option selected>Seleccione</option>
+      <option selected>N/A</option>
   <?php foreach($reca as $reg): ?>
  
     <option value="<?=$reg->getNombre_falta()?>" <?=$reg->getId_regla() == $reg->getId_regla() ? 
@@ -461,7 +461,7 @@ $("#table tr:last").remove();
 </select></td>
 <!--regla 4-->
 <td>  <select name="reglamento_c[]" id='reglamento_c' class="parti" type="text"  oninput="maxlengthNumber(this);" required  class="" >
-      <option selected>Seleccione</option>
+      <option selected>N/A</option>
   <?php foreach($reca as $reg): ?>
  
     <option value="<?=$reg->getNombre_falta()?>" <?=$reg->getId_regla() == $reg->getId_regla() ? 
@@ -485,7 +485,7 @@ $("#table tr:last").remove();
   </select>
   </td>
   <td>  <select name="reglamento[]" id='reglamento' class="parti" type="text"  oninput="maxlengthNumber(this);" required  class="" >
-      <option selected>Seleccione</option>
+      <option selected>N/A</option>
   <?php foreach($reca as $reg): ?>
  
     <option value="<?=$reg->getNombre_falta()?>" <?=$reg->getId_regla() == $reg->getId_regla() ? 
@@ -494,7 +494,7 @@ $("#table tr:last").remove();
     <?php endforeach;?>
 </select></td>
 <td>  <select name="reglamento_a[]" id='reglamento_a' class="parti" type="text"  oninput="maxlengthNumber(this);" required  class="" >
-      <option selected>Seleccione</option>
+      <option selected>N/A</option>
   <?php foreach($reca as $reg): ?>
  
     <option value="<?=$reg->getNombre_falta()?>" <?=$reg->getId_regla() == $reg->getId_regla() ? 
@@ -504,7 +504,7 @@ $("#table tr:last").remove();
 </select></td>
 <!--regla 3-->
 <td>  <select name="reglamento_b[]" id='reglamento_b' class="parti" type="text"  oninput="maxlengthNumber(this);" required  class="" >
-      <option selected>Seleccione</option>
+      <option selected>N/A</option>
   <?php foreach($reca as $reg): ?>
  
     <option value="<?=$reg->getNombre_falta()?>" <?=$reg->getId_regla() == $reg->getId_regla() ? 
@@ -514,7 +514,7 @@ $("#table tr:last").remove();
 </select></td>
 <!--regla 4-->
 <td>  <select name="reglamento_c[]" id='reglamento_c' class="parti" type="text"  oninput="maxlengthNumber(this);" required  class="" >
-      <option selected>Seleccione</option>
+      <option selected>N/A</option>
   <?php foreach($reca as $reg): ?>
  
     <option value="<?=$reg->getNombre_falta()?>" <?=$reg->getId_regla() == $reg->getId_regla() ? 
@@ -537,7 +537,7 @@ $("#table tr:last").remove();
   </select>
   </td>
   <td>  <select name="reglamento[]" id='reglamento' class="parti" type="text"  oninput="maxlengthNumber(this);" required  class="" >
-      <option selected>Seleccione</option>
+      <option selected>N/A</option>
   <?php foreach($reca as $reg): ?>
  
     <option value="<?=$reg->getNombre_falta()?>" <?=$reg->getId_regla() == $reg->getId_regla() ? 
@@ -546,7 +546,7 @@ $("#table tr:last").remove();
     <?php endforeach;?>
 </select></td>
 <td>  <select name="reglamento_a[]" id='reglamento_a' class="parti" type="text"  oninput="maxlengthNumber(this);" required  class="" >
-      <option selected>Seleccione</option>
+      <option selected>N/A</option>
   <?php foreach($reca as $reg): ?>
  
     <option value="<?=$reg->getNombre_falta()?>" <?=$reg->getId_regla() == $reg->getId_regla() ? 
@@ -556,7 +556,7 @@ $("#table tr:last").remove();
 </select></td>
 <!--regla 3-->
 <td>  <select name="reglamento_b[]" id='reglamento_b' class="parti" type="text"  oninput="maxlengthNumber(this);" required  class="" >
-      <option selected>Seleccione</option>
+      <option selected>N/A</option>
   <?php foreach($reca as $reg): ?>
  
     <option value="<?=$reg->getNombre_falta()?>" <?=$reg->getId_regla() == $reg->getId_regla() ? 
@@ -566,7 +566,7 @@ $("#table tr:last").remove();
 </select></td>
 <!--regla 4-->
 <td>  <select name="reglamento_c[]" id='reglamento_c' class="parti" type="text"  oninput="maxlengthNumber(this);" required  class="" >
-      <option selected>Seleccione</option>
+      <option selected>N/A</option>
   <?php foreach($reca as $reg): ?>
  
     <option value="<?=$reg->getNombre_falta()?>" <?=$reg->getId_regla() == $reg->getId_regla() ? 
@@ -678,7 +678,7 @@ $("#table3 tr:last").remove();
 <td><input class="parti" type="hidden" name="q_acta[]"  id="#_acta" placeholder="acta " required value="<?=$zz+1?>"/> </td>
 <td><input class="parti" type="text" name="Aprendiz[]"  id="Aprendiz" placeholder="Aprendiz " required /> </td>
 <td>  <select name="medida[]" id='medida' class="parti" type="text"  oninput="maxlengthNumber(this);" required  class="" >
-      <option selected>Seleccione</option>
+      <option selected>N/A</option>
   <?php foreach($medida as $med): ?>
  
     <option value="<?=$med->getMedida_formativa()?>" <?=$med->getId_medida() == $med->getId_medida() ? 
@@ -686,8 +686,8 @@ $("#table3 tr:last").remove();
      <?=$med->getMedida_formativa()?> </option>
     <?php endforeach;?>
 </select></td>
-<td>  <select name="descripcion_m[]" id='descripcion_m'  class="parti" type="text"  oninput="maxlengthNumber(this);" required  class="" >
-      <option selected>Seleccione</option>
+<td>  <select name="descripcion_m[]" id='descripcion_m' class="select" type="text"  oninput="maxlengthNumber(this);" required  class="" >
+      <option selected>N/A</option>
   <?php foreach($medida as $med): ?>
  
     <option value="<?=$med->getDescripcion_medida()?>" <?=$med->getId_medida() == $med->getId_medida() ? 
@@ -703,7 +703,7 @@ $("#table3 tr:last").remove();
 <td><input class="parti" type="hidden" name="q_acta[]"  id="#_acta" placeholder="acta " required value="<?=$zz+1?>"/> </td>
 <td><input class="parti" type="text" name="Aprendiz[]"  id="Aprendiz" placeholder="Aprendiz " required /> </td>
 <td>  <select name="medida[]" id='medida' class="parti" type="text"  oninput="maxlengthNumber(this);" required  class="" >
-      <option selected>Seleccione</option>
+      <option selected>N/A</option>
   <?php foreach($medida as $med): ?>
  
     <option value="<?=$med->getMedida_formativa()?>" <?=$med->getId_medida() == $med->getId_medida() ? 
@@ -711,8 +711,8 @@ $("#table3 tr:last").remove();
      <?=$med->getMedida_formativa()?> </option>
     <?php endforeach;?>
 </select></td>
-<td>  <select name="descripcion_m[]" id='descripcion_m'  class="parti" type="text"  oninput="maxlengthNumber(this);" required  class="" >
-      <option selected>Seleccione</option>
+<td>  <select name="descripcion_m[]" id='descripcion_m'  class="select" type="text"  oninput="maxlengthNumber(this);" required  class="" >
+      <option selected>N/A</option>
   <?php foreach($medida as $med): ?>
  
     <option value="<?=$med->getDescripcion_medida()?>" <?=$med->getId_medida() == $med->getId_medida() ? 
@@ -728,8 +728,8 @@ $("#table3 tr:last").remove();
 <td><input class="parti" type="hidden" name="n_ficha[]"  id="n_ficha" placeholder="ficha " required value="<?=$p->getN_ficha()?>"/> </td>
 <td><input class="parti" type="hidden" name="q_acta[]"  id="#_acta" placeholder="acta " required value="<?=$zz+1?>"/> </td>
 <td><input class="parti" type="text" name="Aprendiz[]"  id="Aprendiz" placeholder="Aprendiz " required /> </td>
-<td>  <select name="medida[]" id='medida' class="parti" type="text"  oninput="maxlengthNumber(this);" required  class="" >
-      <option selected>Seleccione</option>
+<td>  <select name="medida[]" id='medida'  class="parti" type="text"  oninput="maxlengthNumber(this);" required  class="" >
+      <option selected>N/A</option>
   <?php foreach($medida as $med): ?>
  
     <option value="<?=$med->getMedida_formativa()?>" <?=$med->getId_medida() == $med->getId_medida() ? 
@@ -737,8 +737,8 @@ $("#table3 tr:last").remove();
      <?=$med->getMedida_formativa()?> </option>
     <?php endforeach;?>
 </select></td>
-<td>  <select name="descripcion_m[]" id='descripcion_m'  class="parti" type="text"  oninput="maxlengthNumber(this);" required  class="" >
-      <option selected>Seleccione</option>
+<td>  <select name="descripcion_m[]" id='descripcion_m'  class="select" type="text"  oninput="maxlengthNumber(this);" required  class="" >
+      <option selected>N/A</option>
   <?php foreach($medida as $med): ?>
  
     <option value="<?=$med->getDescripcion_medida()?>" <?=$med->getId_medida() == $med->getId_medida() ? 
@@ -778,7 +778,7 @@ nuevaFila+="<td><input class='parti' type='hidden' name='c_contador[]'  id='acta
 "<td><input class='parti' type='hidden' name='q_acta[]'  id='#_acta' placeholder='acta"+ " ' required value='<?=$zz+1?>'/> </td>"+
 "<td><input class='parti' type='text' name='Aprendiz[]'  id='Aprendiz' placeholder='Aprendiz"+ " ' required /> </td>"+
 "<td>  <select name='medida[]' id='medida' class='parti' type='text'  oninput='maxlengthNumber(this);' required  class='' ><option selected>Seleccione</option><?php foreach($medida as $med): ?><option value='<?=$med->getMedida_formativa()?>' <?=$med->getId_medida() == $med->getId_medida() ? '' : ''?> ><?=$med->getMedida_formativa()?> </option><?php endforeach;?></select></td>"+
-"<td>  <select name='descripcion_m[]' id='descripcion_m'  class='parti' type='text'  oninput='maxlengthNumber(this);' required  class='' ><option selected>Seleccione</option><?php foreach($medida as $med): ?><option value='<?=$med->getDescripcion_medida()?>' <?=$med->getId_medida() == $med->getId_medida() ? '' : ''?> > <?=$med->getDescripcion_medida()?> </option><?php endforeach;?></select></td>"+
+"<td>  <select name='descripcion_m[]' id='descripcion_m'  class='select' type='text'  oninput='maxlengthNumber(this);' required  class='' ><option selected>Seleccione</option><?php foreach($medida as $med): ?><option value='<?=$med->getDescripcion_medida()?>' <?=$med->getId_medida() == $med->getId_medida() ? '' : ''?> > <?=$med->getDescripcion_medida()?> </option><?php endforeach;?></select></td>"+
 "<td> <select   name='cumplimiento[]' id='cumplimiento'  style='visibility:hidden' class='parti' >  <option value='N/A'>N/A</option>  <option value='Cumplio'>Cumplio</option>  <option value='No cumplio'>No cumplio</option></select></td>";
 // Añadimos una columna con el numero total de columnas.
 // Añadimos uno al total, ya que cuando cargamos los valores para la

@@ -148,4 +148,15 @@ tr .form-control{
 .table{
     padding: 20px;
 }
+#table2 .select{
+    width: 800px;
+    border: 1px solid #ff671d;
+    border-radius: 5px;
+    margin:5px;
+    height: 58px;
+    text-align: left;
+    font-size: 14px;
+}
+
+
 
