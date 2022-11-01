@@ -9,6 +9,8 @@ require_once "modelo/particulares.php";
 require_once "modelo/funcionario.php";
 require_once "modelo/casos_anteriores.php";
 require_once "modelo/reglamento.php";
+require_once "modelo/medida.php";
+
 
 class ActaController{
     private $modelo;
@@ -249,6 +251,9 @@ class ActaController{
 
         $reg = new reglamento();
         $reca = $reg->obtenerReglamento();
+
+        $med = new medidaF();
+        $medida = $med->obtenermedida_formativa();
        
        
         if(isset($_GET['id'])){

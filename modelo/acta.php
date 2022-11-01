@@ -213,8 +213,8 @@ public function insertarConclusiones(){
     $FICHA      = $_REQUEST['n_ficha'];
     $N_ACTA      = $_REQUEST['q_acta'];
     $APRENDIZ       = $_REQUEST['Aprendiz'];
-    $INSTRUCTOR    = $_REQUEST['instructor'];
-    $DESCRIPCION         = $_REQUEST['descripcion'];
+    $MEDIDA    = $_REQUEST['medida'];
+    $DESCRIPCION_M         = $_REQUEST['descripcion_m'];
     $CUMPLIMIENTO         = $_REQUEST['cumplimiento'];
     
     
@@ -226,7 +226,7 @@ public function insertarConclusiones(){
     
     for ($i=0; $i < count($APRENDIZ); $i++){
     
-    $InserData =("INSERT INTO conclusiones (c_contador,n_ficha, q_acta, Aprendiz,instructor,descripcion,cumplimiento) VALUES ('".$C_CONTADOR[$i]."','".$FICHA[$i]."','".$N_ACTA[$i]."','".$APRENDIZ[$i]."','".$INSTRUCTOR[$i]."','".$DESCRIPCION[$i]."','".$CUMPLIMIENTO[$i]."')");
+    $InserData =("INSERT INTO conclusiones (c_contador,n_ficha, q_acta, Aprendiz,medida,descripcion_m,cumplimiento) VALUES ('".$C_CONTADOR[$i]."','".$FICHA[$i]."','".$N_ACTA[$i]."','".$APRENDIZ[$i]."','".$MEDIDA[$i]."','".$DESCRIPCION_M[$i]."','".$CUMPLIMIENTO[$i]."')");
     $resultadoInsertUser = mysqli_query($con, $InserData);
       
       }
@@ -248,7 +248,7 @@ public function insertarCasosAnteriores(){
     $A_CONTADOR      = $_REQUEST['A_contador'];
     $A_ACTA      = $_REQUEST['A_acta'];
     $A_APRENDIZ       = $_REQUEST['A_aprendiz'];
-    $A_INSTRUCTOR    = $_REQUEST['A_instructor'];
+    $A_MEDIDA    = $_REQUEST['A_medida'];
     $A_DESCRIPCION         = $_REQUEST['A_descripcion'];
     $A_CUMPLIMIENTO         = $_REQUEST['A_cumplimiento'];
     
@@ -261,7 +261,7 @@ public function insertarCasosAnteriores(){
     
     for ($i=0; $i < count($A_APRENDIZ); $i++){
     
-    $InserData =("INSERT INTO  casos_anteriores (A_ficha,A_contador,A_acta,A_aprendiz,A_instructor,A_descripcion,A_cumplimiento) VALUES ('".$A_FICHA[$i]."','".$A_CONTADOR[$i]."','".$A_ACTA[$i]."','".$A_APRENDIZ[$i]."','".$A_INSTRUCTOR[$i]."','".$A_DESCRIPCION[$i]."','".$A_CUMPLIMIENTO[$i]."')");
+    $InserData =("INSERT INTO  casos_anteriores (A_ficha,A_contador,A_acta,A_aprendiz,A_instructor,A_medida,A_cumplimiento) VALUES ('".$A_FICHA[$i]."','".$A_CONTADOR[$i]."','".$A_ACTA[$i]."','".$A_APRENDIZ[$i]."','".$A_MEDIDA[$i]."','".$A_DESCRIPCION[$i]."','".$A_CUMPLIMIENTO[$i]."')");
     $resultadoInsertUser = mysqli_query($con, $InserData);
       
       }

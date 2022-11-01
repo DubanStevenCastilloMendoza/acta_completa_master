@@ -25,10 +25,11 @@ if(isset($_POST['save_excel_data'])){
 
                 if($count > 0)
                 {
-                    $nombre_falta =  $row['0'];
+                    $medida_formativa =  $row['0'];
+                    $descripcion_medida =  $row['1'];
               
     
-                  $faltas= "INSERT INTO reglamento (nombre_falta) VALUES ('$nombre_falta')";
+                  $faltas= "INSERT INTO medida_formativa (medida_formativa, descripcion_medida) VALUES ('$medida_formativa','$descripcion_medida')";
                   $result = mysqli_query($con, $faltas);
                   $msg = true;
                 }

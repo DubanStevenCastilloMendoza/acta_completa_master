@@ -194,6 +194,18 @@ public function setDescription($description)
     return $this;
 }
 
+public function getFalta()
+{
+    return $this->falta;
+}
+
+public function setFalta($falta)
+{
+    $this->falta = $falta;
+
+    return $this;
+}
+
 
 
 }
