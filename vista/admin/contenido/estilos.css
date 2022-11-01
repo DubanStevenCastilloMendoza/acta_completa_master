@@ -158,5 +158,16 @@ tr .form-control{
     font-size: 14px;
 }
 
+#table3 .selectt{
+    width: 100px;
+    border: 1px solid #ff671d;
+    border-radius: 5px;
+    margin:5px;
+    height: 58px;
+    text-align: left;
+    font-size: 14px;
+    }
+    
+
 
 
