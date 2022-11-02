@@ -114,14 +114,16 @@
 
   <div  class="card">
       <div class="">
-
+      <br>
+    <center>
+    <h3>Participantes:</h3>
+    </center>
 <br>
 
 <table class="table" id="tabla">
   <thead class="thead-dark">
     <tr>
       <th scope="col">   <i class="fa-solid fa-list-ol"></i>nombre </th>
-      <th scope="col">  <i class="fa-solid fa-hashtag"></i>apellido  </th>
       <th scope="col">   <i class="fa-solid fa-calendar"></i> cargo</th>
       <th scope="col">  <i class="fa-solid fa-gear"></i>Asistencia </th>
       </tr>
@@ -134,7 +136,6 @@
 
         <tr>
         <td> <?= $participantes->getNombre()?></td>
-        <td> <?= $participantes->getApellido() ?> </td>
         <td> <?= $participantes->getCargo() ?> </td>
         <td> <?= $participantes->getAsistencia() ?> </td>
 
@@ -166,7 +167,7 @@
      
      <div  class="card">
       <div class="">
-
+      <h5>2.Informacion conformacion de la ficha</h5>
 <br>
     <table class="table" id="tabla">
      
@@ -213,45 +214,116 @@
    
 
   </div>
+  <br>
+  <div class="ro">
+  <h4>Verificación del acta(s) anteriores(es)</h4>
+    <?php foreach
+  ($this->modelo->obtenerVerificacion($_GET['ficha'], $_GET['acta_contador']) as $tra):?>
+   <p>Acta Comité No.<?=$tra->getN_acta()?> - <?=$tra->getFecha()?></p>
+
+  <?php endforeach; ?>
+  <p></p>
+</div>
+<br>
   <p>
 
-  <div class="row">
-    <div class="col">
-    <br>
-      <H5 for="">Casos anterior comité</H5>
-      <textarea name="casos_ant" id='casos_ant' type="text" cols="60" rows="10" oninput="maxlengthNumber(this);" required  class="" placeholder="Casos anterior comité"></textarea >
+  <div  class="row">
+      <div class="">
+        <h4>3.Casos anterior al comité</h4>
+
+<br>
+
+
+
+<table class="table" id="tabla">
+<thead class="thead-dark">
+    <tr>
+      <th scope="col">   <i class="fa-solid fa-list-ol"></i>nombre </th>
+      <th scope="col">  <i class="fa-solid fa-hashtag"></i>instructor</th>
+      <th scope="col">   <i class="fa-solid fa-calendar"></i>Descripción</th>
+      <th scope="col">   <i class="fa-solid fa-calendar"></i>Cumplimiento</th>
+      </tr>
+  </thead>
+  <tbody>
+
+  <?php foreach
+  ($this->modelo->obtenerAnteriores($_GET['ficha'], $_GET['acta_contador']) as $r):?>
+    <tr>
+    <td><?=$r->A_aprendiz?></td>
+      <td><?=$r->A_medida?></td>
+      <td><?=$r->A_descripcion?></td>
+      <td><?=$r->A_cumplimiento?></td>
+  </tr>
+
+  <?php endforeach; ?>
+    </tr>
+</tbody>
+</table>
     </div>
    
 
   </div>
 
+
+
 <p>
 
 
+<div  class="card">
+      <div class="">
+        <h5>Casos particulares:</h5>
 
-<p>
+<br>
 
-<div class="row">
-  <div class="col">
-  <br>
-    <label for="">Casos anterior comité</label>
-    <textarea name="casos_ant" id='casos_ant' type="text" maxlength="" cols="60" rows="10" oninput="maxlengthNumber(this);" required  class="" placeholder="objetivos"><?=$p->getCasos_ant ()?></textarea >
+
+
+<table class="table" id="tabla">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">nombre </th>
+      <th scope="col">instructor</th>
+      <th scope="col">Descripción</th>
+      <th scope="col">Falta</th>
+      <th scope="col">Reglamento</th>
+      <th scope="col">Reglamento</th>
+      <th scope="col">Reglamento</th>
+      <th scope="col">Reglamento</th>
+      </tr>
+  </thead>
+  <tbody>
+
+  <?php 
+    try{
+        foreach($casos as $particulares): ?> 
+
+        <tr>
+        <td> <?= $particulares->getNombre_aprendiz()?></td>
+        <td> <?= $particulares->getNombre_its() ?> </td>
+        <td> <?= $particulares->getDescription() ?> </td>
+        <td> <?= $particulares->getFalta() ?> </td>
+        <td> <?= $particulares->getReglamento() ?> </td>
+        <td> <?= $particulares->getReglamento_a() ?> </td>
+        <td> <?= $particulares->getReglamento_b() ?> </td>
+        <td> <?= $particulares->getReglamento_c() ?> </td>
+
+
+
+    
+    <?php endforeach; 
+    }catch(Exception $e){
+        die($e->getMessage());
+        die("No se pudo listar");
+    }
+    ?>
+    </tr>
+</tbody>
+</table>
+    </div>
+   
+
   </div>
- 
 
-</div>
-<p>
-
-
-<div class="row">
-  <div class="col">
-  <br>
-    <label for="">Casos particulares (Anotaciones Adicionales Comité)</label>
-    <textarea name="casos_part" id='	casos_part' type="text" maxlength="" cols="60" rows="10" oninput="maxlengthNumber(this);" required  class="" placeholder="objetivos"><?=$p->getCasos_part ()?></textarea >
-  </div>
- 
-
-</div>
+  <p>  <p>
 <p>
 
 <div class="row">
@@ -269,12 +341,50 @@
 
 
 
-    <div class="row">
-    <div class="col">
-    <br>
-      <label for="">Conclusiones</label>
-      <textarea name="conclusion" id='conclusion' type="text" maxlength="9000" cols="60" rows="10" oninput="maxlengthNumber(this);" required  class="" ><?=$p->getConclusion ()?> </textarea >
+<div  class="card">
+      <div class="">
+        <h5>Conclusiones:</h5>
+
+<br>
+
+
+
+<table class="table" id="tabla">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">   <i class="fa-solid fa-list-ol"></i>Aprendiz</th>
+      <th scope="col">  <i class="fa-solid fa-hashtag"></i>Medida</th>
+      <th scope="col">   <i class="fa-solid fa-calendar"></i>Descripción</th>
+      </tr>
+  </thead>
+  <tbody>
+
+  <?php 
+    try{
+        foreach($concu as $conclusiones): ?> 
+
+        <tr>
+        <td> <?= $conclusiones->getAprendiz()?></td>
+        <td> <?= $conclusiones->getMedida() ?> </td>
+        <td> <?= $conclusiones->getDescripcion_m() ?> </td>
+
+
+    
+    <?php endforeach; 
+    }catch(Exception $e){
+        die($e->getMessage());
+        die("No se pudo listar");
+    }
+    ?>
+    </tr>
+</tbody>
+</table>
     </div>
+   
+
+  </div>
+
+  <p>  <p>
 
 
     <div class="row">

@@ -80,46 +80,6 @@
 </div>
 </div>
 
-<div  class="card w-75">
-      <div class="card-body" >
-
-      
-
-<center>
-<h1>Subir Excel regla</h1>
-</center>
-
-
-<!--Mensaje de aviso -->
-<?php
-                if(isset($_SESSION['message']))
-                {
-                    echo "<h4>".$_SESSION['message']."</h4>";
-                    unset($_SESSION['message']);
-                }
-                ?>
-
-                <div class="card">
-
-                        <form action="exel/CodeReglamento.php" method="POST" enctype="multipart/form-data">
-
-                            <input type="file" name="import_file" class="form-control" />
-                            <button type="submit" name="save_excel_data" class="bt mt-3" style="background-color: #ff671d; color:white;" >Importar</button>
-
-                        </form>
-
-                </div>
-
-
-
-</div>
-</div>
-
-
-
-
-
-
 
 </center>
 </div>

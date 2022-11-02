@@ -634,8 +634,26 @@ public function obtenerAnteriores($ficha, $acta_contador){
         die ($e->getMessage());
     }
 }
+public function obtenerVerificacion($ficha, $acta_contador){
+    try{ 
+        
+        $query = $this->PDO->prepare("SELECT * FROM acta WHERE ficha= $ficha AND acta_contador < $acta_contador ORDER BY n_acta DESC LIMIT 1;");
+        $query->execute(array($ficha, $acta_contador));
+        return $query->fetchAll(PDO::FETCH_CLASS,__CLASS__);
+    }catch (Exception $e){
+        die ($e->getMessage());
+    }
+}
 
+public function ObtenerCont($ficha){
 
+ 
+
+    $consulta=$this->PDO->prepare("SELECT COUNT(acta_contador) AS cont FROM acta WHERE ficha = $ficha");
+    $consulta->execute();
+     return $consulta->fetch(PDO :: FETCH_OBJ);
+
+}
 
 public function ObtenerConclusiones($ficha){
     try{ 
@@ -668,6 +686,7 @@ public function ObtenerPrueba($ficha){
 
 
 }
+
 
 public function ObtenerCancelado($ficha){
 

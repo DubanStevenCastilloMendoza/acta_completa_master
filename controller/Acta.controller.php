@@ -160,7 +160,8 @@ class ActaController{
 
       $particulares = new particulares(); //?
         $casos = $this->modelo->ObtenerCasosP($_GET["id"]); 
-      
+        $conclusiones = new conclusiones(); //?
+        $concu = $this->modelo->ObtenerConclusiones($_GET["id"]); 
     
       require_once "vista/admin/cabecera/cabecera.php";
       require_once "vista/admin/contenido/editar.php";

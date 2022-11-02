@@ -35,7 +35,7 @@
 
         <td> 
           
-        <a  href="?c=Acta&a=FormCrear&id=<?= $acta->getN_acta()?>&ficha=<?=$acta->getFicha() ?>" type="button" style="background-color: #FF890C;"  class="btn btn-danger" ><i class="fa-solid fa-pen"></i></a > 
+        <a  href="?c=Acta&a=FormCrear&id=<?= $acta->getN_acta()?>&ficha=<?=$acta->getFicha() ?> &acta_contador=<?=$acta->getActa_contador()?>" type="button" style="background-color: #FF890C;"  class="btn btn-danger" ><i class="fa-solid fa-pen"></i></a > 
         <a href="?c=Acta&a=Borrar&id=<?= $acta->getN_acta()?>"  type="button" class="btn btn-danger" ><i class="fa-solid fa-trash-can"></i></a>
         <a   href="?c=Acta&a=FormCrearimp&id=<?= $acta->getN_acta()?>&ficha=<?=$acta->getFicha() ?> &acta_contador=<?=$acta->getActa_contador()?>" type="button" class="btn btn-primary" ><i class="fa-solid fa-eye"></i></a > 
         

@@ -11,6 +11,8 @@
 <input name="id_ficha" id='id_ficha' type="hidden" maxlength="25" oninput="maxlengthNumber(this);" required  class="form-control" value="<?=$p->getId_ficha()?>">
 <div class="card w-100">
 <div class="card-body">
+<?php $a=$this->modelo->ObtenerCont($_GET['ficha']) ?>
+ <H5>ACTAS CREADAS: <?=$a->cont?></H5>
 <form action="?c=acta&a=save" id="acta" name="acta" class="sign-up-form" method="post">
   <br>
   <center>
@@ -120,8 +122,8 @@
     <div class="row">
     <div class="col">
     <br>
-      <H5 for="">  Agenda o puntos a desarrollar:</H5>   
-      <textarea name="agenda" id='agenda' type="text" placeholder="Agenda o puntos a desarrollar"  cols="60" rows="10" oninput="maxlengthNumber(this);" required  class="" value="">Comité de evaluación y seguimiento aprendices ficha - <?=$p->getN_ficha()?> de <?=$p->getPrograma()?>
+      <h3 for="">      Agenda o puntos a desarrollar:</h3>   
+      <textarea name="agenda" id='agenda' type="text" placeholder="Agenda o puntos a desarrollar"  cols="60" rows="10" oninput="maxlengthNumber(this);" required  class="" value="">1.Comité de evaluación y seguimiento aprendices ficha - <?=$p->getN_ficha()?> de <?=$p->getPrograma()?>
     </textarea >
     </div>
 <div>
@@ -130,7 +132,7 @@
     <div class="row">
     <div class="col">
     <br>
-    <H5 for="">  Objetivos</H5>
+    <h3 for="">        Objetivos</h3>
       <textarea name="objetivos" id='objetivos' type="text"  cols="60" rows="10" oninput="maxlengthNumber(this);" required  class="" value="">Se reúne el ________________________________________, como instancia competente para investigar y analizar los casos tanto académicos como disciplinarios de los aprendices de la ficha- <?=$p->getN_ficha()?> de <?=$p->getPrograma()?>.</textarea >
     </div>
   </div>
@@ -176,7 +178,7 @@ endforeach;
     <div class="participantes">
     <br>
     <center>
-    <h3>Participantes:</h3>
+    <h3>1.Participantes:</h3>
     </center>
    
     <div class="part">
@@ -305,8 +307,9 @@ $("#table tr:last").remove();
   <div class="row">
     <div class="col">
     <br>
-      <H5 for="">Información conformación de la ficha</H5>
-   
+    <center>
+      <h3 for="">2.Información conformación de la ficha</h3>
+      </center>
      <div  class="">
       <div class="">
 <br>
@@ -356,10 +359,20 @@ $("#table tr:last").remove();
 
   </div>
   <p>
+  <br>
+  <div class="ro">
+  <h3>3.Verificación del acta(s) anteriores(es)</h3>
+    <?php foreach
+  ($this->modelo->obtenerVerificacion($_GET['ficha'], $_GET['acta_contador']) as $tra):?>
+   <p>Acta Comité No.<?=$tra->getN_acta()?> - <?=$tra->getFecha()?></p>
 
+  <?php endforeach; ?>
+  <p></p>
+</div>
+<br>
   <div  class="row">
       <div class="">
-        <h4>3.Casos anterior al comité</h4>
+        <h3>4.Casos anterior al comité</h3>
 
 <br>
 
@@ -413,7 +426,7 @@ $("#table tr:last").remove();
     <div style="">
 
 <center>
-<h2>Casos Particulares</h2>
+<h3>5.Casos Particulares</h3>
 <table class="tablas" id="table3" style="width:100px">
 <tbody >
 <tr>

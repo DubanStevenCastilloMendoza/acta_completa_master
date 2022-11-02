@@ -212,31 +212,31 @@
   
   <tbody>
   <tr>
-    <td style="background-color: rgb(255, 255, 255);"> <H5>TRANSLADO</H5>  </td>
+    <td > <H5>TRANSLADO</H5>  </td>
     <?php $a=$this->modelo->ObtenerTranslado($_GET['ficha']) ?>
-    <td style="background-color: rgb(255, 255, 255);" ><H5><?=$a->Translado ?></H5></td>
+    <td  ><H5><?=$a->Translado ?></H5></td>
     </tr>
     <tr>
-    <td style="background-color: rgb(252, 154, 42);">  <H5>EN FORMACION</H5> </td>
+    <td >  <H5>EN FORMACION</H5> </td>
 
     <?php $b=$this->modelo->ObtenerFormacion($_GET['ficha']) ?>
-    <td style="background-color: rgb(252, 154, 42 );"><H5><?=$b->Formacion ?></H5> 
+    <td ><H5><?=$b->Formacion ?></H5> 
     </tr>
     <tr>
-    <td style="background-color: rgb(255, 255, 255 );"> <H5> CANCELADO  </H5>   </td>
+    <td > <H5> CANCELADO  </H5>   </td>
     <?php $c=$this->modelo->ObtenerCancelado($_GET['ficha']) ?>
-    <td style="background-color: rgb(255, 255, 255 );"><H5><?=$c->Cancelado ?></H5> </td>
+    <td ><H5><?=$c->Cancelado ?></H5> </td>
     </tr>
     <tr>
-    <td style="background-color: rgb(252, 154, 42 );">  <H5>RETIRO VOLUNTARIO</H5> </td>
+    <td >  <H5>RETIRO VOLUNTARIO</H5> </td>
 
     <?php $d=$this->modelo->ObtenerRetiro($_GET['ficha']) ?>
-    <td style="background-color: rgb(252, 154, 42);"><H5><?=$d->Retiro ?> </H5>  </td>
+    <td ><H5><?=$d->Retiro ?> </H5>  </td>
     </tr>
     <tr>
-    <td style="background-color: rgb(255, 255, 255);"> <H5>SUMA TOTAL</H5></td>
+    <td > <H5>SUMA TOTAL</H5></td>
 
-    <td style="background-color: rgb(255, 255, 255);"><H5><?=  $total=$d->Retiro + $c->Cancelado + $b->Formacion + $a->Translado ?></H5> </td>
+    <td ><H5><?=  $total=$d->Retiro + $c->Cancelado + $b->Formacion + $a->Translado ?></H5> </td>
     </tr>
   </tbody>
 </table>
@@ -246,6 +246,17 @@
 
   </div>
 <p>
+<br>
+  <div class="ro">
+  <h4>Verificación del acta(s) anteriores(es)</h4>
+    <?php foreach
+  ($this->modelo->obtenerVerificacion($_GET['ficha'], $_GET['acta_contador']) as $tra):?>
+   <p>Acta Comité No.<?=$tra->getN_acta()?> - <?=$tra->getFecha()?></p>
+
+  <?php endforeach; ?>
+  <p></p>
+</div>
+<br>
 <div  class="row">
       <div class="">
         <h4>3.Casos anterior al comité</h4>
