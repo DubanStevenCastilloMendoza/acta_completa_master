@@ -13,23 +13,23 @@
 <div  class="card">
       <div class="card-body" >
 <br>
-<input type="text" class="buscador" style="width:20%" id="search" placeholder="Ficha, Programa, tipo formacion">
-    <table class="table-bordered table pull-right" id="mytable">
+    <table class="table" id="tabla">
       
   <thead class="thead-dark">
-    <tr>
+  <tr>
      
-      <center> 
-      <th scope="col">Ficha</th> 
-      </center>
-      <th scope="col">Tipo</th> 
-      <th scope="col">Documento</th>
-      <th scope="col">Nombre</th> 
-      <th scope="col"></i>Apellido</th>
-      <th scope="col"></i>Correo</th>
-      <th scope="col">Estado</th>
-      <center><th scope="col">Opciones</th> </center>
-      </tr>
+     <center> 
+     <th scope="col">Ficha</th> 
+     </center>
+     <th scope="col">Tipo</th> 
+     <th scope="col">Documento</th>
+     <th scope="col">Nombre</th> 
+     <th scope="col"></i>Apellido</th>
+     <th scope="col"></i>Correo</th>
+     <th scope="col">Estado</th>
+     <center><th scope="col">Editar</th> </center>
+     <center><th scope="col">Eliminar</th> </center>
+     </tr>
   </thead>
   <tbody>
     
@@ -47,7 +47,8 @@
 
 
 
-      <td><a   href="?c=Aprendiz&a=FormCrear&id=<?=$r->id_aprendiz?>" type="button" style="background-color: #ff671d;"  id="bt" class="btn " ><i class="fa-solid fa-pen"></i></a >    <a   href="?c=aprendiz&a=BorrarApre&id_aprendiz=<?=$r->id_aprendiz?>" style="background-color: #ff671d;" id="bt" type="button" class="btn" ><i class="fa-solid fa-trash-can"></i></a></td>
+      <td><a   href="?c=Aprendiz&a=FormCrear&id=<?=$r->id_aprendiz?>" type="button" style="background-color: #ff671d;"  id="bt" class="btn " ><i class="fa-solid fa-pen"></i></a >  </td> 
+      <td> <a   href="?c=aprendiz&a=BorrarApre&id_aprendiz=<?=$r->id_aprendiz?>" style="background-color: #ff671d;" id="bt" type="button" class="btn" ><i class="fa-solid fa-trash-can"></i></a></td>
 
   </tr>
 
@@ -98,7 +99,7 @@ const usu = () => {
 </table>
 
 <script>
-var tabla= document.querySelector("#mytabla");
-var dataTable=new DataTable(mytabla);
+var tabla= document.querySelector("#tabla");
+var dataTable=new DataTable(tabla);
 </script>
 </div>
