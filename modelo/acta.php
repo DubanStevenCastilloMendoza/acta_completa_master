@@ -199,7 +199,36 @@ public function insertCasosEspeciales(){
     
     }
 
+    public function insertarAprendicesDestacados(){
+        $usuario        = "root";
+        $password       = "";
+        $servidor       = "localhost";
+        $basededatos    = "acta_completas";
+        $con            = mysqli_connect($servidor, $usuario, $password) or die("No se ha podido conectar al Servidor");
+        $db             = mysqli_select_db($con, $basededatos) or die("Upps! Error en conectar a la Base de Datos");
+        
 
+        $ACTA_DES      = $_REQUEST['acta_des'];
+        $NOMBRE_DES       = $_REQUEST['nombre_des'];
+        $APELLIDO_DES    = $_REQUEST['apellido_des'];
+      
+        
+        
+        /*function codAleatorio($length = 5) {
+            return substr(str_shuffle(str_repeat($x='0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ', ceil($length/strlen($x)) )),1,$length);
+        }
+        $CODE_REFERENCIA  = codAleatorio();*/
+        
+        
+        for ($i=0; $i < count($NOMBRE_DES); $i++){
+        
+        $InserData =("INSERT INTO aprendices_destacados (acta_des,nombre_des,apellido_des) VALUES ('".$ACTA_DES[$i]."','".$NOMBRE_DES[$i]."','".$APELLIDO_DES[$i]."')");
+        $resultadoInsertUser = mysqli_query($con, $InserData);
+          
+          }
+        
+          header("location:?c=vistas&a=ConsultarFicha");
+    }
 
 public function insertarConclusiones(){
     $usuario        = "root";
@@ -618,6 +647,17 @@ public function casosAnteriores($ficha, $acta_contador){
         
         $query = $this->PDO->prepare("SELECT * FROM conclusiones WHERE n_ficha = $ficha AND c_contador = $acta_contador-1");
         $query->execute(array($ficha, $acta_contador));
+        return $query->fetchAll(PDO::FETCH_CLASS,__CLASS__);
+    }catch (Exception $e){
+        die ($e->getMessage());
+    }
+}
+
+public function ObtenerDestacados($ficha){
+    try{ 
+        
+        $query = $this->PDO->prepare("SELECT * FROM aprendices_destacados where  acta_des = $ficha");
+        $query->execute(array($ficha));
         return $query->fetchAll(PDO::FETCH_CLASS,__CLASS__);
     }catch (Exception $e){
         die ($e->getMessage());
@@ -1346,6 +1386,56 @@ public function setA_cumplimiento($A_cumplimiento)
     return $this;
 }
 
+/*Destacados*/
+public function getId_destacados()
+{
+    return $this->id_destacados;
+}
+
+public function setId_destacados($id_destacados)
+{
+    $this->id_destacados = $id_destacados;
+
+    return $this;
+}
+
+
+public function getActa_des()
+{
+    return $this->acta_des;
+}
+
+public function setActa_des($acta_des)
+{
+    $this->acta_des = $acta_des;
+
+    return $this;
+}
+
+
+public function getNombre_des()
+{
+    return $this->nombre_des;
+}
+
+public function setNombre_des($nombre_des)
+{
+    $this->nombre_des = $nombre_des;
+
+    return $this;
+}
+
+public function getApellido_des()
+{
+    return $this->apellido_des;
+}
+
+public function setApellido_des($apellido_des)
+{
+    $this->apellido_des = $apellido_des;
+
+    return $this;
+}
 
 
 }

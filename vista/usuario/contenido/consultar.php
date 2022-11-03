@@ -248,7 +248,7 @@
 <p>
 <br>
   <div class="ro">
-  <h4>Verificación del acta(s) anteriores(es)</h4>
+  <h4>3.Verificación del acta(s) anteriores(es)</h4>
     <?php foreach
   ($this->modelo->obtenerVerificacion($_GET['ficha'], $_GET['acta_contador']) as $tra):?>
    <p>Acta Comité No.<?=$tra->getN_acta()?> - <?=$tra->getFecha()?></p>
@@ -257,13 +257,15 @@
   <p></p>
 </div>
 <br>
+
 <div  class="row">
       <div class="">
-        <h4>3.Casos anterior al comité</h4>
+        <h4>4.Casos anterior al comité</h4>
 
 <br>
 
-
+  <p>  <p>
+  
 
 <table class="table" id="tabla">
 <thead class="thead-dark">
@@ -296,7 +298,46 @@
 
 
   <p>  <p>
-  
+  <div  class="card">
+      <div class="">
+        <h5>5.Aprendices destacados</h5>
+
+<br>
+
+<p><p>
+
+<table class="table" id="tabla">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">   <i class="fa-solid fa-list-ol"></i>Nombres</th>
+      <th scope="col">   <i class="fa-solid fa-calendar"></i>Apellidos</th>
+
+      </tr>
+  </thead>
+  <tbody>
+
+  <?php 
+    try{
+        foreach($des as $destacados): ?> 
+
+        <tr>
+        <td> <?= $destacados->getNombre_des()?></td>
+        <td> <?= $destacados->getApellido_des() ?> </td>
+    
+    <?php endforeach; 
+    }catch(Exception $e){
+        die($e->getMessage());
+        die("No se pudo listar");
+    }
+    ?>
+    </tr>
+</tbody>
+</table>
+    </div>
+   
+
+  </div>
+
 <p>
 
 <p>
@@ -304,7 +345,7 @@
 
 <div  class="card">
       <div class="">
-        <h5>Casos particulares:</h5>
+        <h5>6.Casos particulares:</h5>
 
 <br>
 

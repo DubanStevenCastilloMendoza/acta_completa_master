@@ -10,6 +10,7 @@ require_once "modelo/funcionario.php";
 require_once "modelo/casos_anteriores.php";
 require_once "modelo/reglamento.php";
 require_once "modelo/medida.php";
+require_once "modelo/destacados.php";
 
 
 class ActaController{
@@ -100,6 +101,7 @@ class ActaController{
         $casos= new acta();
         $conclusiones= new acta();
         $casosAnteriores = new acta();
+        $destacados = new acta();
 
         $acta->setActa_no($_POST['acta_no']);
         $acta->setActa_contador($_POST['acta_contador']);
@@ -127,6 +129,7 @@ class ActaController{
         $casos->insertCasosEspeciales();
         $conclusiones->insertarConclusiones();
         $casosAnteriores->insertarCasosAnteriores();
+        $destacados->insertarAprendicesDestacados();
 
         
 
@@ -162,6 +165,9 @@ class ActaController{
         $casos = $this->modelo->ObtenerCasosP($_GET["id"]); 
         $conclusiones = new conclusiones(); //?
         $concu = $this->modelo->ObtenerConclusiones($_GET["id"]); 
+
+        $destacados = new destacados(); //?
+        $des = $this->modelo->ObtenerDestacados($_GET["id"]); 
     
       require_once "vista/admin/cabecera/cabecera.php";
       require_once "vista/admin/contenido/editar.php";
@@ -194,7 +200,8 @@ class ActaController{
         $anteriores = new probando(); //?
         $anter = $this->modelo->ObtenerPrueba($_GET["id"]); 
        
-  
+        $destacados = new destacados(); //?
+        $des = $this->modelo->ObtenerDestacados($_GET["id"]); 
         
       
         require_once "vista/admin/cabecera/cabecera.php";

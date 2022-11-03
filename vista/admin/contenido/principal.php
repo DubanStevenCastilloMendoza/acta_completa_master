@@ -415,6 +415,94 @@ $("#table tr:last").remove();
   </div>
 
   <p>  <p>
+  <div class="row">
+    <div class="participantes">
+    <br>
+    <center>
+    <h3>5.Aprendices Destacados:</h3>
+    </center>
+   
+    <div class="part">
+
+<center>
+
+<table   class="tablas" id="table5">
+<p>
+<thead class="t-head">
+<p>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">Nombres</th>
+      <th scope="col">Apellidos</th>
+    </tr>
+  </thead>
+  <tbody  class="t-body">
+  <p>
+    <center>
+    <tr id="tr">
+    <input type="hidden"  value=" <?php   $zz = $r->n_acta; ?>">
+  <td><input  class='form-control' type='hidden' name='acta_des[]'  id='acta_des' placeholder='acta'  value="<?=$zz+1?>"/></td>    
+  <td><input  class='parti' type='text' name='nombre_des[]'  id='nombre_des' placeholder='Nombres'  value=""/></td> 
+  <td><input  class='parti' type='text' name='apellido_des[]'  id='apellido_des' placeholder='Apellidos'  value=""/></td>
+  </tr>
+</center>
+<p>
+</tbody>
+</table>
+<br /><br />
+<bootom id="add5" class="bt" style="background-color: #ff671d; color:white;"  >Agregar</bootom>
+<bootom id="del5" class="bt" style="background-color: #ff671d; color:white;">Eliminar</bootom>
+<br /><br />
+
+    </div>
+   
+
+    <script type="text/javascript">
+
+$(document).ready(function(){                                                           
+
+$("#add5").click(function(){
+// Obtenemos el numero de columnas (td) que tiene la primera fila
+// (tr) del id "tabla"
+var tds=$("#table5 tr:first td").length;
+// Obtenemos el total de filas (tr) del id "tabla"
+var trs=$("#table5 tr").length;
+var nuevaFila="<tr>";
+cant = $('#contador-filas').val();
+cant++;
+$('#contador-filas').val(cant)
+nuevaFila+="<td><input class='form-control' type='hidden' name='acta_des[]'  id='acta_des' placeholder='acta"+ " '  value='<?=$zz+1?>'/></td>"+
+"<td><input class='parti' type='text' name='nombre_des[]'  id='nombre' placeholder='nombres"+ " '  value=''/></td>"+
+"<td><input class='parti' type='text' name='apellido_des[]'  id='apellido' placeholder='apellidos"+ " '  value=''/></td>";
+// Añadimos una columna con el numero total de columnas.
+// Añadimos uno al total, ya que cuando cargamos los valores para la
+// columna, todavia no esta añadida
+nuevaFila+="</tr>";
+$("#table5").append(nuevaFila);
+});
+/**
+* Funcion para eliminar la ultima columna de la tabla.
+* Si unicamente queda una columna, esta no sera eliminada
+*/
+$("#del5").click(function(){
+// Obtenemos el total de filas (tr) del id "tabla"
+var trs=$("#table5 tr").length;
+if(trs>0)
+{
+// Eliminamos la ultima fila
+cant--;
+$('#contador-filas').val(cant)
+$("#table5 tr:last").remove();
+
+}
+});
+});
+</script>
+
+  </div>
+  </div>
+
+  <p>  <p>
   
   <p>
 
@@ -426,7 +514,7 @@ $("#table tr:last").remove();
     <div style="">
 
 <center>
-<h3>5.Casos Particulares</h3>
+<h3>6.Casos Particulares</h3>
 <table class="tablas" id="table3" style="width:100px">
 <tbody >
 <tr>
