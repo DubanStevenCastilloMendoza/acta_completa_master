@@ -26,6 +26,7 @@ private  $participantes =null ;
 private  $inf_ficha =null ;
 private  $casos_ant =null ;
 private  $casos_part =null ;
+private  $hechos_actuales =null ;
 private  $desarrollo =null ;
 private  $conclusion=null;
 private  $ficha =null ;
@@ -56,6 +57,7 @@ public function Actualizar(acta $acta){
             inf_ficha=?,
             casos_ant=?,
             casos_part=?,
+            hechos_actuales=?,
             desarrollo=?,
             conclusion=?
             WHERE n_acta=?;
@@ -77,6 +79,7 @@ public function Actualizar(acta $acta){
                      $acta->getInf_ficha(),
                      $acta->getCasos_ant(),
                      $acta->getCasos_part(),
+                     $acta->getHechos_actuales(),
                      $acta->getDesarrollo(),
                      $acta->getConclusion(),
                      $acta->getN_acta()
@@ -449,6 +452,7 @@ public function Obtener($id){
        /*$p ->setInf_ficha($r->inf_ficha);*/
        $p ->setCasos_ant($r->casos_ant);
        $p ->setCasos_part($r->casos_part);
+       $p ->setHechos_actuales($r->hechos_actuales);
        $p ->setDesarrollo($r->desarrollo);
        $p ->setConclusion($r->conclusion);
        $p ->setFicha($r->ficha);
@@ -490,7 +494,7 @@ public function insertarparticipantes()
 public function insertar()
 {
     try{
-    $query = "INSERT INTO acta (acta_no,acta_contador,nom_rev,ciudad,fecha,hora_in,hora_fin,lu_en,direccion,agenda,objetivos,inf_ficha,casos_ant,casos_part,desarrollo,conclusion,ficha,programa) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);";
+    $query = "INSERT INTO acta (acta_no,acta_contador,nom_rev,ciudad,fecha,hora_in,hora_fin,lu_en,direccion,agenda,objetivos,inf_ficha,casos_ant,casos_part,hechos_actuales,desarrollo,conclusion,ficha,programa) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);";
     $this -> PDO-> prepare($query)
                         ->execute(array(
                             $this->acta_no,
@@ -507,6 +511,7 @@ public function insertar()
                             $this->inf_ficha,
                             $this->casos_ant,
                             $this->casos_part,
+                            $this->hechos_actuales,
                             $this->desarrollo,
                             $this->conclusion,
                             $this->ficha,
@@ -975,7 +980,18 @@ public function setCasos_part($casos_part)
 }
 
 
+public function getHechos_actuales()
+{
+    return $this->hechos_actuales;
+}
 
+
+public function setHechos_actuales($hechos_actuales)
+{
+    $this-> hechos_actuales = $hechos_actuales;
+
+    return $this;
+}
 
 public function getDesarrollo()
 {

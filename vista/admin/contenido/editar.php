@@ -362,6 +362,15 @@
   </div>
 
   <p>  <p>
+  <div class="row">
+    <div class="col">
+    <br>
+      <label for="">7.Hechos Actuales:</label>
+      <textarea name="hechos_actuales" id='hechos_actuales' type="text" maxlength="9000"  cols="60" rows="10" oninput="maxlengthNumber(this);" required  class="" value=""><?=$p->getHechos_actuales()?> </textarea >
+    </div>
+   
+
+  </div>
 <p>
 
 <div class="row">

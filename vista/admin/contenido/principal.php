@@ -742,6 +742,14 @@ $("#table3 tr:last").remove();
 
   </div>
   <p>
+  <div class="row">
+    <div class="col">
+    <br>
+    <h3 for="">        7.Hechos Actuales</h3>
+      <textarea name="hechos_actuales" id='hechos_actuales' type="text"  cols="60" rows="10" oninput="maxlengthNumber(this);" required  class="" value=""></textarea >
+    </div>
+  </div>
+    <p>
 
   <div class="row">
     <div class="col">

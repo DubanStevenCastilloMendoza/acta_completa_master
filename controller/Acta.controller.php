@@ -48,6 +48,7 @@ class ActaController{
      /*$acta->setInf_ficha($_POST['inf_ficha']);*/
       $acta->setCasos_ant($_POST['casos_ant']);
       $acta->setCasos_part($_POST['casos_part']);
+      $acta->setHechos_actuales($_POST['hechos_actuales']);
       $acta->setDesarrollo($_POST['desarrollo']);
       $acta->setConclusion($_POST['conclusion']);
       $acta->setFicha($_POST['ficha']);
@@ -116,6 +117,7 @@ class ActaController{
         $acta->setObjetivos($_POST['objetivos']);
         $acta->setCasos_ant($_POST['casos_ant']);
         /*$acta->setCasos_part($_POST['casos_part']);*/
+        $acta->setHechos_actuales($_POST['hechos_actuales']);
         $acta->setDesarrollo($_POST['desarrollo']);
        /* $acta->setConclusion($_POST['conclusion']);*/
         $acta->setFicha($_POST['ficha']);

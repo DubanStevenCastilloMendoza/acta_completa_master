@@ -398,6 +398,16 @@
   </div>
 
   <p>  <p>
+  <div class="row">
+    <br> 
+    <h4><label for="">7.Hechos Actuales:</label> </h4>
+    
+
+    
+    <p name="hechos_actuales" id='hechos_actuales' type="text" maxlength="9000" style = "width: 100%;"  ><?=$p->getHechos_actuales()?> </p >
+    <br>
+
+  </div>
 <p>
 
 <div class="row">
