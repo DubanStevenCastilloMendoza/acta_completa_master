@@ -28,6 +28,7 @@ private  $casos_ant =null ;
 private  $casos_part =null ;
 private  $hechos_actuales =null ;
 private  $desarrollo =null ;
+private  $informe_vocero =null ;
 private  $conclusion=null;
 private  $ficha =null ;
 private  $programa =null;
@@ -59,6 +60,7 @@ public function Actualizar(acta $acta){
             casos_part=?,
             hechos_actuales=?,
             desarrollo=?,
+            informe_vocero=?,
             conclusion=?
             WHERE n_acta=?;
         ";
@@ -81,6 +83,7 @@ public function Actualizar(acta $acta){
                      $acta->getCasos_part(),
                      $acta->getHechos_actuales(),
                      $acta->getDesarrollo(),
+                     $acta->getInforme_vocero(),
                      $acta->getConclusion(),
                      $acta->getN_acta()
 
@@ -454,6 +457,7 @@ public function Obtener($id){
        $p ->setCasos_part($r->casos_part);
        $p ->setHechos_actuales($r->hechos_actuales);
        $p ->setDesarrollo($r->desarrollo);
+       $p ->setInforme_vocero($r->informe_vocero);
        $p ->setConclusion($r->conclusion);
        $p ->setFicha($r->ficha);
        $p ->setPrograma($r->programa);
@@ -494,7 +498,7 @@ public function insertarparticipantes()
 public function insertar()
 {
     try{
-    $query = "INSERT INTO acta (acta_no,acta_contador,nom_rev,ciudad,fecha,hora_in,hora_fin,lu_en,direccion,agenda,objetivos,inf_ficha,casos_ant,casos_part,hechos_actuales,desarrollo,conclusion,ficha,programa) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);";
+    $query = "INSERT INTO acta (acta_no,acta_contador,nom_rev,ciudad,fecha,hora_in,hora_fin,lu_en,direccion,agenda,objetivos,inf_ficha,casos_ant,casos_part,hechos_actuales,desarrollo,informe_vocero,conclusion,ficha,programa) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);";
     $this -> PDO-> prepare($query)
                         ->execute(array(
                             $this->acta_no,
@@ -513,6 +517,7 @@ public function insertar()
                             $this->casos_part,
                             $this->hechos_actuales,
                             $this->desarrollo,
+                            $this->informe_vocero,
                             $this->conclusion,
                             $this->ficha,
                             $this->programa
@@ -1006,6 +1011,18 @@ public function setDesarrollo($desarrollo)
     return $this;
 }
 
+public function getInforme_vocero()
+{
+    return $this->informe_vocero;
+}
+
+
+public function setInforme_vocero($informe_vocero)
+{
+    $this-> informe_vocero = $informe_vocero;
+
+    return $this;
+}
 
 
 public function getConclusion()

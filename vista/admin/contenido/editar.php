@@ -383,8 +383,16 @@
 
 </div>
 <p>
+<div class="row">
+    <div class="col">
+    <br>
+      <label for="">9.Informe Vocero:</label>
+      <textarea name="informe_vocero" id='informe_vocero' type="text" maxlength="9000"  cols="60" rows="10" oninput="maxlengthNumber(this);" required  class="" value=""><?=$p->getInforme_vocero()?> </textarea >
+    </div>
+   
 
-
+  </div>
+<p>
 
 
 

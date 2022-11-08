@@ -419,9 +419,15 @@
  <div>
 
 <p>
+<div class="row">
+  <div class="col">
+  <br>
+  <h4><label for="">9.informe vocero</label></h4>
+    <a name="informe_vocero" id='informe_vocero' type="text" maxlength="" cols="60" rows="10" oninput="maxlengthNumber(this);"  placeholder="DESARROLLO DEL COMITE"><?=$p->getInforme_vocero()?></a >
+  </div>
+ <div>
 
-
-
+<p>
 
 
 

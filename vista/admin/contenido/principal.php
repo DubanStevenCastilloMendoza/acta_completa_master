@@ -761,7 +761,17 @@ $("#table3 tr:last").remove();
 
   </div>
   
+<br>
+<div class="row">
+    <div class="col">
+    <br>
+      <H5 for="">9.Informe Vocero</H5>
+      <textarea name="informe_vocero" id='informe_vocero' type="text" cols="60" rows="10" oninput="maxlengthNumber(this);" required  class="" placeholder="Informe vocero"></textarea >
+    </div>
+   
 
+  </div>
+  
 
  <!-- <form id="conclu" name="conclu" method="post" action="?c=acta&a=save">-->
 <br>
