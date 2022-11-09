@@ -1024,8 +1024,47 @@ $("#table2 tr:last").remove();
 
     </div>
   </div>
+  
+<center>
+<div class="privacidad">
+  <div class="col">
+    <p class="parrafo">De acuerdo con la Ley 1581 de 2012, Proteccion de datos personales se debe garantizar la
+      seguridad y protección de los datos personales que se encuentran almacenados en este 
+      documento. El servicio Nacional de Aprendizake SENA solicita la siguiente clasificación de la 
+      información:
+    </p>
+    <h6>La información de este documento se debe clasificar como:</h6> 
+    <br>
+    <label for="">publica</label> <input class="parti" type="radio" name="privacidad"  id="privacidad"  required value="publica"/>
+    <label for="">privado</label> <input class="parti" type="radio" name="privacidad"  id="privacidad"  required value="privada"/> 
+    <label for="">semiprivado</label><input class="parti" type="radio" name="privacidad"  id="privacidad"  required value="semiprivada"/> 
+    <label for=""> sensible</label><input class="parti" type="radio" name="privacidad"  id="privacidad"  required value="sensible"/>
 
+    <p>Nota: antes de contestar esta información por favor remetirse al instructivos</p>
 
+    <table class="table" id="tabla">
+  <thead class="thead-dark">
+    <h3>Compromisos</h3>
+    <tr>
+      <th scope="col">Actividad</th>
+      <th scope="col">Responsable</th>
+     <!--  <th scope="col">   <i class="fa-solid fa-calendar"></i>Apellidos</th> -->
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td>Programación sesión acompañamiento a ficha por parte del área de bienestar al aprendiz.</td>
+        <td>Área bienestar al Aprendiz</td>
+      </tr>  
+</tbody>
+</table>
+<h6>ASISTENTES: (incorporar registro de asistencia)</h6>
+<p class="parrafo">Nota: Puede incluirse imagen o captura de pantalla de los assitentes, si se trata de una reunión
+   virtual o, de los asistentes que participan a través de una plataforma virtual, se pasa link para
+  asistencia y aprovación del acta. Que reposa en el drive de comités de la ficha</p>
+  </div>
+</div>
+      </center>
 
   <p>
 

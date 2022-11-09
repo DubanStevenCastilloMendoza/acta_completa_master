@@ -187,7 +187,15 @@ tr .form-control{
    margin:5px;
     height: 58px;
 }
-    
-
-
-
+.parrafo{
+    font-size: 22px;
+    text-align: left;
+}
+.privacidad input[type="radio"]{
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+}
+.privacidad label{
+    font-size: 24px;
+}

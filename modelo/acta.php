@@ -32,6 +32,7 @@ private  $informe_vocero =null ;
 private  $conclusion=null;
 private  $ficha =null ;
 private  $programa =null;
+private  $privacidad =null;
 
 
 private $PDO;
@@ -492,6 +493,7 @@ public function Obtener($id){
        $p ->setConclusion($r->conclusion);
        $p ->setFicha($r->ficha);
        $p ->setPrograma($r->programa);
+       $p ->setPrivacidad($r->privacidad);
      return $p;
 
 
@@ -529,7 +531,7 @@ public function insertarparticipantes()
 public function insertar()
 {
     try{
-    $query = "INSERT INTO acta (acta_no,acta_contador,nom_rev,ciudad,fecha,hora_in,hora_fin,lu_en,direccion,agenda,objetivos,inf_ficha,casos_ant,casos_part,hechos_actuales,desarrollo,informe_vocero,conclusion,ficha,programa) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);";
+    $query = "INSERT INTO acta (acta_no,acta_contador,nom_rev,ciudad,fecha,hora_in,hora_fin,lu_en,direccion,agenda,objetivos,inf_ficha,casos_ant,casos_part,hechos_actuales,desarrollo,informe_vocero,conclusion,ficha,programa,privacidad) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);";
     $this -> PDO-> prepare($query)
                         ->execute(array(
                             $this->acta_no,
@@ -551,7 +553,8 @@ public function insertar()
                             $this->informe_vocero,
                             $this->conclusion,
                             $this->ficha,
-                            $this->programa
+                            $this->programa,
+                            $this->privacidad
                         ));
                         $this->n_acta=$this->PDO->lastInsertId();
                         return $this;
@@ -860,6 +863,17 @@ public function getNom_rev()
 public function setNom_rev($nom_rev)
 {
     $this->nom_rev = $nom_rev;
+
+    return $this;
+}
+public function getPrivacidad()
+{
+    return $this->privacidad;
+}
+
+public function setPrivacidad($privacidad)
+{
+    $this->privacidad = $privacidad;
 
     return $this;
 }

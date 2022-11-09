@@ -126,6 +126,7 @@ class ActaController{
        /* $acta->setConclusion($_POST['conclusion']);*/
         $acta->setFicha($_POST['ficha']);
         $acta->setPrograma($_POST['programa']); 
+        $acta->setPrivacidad($_POST['privacidad']); 
 
 
       
