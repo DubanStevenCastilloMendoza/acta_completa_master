@@ -268,6 +268,37 @@ public function insertarConclusiones(){
     
       header("location:?c=vistas&a=ConsultarFicha");
 }
+public function insertarDesarrolloComite(){
+    $usuario        = "root";
+    $password       = "";
+    $servidor       = "localhost";
+    $basededatos    = "acta_completas";
+    $con            = mysqli_connect($servidor, $usuario, $password) or die("No se ha podido conectar al Servidor");
+    $db             = mysqli_select_db($con, $basededatos) or die("Upps! Error en conectar a la Base de Datos");
+    
+    $D_ACTA    = $_REQUEST['d_acta'];
+    $D_NOMBRE_APRENDIZ      = $_REQUEST['d_nombre_aprendiz'];
+    $D_DESCARGOS_ITS      = $_REQUEST['d_descargos_its'];
+    $D_DESCARGOS_ITS_B      = $_REQUEST['d_descargos_its_b'];
+    $D_DESCARGOS_ITS_C   = $_REQUEST['d_descargos_its_c'];
+    $D_DESCARGOS_APRENDIZ         = $_REQUEST['d_descargos_aprendiz'];
+    
+    
+    /*function codAleatorio($length = 5) {
+        return substr(str_shuffle(str_repeat($x='0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ', ceil($length/strlen($x)) )),1,$length);
+    }
+    $CODE_REFERENCIA  = codAleatorio();*/
+    
+    
+    for ($i=0; $i < count($D_NOMBRE_APRENDIZ); $i++){
+    
+    $InserData =("INSERT INTO desarrollo_comite (d_acta, d_nombre_aprendiz, d_descargos_its, d_descargos_its_b, d_descargos_its_c, d_descargos_aprendiz) VALUES ('".$D_ACTA[$i]."','".$D_NOMBRE_APRENDIZ[$i]."','".$D_DESCARGOS_ITS[$i]."','".$D_DESCARGOS_ITS_B[$i]."','".$D_DESCARGOS_ITS_C[$i]."','". $D_DESCARGOS_APRENDIZ[$i]."')");
+    $resultadoInsertUser = mysqli_query($con, $InserData);
+      
+      }
+    
+      header("location:?c=vistas&a=ConsultarFicha");
+}
 
 
 
@@ -679,6 +710,17 @@ public function obtenerAnteriores($ficha, $acta_contador){
         
         $query = $this->PDO->prepare("SELECT * FROM casos_anteriores WHERE A_ficha = $ficha AND A_contador = $acta_contador-1");
         $query->execute(array($ficha, $acta_contador));
+        return $query->fetchAll(PDO::FETCH_CLASS,__CLASS__);
+    }catch (Exception $e){
+        die ($e->getMessage());
+    }
+}
+
+public function ObtenerDesarrolloComite($ficha){
+    try{ 
+        
+        $query = $this->PDO->prepare("SELECT * FROM desarrollo_comite where  d_acta = $ficha");
+        $query->execute(array($ficha));
         return $query->fetchAll(PDO::FETCH_CLASS,__CLASS__);
     }catch (Exception $e){
         die ($e->getMessage());
@@ -1469,6 +1511,91 @@ public function setApellido_des($apellido_des)
 
     return $this;
 }
+/*comite*/
+public function getId_desarrollo()
+{
+    return $this->id_desarrollo;
+}
 
+public function setId_desarollo($id_desarrollo)
+{
+    $this->id_desarrollo = $id_desarrollo;
+
+    return $this;
+}
+
+
+public function getD_acta()
+{
+    return $this->d_acta;
+}
+
+public function setD_acta($d_acta)
+{
+    $this->d_acta = $d_acta;
+
+    return $this;
+}
+
+
+public function getD_nombre_aprendiz()
+{
+    return $this->d_nombre_aprendiz;
+}
+
+public function setD_nombre_aprendiz($d_nombre_aprendiz)
+{
+    $this->d_nombre_aprendiz = $d_nombre_aprendiz;
+
+    return $this;
+}
+
+public function getD_descargos_its()
+{
+    return $this->d_descargos_its;
+}
+
+public function setD_descargos_its($d_descargos_its)
+{
+    $this->d_descargos_its = $d_descargos_its;
+
+    return $this;
+}
+
+public function getD_descargos_its_b()
+{
+    return $this->d_descargos_its_b;
+}
+
+public function setD_descargos_its_b($d_descargos_its_b)
+{
+    $this->d_descargos_its_b = $d_descargos_its_b;
+
+    return $this;
+}
+
+public function getD_descargos_its_c()
+{
+    return $this->d_descargos_its_c;
+}
+
+public function setD_descargos_its_c($d_descargos_its_c)
+{
+    $this->d_descargos_its_c = $d_descargos_its_c;
+
+    return $this;
+}
+
+public function getD_descargos_aprendiz()
+{
+    return $this->d_descargos_aprendiz;
+}
+
+public function setD_descargos_aprendiz($d_descargos_aprendiz)
+{
+    $this->d_descargos_aprendiz = $d_descargos_aprendiz;
+
+    return $this;
+}
 
 }

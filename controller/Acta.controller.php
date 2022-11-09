@@ -11,6 +11,7 @@ require_once "modelo/casos_anteriores.php";
 require_once "modelo/reglamento.php";
 require_once "modelo/medida.php";
 require_once "modelo/destacados.php";
+require_once "modelo/desarrollocomite.php";
 
 
 class ActaController{
@@ -104,6 +105,7 @@ class ActaController{
         $conclusiones= new acta();
         $casosAnteriores = new acta();
         $destacados = new acta();
+        $desarrollocomite = new acta();
 
         $acta->setActa_no($_POST['acta_no']);
         $acta->setActa_contador($_POST['acta_contador']);
@@ -134,6 +136,7 @@ class ActaController{
         $conclusiones->insertarConclusiones();
         $casosAnteriores->insertarCasosAnteriores();
         $destacados->insertarAprendicesDestacados();
+        $desarrollocomite->insertarDesarrolloComite();
 
         
 
@@ -172,6 +175,9 @@ class ActaController{
 
         $destacados = new destacados(); //?
         $des = $this->modelo->ObtenerDestacados($_GET["id"]); 
+
+        $desarrollocomite = new desarrollocomite(); //?
+        $desa = $this->modelo->ObtenerDesarrolloComite($_GET["id"]); 
     
       require_once "vista/admin/cabecera/cabecera.php";
       require_once "vista/admin/contenido/editar.php";
@@ -206,6 +212,9 @@ class ActaController{
        
         $destacados = new destacados(); //?
         $des = $this->modelo->ObtenerDestacados($_GET["id"]); 
+
+        $desarrollocomite = new desarrollocomite(); //?
+        $desa = $this->modelo->ObtenerDesarrolloComite($_GET["id"]); 
         
       
         require_once "vista/admin/cabecera/cabecera.php";

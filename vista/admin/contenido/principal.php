@@ -751,15 +751,113 @@ $("#table3 tr:last").remove();
   </div>
     <p>
 
+   <p>
+   <?php 
+      $c=0;
+      $c=$this->modelo->obtenercontador($_GET['ficha']);
+  ?>
   <div class="row">
     <div class="col">
     <br>
-      <H5 for="">Desarrollo del comité</H5>
-      <textarea name="desarrollo" id='desarrollo' type="text" cols="60" rows="10" oninput="maxlengthNumber(this);" required  class="" placeholder="Desarrollo del comité"></textarea >
-    </div>
-   
+    <div>
 
+<center>
+<h3>8.Desarrollo Comité</h3>
+<br>
+<table class="tablas" id="table4">
+<tr>
+<input type="hidden"  value=" <?php   $zz = $r->n_acta; ?>">
+<input type="hidden"  value=" <?php   $c = $c->acta_contador; ?>">
+
+<td><input class="parti" type="hidden" name="d_acta[]"  id="d_acta" placeholder="acta " required value="<?=$zz+1?>"/> </td>
+<td><input class="parti" type="text" name="d_nombre_aprendiz[]"  id="d_nombre_aprendiz" placeholder="Nombre aprendiz " required /> </td>
+<td><textarea class="comit"  type="text" name="d_descargos_its[]"  id="d_descargos_its" placeholder="Descargos instructor" required></textarea></td>
+<td><textarea class="comit"  type="text" name="d_descargos_its_b[]"  id="d_descargos_its" placeholder="Descargos instructor" required></textarea></td>
+<td><textarea class="comit"  type="text" name="d_descargos_its_c[]"  id="d_descargos_its" placeholder="Descargos instructor" required></textarea></td>
+<td><textarea class="comit"  type="text" name="d_descargos_aprendiz[]"  id="d_descargos_its" placeholder="Descargos aprendiz" required></textarea></td>
+</tr>
+<tr>
+<td><input class="parti" type="hidden" name="d_acta[]"  id="d_acta" placeholder="acta " required value="<?=$zz+1?>"/> </td>
+<td><input class="parti" type="text" name="d_nombre_aprendiz[]"  id="d_nombre_aprendiz" placeholder="Nombre aprendiz " required /> </td>
+<td><textarea class="comit"  type="text" name="d_descargos_its[]"  id="d_descargos_its" placeholder="Descargos instructor" required></textarea></td>
+<td><textarea class="comit"  type="text" name="d_descargos_its_b[]"  id="d_descargos_its" placeholder="Descargos instructor" required></textarea></td>
+<td><textarea class="comit"  type="text" name="d_descargos_its_c[]"  id="d_descargos_its" placeholder="Descargos instructor" required></textarea></td>
+<td><textarea class="comit"  type="text" name="d_descargos_aprendiz[]"  id="d_descargos_its" placeholder="Descargos aprendiz" required></textarea></td>
+</tr>
+
+<tr>
+<td><input class="parti" type="hidden" name="d_acta[]"  id="d_acta" placeholder="acta " required value="<?=$zz+1?>"/> </td>
+<td><input class="parti" type="text" name="d_nombre_aprendiz[]"  id="d_nombre_aprendiz" placeholder="Nombre aprendiz " required /> </td>
+<td><textarea class="comit"  type="text" name="d_descargos_its[]"  id="d_descargos_its" placeholder="Descargos instructor" required></textarea></td>
+<td><textarea class="comit"  type="text" name="d_descargos_its_b[]"  id="d_descargos_its" placeholder="Descargos instructor" required></textarea></td>
+<td><textarea class="comit"  type="text" name="d_descargos_its_c[]"  id="d_descargos_its" placeholder="Descargos instructor" required></textarea></td>
+<td><textarea class="comit"  type="text" name="d_descargos_aprendiz[]"  id="d_descargos_its" placeholder="Descargos aprendiz" required></textarea></td>
+</tr>
+
+</tbody>
+</table>
+<br>
+<bootom id="add4" class="bt"  style="background-color: #ff671d; color:white;" >Agregar</bootom>
+<bootom id="del4" class="bt"  style="background-color: #ff671d; color:white;" >Eliminar</bootom>
+<br /><br />
+
+    </div>
+       
+       <!--  Javascript -->
+
+    <script type="text/javascript">
+
+$(document).ready(function(){
+
+$("#add4").click(function(){
+// Obtenemos el numero de columnas (td) que tiene la primera fila
+// (tr) del id "tabla"
+var tds=$("#table4 tr:first td").length;
+// Obtenemos el total de filas (tr) del id "tabla"
+    var trs=$("#table4 tr").length;
+    var nuevaFila="<tr>";
+    cant = $('#contador-filas').val();
+    cant++;
+$('#contador-filas').val(cant)
+nuevaFila+="<td><input class='parti' type='hidden' name='d_acta[]'  id='d_acta' placeholder='acta"+ " ' required value='<?=$zz+1?>'/> </td>"+
+  "<td><input class='parti' type='text' name='d_nombre_aprendiz[]'  id='d_nombre_aprendiz' placeholder='Nombre aprendiz"+ " ' required /> </td>"+
+  "<td><textarea class='comit' type='text' name='d_descargos_its[]' id='d_descargos_its' placeholder='Descargos instructor" +"' required></textarea> </td>"+
+  "<td><textarea class='comit' type='text' name='d_descargos_its_b[]' id='d_descargos_its_b' placeholder='Descargos instructor" +"' required></textarea> </td>"+
+  "<td><textarea class='comit' type='text' name='d_descargos_its_c[]' id='d_descargos_its_c' placeholder='Descargos instructor" +"' required></textarea> </td>"+
+  "<td><textarea class='comit' type='text' name='d_descargos_aprendiz[]' id='d_descargos_aprendiz' placeholder='Descargos aprendiz" +"' required></textarea> </td>";
+// Añadimos una columna con el numero total de columnas.
+// Añadimos uno al total, ya que cuando cargamos los valores para la
+// columna, todavia no esta añadida
+nuevaFila+="</tr>";
+$("#table4").append(nuevaFila);
+});
+/**
+* Funcion para eliminar la ultima columna de la tabla.
+* Si unicamente queda una columna, esta no sera eliminada
+*/
+$("#del4").click(function(){
+// Obtenemos el total de filas (tr) del id "tabla"
+var trs=$("#table4 tr").length;
+if(trs>0)
+{
+// Eliminamos la ultima fila
+cant--;
+$('#contador-filas').val(cant)
+$("#table4 tr:last").remove();
+
+}
+});
+});
+</script>
+
+    </div>
   </div>
+  
+
+
+    <p>
+
+
   
 <br>
 <div class="row">

@@ -373,15 +373,57 @@
   </div>
 <p>
 
-<div class="row">
-  <div class="col">
-  <br>
-    <label for="">Desarrollo del comité</label>
-    <textarea name="desarrollo" id='desarrollo' type="text" maxlength="" cols="60" rows="10" oninput="maxlengthNumber(this);" required  class="" placeholder="objetivos"><?=$p->getDesarrollo()?></textarea >
-  </div>
- 
+<div  class="card">
+      <div class="">
+        <h5>8.Desarrollo Comité</h5>
 
-</div>
+<br>
+
+<p><p>
+
+<table class="table" id="tabla">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">   <i class="fa-solid fa-list-ol"></i>Desarrollo</th>
+      <th scope="col">   <i class="fa-solid fa-list-ol"></i>Acta</th>
+      <th scope="col">   <i class="fa-solid fa-list-ol"></i>Nombre del aprendiz</th>
+      <th scope="col">   <i class="fa-solid fa-list-ol"></i>Descargos instructor</th>
+      <th scope="col">   <i class="fa-solid fa-list-ol"></i>Descargos instructora</th>
+      <th scope="col">   <i class="fa-solid fa-list-ol"></i>Descargos instructorb</th>
+      <th scope="col">   <i class="fa-solid fa-list-ol"></i>Descargos aprendiz</th>
+     <!--  <th scope="col">   <i class="fa-solid fa-calendar"></i>Apellidos</th> -->
+
+      </tr>
+  </thead>
+  <tbody>
+
+  <?php 
+    try{
+        foreach($desa as $desarrollocomite): ?> 
+
+        <tr>
+        <td> <?= $desarrollocomite->getId_desarrollo()?> </td>
+        <td> <?= $desarrollocomite->getD_acta()?> </td>
+        <td> <?= $desarrollocomite->getD_nombre_aprendiz()?> </td>
+        <td> <?= $desarrollocomite->getD_descargos_its() ?> </td>
+        <td> <?= $desarrollocomite->getD_descargos_its_b()?> </td>
+        <td> <?= $desarrollocomite->getD_descargos_its_c()?> </td>
+        <td> <?= $desarrollocomite->getD_descargos_aprendiz()?> </td>
+    
+    <?php endforeach; 
+    }catch(Exception $e){
+        die($e->getMessage());
+        die("No se pudo listar");
+    }
+    ?>
+    </tr>
+</tbody>
+</table>
+    </div>
+   
+
+  </div>
+
 <p>
 <div class="row">
     <div class="col">
