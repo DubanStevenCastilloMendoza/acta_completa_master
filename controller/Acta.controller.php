@@ -224,6 +224,8 @@ class ActaController{
         require_once "vista/admin/footer/footer.php";
       
       }
+
+      
   
   
       
@@ -231,6 +233,31 @@ class ActaController{
       }
 
 
+      public function FormCrearimp2(){
+
+       
+
+        if(isset($_GET['id'])){
+         
+    
+          $p=$this ->modelo ->Obtener ($_GET['id']);
+          $participantes = new participantes(); //?
+          $parti = $this->modelo->ObtenerParticipantes($_GET["id"]); 
+
+          require "vista/usuario/contenido/pdf.php";
+        
+
+        
+
+               
+     
+        
+        }
+    
+    
+        
+        
+        }
 
     public function FormCrearusu(){
 
