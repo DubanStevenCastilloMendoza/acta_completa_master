@@ -40,7 +40,7 @@
 
 
   <!--Locación botón editar-->
-      <td><a    href="?c=Instructor&a=FormCrear&id=<?=$r->id_instructor?>" type="button" style="background-color: #ff671d;" id="bt"  class="btn" ><i class="fa-solid fa-pen"></i></a >    <a  href="?c=Instructor&a=Borrar&id=<?=$r->id_instructor?>" style="background-color: #ff671d;" id="bt" type="button" class="btn" ><i class="fa-solid fa-trash-can"></i></a></td>
+      <td><a    href="?c=Instructor&a=FormCrear&id=<?=$r->id_instructor?>" type="button" style="background-color: #39A900;" id="bt"  class="btn" ><i class="fa-solid fa-pen"></i></a >    <a  href="?c=Instructor&a=Borrar&id=<?=$r->id_instructor?>" style="background-color: #39A900;" id="bt" type="button" class="btn" ><i class="fa-solid fa-trash-can"></i></a></td>
 
   </tr>
 

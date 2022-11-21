@@ -22,7 +22,7 @@ input{
 .form-control input {
   max-width: 280px;
   width: 100%;
-  border-color: #68C4D4;
+  border-color: #39A900;
 
   margin: 2px ;
   height: 45px;
@@ -226,13 +226,13 @@ form.sign-in-form {
 }
 
 .social-icon:hover {
-  color: #68C4D4;
-  border-color: #68C4D4;
+  color: #39A900;
+  border-color: #39A900;
 }
 
 .btnenviar {
   width: 110px;
-  background-color:#68C4D4;
+  background-color:#39A900;
   border: none;
   outline: none;
   height: 25px;
@@ -250,7 +250,7 @@ form.sign-in-form {
 
 .btn {
   width: 150px;
-  background-color: #ff7b00;
+  background-color: #39A900;
   border: none;
   outline: none;
   height: 45px;
@@ -285,7 +285,7 @@ form.sign-in-form {
   top: -10%;
   right: 48%;
   transform: translateY(-50%);
-  background: #ff7b00;
+  background: #39A900;
   transition: 1.8s ease-in-out;
   border-radius: 50%;
   z-index: 6;
@@ -335,7 +335,7 @@ form.sign-in-form {
 
 .btn.transparent {
   margin: 0;
-  background: #ff9900;
+  background: #39A900;
   border: 2px solid rgb(255, 255, 255);
   width: 130px;
   height: 41px;

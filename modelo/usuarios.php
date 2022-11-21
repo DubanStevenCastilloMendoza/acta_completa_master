@@ -59,6 +59,54 @@ public function Actualizarusu(usuario $usuario){
 
 }
 
+public function ActualizarContraseña(usuario $usuario){
+    try{
+        $consulta="UPDATE usuario SET
+          
+            contrasena=?
+    
+
+            WHERE id=?;
+        ";
+        $this->PDO->prepare($consulta)
+                ->execute(array(
+  
+                     $usuario->getContrasena(),
+
+
+                     $usuario->getId()
+
+
+                ));
+    }catch(Exception$e){
+   }
+
+   header("location:?c=vistas&a=Usuario");
+       
+
+
+}
+
+public function ObtenerContra($id){
+    try{
+         $consulta=$this->PDO->prepare("SELECT * FROM usuario where id=?;");
+        $consulta->execute(array($id));
+      $r= $consulta->fetch(PDO::FETCH_OBJ);
+       $p= new usuario();
+       $p ->setId($r->id);
+       $p ->setContrasena($r->contrasena);
+   
+
+
+     return $p;
+
+
+    }catch(Exception $e){
+        die($e->getMessage());
+    }
+
+}
+
 
 public function Listarusu(){
     try{

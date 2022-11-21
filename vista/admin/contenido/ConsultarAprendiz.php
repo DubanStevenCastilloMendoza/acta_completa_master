@@ -47,8 +47,8 @@
 
 
 
-      <td><a   href="?c=Aprendiz&a=FormCrear&id=<?=$r->id_aprendiz?>" type="button" style="background-color: #ff671d;"  id="bt" class="btn " ><i class="fa-solid fa-pen"></i></a >  </td> 
-      <td> <a   href="?c=aprendiz&a=BorrarApre&id_aprendiz=<?=$r->id_aprendiz?>" style="background-color: #ff671d;" id="bt" type="button" class="btn" ><i class="fa-solid fa-trash-can"></i></a></td>
+      <td><a   href="?c=Aprendiz&a=FormCrear&id=<?=$r->id_aprendiz?>" type="button" style="background-color: #39A900;"  id="bt" class="btn " ><i class="fa-solid fa-pen"></i></a >  </td> 
+      <td> <a   href="?c=aprendiz&a=BorrarApre&id_aprendiz=<?=$r->id_aprendiz?>" style="background-color: #39A900;" id="bt" type="button" class="btn" ><i class="fa-solid fa-trash-can"></i></a></td>
 
   </tr>
 

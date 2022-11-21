@@ -4,7 +4,7 @@
   -webkit-box-sizing:border-box;
 }
 .blue {
-  background: #ff671d;
+  background: #39A900;
   color: #fff;
 }
 .navbar {
@@ -29,7 +29,7 @@ i { margin: 0 7px; }
   margin: 0 20px;
 }
 #sidebarCollapse:hover {
-  color: #ff671d;
+  color: #39A900;
   background: #fff;
   outline: none;
 }
@@ -45,7 +45,7 @@ i { margin: 0 7px; }
     min-width: 250px;
     max-width: 250px;
     margin-top: 70px;
-    background: #ff671d;
+    background: #39A900;
     color: #fff;
     transition: all 0.3s;
 }
@@ -56,7 +56,7 @@ i { margin: 0 7px; }
 #sidebar .sidebar-header{
   font-family: 'Prompt', sans-serif;
 	padding: 20px;
-	background: #ff671d;
+	background: #39A900;
 }
 #sidebar ul.components{
 	padding: 20px 0px;
@@ -79,7 +79,7 @@ i { margin: 0 7px; }
     font-weight: bold;
 }
 #sidebar ul li a:hover {
-    color: #ff671d;
+    color: #39A900;
     background: #fff;
     text-decoration: none;
 }
@@ -148,7 +148,7 @@ i { margin: 0 7px; }
 #sidebar ul li.active>a,
 a[aria-expanded="true"] {
     color: #fff;
-    background: #ff671d;
+    background: #39A900;
 }
 a[data-toggle="collapse"] {
     position: relative;

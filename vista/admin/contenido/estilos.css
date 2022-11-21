@@ -8,7 +8,7 @@
     width: 80%;
     border: none;
     background: transparent;
-    border-bottom: 1.5px solid #ff671d;
+    border-bottom: 1.5px solid #39A900;
     font-family: 'Prompt', sans-serif;
     outline: none;
     height: 40px;
@@ -24,13 +24,13 @@ label{
     font-family: 'Prompt', sans-serif;
 }
 h1{
-    color: #ff671d;
+    color: #39A900;
     font-weight: bold;
     font-family: 'Prompt', sans-serif;
 }
 
 form input[type="file"]:focus{
-    border-color: #ff671d;
+    border-color: #39A900;
     outline: none;
     box-shadow: none;
 }
@@ -51,7 +51,7 @@ form input[type="file"]:focus{
     width: 80%;
     border: none;
     background: transparent;
-    border-bottom: 1.5px solid #ff671d;
+    border-bottom: 1.5px solid #39A900;
     font-family: 'Prompt', sans-serif;
     outline: none;
     height: 40px;
@@ -69,7 +69,7 @@ tr:nth-child(even){
 .col textarea{
     width: 100%;
     border-radius: 15px;
-    border: 1px solid #ff671d;
+    border: 1px solid #39A900;
     outline: none;
     font-family: 'Prompt', sans-serif;
 } 
@@ -81,14 +81,14 @@ tr .form-control{
     width: 90%;
     margin: 22px;  
    border-radius: 8px;
-    border: 1px solid #ff671d;
+    border: 1px solid #39A900;
 }
 .t-head{
     text-align: center;
 }
 
 #bt{
-    background: #ff671d;
+    background: #39A900;
 }
 #bt i{
     color: white;
@@ -102,7 +102,7 @@ tr .form-control{
 
 #table2 tr .parti{
     width: 180px;
-    border: 1px solid #ff671d;
+    border: 1px solid #39A900;
     border-radius: 5px;
   
     height: 58px;
@@ -127,7 +127,7 @@ tr .form-control{
 
 #table3 tr .parti{
     width: 100px;
-    border: 1px solid #ff671d;
+    border: 1px solid #39A900;
     border-radius: 5px;
    margin:5px;
     height: 58px;
@@ -150,7 +150,7 @@ tr .form-control{
 }
 #table2 .select{
     width: 800px;
-    border: 1px solid #ff671d;
+    border: 1px solid #39A900;
     border-radius: 5px;
     margin:5px;
     height: 58px;
@@ -160,7 +160,7 @@ tr .form-control{
 
 #table3 .selectt{
     width: 100px;
-    border: 1px solid #ff671d;
+    border: 1px solid #39A900;
     border-radius: 5px;
     margin:5px;
     height: 58px;
@@ -169,7 +169,7 @@ tr .form-control{
 }
 #table5 tr .parti{
     width: 320px;
-    border: 1px solid #ff671d;
+    border: 1px solid #39A900;
     border-radius: 5px;
    margin:5px;
     height: 58px;
@@ -182,7 +182,7 @@ tr .form-control{
 }
 #table4 tr .parti{
     width: 150px;
-    border: 1px solid #ff671d;
+    border: 1px solid #39A900;
     border-radius: 5px;
    margin:5px;
     height: 58px;

@@ -40,7 +40,7 @@
 
 
  <!--Locación botón editar-->
-      <td><a    href="?c=Funcionario&a=FormCrearfuncionario&id=<?=$r->id_funcionario?>"  type="button" style="background-color: #ff671d;"  id="bt" class="btn" ><i class="fa-solid fa-pen"></i></a >    <a href="?c=Funcionario&a=Borrar&id=<?=$r->id_funcionario?>" style="background-color: #ff671d;" id="bt" type="button" class="btn " ><i class="fa-solid fa-trash-can"></i></a></td>
+      <td><a    href="?c=Funcionario&a=FormCrearfuncionario&id=<?=$r->id_funcionario?>"  type="button" style="background-color: #39A900;"  id="bt" class="btn" ><i class="fa-solid fa-pen"></i></a >    <a href="?c=Funcionario&a=Borrar&id=<?=$r->id_funcionario?>" style="background-color: #39A900;" id="bt" type="button" class="btn " ><i class="fa-solid fa-trash-can"></i></a></td>
 
   </tr>
 

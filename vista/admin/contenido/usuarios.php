@@ -44,7 +44,7 @@
 
 
 
-      <td><a   href="?c=Usuarios&a=Editusu&id=<?=$r->id?>" type="button" style="background-color: #ff671d;"  id="bt" class="btn" ><i class="fa-solid fa-pen"></i></a >     <a href="?c=Usuarios&a=Borrarusu&id=<?=$r->id?>" style="background-color: #ff671d;" type="button" id="bt" class="btn " ><i class="fa-solid fa-trash-can"></i></a></td>
+      <td><a   href="?c=Usuarios&a=EditContra&id=<?=$r->id?>" type="button" style="background-color: #39A900;"  id="bt" class="btn" ><i class="fa-solid fa-lock"></i></a >  <a   href="?c=Usuarios&a=Editusu&id=<?=$r->id?>" type="button" style="background-color: #39A900;"  id="bt" class="btn" ><i class="fa-solid fa-pen"></i></a >     <a href="?c=Usuarios&a=Borrarusu&id=<?=$r->id?>" style="background-color: #39A900;" type="button" id="bt" class="btn " ><i class="fa-solid fa-trash-can"></i></a></td>
 </td>
 
   </tr>

@@ -18,12 +18,15 @@
 <br>
 
 <div class="card">
-<div class="card-body">
+<div class="card-body" style="border: 1px solid black;">
 <form action="" id="acta" class="sign-up-form" method="post" >
 
+
   <div class="row">
-
-
+<center>
+  <img src="multimedia/logo-sena.png" class="fixed-left" id="logo-sena"  style="width:100px; height:100px;">
+  </center>
+  <br>
   <div class="col">
   <br>
       <center>
@@ -123,34 +126,21 @@
 
 
 
-    <div class="row">
-    <div class="col">
-    
-    <br>
-    <br>
+    <div class="row" style="margin-top:50px;">
     <h4> <label for="">AGENDA O PUNTOS PARA DESARROLLAR:</label></h4>
       <a name="agenda" id='agenda' type="text" maxlength="9000" cols="60" rows="10" oninput="maxlengthNumber(this);" > <?=$p->getAgenda ()?> </a>
     </div>
-    <p>
-    <div class="row">
-    <br> 
+  
+    <div class="row" style="margin-top:50px;">
     <h4><label for="">OBJETIVO(S) DE LA REUNIÓN:</label> </h4>
-    
-
-    
     <p name="objetivos" id='objetivos' type="text" maxlength="9000" style = "width: 100%;"  ><?=$p->getObjetivos ()?> </p >
-    <br>
-
   </div>
+ 
   <center> <h3>Desarrollo de la reunion</h3>   </center>
 
-  <div  class="card">
-      <div class="">
+  <div  class="row" style="margin-top:50px;">
+      <div class="col">
         <h5>1.Participantes</h5>
-
-<br>
-
-
 
 <table class="table" id="tabla">
   <thead class="thead-dark">
@@ -183,21 +173,12 @@
 </tbody>
 </table>
     </div>
-   
-
-  </div>
-
-  <p>  <p>
-  
-  <p>
-    
-  <p>
+    </div>
 
 
- 
-     
-  <div  class="card">
-      <div class="">
+  <div  class="row" style="margin-top:50px;">
+      <div class="col">
+        <br>
       <h5>2.Informacion conformacion de la ficha</h5>
 <br>
     <table class="table" id="tabla">
@@ -242,12 +223,10 @@
 </table>
 
     </div>
-   
-
   </div>
 <p>
 <br>
-  <div class="ro">
+  <div class="row" style="margin-top:50px;">
   <h4>3.Verificación del acta(s) anteriores(es)</h4>
     <?php foreach
   ($this->modelo->obtenerVerificacion($_GET['ficha'], $_GET['acta_contador']) as $tra):?>
@@ -258,8 +237,8 @@
 </div>
 <br>
 
-<div  class="row">
-      <div class="">
+<div  class="row" style="margin-top:50px;">
+      <div class="col">
         <h4>4.Casos anterior al comité</h4>
 
 <br>
@@ -298,8 +277,8 @@
 
 
   <p>  <p>
-  <div  class="card">
-      <div class="">
+  <div  class="row" style="margin-top:50px;">
+      <div class="col">
         <h5>5.Aprendices destacados</h5>
 
 <br>
@@ -342,9 +321,10 @@
 
 <p>
 
-
-<div  class="card">
-      <div class="">
+<br><br>
+<div  class="row" style="margin-top:100px;">
+      <div class="col">
+        <br><br>
         <h5>6.Casos particulares:</h5>
 
 <br>
@@ -398,7 +378,7 @@
   </div>
 
   <p>  <p>
-  <div class="row">
+  <div class="row" style="margin-top:50px;">
     <br> 
     <h4><label for="">7.Hechos Actuales:</label> </h4>
     
@@ -410,8 +390,8 @@
   </div>
 <p>
 <p>
-<div  class="card">
-      <div class="">
+<div  class="row" style="margin-top:50px;">
+      <div class="col">
         <h5>8.Desarrollo Comité</h5>
 
 <br>
@@ -421,8 +401,6 @@
 <table class="table" id="tabla">
   <thead class="thead-dark">
     <tr>
-      <th scope="col">   <i class="fa-solid fa-list-ol"></i>Desarrollo</th>
-      <th scope="col">   <i class="fa-solid fa-list-ol"></i>Acta</th>
       <th scope="col">   <i class="fa-solid fa-list-ol"></i>Nombre del aprendiz</th>
       <th scope="col">   <i class="fa-solid fa-list-ol"></i>Descargos instructor</th>
       <th scope="col">   <i class="fa-solid fa-list-ol"></i>Descargos instructora</th>
@@ -439,8 +417,6 @@
         foreach($desa as $desarrollocomite): ?> 
 
         <tr>
-        <td> <?= $desarrollocomite->getId_desarrollo()?> </td>
-        <td> <?= $desarrollocomite->getD_acta()?> </td>
         <td> <?= $desarrollocomite->getD_nombre_aprendiz()?> </td>
         <td> <?= $desarrollocomite->getD_descargos_its() ?> </td>
         <td> <?= $desarrollocomite->getD_descargos_its_b()?> </td>
@@ -463,9 +439,9 @@
 
 
 <p>
-<div class="row">
+<div class="row" style="margin-top:100px;">
   <div class="col">
-  <br>
+  <br><br><br>
   <h4><label for="">9.informe vocero</label></h4>
     <a name="informe_vocero" id='informe_vocero' type="text" maxlength="" cols="60" rows="10" oninput="maxlengthNumber(this);"  placeholder="DESARROLLO DEL COMITE"><?=$p->getInforme_vocero()?></a >
   </div>
@@ -475,8 +451,8 @@
 
 
 
-<div  class="card">
-      <div class="">
+<div  class="row" style="margin-top:50px;">
+      <div class="col">
         <h5>Conclusiones:</h5>
 
 <br>
@@ -566,7 +542,7 @@
 
     </div>
     <center>
-    <button  id='parte1' style="background-color: #FF890C;"  class="btn btn-danger" type="button" onclick="javascript:imprim1(imp1);">Imprimir</button>
+    <button  id='parte1' style="background-color: #39A900; color:white;"  class="bt" type="button" onclick="javascript:imprim1(imp1);">Imprimir</button>
    
     </center>
     </div>
@@ -574,19 +550,19 @@
   </div>
 
   </div>
-
+  <style type="text/css" media="print">
+@media print {
+#excluir {display:none;}
+#parte1 {display:none;}
+}
+</style>
 
 </form>
 </div>
 </div>
 
 
-<style type="text/css" media="print">
-@media print {
-#excluir {display:none;}
-#parte2 {display:none;}
-}
-</style>
+
 
 <script>
 

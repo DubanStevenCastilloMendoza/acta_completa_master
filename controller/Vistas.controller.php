@@ -60,6 +60,14 @@ class VistasController{
                require_once "vista/admin/contenido/FichaContador.php";
                require_once "vista/admin/footer/footer.php";
             }
+
+            public function contraseña(){
+
+                require_once "vista/admin/cabecera/cabecera.php";
+               require_once "vista/admin/contenido/cambiarContraseña.php";
+
+               require_once "vista/admin/footer/footer.php";
+            }
             
             public function Particulares(){
 

@@ -8,21 +8,21 @@
       
 <br>
 <center>
-<h1>Ficha Contador</h1>
+<h1>Cambiar Contraseña</h1>
 </center>
-<form action="?c=Ficha&a=GuardarFichaContador" id="programa" class="sign-up-form" method="post" >
+<form action="?c=Usuarios&a=GuardarContra" id="programa" class="sign-up-form" method="post" >
 <br>
 
 <!-- Nombre y apellido usuarios externos-->
 <div class="row">
 <div class="row">
-<input name="id_ficha" id='id_ficha' type="hidden" maxlength="25" oninput="maxlengthNumber(this);" required  class="form-control" value="<?=$l->getId_ficha()?>">
+<input name="id" id='id' type="hidden" maxlength="25" oninput="maxlengthNumber(this);" required  class="form-control" value="<?=$p->getId()?>">
 <div class="col">
 
 
 <div class="col">
-  <label for="">Ficha Contador:</label>
-  <input name="ficha_contador" id='ficha_contador' type="text" maxlength="25" oninput="maxlengthNumber(this);" required  class="form-control" value="<?=$l->getFicha_contador()+1?>">
+  <label for="">Contraseña:</label>
+  <input name="contrasena" id='contrasena' type="text" maxlength="25" oninput="maxlengthNumber(this);" required  class="form-control" value="<?=$p->getContrasena()?>">
   </div>
 </div>
 <br>

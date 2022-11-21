@@ -47,11 +47,6 @@
 
 
 <div class="row">
-
-<div class="col">
-  <label for=""> Contraseña:</label>
-  <input name="contrasena" id='contrasena' type="password" maxlength="25" oninput="maxlengthNumber(this);" required  class="" value="<?=$p->getContrasena()?>">
-  </div>
   <div class="col">
 <label for="">Documento:</label>
   <input name="documento" id='documento' type="number" maxlength="25" oninput="maxlengthNumber(this);" required  class="" value="<?=$p->getDocumento()?>">
@@ -66,8 +61,8 @@
     <div class="col">
     <br>
     <center>
-    <button style="background-color: #ff671d; color:white;"   class="bt"  onclick='return enviarFormulario();' id="bt1"  class="btn solid" >Actualizar</button>
-    <a    href="?c=Vistas&a=Usuario" style="background-color: #ff671d; color:white;"  type="submit" class="bt "> Cancelar</a>
+    <button style="background-color: #39A900; color:white;"   class="bt"  onclick='return enviarFormulario();' id="bt1"  class="btn solid" >Actualizar</button>
+    <a    href="?c=Vistas&a=Usuario" style="background-color: #39A900; color:white;"  type="submit" class="bt "> Cancelar</a>
     </center>
     </div>
   </div>
@@ -86,8 +81,8 @@ function enviarFormulario() {
   icon: 'question',
   showDenyButton: true,
   showCancelButton: true,
-  confirmButtonColor: '#FF8000',
-  denyButtonColor: '#FF4040',
+  confirmButtonColor: '#39A900',
+  denyButtonColor: '#39A900',
   confirmButtonText: 'Guardar ',
   denyButtonText: `No guardar`,
 }).then((result) => {

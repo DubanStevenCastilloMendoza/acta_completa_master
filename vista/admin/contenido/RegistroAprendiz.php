@@ -109,7 +109,7 @@
   <div class="row">
   <div class="col">
   <center>
-    <button type="submit" style="background-color: #ff671d; color:white;"  class="bt"> Guardar</button>
+    <button type="submit" style="background-color: #39A900; color:white;"  class="bt"> Guardar</button>
     </center>
   </div>
 </div>
@@ -148,7 +148,7 @@
                         <form action="exel/CodeAprendiz.php" method="POST" enctype="multipart/form-data">
 
                             <input type="file" name="import_file" class="form-control" />
-                            <button type="submit" name="save_excel_data" class="bt mt-3" style="background-color: #ff671d; color:white;" >Importar</button>
+                            <button type="submit" name="save_excel_data" class="bt mt-3" style="background-color: #39A900; color:white;" >Importar</button>
 
                         </form>
 

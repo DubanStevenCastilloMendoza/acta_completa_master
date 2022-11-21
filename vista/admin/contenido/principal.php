@@ -770,28 +770,28 @@ $("#table3 tr:last").remove();
 <input type="hidden"  value=" <?php   $c = $c->acta_contador; ?>">
 
 <td><input class="parti" type="hidden" name="d_acta[]"  id="d_acta" placeholder="acta " required value="<?=$zz+1?>"/> </td>
-<td><input class="parti" type="text" name="d_nombre_aprendiz[]"  id="d_nombre_aprendiz" placeholder="Nombre aprendiz " required /> </td>
-<td><textarea class="comit"  type="text" name="d_descargos_its[]"  id="d_descargos_its" placeholder="Descargos instructor" required></textarea></td>
-<td><textarea class="comit"  type="text" name="d_descargos_its_b[]"  id="d_descargos_its" placeholder="Descargos instructor" required></textarea></td>
-<td><textarea class="comit"  type="text" name="d_descargos_its_c[]"  id="d_descargos_its" placeholder="Descargos instructor" required></textarea></td>
-<td><textarea class="comit"  type="text" name="d_descargos_aprendiz[]"  id="d_descargos_its" placeholder="Descargos aprendiz" required></textarea></td>
+<td><input class="parti" type="text" name="d_nombre_aprendiz[]"  id="d_nombre_aprendiz" placeholder="Nombre aprendiz " /> </td>
+<td><textarea class="comit"  type="text" name="d_descargos_its[]"  id="d_descargos_its" placeholder="Descargos instructor" ></textarea></td>
+<td><textarea class="comit"  type="text" name="d_descargos_its_b[]"  id="d_descargos_its" placeholder="Descargos instructor" ></textarea></td>
+<td><textarea class="comit"  type="text" name="d_descargos_its_c[]"  id="d_descargos_its" placeholder="Descargos instructor" ></textarea></td>
+<td><textarea class="comit"  type="text" name="d_descargos_aprendiz[]"  id="d_descargos_its" placeholder="Descargos aprendiz" ></textarea></td>
 </tr>
 <tr>
 <td><input class="parti" type="hidden" name="d_acta[]"  id="d_acta" placeholder="acta " required value="<?=$zz+1?>"/> </td>
-<td><input class="parti" type="text" name="d_nombre_aprendiz[]"  id="d_nombre_aprendiz" placeholder="Nombre aprendiz " required /> </td>
-<td><textarea class="comit"  type="text" name="d_descargos_its[]"  id="d_descargos_its" placeholder="Descargos instructor" required></textarea></td>
-<td><textarea class="comit"  type="text" name="d_descargos_its_b[]"  id="d_descargos_its" placeholder="Descargos instructor" required></textarea></td>
-<td><textarea class="comit"  type="text" name="d_descargos_its_c[]"  id="d_descargos_its" placeholder="Descargos instructor" required></textarea></td>
-<td><textarea class="comit"  type="text" name="d_descargos_aprendiz[]"  id="d_descargos_its" placeholder="Descargos aprendiz" required></textarea></td>
+<td><input class="parti" type="text" name="d_nombre_aprendiz[]"  id="d_nombre_aprendiz" placeholder="Nombre aprendiz "  /> </td>
+<td><textarea class="comit"  type="text" name="d_descargos_its[]"  id="d_descargos_its" placeholder="Descargos instructor" ></textarea></td>
+<td><textarea class="comit"  type="text" name="d_descargos_its_b[]"  id="d_descargos_its" placeholder="Descargos instructor" ></textarea></td>
+<td><textarea class="comit"  type="text" name="d_descargos_its_c[]"  id="d_descargos_its" placeholder="Descargos instructor"></textarea></td>
+<td><textarea class="comit"  type="text" name="d_descargos_aprendiz[]"  id="d_descargos_its" placeholder="Descargos aprendiz" ></textarea></td>
 </tr>
 
 <tr>
 <td><input class="parti" type="hidden" name="d_acta[]"  id="d_acta" placeholder="acta " required value="<?=$zz+1?>"/> </td>
-<td><input class="parti" type="text" name="d_nombre_aprendiz[]"  id="d_nombre_aprendiz" placeholder="Nombre aprendiz " required /> </td>
-<td><textarea class="comit"  type="text" name="d_descargos_its[]"  id="d_descargos_its" placeholder="Descargos instructor" required></textarea></td>
-<td><textarea class="comit"  type="text" name="d_descargos_its_b[]"  id="d_descargos_its" placeholder="Descargos instructor" required></textarea></td>
-<td><textarea class="comit"  type="text" name="d_descargos_its_c[]"  id="d_descargos_its" placeholder="Descargos instructor" required></textarea></td>
-<td><textarea class="comit"  type="text" name="d_descargos_aprendiz[]"  id="d_descargos_its" placeholder="Descargos aprendiz" required></textarea></td>
+<td><input class="parti" type="text" name="d_nombre_aprendiz[]"  id="d_nombre_aprendiz" placeholder="Nombre aprendiz "  /> </td>
+<td><textarea class="comit"  type="text" name="d_descargos_its[]"  id="d_descargos_its" placeholder="Descargos instructor" ></textarea></td>
+<td><textarea class="comit"  type="text" name="d_descargos_its_b[]"  id="d_descargos_its" placeholder="Descargos instructor" ></textarea></td>
+<td><textarea class="comit"  type="text" name="d_descargos_its_c[]"  id="d_descargos_its" placeholder="Descargos instructor" ></textarea></td>
+<td><textarea class="comit"  type="text" name="d_descargos_aprendiz[]"  id="d_descargos_its" placeholder="Descargos aprendiz" ></textarea></td>
 </tr>
 
 </tbody>
@@ -820,11 +820,11 @@ var tds=$("#table4 tr:first td").length;
     cant++;
 $('#contador-filas').val(cant)
 nuevaFila+="<td><input class='parti' type='hidden' name='d_acta[]'  id='d_acta' placeholder='acta"+ " ' required value='<?=$zz+1?>'/> </td>"+
-  "<td><input class='parti' type='text' name='d_nombre_aprendiz[]'  id='d_nombre_aprendiz' placeholder='Nombre aprendiz"+ " ' required /> </td>"+
-  "<td><textarea class='comit' type='text' name='d_descargos_its[]' id='d_descargos_its' placeholder='Descargos instructor" +"' required></textarea> </td>"+
-  "<td><textarea class='comit' type='text' name='d_descargos_its_b[]' id='d_descargos_its_b' placeholder='Descargos instructor" +"' required></textarea> </td>"+
-  "<td><textarea class='comit' type='text' name='d_descargos_its_c[]' id='d_descargos_its_c' placeholder='Descargos instructor" +"' required></textarea> </td>"+
-  "<td><textarea class='comit' type='text' name='d_descargos_aprendiz[]' id='d_descargos_aprendiz' placeholder='Descargos aprendiz" +"' required></textarea> </td>";
+  "<td><input class='parti' type='text' name='d_nombre_aprendiz[]'  id='d_nombre_aprendiz' placeholder='Nombre aprendiz"+ " '  /> </td>"+
+  "<td><textarea class='comit' type='text' name='d_descargos_its[]' id='d_descargos_its' placeholder='Descargos instructor" +"' ></textarea> </td>"+
+  "<td><textarea class='comit' type='text' name='d_descargos_its_b[]' id='d_descargos_its_b' placeholder='Descargos instructor" +"'></textarea> </td>"+
+  "<td><textarea class='comit' type='text' name='d_descargos_its_c[]' id='d_descargos_its_c' placeholder='Descargos instructor" +"' ></textarea> </td>"+
+  "<td><textarea class='comit' type='text' name='d_descargos_aprendiz[]' id='d_descargos_aprendiz' placeholder='Descargos aprendiz" +"' ></textarea> </td>";
 // Añadimos una columna con el numero total de columnas.
 // Añadimos uno al total, ya que cuando cargamos los valores para la
 // columna, todavia no esta añadida

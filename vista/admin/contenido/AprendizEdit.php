@@ -109,8 +109,8 @@
   <div class="row">
   <div class="col">
   <center>
-    <button type="submit" style="background-color: #ff671d; color:white;"   onclick= 'return enviarFormulario();' id="bt1" class="bt">Actualizar</button>
-    <a    href="?c=Vistas&a=ConsultarAprendiz" style="background-color: #ff671d; color:white;"  type="submit" class="bt "> Cancelar</a>
+    <button type="submit" style="background-color: #39A900; color:white;"   onclick= 'return enviarFormulario();' id="bt1" class="bt">Actualizar</button>
+    <a    href="?c=Vistas&a=ConsultarAprendiz" style="background-color: #39A900; color:white;"  type="submit" class="bt "> Cancelar</a>
     </center>
   </div>
 </div>
@@ -131,8 +131,8 @@ function enviarFormulario() {
   icon: 'question',
   showDenyButton: true,
   showCancelButton: true,
-  confirmButtonColor: '#FF8000',
-  denyButtonColor: '#FF4040',
+  confirmButtonColor: '#39A900',
+  denyButtonColor: '#39A900',
   confirmButtonText: 'Guardar ',
   denyButtonText: `No guardar`,
 }).then((result) => {

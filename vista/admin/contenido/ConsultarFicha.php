@@ -42,11 +42,11 @@
     <td><?=$r->fecha_fin?></td>
 
     <input type="hidden" value=" <?= $mm = $qq->acta_contador?>">
-   <center> <td><a href="?c=Ficha&a=FormFichaContador&id=<?=$r->id_ficha?>" type="button" style="background-color: #ff671d;"  id="bt" class="btn " ><i class="fa-solid fa-hashtag"></i></a > </td></center>
-    <td><a href="?c=Acta&a=menu&id=<?=$r->N_ficha?>" type="button" style="background-color: #ff671d;"  id="bt" class="btn " ><i class="fa-solid fa-book"></i></a ></td>
-   <center> <td> <a   href="?c=Acta&a=FormCrearficha&id=<?=$r->id_ficha?>&ficha=<?=$r->N_ficha?>&acta_contador=<?=$r->ficha_contador?>" type="button" style="background-color: #ff671d;" id="bt" class="btn " ><i class="fa-solid fa-plus"></i></a > </td><center>
-    <td><a   href="?c=Ficha&a=FormCrearficha&id=<?=$r->id_ficha?>" type="button" style="background-color: #ff671d;" id="bt" class="btn " ><i class="fa-solid fa-pen"></i></a ></td>
-    <td><a  href="?c=Ficha&a=Borrarficha&id=<?=$r->id_ficha?>" style="background-color: #ff671d;" id="bt" type="button" class="btn" ><i class="fa-solid fa-trash-can"></i></a ></td>
+   <center> <td><a href="?c=Ficha&a=FormFichaContador&id=<?=$r->id_ficha?>" type="button" style="background-color: #39A900;"  id="bt" class="btn " ><i class="fa-solid fa-hashtag"></i></a > </td></center>
+    <td><a href="?c=Acta&a=menu&id=<?=$r->N_ficha?>" type="button" style="background-color: #39A900;"  id="bt" class="btn " ><i class="fa-solid fa-book"></i></a ></td>
+   <center> <td> <a   href="?c=Acta&a=FormCrearficha&id=<?=$r->id_ficha?>&ficha=<?=$r->N_ficha?>&acta_contador=<?=$r->ficha_contador?>" type="button" style="background-color: #39A900;" id="bt" class="btn " ><i class="fa-solid fa-plus"></i></a > </td><center>
+    <td><a   href="?c=Ficha&a=FormCrearficha&id=<?=$r->id_ficha?>" type="button" style="background-color: #39A900;" id="bt" class="btn " ><i class="fa-solid fa-pen"></i></a ></td>
+    <td><a  href="?c=Ficha&a=Borrarficha&id=<?=$r->id_ficha?>" style="background-color: #39A900;" id="bt" type="button" class="btn" ><i class="fa-solid fa-trash-can"></i></a ></td>
 </tr>
 
 <?php endforeach; ?>

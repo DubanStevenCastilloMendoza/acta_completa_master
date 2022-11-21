@@ -37,7 +37,7 @@
 
 
  <!--Locación botón editar-->
-      <td><a   href="?c=programa&a=EditPrograma&id_programa=<?=$r->id_programa?>" type="button" style="background-color: #ff671d;" id="bt" class="btn" ><i class="fa-solid fa-pen"></i></a >    <a href="?c=programa&a=BorrarPro&id_programa=<?=$r->id_programa?>" style="background-color: #ff671d; color:white;" bt="bt" type="button" class="btn" ><i class="fa-solid fa-trash-can"></i></a></td>
+      <td><a   href="?c=programa&a=EditPrograma&id_programa=<?=$r->id_programa?>" type="button" style="background-color: #39A900;" id="bt" class="btn" ><i class="fa-solid fa-pen"></i></a >    <a href="?c=programa&a=BorrarPro&id_programa=<?=$r->id_programa?>" style="background-color: #39A900; color:white;" bt="bt" type="button" class="btn" ><i class="fa-solid fa-trash-can"></i></a></td>
 
   </tr>
 

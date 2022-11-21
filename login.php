@@ -94,12 +94,7 @@
 
                                     <!-- esto evita el desbordamiento de datos-->
 
-            <center>
-              <a  id="" href="?c=usuario&a=recuperarPass&Start=1">
-              
-              Recuperar contraseña
-             </a>
-             </center>
+
 
              <br>
 <center>

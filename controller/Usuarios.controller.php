@@ -113,6 +113,29 @@ class UsuariosController{
     
     }
 
+    public function GuardarContra(){
+
+      
+        $usuario=new usuario();
+    
+
+        $usuario->setId($_POST['id']);
+        $usuario->setContrasena($_POST['contrasena']);
+    
+
+    
+    
+        $usuario ->getId() > 0 ?
+    
+        $this ->modelo->  ActualizarContraseña($usuario):
+  
+        
+        header("location:?c=vistas&a=Usuario");
+    
+    
+    }
+
+
     
     function logout()
     {
@@ -143,6 +166,28 @@ class UsuariosController{
         
           require_once "vista/admin/cabecera/cabecera.php";
           require_once "vista/admin/contenido/usuariosedit.php";
+          require_once "vista/admin/footer/footer.php";
+        
+        }
+    
+    
+        
+        
+        }
+
+        
+    public function EditContra(){
+
+        if(isset($_GET['id'])){
+        
+        
+          $p=$this ->modelo ->ObtenerContra($_GET['id']);
+         
+    
+          
+        
+          require_once "vista/admin/cabecera/cabecera.php";
+          require_once "vista/admin/contenido/cambiarContraseña.php";
           require_once "vista/admin/footer/footer.php";
         
         }

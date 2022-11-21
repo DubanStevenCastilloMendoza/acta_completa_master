@@ -9,7 +9,7 @@
 <br>
 <center>
 
-<h1>  <i class="fa-solid fa-user"></i> PERFIL    </h1>
+<h1>  <i class="fa-solid fa-user"></i> PERFIL</h1>
 </center>
 
 <br>
@@ -49,60 +49,6 @@
   <div class="col">
 <br>
 <br>
-<!-- Button trigger modal -->
-<button type="button" class="bt btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-  Cambiar Contraseña
-</button>
-
-<!-- Modal -->
-
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">  Cambiar Contraseña</h5>
-
-
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-
-
-
-      <form>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Contraseña actual</label>
-    <input type="password" class="" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Contraseña actual">
-    <br>
-    
-    <small id="emailHelp" class="form-text text-muted">Escriba su contraseña actual y su nueva contraseña </small>
-  </div>
-
-  <div class="form-group">
-    <label for="exampleInputPassword1">Nueva contraseña</label>
-    <input type="password" class="" id="exampleInputPassword1" placeholder="Nueva contraseña">
-  </div>
-  <div class="form-check">
-
-
-  </div>
-  <button type="submit" class="bt btn-primary">Actualizar</button>
-
-</div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
 </form>
 </div>
 </div>
