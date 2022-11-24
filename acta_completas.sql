@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 09-11-2022 a las 16:50:02
+-- Tiempo de generación: 24-11-2022 a las 16:54:00
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 7.4.29
 
@@ -51,34 +51,17 @@ CREATE TABLE `acta` (
   `descargos_apre` varchar(100) NOT NULL,
   `conclusion` varchar(1000) DEFAULT NULL,
   `ficha` int(100) NOT NULL,
-  `programa` varchar(100) NOT NULL
+  `programa` varchar(100) NOT NULL,
+  `privacidad` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `acta`
 --
 
-INSERT INTO `acta` (`n_acta`, `acta_no`, `acta_contador`, `nom_rev`, `ciudad`, `fecha`, `hora_in`, `hora_fin`, `lu_en`, `direccion`, `agenda`, `objetivos`, `participantes`, `inf_ficha`, `casos_ant`, `aprendices_dest`, `casos_part`, `hechos_actuales`, `desarrollo`, `informe_vocero`, `descargos_apre`, `conclusion`, `ficha`, `programa`) VALUES
-(1, 'Na.001', 1, 'Comité Académico', 'Bogotá D.C.', '2022-11-22', '17:13', '18:13', 'qqqqqqqqq', 'Cl. 15 #31-42', 'Comité de evaluación y seguimiento aprendices ficha - 2247675 de adsi    ', 'Se reúne el ________________________________________, como instancia competente para investigar y analizar los casos tanto académicos como disciplinarios de los aprendices de la ficha- 2247675 de adsi.', NULL, NULL, NULL, NULL, NULL, '', 'qqqqqqqqqqqqqqqqq', '', '', NULL, 2247675, ' adsi'),
-(2, 'Na.002', 2, 'Comité Académico', 'Bogotá D.C.', '2022-11-23', '13:18', '16:14', 'lol', 'Cl. 15 #31-42', ' Comité de evaluación y seguimiento aprendices ficha - 2247675 de adsi     ', 'Se reúne el ________________________________________, como instancia competente para investigar y analizar los casos tanto académicos como disciplinarios de los aprendices de la ficha- 2247675 de adsi. ', NULL, NULL, NULL, NULL, NULL, '', 'gg', '', '', NULL, 2247675, ' adsi'),
-(3, 'Na.003', 3, 'Comité Académico', 'Bogotá D.C.', '2022-12-08', '13:19', '19:15', 'yyyyy', 'Cl. 15 #31-42', 'Comité de evaluación y seguimiento aprendices ficha - 2247675 de adsi    ', 'Se reúne el ________________________________________, como instancia competente para investigar y analizar los casos tanto académicos como disciplinarios de los aprendices de la ficha- 2247675 de adsi.', NULL, NULL, NULL, NULL, NULL, '', 'y', '', '', NULL, 2247675, ' adsi'),
-(4, 'Na.004', 4, 'Comité Étapa Productiva', 'Bogotá D.C.', '2022-11-23', '15:23', '16:23', 'dddd', 'Cl. 15 #31-42', 'Comité de evaluación y seguimiento aprendices ficha - 2247675 de adsi    ', 'Se reúne el ________________________________________, como instancia competente para investigar y analizar los casos tanto académicos como disciplinarios de los aprendices de la ficha- 2247675 de adsi.', NULL, NULL, NULL, NULL, NULL, '', 'dddd', '', '', NULL, 2247675, ' adsi'),
-(5, 'Na.005', 5, 'Comité Académico', 'Bogotá D.C.', '2022-11-24', '15:40', '15:40', 'hhhhh', 'Cl. 15 #31-42', 'Comité de evaluación y seguimiento aprendices ficha - 2247675 de adsi    ', 'Se reúne el ________________________________________, como instancia competente para investigar y analizar los casos tanto académicos como disciplinarios de los aprendices de la ficha- 2247675 de adsi.', NULL, NULL, NULL, NULL, NULL, '', 'hhhhh', '', '', NULL, 2247675, ' adsi'),
-(6, 'Na.006', 6, 'Comité de Seguimiento', 'Bogotá D.C.', '2022-11-14', '21:08', '21:08', 'dfsdfsdf', 'Cl. 15 #31-42', 'Comité de evaluación y seguimiento aprendices ficha - 2247675 de adsi    ', 'Se reúne el ________________________________________, como instancia competente para investigar y analizar los casos tanto académicos como disciplinarios de los aprendices de la ficha- 2247675 de adsi.', NULL, NULL, NULL, NULL, NULL, '', 'd', '', '', NULL, 2247675, ' adsi'),
-(7, 'Na.007', 7, 'Comité Académico', 'Bogotá D.C.', '2022-12-01', '17:12', '20:09', 'fsdfsdf', 'Cl. 15 #31-42', 'Comité de evaluación y seguimiento aprendices ficha - 2247675 de adsi    ', 'Se reúne el ________________________________________, como instancia competente para investigar y analizar los casos tanto académicos como disciplinarios de los aprendices de la ficha- 2247675 de adsi.', NULL, NULL, NULL, NULL, NULL, '', 'jjjj', '', '', NULL, 2247675, ' adsi'),
-(8, 'Na.008', 8, 'Comité Académico', 'Bogotá D.C.', '2022-11-21', '21:10', '21:10', 'mmmm', 'Cl. 15 #31-42', 'Comité de evaluación y seguimiento aprendices ficha - 2247675 de adsi    ', 'Se reúne el ________________________________________, como instancia competente para investigar y analizar los casos tanto académicos como disciplinarios de los aprendices de la ficha- 2247675 de adsi.', NULL, NULL, NULL, NULL, NULL, '', 'mmmmmmmm', '', '', NULL, 2247675, ' adsi'),
-(9, 'Na.09', 9, 'Comité de Seguimiento', 'Bogotá D.C.', '2022-11-18', '00:17', '00:17', 'vbbbbbb', 'Cl. 15 #31-42', 'Comité de evaluación y seguimiento aprendices ficha - 2247675 de adsi    ', 'Se reúne el ________________________________________, como instancia competente para investigar y analizar los casos tanto académicos como disciplinarios de los aprendices de la ficha- 2247675 de adsi.', NULL, NULL, NULL, NULL, NULL, '', 'dfgdfg', '', '', NULL, 2247675, ' adsi'),
-(10, 'H01', 10, 'Comité Académico', 'Bogotá D.C.', '2022-11-23', '09:23', '01:19', 'CVC', 'Cl. 15 #31-42', 'Comité de evaluación y seguimiento aprendices ficha - 2247675 de adsi    ', 'Se reúne el ________________________________________, como instancia competente para investigar y analizar los casos tanto académicos como disciplinarios de los aprendices de la ficha- 2247675 de adsi.', NULL, NULL, NULL, NULL, NULL, '', 'sdfsdf', '', '', NULL, 2247675, ' adsi'),
-(11, 'Na.002', 1, 'Comité Extraordinarios', 'Bogotá D.C.', '2022-11-16', '00:26', '11:26', 'vvvvvvvvvvvv', 'Cl. 15 #31-42', 'Comité de evaluación y seguimiento aprendices ficha - 2184573 de cine y televisión    ', 'Se reúne el ________________________________________, como instancia competente para investigar y analizar los casos tanto académicos como disciplinarios de los aprendices de la ficha- 2184573 de cine y televisión.', NULL, NULL, NULL, NULL, NULL, '', 'v', '', '', NULL, 2184573, ' cine y televisión'),
-(12, 'Na.0011', 11, 'Comité Académico', 'Bogotá D.C.', '2022-11-24', '04:46', '02:46', 'vbbbbbbbb', 'Cl. 15 #31-42', '1.Comité de evaluación y seguimiento aprendices ficha - 2247675 de adsi    ', 'Se reúne el ________________________________________, como instancia competente para investigar y analizar los casos tanto académicos como disciplinarios de los aprendices de la ficha- 2247675 de adsi.', NULL, NULL, NULL, NULL, NULL, '', 'ghjghj', '', '', NULL, 2247675, ' adsi'),
-(13, 'Na.012', 12, 'Comité Académico', 'Bogotá D.C.', '2022-11-23', '10:53', '10:52', 'sadasd', 'Cl. 15 #31-42', '1.Comité de evaluación y seguimiento aprendices ficha - 2247675 de adsi    ', 'Se reúne el ________________________________________, como instancia competente para investigar y analizar los casos tanto académicos como disciplinarios de los aprendices de la ficha- 2247675 de adsi.', NULL, NULL, NULL, NULL, NULL, '', 'dsfsdf', '', '', NULL, 2247675, ' adsi'),
-(14, 'Na.004', 13, 'Comité Académico', 'Bogotá D.C.', '2022-11-24', '11:26', '08:30', 'ds', 'Cl. 15 #31-42', ' 1.Comité de evaluación y seguimiento aprendices ficha - 2247675 de adsi     ', 'Se reúne el ________________________________________, como instancia competente para investigar y analizar los casos tanto académicos como disciplinarios de los aprendices de la ficha- 2247675 de adsi. ', NULL, NULL, NULL, NULL, NULL, 'holaaaaaaaaaaaaaaaa', 'sdfsdf', '', '', NULL, 2247675, ' adsi'),
-(15, 'ssd45', 14, 'Comité Extraordinarios', 'Bogotá D.C.', '2022-11-16', '16:32', '16:32', 'ttttttttttttttttt', 'Cl. 15 #31-42', ' 1.Comité de evaluación y seguimiento aprendices ficha - 2247675 de adsi     ', 'Se reúne el ________________________________________, como instancia competente para investigar y analizar los casos tanto académicos como disciplinarios de los aprendices de la ficha- 2247675 de adsi. ', NULL, NULL, NULL, NULL, NULL, 'hptaaaaaa', 'ttttttttttttt', '', '', NULL, 2247675, ' adsi'),
-(16, 'ghfgh', 15, 'Comité Étapa Productiva', 'Bogotá D.C.', '2022-12-06', '16:39', '14:40', 'ghghgh', 'Cl. 15 #31-42', '    1.Comité de evaluación y seguimiento aprendices ficha - 2247675 de adsi        ', 'Se reúne el ________________________________________, como instancia competente para investigar y analizar los casos tanto académicos como disciplinarios de los aprendices de la ficha- 2247675 de adsi.    ', NULL, NULL, NULL, NULL, NULL, 'ghg    ', 'kkkkkkkkkkkkkkkkkkkk', ' sopla mondaaaa', '', NULL, 2247675, ' adsi'),
-(17, 'jk', 16, 'Comité Académico', 'Bogotá D.C.', '2022-11-11', '16:50', '16:53', 'jkjkjk', 'Cl. 15 #31-42', '1.Comité de evaluación y seguimiento aprendices ficha - 2247675 de adsi    ', 'Se reúne el ________________________________________, como instancia competente para investigar y analizar los casos tanto académicos como disciplinarios de los aprendices de la ficha- 2247675 de adsi.', NULL, NULL, NULL, NULL, NULL, 'bvnvbn', 'sapo hpta', 'vbnvbnn', '', NULL, 2247675, ' adsi'),
-(18, 'bvbvb', 17, 'Seleccione el comité', 'Bogotá D.C.', '2022-11-11', '16:58', '16:59', 'vbvb', 'Cl. 15 #31-42', '  1.Comité de evaluación y seguimiento aprendices ficha - 2247675 de adsi      ', 'Se reúne el ________________________________________, como instancia competente para investigar y analizar los casos tanto académicos como disciplinarios de los aprendices de la ficha- 2247675 de adsi.  ', NULL, NULL, NULL, NULL, NULL, 'hola', NULL, 'care monda', '', NULL, 2247675, ' adsi'),
-(19, 'Na.0152', 18, 'Comité Académico', 'Bogotá D.C.', '2022-11-15', '00:27', '11:27', 'fffffffff', 'Cl. 15 #31-42', ' 1.Comité de evaluación y seguimiento aprendices ficha - 2247675 de adsi     ', 'Se reúne el ________________________________________, como instancia competente para investigar y analizar los casos tanto académicos como disciplinarios de los aprendices de la ficha- 2247675 de adsi. ', NULL, NULL, NULL, NULL, NULL, 'el cholo ', NULL, 'hhhhhhh ', '', NULL, 2247675, ' adsi'),
-(20, 'Na.004gg', 19, 'Comité Académico', 'Bogotá D.C.', '2022-11-30', '03:42', '03:42', 'ghgh', 'Cl. 15 #31-42', '1.Comité de evaluación y seguimiento aprendices ficha - 2247675 de adsi    ', 'Se reúne el ________________________________________, como instancia competente para investigar y analizar los casos tanto académicos como disciplinarios de los aprendices de la ficha- 2247675 de adsi.', NULL, NULL, NULL, NULL, NULL, 'nnnnnnnnnnnnnnn', NULL, 'nnnnnnnnnnnnnnnnnnnnnnnnnnn', '', NULL, 2247675, ' adsi');
+INSERT INTO `acta` (`n_acta`, `acta_no`, `acta_contador`, `nom_rev`, `ciudad`, `fecha`, `hora_in`, `hora_fin`, `lu_en`, `direccion`, `agenda`, `objetivos`, `participantes`, `inf_ficha`, `casos_ant`, `aprendices_dest`, `casos_part`, `hechos_actuales`, `desarrollo`, `informe_vocero`, `descargos_apre`, `conclusion`, `ficha`, `programa`, `privacidad`) VALUES
+(1, 'Na.001', 1, 'Seleccione el comité', 'Bogotá D.C.', '2022-11-25', '11:28', '17:34', 'meet.google.com/xrb-ianu-oba Link: https://forms.gle/PgXL7xqytfwPTFc2A', 'Cl. 15 #31-42', '1.Comité de evaluación y seguimiento aprendices ficha - 2247675 de adsi    ', 'Se reúne el ________________________________________, como instancia competente para investigar y analizar los casos tanto académicos como disciplinarios de los aprendices de la ficha- 2247675 de adsi.', NULL, NULL, NULL, NULL, NULL, 'El instructor jefe de taller Carlos Pérez Álvarez en el mes de mayo 2021 solicitó a coordinación\r\nacadémica comité de evaluación y seguimiento para aprendices de ficha - 2247675 TECNÓLOGO EN\r\nANÁLISIS Y DESARROLLO DE SISTEMAS DE INFORMACIÓN.', NULL, 'El presente informe tratarán los temas referentes al estado de la ficha para el día 22/05/2021 tales\r\ncomo el estado de la misma a nivel general, aspectos académicos a destacar y por último\r\nsugerencias para mejorar dicho estado.\r\n\r\nGD-F-007 V03\r\n\r\nEstado El estado de la ficha a día de hoy se puede calificar como “bueno”, La ficha se encuentra\r\nconformada actualmente por 29 aprendices los cuales salvo contadas excepciones mantienen un\r\nrendimiento académico apropiado para el programa de formación. Algunos aprendices ya han\r\ncompletado sus correspondientes formaciones en el apartado de English dot works 1,2 y 3 dado\r\nque habían cursado el 1 en el colegio o en un programa técnico previo, la mayoría se encuentra por\r\nempezar el English dot word 3, Se destaca que en general la ficha se ha acostumbrado a trabajar de\r\nmanera virtual pese a haberse matriculado en una formación presencial, debido a esto, Algunos\r\nhan decidido tomar su formación mientras realizan otras actividades como hacer una diligencia o\r\ntareas del hogar. Aspectos académicos Por el lado académico la ficha está distribuida en 3 grupos,\r\nel primero está constituido por un aproximado de 5.6 aprendices que entregan todas sus evidencias\r\na tiempo y de forma apropiada. El segundo y más grande está conformado por aproximadamente\r\n18 aprendices que entregan sus evidencias con leves errores y en ocasiones no necesariamente a\r\ntiempo u otro motivo por el que estas pueden en algunos casos considerarse erradas o\r\ninsuficientes. Por último, se encuentra en igual proporción al primero los aprendices que no\r\nentregan sus evidencias a tiempo, no participan en clase, y las evidencias que entregan no suelen\r\nser lo solicitado.', '', NULL, 2247675, ' adsi', 'privada'),
+(2, 'Na.002', 2, 'Comité Académico', 'Bogotá D.C.', '2022-11-15', '17:39', '19:39', 'meet.google.com/xrb-ianu-oba Link: https://forms.gle/PgXL7xqytfwPTFc2A', 'Cl. 15 #31-42', '1.Comité de evaluación y seguimiento aprendices ficha - 2247675 de adsi    ', 'Se reúne el ________________________________________, como instancia competente para investigar y analizar los casos tanto académicos como disciplinarios de los aprendices de la ficha- 2247675 de adsi.', NULL, NULL, NULL, NULL, NULL, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit vestibulum massa ullamcorper volutpat. Aliquam erat volutpat. Aenean id est a eros aliquet molestie. Sed a finibus diam. Curabitur ut urna mauris. Aenean venenatis mollis pellentesque. Donec sed metus nibh. Curabitur ut blandit nisi. Donec sollicitudin urna sed ornare faucibus. Ut ac purus sit amet erat facilisis sollicitudin non eu mi. Sed consequat quam in elit pellentesque condimentum. Ut molestie vulputate odio ac vulputate. Integer accumsan aliquet dui, ut scelerisque nisi vestibulum sed. Cras vel mi vel metus elementum dapibus sit amet id nisl.\r\n\r\nDonec cursus eleifend lorem, eget tempor lorem condimentum in. Duis purus urna, tincidunt a tincidunt quis, bibendum in ligula. Sed in arcu ut libero elementum posuere nec a diam. Integer auctor interdum libero. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent sodales, risus eget auctor dictum, arcu lectus consectetur nibh, quis eleifend risus augue eget nibh. Morbi quis magna enim. Ut orci lectus, gravida eu pharetra in, mattis eget magna. Vestibulum in mollis enim. Vestibulum urna tortor, ultricies eget orci eu, consectetur ultrices risus. Mauris sollicitudin ut metus scelerisque efficitur.', NULL, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit vestibulum massa ullamcorper volutpat. Aliquam erat volutpat. Aenean id est a eros aliquet molestie. Sed a finibus diam. Curabitur ut urna mauris. Aenean venenatis mollis pellentesque. Donec sed metus nibh. Curabitur ut blandit nisi. Donec sollicitudin urna sed ornare faucibus. Ut ac purus sit amet erat facilisis sollicitudin non eu mi. Sed consequat quam in elit pellentesque condimentum. Ut molestie vulputate odio ac vulputate. Integer accumsan aliquet dui, ut scelerisque nisi vestibulum sed. Cras vel mi vel metus elementum dapibus sit amet id nisl.\r\n\r\nDonec cursus eleifend lorem, eget tempor lorem condimentum in. Duis purus urna, tincidunt a tincidunt quis, bibendum in ligula. Sed in arcu ut libero elementum posuere nec a diam. Integer auctor interdum libero. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent sodales, risus eget auctor dictum, arcu lectus consectetur nibh, quis eleifend risus augue eget nibh. Morbi quis magna enim. Ut orci lectus, gravida eu pharetra in, mattis eget magna. Vestibulum in mollis enim. Vestibulum urna tortor, ultricies eget orci eu, consectetur ultrices risus. Mauris sollicitudin ut metus scelerisque efficitur.', '', NULL, 2247675, ' adsi', 'privada');
 
 -- --------------------------------------------------------
 
@@ -98,20 +81,8 @@ CREATE TABLE `aprendices_destacados` (
 --
 
 INSERT INTO `aprendices_destacados` (`id_destacados`, `acta_des`, `nombre_des`, `apellido_des`) VALUES
-(1, 10, 'd', 'd'),
-(2, 10, 'f', 'f'),
-(3, 10, 'h', 'h'),
-(4, 11, 'v', 'v'),
-(5, 13, 'yu', 'yu'),
-(6, 13, 'ui', 'ui'),
-(7, 13, 'pop', 'pop'),
-(8, 14, 'sdfd', 'dff'),
-(9, 15, 't', 't'),
-(10, 16, 'ghg', 'h'),
-(11, 17, 'fg', 'f'),
-(12, 18, 'vbvb', 'bvbv'),
-(13, 19, 'h', 'h'),
-(14, 20, 'nn', 'nnnnnnnnnnnnnnnnnnnnnnnnn');
+(1, 1, '', ''),
+(2, 2, 'Hernesto', 'Gonzales');
 
 -- --------------------------------------------------------
 
@@ -171,61 +142,8 @@ CREATE TABLE `casos_anteriores` (
 --
 
 INSERT INTO `casos_anteriores` (`id`, `A_ficha`, `A_contador`, `A_acta`, `A_aprendiz`, `A_medida`, `A_descripcion`, `A_cumplimiento`) VALUES
-(1, 2247675, 1, 2, 'q', '1.DESERCIÓN', '1.Cuando el aprendiz injustificadamente no se presente por tres (3) días consecutivos al Centro de Formación o empresa en su proceso formativo. Cuando al terminar el periodo de aplazamiento aprobado por el SENA, el Aprendiz no reingresa al programa de formación. Cuando transcurridos dos (2) años contados a partir de la fecha de terminación de la etapa lectiva del programa, el Aprendiz no ha presentado evidencia de la realización de la etapa productiva.', 'N/A'),
-(2, 2247675, 1, 2, 'q', '2.LLAMADO DE ATENCIÓN ESCRITO', '2.Cuando se trate de hechos que contraríen en menor grado el orden académico o disciplinario, sin afectar los deberes, derechos y prohibiciones, o cuando sea necesario para prevenir la ocurrencia de hechos que vulneren esos deberes, derechos y prohibiciones, el aprendiz podrá recibir un llamado de atención verbal por parte del (los) Instructor, el Coordinador Académico, el(los) responsable(s) de Bienestar, o el subdirector del Centro. Este llamado de atención verbal no constituye una sanción.', 'N/A'),
-(3, 2247675, 1, 2, 'q', '3.PLAN DE MEJORAMIENTO DISCIPLINARIO', '3.No deberá haber inasistencias ni retardos, en el horario que se determine o se incurrirá en plan de mejoramiento Integral.', 'N/A'),
-(4, 2247675, 2, 3, 'g', '8.CANCELACIÓN DE MATRÍCULA', '8.Acto administrativo que se origina cuando persisten en el aprendiz las causales que originaron el condicionamiento de matrícula o por faltas catalogadas como graves de acuerdo a la clasificación determinada en los artículos 25 y 26 del reglamento, en las etapas lectiva y productiva. Implica que la persona sancionada pierde la condición de aprendiz y no puede participar en procesos de ingreso a la institución por periodo entre 6 y 12 meses cuando es de índole académico y entre 12 y 24 meses cuando es de índole disciplinaria, de acuerdo a las recomendaciones del comité de evaluación y seguimiento. Una vez en firme la sanción, debe entregar de manera inmediata el carné institucional y ponerse a paz y salvo por todo concepto.', 'N/A'),
-(5, 2247675, 2, 3, 'g', '7.CONDICIONAMIENTO DE LA MATRÍCULA', '7.Se impone al Aprendiz que incurra en una falta académica o disciplinaria, previo agotamiento del procedimiento establecido en este Reglamento. El condicionamiento de matrícula cesa cuando el Aprendiz cumple el plan de mejoramiento concertado y /o compromisos escritos. Una vez quede en firme el condicionamiento de la matrícula, el Subdirector del Centro debe generar la pérdida de estímulos e incentivos que esté recibiendo el aprendiz, si los tuviere. Esta decisión será determinada en el acto académico que ordene el condicionamiento de matrícula transcurrido este tiempo el condicionamiento no es superado se procederá a realizar la Cancelación de la Matrícula.', 'N/A'),
-(6, 2247675, 2, 3, 'g', '6.PLAN DE MEJORAMIENTO INTEGRAL POR COMITÉ', '6.No deberá haber inasistencias ni retardos, en el horario que se determine y deberá cumplir con todas las evidencias acordadas desde el inicio del trimestre en el plan de trabajo y evaluación o se incurrirá en Condicionamiento de Matrícula.', 'N/A'),
-(7, 2247675, 3, 4, 'y', '3.PLAN DE MEJORAMIENTO DISCIPLINARIO', '3.No deberá haber inasistencias ni retardos, en el horario que se determine o se incurrirá en plan de mejoramiento Integral.', 'N/A'),
-(8, 2247675, 3, 4, 'y', '4.PLAN DE MEJORAMIENTO ACADÉMICO', '4.Deberá cumplir con todas las evidencias acordadas desde el inicio del trimestre en el plan de trabajo y evaluación o se incurrirá en plan de mejoramiento Integral.', 'N/A'),
-(9, 2247675, 3, 4, 'y', '5.PLAN DE MEJORAMIENTO ACADÉMICO Y DISCIPLINARIO', '4.Deberá cumplir con todas las evidencias acordadas desde el inicio del trimestre en el plan de trabajo y evaluación o se incurrirá en plan de mejoramiento Integral.', 'N/A'),
-(10, 2247675, 4, 5, 'd', '1.DESERCIÓN', '1.Cuando el aprendiz injustificadamente no se presente por tres (3) días consecutivos al Centro de Formación o empresa en su proceso formativo. Cuando al terminar el periodo de aplazamiento aprobado por el SENA, el Aprendiz no reingresa al programa de formación. Cuando transcurridos dos (2) años contados a partir de la fecha de terminación de la etapa lectiva del programa, el Aprendiz no ha presentado evidencia de la realización de la etapa productiva.', 'No cumplio'),
-(11, 2247675, 4, 5, 'd', '7.CONDICIONAMIENTO DE LA MATRÍCULA', '7.Se impone al Aprendiz que incurra en una falta académica o disciplinaria, previo agotamiento del procedimiento establecido en este Reglamento. El condicionamiento de matrícula cesa cuando el Aprendiz cumple el plan de mejoramiento concertado y /o compromisos escritos. Una vez quede en firme el condicionamiento de la matrícula, el Subdirector del Centro debe generar la pérdida de estímulos e incentivos que esté recibiendo el aprendiz, si los tuviere. Esta decisión será determinada en el acto académico que ordene el condicionamiento de matrícula transcurrido este tiempo el condicionamiento no es superado se procederá a realizar la Cancelación de la Matrícula.', 'Cumplio'),
-(12, 2247675, 4, 5, 'd', '3.PLAN DE MEJORAMIENTO DISCIPLINARIO', '3.No deberá haber inasistencias ni retardos, en el horario que se determine o se incurrirá en plan de mejoramiento Integral.', 'No cumplio'),
-(13, 2247675, 5, 6, 'hhhhhhh', '3.PLAN DE MEJORAMIENTO DISCIPLINARIO', '3.No deberá haber inasistencias ni retardos, en el horario que se determine o se incurrirá en plan de mejoramiento Integral.', ''),
-(14, 2247675, 5, 6, 'hhhhhhhhhhhhhhhh', '4.PLAN DE MEJORAMIENTO ACADÉMICO', '4.Deberá cumplir con todas las evidencias acordadas desde el inicio del trimestre en el plan de trabajo y evaluación o se incurrirá en plan de mejoramiento Integral.', ''),
-(15, 2247675, 5, 6, 'hhhhh', '8.CANCELACIÓN DE MATRÍCULA', '8.Acto administrativo que se origina cuando persisten en el aprendiz las causales que originaron el condicionamiento de matrícula o por faltas catalogadas como graves de acuerdo a la clasificación determinada en los artículos 25 y 26 del reglamento, en las etapas lectiva y productiva. Implica que la persona sancionada pierde la condición de aprendiz y no puede participar en procesos de ingreso a la institución por periodo entre 6 y 12 meses cuando es de índole académico y entre 12 y 24 meses cuando es de índole disciplinaria, de acuerdo a las recomendaciones del comité de evaluación y seguimiento. Una vez en firme la sanción, debe entregar de manera inmediata el carné institucional y ponerse a paz y salvo por todo concepto.', ''),
-(16, 2247675, 6, 7, 'd', '1.DESERCIÓN', '1.Cuando el aprendiz injustificadamente no se presente por tres (3) días consecutivos al Centro de Formación o empresa en su proceso formativo. Cuando al terminar el periodo de aplazamiento aprobado por el SENA, el Aprendiz no reingresa al programa de formación. Cuando transcurridos dos (2) años contados a partir de la fecha de terminación de la etapa lectiva del programa, el Aprendiz no ha presentado evidencia de la realización de la etapa productiva.', 'Cumplio'),
-(17, 2247675, 6, 7, 'd', '2.LLAMADO DE ATENCIÓN ESCRITO', '2.Cuando se trate de hechos que contraríen en menor grado el orden académico o disciplinario, sin afectar los deberes, derechos y prohibiciones, o cuando sea necesario para prevenir la ocurrencia de hechos que vulneren esos deberes, derechos y prohibiciones, el aprendiz podrá recibir un llamado de atención verbal por parte del (los) Instructor, el Coordinador Académico, el(los) responsable(s) de Bienestar, o el subdirector del Centro. Este llamado de atención verbal no constituye una sanción.', 'No cumplio'),
-(18, 2247675, 6, 7, 'd', '2.LLAMADO DE ATENCIÓN ESCRITO', '2.Cuando se trate de hechos que contraríen en menor grado el orden académico o disciplinario, sin afectar los deberes, derechos y prohibiciones, o cuando sea necesario para prevenir la ocurrencia de hechos que vulneren esos deberes, derechos y prohibiciones, el aprendiz podrá recibir un llamado de atención verbal por parte del (los) Instructor, el Coordinador Académico, el(los) responsable(s) de Bienestar, o el subdirector del Centro. Este llamado de atención verbal no constituye una sanción.', 'Cumplio'),
-(19, 2247675, 7, 8, 'j', 'N/A', 'N/A', 'Cumplio'),
-(20, 2247675, 7, 8, 'j', 'N/A', 'N/A', 'No cumplio'),
-(21, 2247675, 7, 8, 'j', 'N/A', 'N/A', 'Cumplio'),
-(22, 2247675, 7, 8, 'j', 'Seleccione', 'N/A', 'No cumplio'),
-(23, 2247675, 8, 9, 'm', 'N/A', 'N/A', ''),
-(24, 2247675, 8, 9, 'm', 'N/A', 'N/A', ''),
-(25, 2247675, 8, 9, 'm', 'N/A', 'N/A', ''),
-(26, 2247675, 9, 10, 'dfgdf', 'N/A', 'N/A', ''),
-(27, 2247675, 9, 10, 'dfgg', 'N/A', 'N/A', ''),
-(28, 2247675, 9, 10, 'dfg', 'N/A', 'N/A', ''),
-(29, 2247675, 10, 11, 'dsfsdfsd', 'N/A', 'N/A', ''),
-(30, 2247675, 10, 11, 'fsdfds', 'N/A', 'N/A', ''),
-(31, 2247675, 10, 11, 'sdf', 'N/A', 'N/A', ''),
-(32, 2247675, 11, 13, 'gjghjh', 'N/A', 'N/A', ''),
-(33, 2247675, 11, 13, 'ghj', 'N/A', 'N/A', ''),
-(34, 2247675, 11, 13, 'ghjghj', 'N/A', 'N/A', ''),
-(35, 2247675, 12, 14, 'sdfsdf', 'N/A', 'N/A', ''),
-(36, 2247675, 12, 14, 'sdfsdf', 'N/A', 'N/A', ''),
-(37, 2247675, 12, 14, 'fsdfsd', 'N/A', 'N/A', ''),
-(38, 2247675, 13, 15, 'sdf', 'N/A', 'N/A', ''),
-(39, 2247675, 13, 15, 'fsd', 'N/A', 'N/A', ''),
-(40, 2247675, 13, 15, 'fsdfsd', 'N/A', 'N/A', ''),
-(41, 2247675, 14, 16, 't', 'N/A', 'N/A', ''),
-(42, 2247675, 14, 16, 't', 'N/A', 'N/A', ''),
-(43, 2247675, 14, 16, 't', 'N/A', 'N/A', ''),
-(44, 2247675, 15, 17, 'k', 'N/A', 'N/A', ''),
-(45, 2247675, 15, 17, 'k', 'N/A', 'N/A', ''),
-(46, 2247675, 15, 17, 'k', 'N/A', 'N/A', ''),
-(47, 2247675, 16, 18, 'sfsdfd', 'N/A', 'N/A', ''),
-(48, 2247675, 16, 18, 'fds', 'N/A', 'N/A', ''),
-(49, 2247675, 16, 18, 'sdffd', 'N/A', 'N/A', ''),
-(50, 2247675, 17, 19, 'fgdfgdf', 'N/A', 'N/A', ''),
-(51, 2247675, 17, 19, 'gdfgdf', 'N/A', 'N/A', ''),
-(52, 2247675, 17, 19, 'dfgdfg', 'N/A', 'N/A', ''),
-(53, 2247675, 18, 20, 'h', 'N/A', 'N/A', ''),
-(54, 2247675, 18, 20, 'h', 'N/A', 'N/A', ''),
-(55, 2247675, 18, 20, 'h', 'N/A', 'N/A', '');
+(1, 2247675, 1, 2, 'JUAN SEBASTIAN MURCIA PINZON', '4.PLAN DE MEJORAMIENTO ACADÉMICO', '4.Deberá cumplir con todas las evidencias acordadas desde el inicio del trimestre en el plan de trabajo y evaluación o se incurrirá en plan de mejoramiento Integral.', 'Cumplio'),
+(2, 2247675, 1, 2, 'JOHAN MAURICIO MOSQUERA SOLANO', '4.PLAN DE MEJORAMIENTO ACADÉMICO', '4.Deberá cumplir con todas las evidencias acordadas desde el inicio del trimestre en el plan de trabajo y evaluación o se incurrirá en plan de mejoramiento Integral.', 'No cumplio');
 
 -- --------------------------------------------------------
 
@@ -252,66 +170,12 @@ CREATE TABLE `casos_especiales` (
 --
 
 INSERT INTO `casos_especiales` (`id_casos`, `C_ficha`, `C_acta`, `nombre_aprendiz`, `nombre_its`, `description`, `falta`, `reglamento`, `reglamento_a`, `reglamento_b`, `reglamento_c`) VALUES
-(1, 2247675, 1, 'qqqq', 'qqqqqqqqqqq', 'qqqqqqqqqq', 'Académica', 'N/A', 'N/A', 'N/A', 'N/A'),
-(2, 2247675, 1, 'qqqqqqqqqqqq', 'qqqqqqqqqqqq', 'qqqqqqqqqq', 'Académica', 'N/A', 'N/A', 'N/A', 'N/A'),
-(3, 2247675, 1, 'qqqqqqqqqq', 'qqqqqqqqqqq', 'qqqqqqqqqqqqqqq', 'Académica', 'N/A', 'N/A', 'N/A', 'N/A'),
-(4, 2247675, 2, 'g', 'g', 'g', 'Académica', 'N/A', 'N/A', 'N/A', 'N/A'),
-(5, 2247675, 2, 'g', 'g', 'g', 'Académica', 'N/A', 'N/A', 'N/A', 'N/A'),
-(6, 2247675, 2, 'g', 'gg', 'g', 'Académica', 'N/A', 'N/A', 'N/A', 'N/A'),
-(7, 2247675, 3, 'y', 'y', 'y', 'Académica', 'N/A', 'N/A', 'N/A', 'N/A'),
-(8, 2247675, 3, 'y', 'y', 'yy', 'Académica', 'N/A', 'N/A', 'N/A', 'N/A'),
-(9, 2247675, 3, 'yy', 'y', 'y', 'Académica', 'N/A', 'N/A', 'N/A', 'N/A'),
-(10, 2247675, 4, 'd', 'dddddd', 'ddddddddd', 'Académica', '14. Portar permanentemente y en lugar visible el carné que lo identifica como Aprendiz Sena, durante su proceso de aprendizaje, renovarlo de acuerdo con las disposiciones vigentes y devolverlo al finalizar el programa o cuando se presente retiro, aplazamiento o cancelación de la matrícula. En caso de pérdida de carné, el aprendiz debe formular la denuncia correspondiente, tramitar el duplicado y cancelar el valor respectivo con base en la normatividad dada por la Dirección General.', '13. Conocer y asumir las políticas y directrices institucionales establecidas, así como el Reglamento del Aprendiz Sena, y convivir en comunidad de acuerdo con ellos.', '9. Asumir con responsabilidad su participación en las actividades programadas como salidas, pasantías técnicas, intercambios de aprendices a nivel nacional e internacional, así como en las demás de carácter lúdico-pedagógico.', '10. Hacer uso apropiado de los ambientes de aprendizaje (infraestructura, equipos, herramientas, recursos didácticos, técnicos, tecnológicos, bibliográficos), disponibles para su proceso de aprendizaje, asumiendo responsabilidad legal en situaciones de utilización inadecuada y uso indebido, que deterioran los ambientes de aprendizaje y generan detrimento patrimonial.'),
-(11, 2247675, 4, 'dddddddddddddd', 'd', 'dd', 'Académica', '7. Proteger los recursos culturales y naturales del país y velar por la conservación del ambiente sano, vinculándose, apoyando y/o colaborando en las acciones que adelante el Centro de Formación.', '14. Portar permanentemente y en lugar visible el carné que lo identifica como Aprendiz Sena, durante su proceso de aprendizaje, renovarlo de acuerdo con las disposiciones vigentes y devolverlo al finalizar el programa o cuando se presente retiro, aplazamiento o cancelación de la matrícula. En caso de pérdida de carné, el aprendiz debe formular la denuncia correspondiente, tramitar el duplicado y cancelar el valor respectivo con base en la normatividad dada por la Dirección General.', '11. Asistir a las reuniones que programe el Centro de Formación para seguimiento a las actividades desarrolladas durante la etapa productiva. La no asistencia a estas reuniones debe justificarse mediante excusa comprobable.', '18. Actuar siempre teniendo como base los principios y valores para la convivencia; obrar con honestidad, respeto, responsabilidad, lealtad, justicia, compañerismo y solidaridad con la totalidad de los integrantes de la comunidad educativa y expresarse con respeto, cultura y educación, en forma directa, a través de medios impresos o electrónicos que le facilita la entidad (como foros de discusión, redes sociales, chat, correo electrónico, blogs y demás).'),
-(12, 2247675, 4, 'd', 'dd', 'd', 'Académica', '16. Portar el uniforme de manera decorosa; dentro del Centro de Formación, en los ambientes donde se desarrollen actividades extracurriculares y entornos diferentes al académico. Así como en el desarrollo de la etapa productiva, cuando la empresa patrocinadora lo exija.', '5. Informar y hacer la solicitud, por escrito, al Coordinador Académico y registrar en el sistema de gestión de la formación oportunamente las solicitudes o novedades (Traslados, Aplazamiento, Retiro voluntario y Reingreso), que presente durante el proceso de aprendizaje, utilizando medios virtuales y/o físicos; para los programas de formación complementaria en modalidad virtual, realizar en los sistemas de información el retiro voluntario del programa o inscripción del mismo. ', '11. Asistir a las reuniones que programe el Centro de Formación para seguimiento a las actividades desarrolladas durante la etapa productiva. La no asistencia a estas reuniones debe justificarse mediante excusa comprobable.', '3. Verificar en el sistema que sus datos básicos, se encuentren totalmente diligenciados y/o actualizarlos de acuerdo con el trámite administrativo correspondiente.'),
-(13, 2247675, 5, 'hhhh', 'hhhhhhhhh', 'hhhhhhhhhh', 'disciplinaria', '16. Portar el uniforme de manera decorosa; dentro del Centro de Formación, en los ambientes donde se desarrollen actividades extracurriculares y entornos diferentes al académico. Así como en el desarrollo de la etapa productiva, cuando la empresa patrocinadora lo exija.', '30. Verificar a través del Sistema Gestión Virtual de Aprendices, que el contrato de aprendizaje con la empresa patrocinadora se encuentre acorde al contrato físico firmado, y en caso de encontrar inconsistencias reportarlo de forma inmediata a la Oficina de Promoción y Relaciones Corporativas de su Centro con la líder de contrato de aprendizaje.', '21. Respetar la dignidad, intimidad e integridad de los miembros de la comunidad educativa Sena.', '6. Si el trámite para la consecución de contrato de aprendizaje o de otra de las alternativas para el desarrollo de la etapa productiva, es realizado directamente por el aprendiz, este deberá informar inmediatamente cuando esto ocurra, a los responsables de apoyar este proceso en el Centro de Formación.'),
-(14, 2247675, 5, 'hhhh', 'h', 'hhh', 'Académica y Disciplinaria', '18. Actuar siempre teniendo como base los principios y valores para la convivencia; obrar con honestidad, respeto, responsabilidad, lealtad, justicia, compañerismo y solidaridad con la totalidad de los integrantes de la comunidad educativa y expresarse con respeto, cultura y educación, en forma directa, a través de medios impresos o electrónicos que le facilita la entidad (como foros de discusión, redes sociales, chat, correo electrónico, blogs y demás).', '18. Actuar siempre teniendo como base los principios y valores para la convivencia; obrar con honestidad, respeto, responsabilidad, lealtad, justicia, compañerismo y solidaridad con la totalidad de los integrantes de la comunidad educativa y expresarse con respeto, cultura y educación, en forma directa, a través de medios impresos o electrónicos que le facilita la entidad (como foros de discusión, redes sociales, chat, correo electrónico, blogs y demás).', '2. Respetar los derechos ajenos y no abusar de los propios.', '10. Hacer uso apropiado de los ambientes de aprendizaje (infraestructura, equipos, herramientas, recursos didácticos, técnicos, tecnológicos, bibliográficos), disponibles para su proceso de aprendizaje, asumiendo responsabilidad legal en situaciones de utilización inadecuada y uso indebido, que deterioran los ambientes de aprendizaje y generan detrimento patrimonial.'),
-(15, 2247675, 5, 'hhhhhhhhhhhh', 'h', 'hhhhhhh', 'Académica y Disciplinaria', '17. Conservar y mantener en buen estado, orden y aseo, las instalaciones físicas, el material didáctico, equipos y herramientas de la entidad o que estén a cargo de esta, respondiendo por los daños ocasionados a estos intencionalmente o por descuido, debidamente comprobados.', '25. Enaltecer y respetar los símbolos patrios e institucionales.', '27. Cumplir a cabalidad la normatividad vigente del Estado colombiano en lo referente a delitos informáticos.', '11. Asistir a las reuniones que programe el Centro de Formación para seguimiento a las actividades desarrolladas durante la etapa productiva. La no asistencia a estas reuniones debe justificarse mediante excusa comprobable.'),
-(16, 2247675, 6, 'd', 'd', 'dd', 'Académica', 'N/A', 'N/A', 'N/A', 'N/A'),
-(17, 2247675, 6, 'd', 'd', 'dd', 'Académica', 'N/A', 'N/A', 'N/A', 'N/A'),
-(18, 2247675, 6, 'd', 'd', 'd', 'Académica', 'N/A', 'N/A', 'N/A', 'N/A'),
-(19, 2247675, 7, 'jj', 'jj', 'j', 'Académica', 'N/A', 'N/A', 'N/A', 'N/A'),
-(20, 2247675, 7, 'jj', 'j', 'jjj', 'Académica', 'N/A', 'N/A', 'N/A', 'N/A'),
-(21, 2247675, 7, 'jj', 'jj', 'jj', 'Académica', 'N/A', 'N/A', 'N/A', 'N/A'),
-(22, 2247675, 8, 'mmm', 'mm', 'mmm', 'Académica', '15. Utilizar la dotación o ropa de trabajo y los elementos de protección personal dispuestos en los ambientes de aprendizaje, observando las condiciones de prevención señaladas por el Instructor o Tutor y organizarlos para ser utilizados exclusivamente en el ambiente de aprendizaje requerido.', '13. Conocer y asumir las políticas y directrices institucionales establecidas, así como el Reglamento del Aprendiz Sena, y convivir en comunidad de acuerdo con ellos.', '10. Hacer uso apropiado de los ambientes de aprendizaje (infraestructura, equipos, herramientas, recursos didácticos, técnicos, tecnológicos, bibliográficos), disponibles para su proceso de aprendizaje, asumiendo responsabilidad legal en situaciones de utilización inadecuada y uso indebido, que deterioran los ambientes de aprendizaje y generan detrimento patrimonial.', '15. Utilizar la dotación o ropa de trabajo y los elementos de protección personal dispuestos en los ambientes de aprendizaje, observando las condiciones de prevención señaladas por el Instructor o Tutor y organizarlos para ser utilizados exclusivamente en el ambiente de aprendizaje requerido.'),
-(23, 2247675, 8, 'mm', 'mm', 'mm', 'Académica', '19. Hacer uso apropiado de los espacios de comunicación y respetar a los integrantes de la comunidad educativa, siendo solidario, tolerante y veraz en la información que se publique en medios impresos o digitales; abstenerse de enviar material multimedia que contenga imágenes, videos, documentos o grabaciones que no sean objeto de las actividades de aprendizaje.', '6. Si el trámite para la consecución de contrato de aprendizaje o de otra de las alternativas para el desarrollo de la etapa productiva, es realizado directamente por el aprendiz, este deberá informar inmediatamente cuando esto ocurra, a los responsables de apoyar este proceso en el Centro de Formación.', '13. Conocer y asumir las políticas y directrices institucionales establecidas, así como el Reglamento del Aprendiz Sena, y convivir en comunidad de acuerdo con ellos.', '12. Respetar los derechos de autor en los materiales, trabajos, proyectos y demás documentos generados por los grupos de trabajo o compañeros, y que hayan sido compartidos al interior de la Plataforma. Sin embargo, con la autorización de los creadores se puede hacer uso de cualquier material publicado, dando el crédito a quien generó la idea, a la fuente que se consultó o al recurso que referencia la información.'),
-(24, 2247675, 8, 'mmm', 'mmm', 'mmmmm', 'Académica', '12. Respetar los derechos de autor en los materiales, trabajos, proyectos y demás documentos generados por los grupos de trabajo o compañeros, y que hayan sido compartidos al interior de la Plataforma. Sin embargo, con la autorización de los creadores se puede hacer uso de cualquier material publicado, dando el crédito a quien generó la idea, a la fuente que se consultó o al recurso que referencia la información.', '2. Respetar los derechos ajenos y no abusar de los propios.', '8. Acatar las decisiones contempladas en el Manual de Convivencia.', '12. Respetar los derechos de autor en los materiales, trabajos, proyectos y demás documentos generados por los grupos de trabajo o compañeros, y que hayan sido compartidos al interior de la Plataforma. Sin embargo, con la autorización de los creadores se puede hacer uso de cualquier material publicado, dando el crédito a quien generó la idea, a la fuente que se consultó o al recurso que referencia la información.'),
-(25, 2247675, 9, 'fgdfg', 'dfgdf', 'gdfg', 'Académica', 'N/A', 'N/A', 'N/A', 'N/A'),
-(26, 2247675, 9, 'fg', 'dfgd', 'dfgdfg', 'Académica', 'N/A', 'N/A', 'N/A', 'N/A'),
-(27, 2247675, 9, 'dfgdfg', 'dfg', 'dfg', 'Académica', 'N/A', 'N/A', 'N/A', 'N/A'),
-(28, 2247675, 10, 'dsf', 'sfsdd', 'fsddf', 'Académica', 'N/A', 'N/A', 'N/A', 'N/A'),
-(29, 2247675, 10, 'sdf', 'sdff', 'sdfs', 'Académica', 'N/A', 'N/A', 'N/A', 'N/A'),
-(30, 2247675, 10, 'fsd', 'sdff', 'dfsd', 'Académica', 'N/A', 'N/A', 'N/A', 'N/A'),
-(31, 2184573, 11, 'v', 'v', 'v', 'Académica', 'N/A', 'N/A', 'N/A', 'N/A'),
-(32, 2184573, 11, 'vv', 'vv', 'v', 'Académica', 'N/A', 'N/A', 'N/A', 'N/A'),
-(33, 2184573, 11, 'v', 'v', 'v', 'Académica', 'N/A', 'N/A', 'N/A', 'N/A'),
-(34, 2247675, 12, 'jghjghj', 'ghj', 'ghj', 'Académica', 'N/A', 'N/A', 'N/A', 'N/A'),
-(35, 2247675, 12, 'jghj', 'gjghh', 'hgjghj', 'Académica', 'N/A', 'N/A', 'N/A', 'N/A'),
-(36, 2247675, 12, 'ghjgh', 'jghj', 'ghj', 'Académica', 'N/A', 'N/A', 'N/A', 'N/A'),
-(37, 2247675, 13, 'dsfsd', 'fsdf', 'sdf', 'Académica', 'N/A', 'N/A', 'N/A', 'N/A'),
-(38, 2247675, 13, 'fsdfsd', 'sdff', 'sdfsd', 'Académica', 'N/A', 'N/A', 'N/A', 'N/A'),
-(39, 2247675, 13, 'fsd', 'fsdsd', 'f', 'Académica', 'N/A', 'N/A', 'N/A', 'N/A'),
-(40, 2247675, 14, 'dfsd', 'sdf', 'sdf', 'Académica', 'N/A', 'N/A', 'N/A', 'N/A'),
-(41, 2247675, 14, 'sdfsd', 'fsd', 'fsdf', 'Académica', 'N/A', 'N/A', 'N/A', 'N/A'),
-(42, 2247675, 14, 'sdf', 'sdff', 'sdfsd', 'Académica', 'N/A', 'N/A', 'N/A', 'N/A'),
-(43, 2247675, 15, 't', 't', 't', 'Académica', 'N/A', 'N/A', 'N/A', 'N/A'),
-(44, 2247675, 15, 't', 't', 't', 'Académica', 'N/A', 'N/A', 'N/A', 'N/A'),
-(45, 2247675, 15, 't', 't', 't', 'Académica', 'N/A', 'N/A', 'N/A', 'N/A'),
-(46, 2247675, 16, 'gh', 'ghg', 'h', 'Académica', 'N/A', 'N/A', 'N/A', 'N/A'),
-(47, 2247675, 16, 'gh', 'h', 'ghg', 'Académica', 'N/A', 'N/A', 'N/A', 'N/A'),
-(48, 2247675, 16, 'hg', 'gh', 'gh', 'Académica', 'N/A', 'N/A', 'N/A', 'N/A'),
-(49, 2247675, 17, 'fg', 'fg', 'fgf', 'Académica', 'N/A', 'N/A', 'N/A', 'N/A'),
-(50, 2247675, 17, 'gf', 'fg', 'gfg', 'Académica', 'N/A', 'N/A', 'N/A', 'N/A'),
-(51, 2247675, 17, 'ghhjhkvb', 'vbnnvb', 'jjh', 'Académica', 'N/A', 'N/A', 'N/A', 'N/A'),
-(52, 2247675, 18, 'vb', 'vbv', 'bvb', 'Académica', 'N/A', 'N/A', 'N/A', 'N/A'),
-(53, 2247675, 18, 'vb', 'bvbv', 'vbvb', 'Académica', 'N/A', 'N/A', 'N/A', 'N/A'),
-(54, 2247675, 18, 'bv', 'vbv', 'bvb', 'Académica', 'N/A', 'N/A', 'N/A', 'N/A'),
-(55, 2247675, 19, 'h', 'h', 'h', 'Académica', 'N/A', 'N/A', 'N/A', 'N/A'),
-(56, 2247675, 19, 'h', 'h', 'h', 'Académica', 'N/A', 'N/A', 'N/A', 'N/A'),
-(57, 2247675, 19, 'h', 'h', 'h', 'Académica', 'N/A', 'N/A', 'N/A', 'N/A'),
-(58, 2247675, 20, 'nnnnnnnn', 'nnnnnnnnn', 'nnnnnnnnnn', 'Académica', 'N/A', 'N/A', 'N/A', 'N/A'),
-(59, 2247675, 20, 'nnnnnnnnnnnn', 'nnnnnn', 'nnnnnnnnnn', 'Académica', 'N/A', 'N/A', 'N/A', 'N/A'),
-(60, 2247675, 20, 'nnnnnnnnn', 'nnnnnnnnn', 'nnnnnnnnnnnnnnnnnnn', 'Académica', 'N/A', 'N/A', 'N/A', 'N/A');
+(1, 2247675, 1, 'Juan Sebastián Murcia Pinzón', 'Carlos perez', 'Incumplimiento plan de mejoramiento al no entregarlo o la evidencia entregada no cumple con los\r\níte', 'Académica', '1. Cumplir con todas las actividades propias de su proceso de aprendizaje o del plan de mejoramiento, definidas durante su etapa lectiva y productiva.', 'N/A', 'N/A', 'N/A'),
+(2, 2247675, 1, 'Johan Mauricio Mosquera Solano', 'Carlos perez', 'Incumplimiento plan de mejoramiento al no entregarlo o la evidencia entregada no cumple con los\r\níte', 'Académica', '1. Cumplir con todas las actividades propias de su proceso de aprendizaje o del plan de mejoramiento, definidas durante su etapa lectiva y productiva.', 'N/A', 'N/A', 'N/A'),
+(3, 2247675, 1, 'Angie Tatiana Páez Lara', 'Carlos perez', 'Incumplimiento plan de mejoramiento al no entregarlo o la evidencia entregada no cumple con los\r\níte', 'Académica', '1. Cumplir con todas las actividades propias de su proceso de aprendizaje o del plan de mejoramiento, definidas durante su etapa lectiva y productiva.', 'N/A', 'N/A', 'N/A'),
+(4, 2247675, 2, 'Pedro', 'Pedro', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit vestibulum massa ullamc', 'Académica', '10. Hacer uso apropiado de los ambientes de aprendizaje (infraestructura, equipos, herramientas, recursos didácticos, técnicos, tecnológicos, bibliográficos), disponibles para su proceso de aprendizaje, asumiendo responsabilidad legal en situaciones de utilización inadecuada y uso indebido, que deterioran los ambientes de aprendizaje y generan detrimento patrimonial.', 'N/A', 'N/A', 'N/A'),
+(5, 2247675, 2, 'Pedro', 'Pedro', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit vestibulum massa ullamc', 'Académica', '8. Acatar las decisiones contempladas en el Manual de Convivencia.', 'N/A', 'N/A', 'N/A'),
+(6, 2247675, 2, 'Pedro', 'Pedro', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit vestibulum massa ullamc', 'Académica', '7. Proteger los recursos culturales y naturales del país y velar por la conservación del ambiente sano, vinculándose, apoyando y/o colaborando en las acciones que adelante el Centro de Formación.', 'N/A', 'N/A', 'N/A');
 
 -- --------------------------------------------------------
 
@@ -335,67 +199,11 @@ CREATE TABLE `conclusiones` (
 --
 
 INSERT INTO `conclusiones` (`id_conclusion`, `c_contador`, `n_ficha`, `q_acta`, `Aprendiz`, `medida`, `descripcion_m`, `cumplimiento`) VALUES
-(1, 1, 2247675, 1, 'q', '1.DESERCIÓN', '1.Cuando el aprendiz injustificadamente no se presente por tres (3) días consecutivos al Centro de Formación o empresa en su proceso formativo. Cuando al terminar el periodo de aplazamiento aprobado por el SENA, el Aprendiz no reingresa al programa de formación. Cuando transcurridos dos (2) años contados a partir de la fecha de terminación de la etapa lectiva del programa, el Aprendiz no ha presentado evidencia de la realización de la etapa productiva.', 'N/A'),
-(2, 1, 2247675, 1, 'q', '2.LLAMADO DE ATENCIÓN ESCRITO', '2.Cuando se trate de hechos que contraríen en menor grado el orden académico o disciplinario, sin afectar los deberes, derechos y prohibiciones, o cuando sea necesario para prevenir la ocurrencia de hechos que vulneren esos deberes, derechos y prohibiciones, el aprendiz podrá recibir un llamado de atención verbal por parte del (los) Instructor, el Coordinador Académico, el(los) responsable(s) de Bienestar, o el subdirector del Centro. Este llamado de atención verbal no constituye una sanción.', 'N/A'),
-(3, 1, 2247675, 1, 'q', '3.PLAN DE MEJORAMIENTO DISCIPLINARIO', '3.No deberá haber inasistencias ni retardos, en el horario que se determine o se incurrirá en plan de mejoramiento Integral.', 'N/A'),
-(4, 2, 2247675, 2, 'g', '8.CANCELACIÓN DE MATRÍCULA', '8.Acto administrativo que se origina cuando persisten en el aprendiz las causales que originaron el condicionamiento de matrícula o por faltas catalogadas como graves de acuerdo a la clasificación determinada en los artículos 25 y 26 del reglamento, en las etapas lectiva y productiva. Implica que la persona sancionada pierde la condición de aprendiz y no puede participar en procesos de ingreso a la institución por periodo entre 6 y 12 meses cuando es de índole académico y entre 12 y 24 meses cuando es de índole disciplinaria, de acuerdo a las recomendaciones del comité de evaluación y seguimiento. Una vez en firme la sanción, debe entregar de manera inmediata el carné institucional y ponerse a paz y salvo por todo concepto.', 'N/A'),
-(5, 2, 2247675, 2, 'g', '7.CONDICIONAMIENTO DE LA MATRÍCULA', '7.Se impone al Aprendiz que incurra en una falta académica o disciplinaria, previo agotamiento del procedimiento establecido en este Reglamento. El condicionamiento de matrícula cesa cuando el Aprendiz cumple el plan de mejoramiento concertado y /o compromisos escritos. Una vez quede en firme el condicionamiento de la matrícula, el Subdirector del Centro debe generar la pérdida de estímulos e incentivos que esté recibiendo el aprendiz, si los tuviere. Esta decisión será determinada en el acto académico que ordene el condicionamiento de matrícula transcurrido este tiempo el condicionamiento no es superado se procederá a realizar la Cancelación de la Matrícula.', 'N/A'),
-(6, 2, 2247675, 2, 'g', '6.PLAN DE MEJORAMIENTO INTEGRAL POR COMITÉ', '6.No deberá haber inasistencias ni retardos, en el horario que se determine y deberá cumplir con todas las evidencias acordadas desde el inicio del trimestre en el plan de trabajo y evaluación o se incurrirá en Condicionamiento de Matrícula.', 'N/A'),
-(7, 3, 2247675, 3, 'y', '3.PLAN DE MEJORAMIENTO DISCIPLINARIO', '3.No deberá haber inasistencias ni retardos, en el horario que se determine o se incurrirá en plan de mejoramiento Integral.', 'N/A'),
-(8, 3, 2247675, 3, 'y', '4.PLAN DE MEJORAMIENTO ACADÉMICO', '4.Deberá cumplir con todas las evidencias acordadas desde el inicio del trimestre en el plan de trabajo y evaluación o se incurrirá en plan de mejoramiento Integral.', 'N/A'),
-(9, 3, 2247675, 3, 'y', '5.PLAN DE MEJORAMIENTO ACADÉMICO Y DISCIPLINARIO', '4.Deberá cumplir con todas las evidencias acordadas desde el inicio del trimestre en el plan de trabajo y evaluación o se incurrirá en plan de mejoramiento Integral.', 'N/A'),
-(10, 4, 2247675, 4, 'd', '1.DESERCIÓN', '1.Cuando el aprendiz injustificadamente no se presente por tres (3) días consecutivos al Centro de Formación o empresa en su proceso formativo. Cuando al terminar el periodo de aplazamiento aprobado por el SENA, el Aprendiz no reingresa al programa de formación. Cuando transcurridos dos (2) años contados a partir de la fecha de terminación de la etapa lectiva del programa, el Aprendiz no ha presentado evidencia de la realización de la etapa productiva.', 'N/A'),
-(11, 4, 2247675, 4, 'd', '7.CONDICIONAMIENTO DE LA MATRÍCULA', '7.Se impone al Aprendiz que incurra en una falta académica o disciplinaria, previo agotamiento del procedimiento establecido en este Reglamento. El condicionamiento de matrícula cesa cuando el Aprendiz cumple el plan de mejoramiento concertado y /o compromisos escritos. Una vez quede en firme el condicionamiento de la matrícula, el Subdirector del Centro debe generar la pérdida de estímulos e incentivos que esté recibiendo el aprendiz, si los tuviere. Esta decisión será determinada en el acto académico que ordene el condicionamiento de matrícula transcurrido este tiempo el condicionamiento no es superado se procederá a realizar la Cancelación de la Matrícula.', 'N/A'),
-(12, 4, 2247675, 4, 'd', '3.PLAN DE MEJORAMIENTO DISCIPLINARIO', '3.No deberá haber inasistencias ni retardos, en el horario que se determine o se incurrirá en plan de mejoramiento Integral.', 'N/A'),
-(13, 5, 2247675, 5, 'hhhhhhh', '3.PLAN DE MEJORAMIENTO DISCIPLINARIO', '3.No deberá haber inasistencias ni retardos, en el horario que se determine o se incurrirá en plan de mejoramiento Integral.', ''),
-(14, 5, 2247675, 5, 'hhhhhhhhhhhhhhhh', '4.PLAN DE MEJORAMIENTO ACADÉMICO', '4.Deberá cumplir con todas las evidencias acordadas desde el inicio del trimestre en el plan de trabajo y evaluación o se incurrirá en plan de mejoramiento Integral.', ''),
-(15, 5, 2247675, 5, 'hhhhh', '8.CANCELACIÓN DE MATRÍCULA', '8.Acto administrativo que se origina cuando persisten en el aprendiz las causales que originaron el condicionamiento de matrícula o por faltas catalogadas como graves de acuerdo a la clasificación determinada en los artículos 25 y 26 del reglamento, en las etapas lectiva y productiva. Implica que la persona sancionada pierde la condición de aprendiz y no puede participar en procesos de ingreso a la institución por periodo entre 6 y 12 meses cuando es de índole académico y entre 12 y 24 meses cuando es de índole disciplinaria, de acuerdo a las recomendaciones del comité de evaluación y seguimiento. Una vez en firme la sanción, debe entregar de manera inmediata el carné institucional y ponerse a paz y salvo por todo concepto.', ''),
-(16, 6, 2247675, 6, 'd', '1.DESERCIÓN', '1.Cuando el aprendiz injustificadamente no se presente por tres (3) días consecutivos al Centro de Formación o empresa en su proceso formativo. Cuando al terminar el periodo de aplazamiento aprobado por el SENA, el Aprendiz no reingresa al programa de formación. Cuando transcurridos dos (2) años contados a partir de la fecha de terminación de la etapa lectiva del programa, el Aprendiz no ha presentado evidencia de la realización de la etapa productiva.', ''),
-(17, 6, 2247675, 6, 'd', '2.LLAMADO DE ATENCIÓN ESCRITO', '2.Cuando se trate de hechos que contraríen en menor grado el orden académico o disciplinario, sin afectar los deberes, derechos y prohibiciones, o cuando sea necesario para prevenir la ocurrencia de hechos que vulneren esos deberes, derechos y prohibiciones, el aprendiz podrá recibir un llamado de atención verbal por parte del (los) Instructor, el Coordinador Académico, el(los) responsable(s) de Bienestar, o el subdirector del Centro. Este llamado de atención verbal no constituye una sanción.', ''),
-(18, 6, 2247675, 6, 'd', '2.LLAMADO DE ATENCIÓN ESCRITO', '2.Cuando se trate de hechos que contraríen en menor grado el orden académico o disciplinario, sin afectar los deberes, derechos y prohibiciones, o cuando sea necesario para prevenir la ocurrencia de hechos que vulneren esos deberes, derechos y prohibiciones, el aprendiz podrá recibir un llamado de atención verbal por parte del (los) Instructor, el Coordinador Académico, el(los) responsable(s) de Bienestar, o el subdirector del Centro. Este llamado de atención verbal no constituye una sanción.', ''),
-(19, 7, 2247675, 7, 'j', 'N/A', 'N/A', ''),
-(20, 7, 2247675, 7, 'j', 'N/A', 'N/A', ''),
-(21, 7, 2247675, 7, 'j', 'N/A', 'N/A', ''),
-(22, 7, 2247675, 7, 'j', 'Seleccione', 'N/A', ''),
-(23, 8, 2247675, 8, 'm', 'N/A', 'N/A', ''),
-(24, 8, 2247675, 8, 'm', 'N/A', 'N/A', ''),
-(25, 8, 2247675, 8, 'm', 'N/A', 'N/A', ''),
-(26, 9, 2247675, 9, 'dfgdf', 'N/A', 'N/A', ''),
-(27, 9, 2247675, 9, 'dfgg', 'N/A', 'N/A', ''),
-(28, 9, 2247675, 9, 'dfg', 'N/A', 'N/A', ''),
-(29, 10, 2247675, 10, 'dsfsdfsd', 'N/A', 'N/A', ''),
-(30, 10, 2247675, 10, 'fsdfds', 'N/A', 'N/A', ''),
-(31, 10, 2247675, 10, 'sdf', 'N/A', 'N/A', ''),
-(32, 1, 2184573, 11, 'v', 'N/A', 'N/A', ''),
-(33, 1, 2184573, 11, 'v', 'N/A', 'N/A', ''),
-(34, 1, 2184573, 11, 'v', 'N/A', 'N/A', ''),
-(35, 11, 2247675, 12, 'gjghjh', 'N/A', 'N/A', ''),
-(36, 11, 2247675, 12, 'ghj', 'N/A', 'N/A', ''),
-(37, 11, 2247675, 12, 'ghjghj', 'N/A', 'N/A', ''),
-(38, 12, 2247675, 13, 'sdfsdf', 'N/A', 'N/A', ''),
-(39, 12, 2247675, 13, 'sdfsdf', 'N/A', 'N/A', ''),
-(40, 12, 2247675, 13, 'fsdfsd', 'N/A', 'N/A', ''),
-(41, 13, 2247675, 14, 'sdf', 'N/A', 'N/A', ''),
-(42, 13, 2247675, 14, 'fsd', 'N/A', 'N/A', ''),
-(43, 13, 2247675, 14, 'fsdfsd', 'N/A', 'N/A', ''),
-(44, 14, 2247675, 15, 't', 'N/A', 'N/A', ''),
-(45, 14, 2247675, 15, 't', 'N/A', 'N/A', ''),
-(46, 14, 2247675, 15, 't', 'N/A', 'N/A', ''),
-(47, 15, 2247675, 16, 'k', 'N/A', 'N/A', ''),
-(48, 15, 2247675, 16, 'k', 'N/A', 'N/A', ''),
-(49, 15, 2247675, 16, 'k', 'N/A', 'N/A', ''),
-(50, 16, 2247675, 17, 'sfsdfd', 'N/A', 'N/A', ''),
-(51, 16, 2247675, 17, 'fds', 'N/A', 'N/A', ''),
-(52, 16, 2247675, 17, 'sdffd', 'N/A', 'N/A', ''),
-(53, 17, 2247675, 18, 'fgdfgdf', 'N/A', 'N/A', ''),
-(54, 17, 2247675, 18, 'gdfgdf', 'N/A', 'N/A', ''),
-(55, 17, 2247675, 18, 'dfgdfg', 'N/A', 'N/A', ''),
-(56, 18, 2247675, 19, 'h', 'N/A', 'N/A', ''),
-(57, 18, 2247675, 19, 'h', 'N/A', 'N/A', ''),
-(58, 18, 2247675, 19, 'h', 'N/A', 'N/A', ''),
-(59, 19, 2247675, 20, 'nnnnn', 'N/A', 'N/A', ''),
-(60, 19, 2247675, 20, 'nnnnnnn', 'N/A', 'N/A', ''),
-(61, 19, 2247675, 20, 'nnnnnnnnnnnn', 'N/A', 'N/A', '');
+(1, 1, 2247675, 1, 'JUAN SEBASTIAN MURCIA PINZON', '4.PLAN DE MEJORAMIENTO ACADÉMICO', '4.Deberá cumplir con todas las evidencias acordadas desde el inicio del trimestre en el plan de trabajo y evaluación o se incurrirá en plan de mejoramiento Integral.', ''),
+(2, 1, 2247675, 1, 'JOHAN MAURICIO MOSQUERA SOLANO', '4.PLAN DE MEJORAMIENTO ACADÉMICO', '4.Deberá cumplir con todas las evidencias acordadas desde el inicio del trimestre en el plan de trabajo y evaluación o se incurrirá en plan de mejoramiento Integral.', ''),
+(3, 2, 2247675, 2, 'pedro', '1.DESERCIÓN', '4.Deberá cumplir con todas las evidencias acordadas desde el inicio del trimestre en el plan de trabajo y evaluación o se incurrirá en plan de mejoramiento Integral.', ''),
+(4, 2, 2247675, 2, 'pedro', '4.PLAN DE MEJORAMIENTO ACADÉMICO', '2.Cuando se trate de hechos que contraríen en menor grado el orden académico o disciplinario, sin afectar los deberes, derechos y prohibiciones, o cuando sea necesario para prevenir la ocurrencia de hechos que vulneren esos deberes, derechos y prohibiciones, el aprendiz podrá recibir un llamado de atención verbal por parte del (los) Instructor, el Coordinador Académico, el(los) responsable(s) de Bienestar, o el subdirector del Centro. Este llamado de atención verbal no constituye una sanción.', ''),
+(5, 2, 2247675, 2, 'pedro', '5.PLAN DE MEJORAMIENTO ACADÉMICO Y DISCIPLINARIO', '4.Deberá cumplir con todas las evidencias acordadas desde el inicio del trimestre en el plan de trabajo y evaluación o se incurrirá en plan de mejoramiento Integral.', '');
 
 -- --------------------------------------------------------
 
@@ -418,13 +226,11 @@ CREATE TABLE `desarrollo_comite` (
 --
 
 INSERT INTO `desarrollo_comite` (`id_desarrollo`, `d_acta`, `d_nombre_aprendiz`, `d_descargos_its`, `d_descargos_its_b`, `d_descargos_its_c`, `d_descargos_aprendiz`) VALUES
-(1, 19, 'h', 'h', 'h', 'h', 'h'),
-(2, 19, 'h', 'hh', 'h', 'h', 'h'),
-(3, 19, 'h', 'h', 'h', 'h', 'h'),
-(4, 20, 'n', 'nnn', 'nnnnnnnnn', 'nnnnnnnnn', 'nnnnnnnnnnn'),
-(5, 20, 'nnnnnnnnnnnnn', 'nnnnnnnnnnnnnnnnn', 'nnnnnnnnnnnn', 'nnnnnnnnnn', 'nnnnnnnnn'),
-(6, 20, 'nnnnnnnnnn', 'nnnnnnnnnnn', 'nnnnnnnnnnnn', 'nnnnnnnnnn', 'nnnnnnnnnn'),
-(7, 20, 'nnnnnnnnnnnnnnnnnnn', 'nnnnnnnnnnn', 'nnnnnnnnnnn', 'nnnnnnnnnn', 'nnnnnnnnnnnn');
+(1, 1, 'JUAN SEBASTIAN MURCIA PINZON', 'Incumplimiento plan de mejoramiento al no entregarlo o la evidencia entregada no cumple con los\r\nítems necesarios para ser aprobada (técnico - emprendimiento). El instructor indica que el caso de\r\nlos aprendices es similar para todos, no presentan evidencias, se les hace llamados de atención, se\r\nles indica que revisen los comentarios de las evidencias y las mejoren o las entreguen.\r\nEl indicó que el aprendiz incumplió dos planes de mejoramiento, se cumplieron términos de los\r\nplanes o los entregaron de forma inapropiada.\r\nInstructor Javier Ramírez Carvajal indicó que trata de llevar a los aprendices, exigiendoles y\r\nresaltando tiempos de entrega, pero continúan incurriendo en demora en las entregas de\r\nevidencias.\r\nCoordinadora Académica Diana Castro indicó que es importante que los equipos ejecutores estén\r\nen constante comunicación. Los cuadros de excel en la carpeta de la ficha comité están sin\r\ndiligenciar. Reiteró a todos los instructores para que actividades previas se realicen con los equipos\r\nejecutores; es importante estar en la misma sintonía antes del desarrollo del comité de evaluación\r\ny seguimiento.\r\nEl instructor Henry Córdoba mencionó que la ficha es un grupo juicioso, en algunas actividades le\r\ntoca estar encima de ellos para que funcionen, es importante que adquieran cultura de\r\ncumplimiento. Actualmente asisten de forma regular, pero los aprendices se escudan en que no\r\nhablan, no participan,se amparan en fallas de internet, se les sugieren correcciones en actividades\r\npero no las hacen y eso es grave.\r\nCoordinadora Académica Diana Castro indicó que es necesario documentar todo lo que se gestione\r\ndesde el ambiente de formación, es importante tener evidencias, si no se tienen con el debido\r\nproceso, no se le pueden aplicar medidas a aprendices que incumplen; porque no está\r\ndocumentado. Resaltó que en caso de incumplimiento reiterativo sugiere plan de mejoramiento\r\nintegral para el aprendiz.', 'N/A', 'N/A', 'Se le indicó al aprendiz el motivo por el cual se citó al comité. Aprendiz indicó que es la primera vez\r\nen comité, no tiene conocimiento de qué debe hacer.\r\nCoordinadora Académica explicó que debía mostrar evidencias válidas acorde a reglamento del\r\naprendiz, para justificar motivo de su falta.\r\n\r\nGD-F-007 V03\r\n\r\nAprendiz indicó que ha incumplido en entrega de los trabajos que ha dejado instructor Carlos Pérez\r\npor tiempo, se puede decir que es excusa muy barata, pero la cuestión es que le toca hacer\r\nquehaceres de la casa, al mismo tiempo de recibir formación, no recibe ayuda por parte de persona\r\ncon la que vive, primero debe hacer cosas de la casa, y luego debe hacer los trabajos. Es la única\r\nexcusa que tiene, se disculpa con el instructor por no entregar evidencias cuando las pide, depronto\r\nno sabe disponer el tiempo, dividir horas de clase, con cosas que debe hacer en la casa, es como la\r\ndefensa.\r\nAprendiz procedió a retirar se de la sesión.'),
+(2, 1, 'JOHAN MAURICIO MOSQUERA SOLANO', 'Instructor Carlos Pérez\r\nIncumplimiento plan de mejoramiento al no entregarlo o la evidencia entregada no cumple con los\r\nítems necesarios para ser aprobada (técnico - emprendimiento).\r\nLa instructora Sonia Milena Moreno indicó que hasta el momento el aprendiz no tiene\r\ninconvenientes con el aprendiz en la competencia.', 'N/A', 'N/A', 'Aprendiz mencionó que debe hacer cosas en la casa, se le olvidan subir evidencias, le toca salir a\r\ntrabajar para traer de comer a la casa, el problema es que el viernes ingresaron a la casa y le robaron\r\nel computador, actualmente le queda difícil, le prestan un computador empresarial y le queda\r\ndificil descargar cosas porque es corporativo.\r\nCoordinadora Académica Diana Castro mencionó que todo depende de la disciplina y del apoyo de\r\nla familia, la idea es que dediquen tiempo en sesiones, para diferentes actividades del día, el\r\ncumplimiento es vital con un compromiso como este. Si es necesario se realizará acompañamiento\r\npor parte de bienestar con sus familias, es importante definir prioridades, en ocasiones hay algunos\r\nsucesos que son difíciles, frente a novedad como esta se puede dar solución, todo se puede hacer\r\ncon mayor o menor esfuerzo, pero es el futuro que escogieron, los invito a que cumplan con su\r\nproyecto de vida, hay que tomar medidas formativas. Se les ha asignado planes de mejoramiento,\r\nse ha incumplido, se va a asignar plan de mejoramiento sujeto a condicionamiento de matrícula,\r\nhay consecuencias que esto trae, no podrán acceder a contrato de aprendizaje, ni a ningún apoyo,\r\nla invitación es a cumplir plan de mejoramiento, los tiempos serán dados por instructor Carlos\r\nPérez.\r\nAprendiz indicó que le prestan computador empresariales en las noches para hacer las actividades.\r\n\r\nGD-F-007 V03\r\n\r\nCoordinadora Académica Diana Castro mencionó que hay que tomar medidas para el correcto\r\ndesarrollo de la formación.\r\nEl instructor Henry Córdoba mencionó la importancia del cumplimiento en actividades y sugirió a\r\nlos aprendices analizar en su proyecto de vida las prioridades.\r\nEl aprendiz procedió a retirarse de la sesión.'),
+(3, 2, 'pedro', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit vestibulum massa ullamcorper volutpat. Aliquam erat volutpat. Aenean id est a eros aliquet molestie. Sed a finibus diam. Curabitur ut urna mauris. Aenean venenatis mollis pellentesque. Donec sed metus nibh. Curabitur ut blandit nisi. Donec sollicitudin urna sed ornare faucibus. Ut ac purus sit amet erat facilisis sollicitudin non eu mi. Sed consequat quam in elit pellentesque condimentum. Ut molestie vulputate odio ac vulputate. Integer accumsan aliquet dui, ut scelerisque nisi vestibulum sed. Cras vel mi vel metus elementum dapibus sit amet id nisl.\r\n\r\nDonec cursus eleifend lorem, eget tempor lorem condimentum in. Duis purus urna, tincidunt a tincidunt quis, bibendum in ligula. Sed in arcu ut libero elementum posuere nec a diam. Integer auctor interdum libero. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent sodales, risus eget auctor dictum, arcu lectus consectetur nibh, quis eleifend risus augue eget nibh. Morbi quis magna enim. Ut orci lectus, gravida eu pharetra in, mattis eget magna. Vestibulum in mollis enim. Vestibulum urna tortor, ultricies eget orci eu, consectetur ultrices risus. Mauris sollicitudin ut metus scelerisque efficitur.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit vestibulum massa ullamcorper volutpat. Aliquam erat volutpat. Aenean id est a eros aliquet molestie. Sed a finibus diam. Curabitur ut urna mauris. Aenean venenatis mollis pellentesque. Donec sed metus nibh. Curabitur ut blandit nisi. Donec sollicitudin urna sed ornare faucibus. Ut ac purus sit amet erat facilisis sollicitudin non eu mi. Sed consequat quam in elit pellentesque condimentum. Ut molestie vulputate odio ac vulputate. Integer accumsan aliquet dui, ut scelerisque nisi vestibulum sed. Cras vel mi vel metus elementum dapibus sit amet id nisl.\r\n\r\nDonec cursus eleifend lorem, eget tempor lorem condimentum in. Duis purus urna, tincidunt a tincidunt quis, bibendum in ligula. Sed in arcu ut libero elementum posuere nec a diam. Integer auctor interdum libero. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent sodales, risus eget auctor dictum, arcu lectus consectetur nibh, quis eleifend risus augue eget nibh. Morbi quis magna enim. Ut orci lectus, gravida eu pharetra in, mattis eget magna. Vestibulum in mollis enim. Vestibulum urna tortor, ultricies eget orci eu, consectetur ultrices risus. Mauris sollicitudin ut metus scelerisque efficitur.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit vestibulum massa ullamcorper volutpat. Aliquam erat volutpat. Aenean id est a eros aliquet molestie. Sed a finibus diam. Curabitur ut urna mauris. Aenean venenatis mollis pellentesque. Donec sed metus nibh. Curabitur ut blandit nisi. Donec sollicitudin urna sed ornare faucibus. Ut ac purus sit amet erat facilisis sollicitudin non eu mi. Sed consequat quam in elit pellentesque condimentum. Ut molestie vulputate odio ac vulputate. Integer accumsan aliquet dui, ut scelerisque nisi vestibulum sed. Cras vel mi vel metus elementum dapibus sit amet id nisl.\r\n\r\nDonec cursus eleifend lorem, eget tempor lorem condimentum in. Duis purus urna, tincidunt a tincidunt quis, bibendum in ligula. Sed in arcu ut libero elementum posuere nec a diam. Integer auctor interdum libero. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent sodales, risus eget auctor dictum, arcu lectus consectetur nibh, quis eleifend risus augue eget nibh. Morbi quis magna enim. Ut orci lectus, gravida eu pharetra in, mattis eget magna. Vestibulum in mollis enim. Vestibulum urna tortor, ultricies eget orci eu, consectetur ultrices risus. Mauris sollicitudin ut metus scelerisque efficitur.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit vestibulum massa ullamcorper volutpat. Aliquam erat volutpat. Aenean id est a eros aliquet molestie. Sed a finibus diam. Curabitur ut urna mauris. Aenean venenatis mollis pellentesque. Donec sed metus nibh. Curabitur ut blandit nisi. Donec sollicitudin urna sed ornare faucibus. Ut ac purus sit amet erat facilisis sollicitudin non eu mi. Sed consequat quam in elit pellentesque condimentum. Ut molestie vulputate odio ac vulputate. Integer accumsan aliquet dui, ut scelerisque nisi vestibulum sed. Cras vel mi vel metus elementum dapibus sit amet id nisl.\r\n\r\nDonec cursus eleifend lorem, eget tempor lorem condimentum in. Duis purus urna, tincidunt a tincidunt quis, bibendum in ligula. Sed in arcu ut libero elementum posuere nec a diam. Integer auctor interdum libero. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent sodales, risus eget auctor dictum, arcu lectus consectetur nibh, quis eleifend risus augue eget nibh. Morbi quis magna enim. Ut orci lectus, gravida eu pharetra in, mattis eget magna. Vestibulum in mollis enim. Vestibulum urna tortor, ultricies eget orci eu, consectetur ultrices risus. Mauris sollicitudin ut metus scelerisque efficitur.'),
+(4, 2, 'pedro', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit vestibulum massa ullamcorper volutpat. Aliquam erat volutpat. Aenean id est a eros aliquet molestie. Sed a finibus diam. Curabitur ut urna mauris. Aenean venenatis mollis pellentesque. Donec sed metus nibh. Curabitur ut blandit nisi. Donec sollicitudin urna sed ornare faucibus. Ut ac purus sit amet erat facilisis sollicitudin non eu mi. Sed consequat quam in elit pellentesque condimentum. Ut molestie vulputate odio ac vulputate. Integer accumsan aliquet dui, ut scelerisque nisi vestibulum sed. Cras vel mi vel metus elementum dapibus sit amet id nisl.\r\n\r\nDonec cursus eleifend lorem, eget tempor lorem condimentum in. Duis purus urna, tincidunt a tincidunt quis, bibendum in ligula. Sed in arcu ut libero elementum posuere nec a diam. Integer auctor interdum libero. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent sodales, risus eget auctor dictum, arcu lectus consectetur nibh, quis eleifend risus augue eget nibh. Morbi quis magna enim. Ut orci lectus, gravida eu pharetra in, mattis eget magna. Vestibulum in mollis enim. Vestibulum urna tortor, ultricies eget orci eu, consectetur ultrices risus. Mauris sollicitudin ut metus scelerisque efficitur.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit vestibulum massa ullamcorper volutpat. Aliquam erat volutpat. Aenean id est a eros aliquet molestie. Sed a finibus diam. Curabitur ut urna mauris. Aenean venenatis mollis pellentesque. Donec sed metus nibh. Curabitur ut blandit nisi. Donec sollicitudin urna sed ornare faucibus. Ut ac purus sit amet erat facilisis sollicitudin non eu mi. Sed consequat quam in elit pellentesque condimentum. Ut molestie vulputate odio ac vulputate. Integer accumsan aliquet dui, ut scelerisque nisi vestibulum sed. Cras vel mi vel metus elementum dapibus sit amet id nisl.\r\n\r\nDonec cursus eleifend lorem, eget tempor lorem condimentum in. Duis purus urna, tincidunt a tincidunt quis, bibendum in ligula. Sed in arcu ut libero elementum posuere nec a diam. Integer auctor interdum libero. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent sodales, risus eget auctor dictum, arcu lectus consectetur nibh, quis eleifend risus augue eget nibh. Morbi quis magna enim. Ut orci lectus, gravida eu pharetra in, mattis eget magna. Vestibulum in mollis enim. Vestibulum urna tortor, ultricies eget orci eu, consectetur ultrices risus. Mauris sollicitudin ut metus scelerisque efficitur.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit vestibulum massa ullamcorper volutpat. Aliquam erat volutpat. Aenean id est a eros aliquet molestie. Sed a finibus diam. Curabitur ut urna mauris. Aenean venenatis mollis pellentesque. Donec sed metus nibh. Curabitur ut blandit nisi. Donec sollicitudin urna sed ornare faucibus. Ut ac purus sit amet erat facilisis sollicitudin non eu mi. Sed consequat quam in elit pellentesque condimentum. Ut molestie vulputate odio ac vulputate. Integer accumsan aliquet dui, ut scelerisque nisi vestibulum sed. Cras vel mi vel metus elementum dapibus sit amet id nisl.\r\n\r\nDonec cursus eleifend lorem, eget tempor lorem condimentum in. Duis purus urna, tincidunt a tincidunt quis, bibendum in ligula. Sed in arcu ut libero elementum posuere nec a diam. Integer auctor interdum libero. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent sodales, risus eget auctor dictum, arcu lectus consectetur nibh, quis eleifend risus augue eget nibh. Morbi quis magna enim. Ut orci lectus, gravida eu pharetra in, mattis eget magna. Vestibulum in mollis enim. Vestibulum urna tortor, ultricies eget orci eu, consectetur ultrices risus. Mauris sollicitudin ut metus scelerisque efficitur.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit vestibulum massa ullamcorper volutpat. Aliquam erat volutpat. Aenean id est a eros aliquet molestie. Sed a finibus diam. Curabitur ut urna mauris. Aenean venenatis mollis pellentesque. Donec sed metus nibh. Curabitur ut blandit nisi. Donec sollicitudin urna sed ornare faucibus. Ut ac purus sit amet erat facilisis sollicitudin non eu mi. Sed consequat quam in elit pellentesque condimentum. Ut molestie vulputate odio ac vulputate. Integer accumsan aliquet dui, ut scelerisque nisi vestibulum sed. Cras vel mi vel metus elementum dapibus sit amet id nisl.\r\n\r\nDonec cursus eleifend lorem, eget tempor lorem condimentum in. Duis purus urna, tincidunt a tincidunt quis, bibendum in ligula. Sed in arcu ut libero elementum posuere nec a diam. Integer auctor interdum libero. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent sodales, risus eget auctor dictum, arcu lectus consectetur nibh, quis eleifend risus augue eget nibh. Morbi quis magna enim. Ut orci lectus, gravida eu pharetra in, mattis eget magna. Vestibulum in mollis enim. Vestibulum urna tortor, ultricies eget orci eu, consectetur ultrices risus. Mauris sollicitudin ut metus scelerisque efficitur.'),
+(5, 2, 'pedro', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit vestibulum massa ullamcorper volutpat. Aliquam erat volutpat. Aenean id est a eros aliquet molestie. Sed a finibus diam. Curabitur ut urna mauris. Aenean venenatis mollis pellentesque. Donec sed metus nibh. Curabitur ut blandit nisi. Donec sollicitudin urna sed ornare faucibus. Ut ac purus sit amet erat facilisis sollicitudin non eu mi. Sed consequat quam in elit pellentesque condimentum. Ut molestie vulputate odio ac vulputate. Integer accumsan aliquet dui, ut scelerisque nisi vestibulum sed. Cras vel mi vel metus elementum dapibus sit amet id nisl.\r\n\r\nDonec cursus eleifend lorem, eget tempor lorem condimentum in. Duis purus urna, tincidunt a tincidunt quis, bibendum in ligula. Sed in arcu ut libero elementum posuere nec a diam. Integer auctor interdum libero. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent sodales, risus eget auctor dictum, arcu lectus consectetur nibh, quis eleifend risus augue eget nibh. Morbi quis magna enim. Ut orci lectus, gravida eu pharetra in, mattis eget magna. Vestibulum in mollis enim. Vestibulum urna tortor, ultricies eget orci eu, consectetur ultrices risus. Mauris sollicitudin ut metus scelerisque efficitur.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit vestibulum massa ullamcorper volutpat. Aliquam erat volutpat. Aenean id est a eros aliquet molestie. Sed a finibus diam. Curabitur ut urna mauris. Aenean venenatis mollis pellentesque. Donec sed metus nibh. Curabitur ut blandit nisi. Donec sollicitudin urna sed ornare faucibus. Ut ac purus sit amet erat facilisis sollicitudin non eu mi. Sed consequat quam in elit pellentesque condimentum. Ut molestie vulputate odio ac vulputate. Integer accumsan aliquet dui, ut scelerisque nisi vestibulum sed. Cras vel mi vel metus elementum dapibus sit amet id nisl.\r\n\r\nDonec cursus eleifend lorem, eget tempor lorem condimentum in. Duis purus urna, tincidunt a tincidunt quis, bibendum in ligula. Sed in arcu ut libero elementum posuere nec a diam. Integer auctor interdum libero. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent sodales, risus eget auctor dictum, arcu lectus consectetur nibh, quis eleifend risus augue eget nibh. Morbi quis magna enim. Ut orci lectus, gravida eu pharetra in, mattis eget magna. Vestibulum in mollis enim. Vestibulum urna tortor, ultricies eget orci eu, consectetur ultrices risus. Mauris sollicitudin ut metus scelerisque efficitur.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit vestibulum massa ullamcorper volutpat. Aliquam erat volutpat. Aenean id est a eros aliquet molestie. Sed a finibus diam. Curabitur ut urna mauris. Aenean venenatis mollis pellentesque. Donec sed metus nibh. Curabitur ut blandit nisi. Donec sollicitudin urna sed ornare faucibus. Ut ac purus sit amet erat facilisis sollicitudin non eu mi. Sed consequat quam in elit pellentesque condimentum. Ut molestie vulputate odio ac vulputate. Integer accumsan aliquet dui, ut scelerisque nisi vestibulum sed. Cras vel mi vel metus elementum dapibus sit amet id nisl.\r\n\r\nDonec cursus eleifend lorem, eget tempor lorem condimentum in. Duis purus urna, tincidunt a tincidunt quis, bibendum in ligula. Sed in arcu ut libero elementum posuere nec a diam. Integer auctor interdum libero. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent sodales, risus eget auctor dictum, arcu lectus consectetur nibh, quis eleifend risus augue eget nibh. Morbi quis magna enim. Ut orci lectus, gravida eu pharetra in, mattis eget magna. Vestibulum in mollis enim. Vestibulum urna tortor, ultricies eget orci eu, consectetur ultrices risus. Mauris sollicitudin ut metus scelerisque efficitur.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit vestibulum massa ullamcorper volutpat. Aliquam erat volutpat. Aenean id est a eros aliquet molestie. Sed a finibus diam. Curabitur ut urna mauris. Aenean venenatis mollis pellentesque. Donec sed metus nibh. Curabitur ut blandit nisi. Donec sollicitudin urna sed ornare faucibus. Ut ac purus sit amet erat facilisis sollicitudin non eu mi. Sed consequat quam in elit pellentesque condimentum. Ut molestie vulputate odio ac vulputate. Integer accumsan aliquet dui, ut scelerisque nisi vestibulum sed. Cras vel mi vel metus elementum dapibus sit amet id nisl.\r\n\r\nDonec cursus eleifend lorem, eget tempor lorem condimentum in. Duis purus urna, tincidunt a tincidunt quis, bibendum in ligula. Sed in arcu ut libero elementum posuere nec a diam. Integer auctor interdum libero. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent sodales, risus eget auctor dictum, arcu lectus consectetur nibh, quis eleifend risus augue eget nibh. Morbi quis magna enim. Ut orci lectus, gravida eu pharetra in, mattis eget magna. Vestibulum in mollis enim. Vestibulum urna tortor, ultricies eget orci eu, consectetur ultrices risus. Mauris sollicitudin ut metus scelerisque efficitur.');
 
 -- --------------------------------------------------------
 
@@ -462,8 +268,8 @@ CREATE TABLE `ficha` (
 --
 
 INSERT INTO `ficha` (`id_ficha`, `ficha_contador`, `N_ficha`, `cantidad_apre`, `programa`, `jornada`, `tipo_forma`, `fecha_inicio`, `fecha_fin`, `actas`, `aprendices`) VALUES
-(1, 19, 2247675, 15, 'adsi', 'Diruna', 'Técnico', '2022-10-10', '2022-10-19', NULL, 0),
-(2, 2, 2184573, 45, 'cine y televisión', 'Nocturna', 'Técnico', '2022-11-04', '2022-10-23', NULL, 0),
+(1, 3, 2247675, 15, 'adsi', 'Diruna', 'Técnico', '2022-10-10', '2022-10-19', NULL, 0),
+(2, 1, 2184573, 45, 'cine y televisión', 'Nocturna', 'Técnico', '2022-11-04', '2022-10-23', NULL, 0),
 (3, 1, 12, 4, 'Mesa y bar ', 'Nocturna', 'Tecnológo', '2022-10-19', '2022-10-17', NULL, 0),
 (4, 1, 7, 45, 'serigrafia', 'Nocturna', 'Tecnológo', '2022-10-21', '2022-10-20', NULL, 0),
 (6, 1, 445, 12, 'serigrafia', 'Nocturna', 'Técnico', '2022-10-26', '2022-10-12', NULL, 0);
@@ -568,66 +374,14 @@ CREATE TABLE `participantes` (
 --
 
 INSERT INTO `participantes` (`id`, `n_acta`, `nombre`, `cargo`, `asistencia`) VALUES
-(1, 1, 'Adriana Hernandez', 'instructor jefe de taller', 'Asistio'),
-(2, 1, 'Adriana Hernandez', 'instructor jefe de taller', 'Asistio'),
-(3, 1, 'Adriana Hernandez', 'instructor jefe de taller', 'Asistio'),
-(4, 2, 'Adriana Hernandez', 'instructor jefe de taller', 'Asistio'),
-(5, 2, 'Adriana Hernandez', 'instructor jefe de taller', 'Asistio'),
-(6, 2, 'Adriana Hernandez', 'instructor jefe de taller', 'Asistio'),
-(7, 3, 'Adriana Hernandez', 'instructor jefe de taller', 'Asistio'),
-(8, 3, 'Adriana Hernandez', 'instructor jefe de taller', 'Asistio'),
-(9, 3, 'Adriana Hernandez', 'instructor jefe de taller', 'Asistio'),
-(10, 4, 'Adriana Hernandez', 'instructor jefe de taller', 'Asistio'),
-(11, 4, 'Adriana Hernandez', 'instructor jefe de taller', 'Asistio'),
-(12, 4, 'Adriana Hernandez', 'instructor jefe de taller', 'Asistio'),
-(13, 5, 'Adriana Hernandez', 'instructor jefe de taller', 'Asistio'),
-(14, 5, 'Adriana Hernandez', 'instructor jefe de taller', 'Asistio'),
-(15, 5, 'Adriana Hernandez', 'instructor jefe de taller', 'Asistio'),
-(16, 6, 'Adriana Hernandez', 'instructor jefe de taller', 'Asistio'),
-(17, 6, 'Adriana Hernandez', 'instructor jefe de taller', 'Asistio'),
-(18, 6, 'Adriana Hernandez', 'instructor jefe de taller', 'Asistio'),
-(19, 7, 'Adriana Hernandez', 'instructor jefe de taller', 'Asistio'),
-(20, 7, 'Adriana Hernandez', 'instructor jefe de taller', 'Asistio'),
-(21, 7, 'Adriana Hernandez', 'instructor jefe de taller', 'Asistio'),
-(22, 8, 'Adriana Hernandez', 'instructor jefe de taller', 'Asistio'),
-(23, 8, 'Adriana Hernandez', 'instructor jefe de taller', 'Asistio'),
-(24, 8, 'Adriana Hernandez', 'instructor jefe de taller', 'Asistio'),
-(25, 9, 'Adriana Hernandez', 'instructor jefe de taller', 'Asistio'),
-(26, 9, 'Adriana Hernandez', 'instructor jefe de taller', 'Asistio'),
-(27, 9, 'Adriana Hernandez', 'instructor jefe de taller', 'Asistio'),
-(28, 10, 'Adriana Hernandez', 'instructor jefe de taller', 'Asistio'),
-(29, 10, 'Adriana Hernandez', 'instructor jefe de taller', 'Asistio'),
-(30, 10, 'Adriana Hernandez', 'instructor jefe de taller', 'Asistio'),
-(31, 11, 'Adriana Hernandez', 'instructor jefe de taller', 'Asistio'),
-(32, 11, 'Adriana Hernandez', 'instructor jefe de taller', 'Asistio'),
-(33, 11, 'Adriana Hernandez', 'instructor jefe de taller', 'Asistio'),
-(34, 12, 'Adriana Hernandez', 'instructor jefe de taller', 'Asistio'),
-(35, 12, 'Adriana Hernandez', 'instructor jefe de taller', 'Asistio'),
-(36, 12, 'Adriana Hernandez', 'instructor jefe de taller', 'Asistio'),
-(37, 13, 'Adriana Hernandez', 'instructor jefe de taller', 'Asistio'),
-(38, 13, 'Adriana Hernandez', 'instructor jefe de taller', 'Asistio'),
-(39, 13, 'Adriana Hernandez', 'instructor jefe de taller', 'Asistio'),
-(40, 14, 'Adriana Hernandez', 'instructor jefe de taller', 'Asistio'),
-(41, 14, 'Adriana Hernandez', 'instructor jefe de taller', 'Asistio'),
-(42, 14, 'Adriana Hernandez', 'instructor jefe de taller', 'Asistio'),
-(43, 15, 'Adriana Hernandez', 'instructor jefe de taller', 'Asistio'),
-(44, 15, 'Adriana Hernandez', 'instructor jefe de taller', 'Asistio'),
-(45, 15, 'Adriana Hernandez', 'instructor jefe de taller', 'Asistio'),
-(46, 16, 'Adriana Hernandez', 'instructor jefe de taller', 'Asistio'),
-(47, 16, 'Adriana Hernandez', 'instructor jefe de taller', 'Asistio'),
-(48, 16, 'Adriana Hernandez', 'instructor jefe de taller', 'Asistio'),
-(49, 17, 'Adriana Hernandez', 'instructor jefe de taller', 'Asistio'),
-(50, 17, 'Adriana Hernandez', 'instructor jefe de taller', 'Asistio'),
-(51, 17, 'Adriana Hernandez', 'instructor jefe de taller', 'Asistio'),
-(52, 18, 'Adriana Hernandez', 'instructor jefe de taller', 'Asistio'),
-(53, 18, 'Adriana Hernandez', 'instructor jefe de taller', 'Asistio'),
-(54, 18, 'Adriana Hernandez', 'instructor jefe de taller', 'Asistio'),
-(55, 19, 'Adriana Hernandez', 'instructor jefe de taller', 'Asistio'),
-(56, 19, 'Adriana Hernandez', 'instructor jefe de taller', 'Asistio'),
-(57, 19, 'Adriana Hernandez', 'instructor jefe de taller', 'Asistio'),
-(58, 20, 'Adriana Hernandez', 'instructor jefe de taller', 'Asistio'),
-(59, 20, 'Adriana Hernandez', 'instructor jefe de taller', 'Asistio'),
-(60, 20, 'Adriana Hernandez', 'instructor jefe de taller', 'Asistio');
+(1, 1, 'Alejandro Acevedo', 'Instructora', 'Asistio'),
+(2, 1, 'Alexander Carvajal', 'Funcionario de apoyo a Bienestar de Aprendices', 'No Asistio'),
+(3, 1, 'Juan Sanchez', 'Instructor', 'Asistio'),
+(4, 1, 'Juan Sanchez', 'Instructor tecnico', 'Asistio'),
+(5, 1, 'Alexander Carvajal', 'Instructora', 'No Asistio'),
+(6, 2, 'Alejandro Acevedo', 'Coordinador de Formación Profesional Integral o quien haga sus veces', 'Asistio'),
+(7, 2, 'Juan Sanchez', 'Coordinador Académico', 'Asistio'),
+(8, 2, 'Julia  Romero', 'Coordinador de Formación Profesional Integral o quien haga sus veces', 'Asistio');
 
 -- --------------------------------------------------------
 
@@ -725,6 +479,27 @@ INSERT INTO `rol` (`id_rol`, `roles`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `upload`
+--
+
+CREATE TABLE `upload` (
+  `id` int(100) NOT NULL,
+  `acta_rar` int(100) DEFAULT NULL,
+  `fname` text NOT NULL,
+  `name` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `upload`
+--
+
+INSERT INTO `upload` (`id`, `acta_rar`, `fname`, `name`) VALUES
+(6, 1, '20221124163609__manual_identidad_corporativa_2022.pdf', '_manual_identidad_corporativa_2022.pdf'),
+(7, 1, '20221124165034_archivos_descarga (2).zip', 'archivos_descarga (2).zip');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `usuario`
 --
 
@@ -744,7 +519,7 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`id`, `nombre`, `apellido`, `correo`, `rol`, `telefono`, `contrasena`, `documento`) VALUES
-(15, 'duban steven', 'castillo', 'steven@gmail.com', 1, 4646456, '1234567', 64554),
+(15, 'duban steven', 'castillo', 'steven@gmail.com', 1, 4646456, '12345678', 6455466),
 (16, 'Hugo', 'Camargo', 'hugo@gmail.com', 1, 5465456, '123456', 2147483647);
 
 --
@@ -859,6 +634,12 @@ ALTER TABLE `rol`
   ADD PRIMARY KEY (`id_rol`);
 
 --
+-- Indices de la tabla `upload`
+--
+ALTER TABLE `upload`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indices de la tabla `usuario`
 --
 ALTER TABLE `usuario`
@@ -873,13 +654,13 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `acta`
 --
 ALTER TABLE `acta`
-  MODIFY `n_acta` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `n_acta` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `aprendices_destacados`
 --
 ALTER TABLE `aprendices_destacados`
-  MODIFY `id_destacados` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id_destacados` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `aprendiz`
@@ -891,25 +672,25 @@ ALTER TABLE `aprendiz`
 -- AUTO_INCREMENT de la tabla `casos_anteriores`
 --
 ALTER TABLE `casos_anteriores`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `casos_especiales`
 --
 ALTER TABLE `casos_especiales`
-  MODIFY `id_casos` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
+  MODIFY `id_casos` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `conclusiones`
 --
 ALTER TABLE `conclusiones`
-  MODIFY `id_conclusion` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
+  MODIFY `id_conclusion` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `desarrollo_comite`
 --
 ALTER TABLE `desarrollo_comite`
-  MODIFY `id_desarrollo` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_desarrollo` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `estado`
@@ -945,7 +726,7 @@ ALTER TABLE `medida_formativa`
 -- AUTO_INCREMENT de la tabla `participantes`
 --
 ALTER TABLE `participantes`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `programa`
@@ -964,6 +745,12 @@ ALTER TABLE `reglamento`
 --
 ALTER TABLE `rol`
   MODIFY `id_rol` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT de la tabla `upload`
+--
+ALTER TABLE `upload`
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `usuario`
