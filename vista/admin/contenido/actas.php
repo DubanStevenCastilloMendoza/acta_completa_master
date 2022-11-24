@@ -37,7 +37,8 @@
           
         <a  href="?c=Acta&a=FormCrear&id=<?= $acta->getN_acta()?>&ficha=<?=$acta->getFicha() ?> &acta_contador=<?=$acta->getActa_contador()?>" type="button" style="background-color: #39A900; color:white;"  class="btn " ><i class="fa-solid fa-pen"></i></a > 
         <a href="?c=Acta&a=Borrar&id=<?= $acta->getN_acta()?>"  type="button" class="btn " style="background-color: #39A900; color:white;" ><i class="fa-solid fa-trash-can"></i></a>
-        <a   href="?c=Acta&a=FormCrearimp&id=<?= $acta->getN_acta()?>&ficha=<?=$acta->getFicha() ?> &acta_contador=<?=$acta->getActa_contador()?>" type="button" style="background-color: #39A900; color:white;" class="btn " ><i class="fa-solid fa-eye"></i></a > 
+        <a   href="?c=Acta&a=FormCrearimp&id=<?= $acta->getN_acta()?>&ficha=<?=$acta->getFicha() ?> &acta_contador=<?=$acta->getActa_contador()?>" type="button" style="background-color: #39A900; color:white;" class="btn " ><i class="fa-solid fa-eye"></i></a >
+        <a   href="?c=Acta&a=FormCrearRar&id=<?= $acta->getN_acta()?>&ficha=<?=$acta->getFicha() ?>" type="button" style="background-color: #39A900; color:white;" class="btn " ><i class="fa-solid fa-file-zipper"></i></a >  
       </td>        
 
     </tr>

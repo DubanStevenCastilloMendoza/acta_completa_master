@@ -67,8 +67,15 @@ class VistasController{
                require_once "vista/admin/contenido/cambiarContraseña.php";
 
                require_once "vista/admin/footer/footer.php";
-            }
+            }  
             
+            public function rar(){
+
+               require_once "Archivoss/rar.php";
+
+               require_once "vista/admin/footer/footer.php";
+            }  
+
             public function Particulares(){
 
                 require_once "vista/admin/cabecera/cabecera.php";

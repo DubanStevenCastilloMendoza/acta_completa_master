@@ -513,5 +513,7 @@ form.sign-in-form {
   .containers.sign-up-mode:before {
     bottom: 28%;
     left: 50%;
+  
   }
 }
+

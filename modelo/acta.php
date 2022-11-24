@@ -651,6 +651,17 @@ public function ObtenerParticipantes($ficha){
     }
 }
 
+public function ObtenerRarr($ficha){
+    try{ 
+        
+        $query = $this->PDO->prepare("SELECT * FROM upload where acta_rar = $ficha");
+        $query->execute(array($ficha));
+        return $query->fetchAll(PDO::FETCH_CLASS,__CLASS__);
+    }catch (Exception $e){
+        die ($e->getMessage());
+    }
+}
+
 public function ObtenerCasosP($ficha){
     try{ 
         
@@ -1611,5 +1622,73 @@ public function setD_descargos_aprendiz($d_descargos_aprendiz)
 
     return $this;
 }
+
+
+/*rar*/
+public function getId_rar()
+{
+    return $this->id;
+}
+
+public function setId_rar($id)
+{
+    $this->id = $id;
+
+    return $this;
+}
+
+
+public function getActa_rar()
+{
+    return $this->acta_rar;
+}
+
+public function setActa_rar($acta_rar)
+{
+    $this->acta_rar = $acta_rar;
+
+    return $this;
+}
+
+
+public function getFicha_rar()
+{
+    return $this->ficha_rar;
+}
+
+public function setFicha_rar($ficha_rar)
+{
+    $this->ficha_rar = $ficha_rar;
+
+    return $this;
+}
+
+
+public function getFname()
+{
+    return $this->fname;
+}
+
+public function setFname($fname)
+{
+    $this->fname = $fname;
+
+    return $this;
+}
+
+
+
+public function getName()
+{
+    return $this->name;
+}
+
+public function setName($name)
+{
+    $this->name = $name;
+
+    return $this;
+}
+
 
 }

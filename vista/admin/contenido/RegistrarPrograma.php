@@ -53,8 +53,6 @@
 <center>
 <h1>Subir Excel</h1>
 </center>
-
-
 <!--Mensaje de aviso -->
 <?php
                 if(isset($_SESSION['message']))

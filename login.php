@@ -98,7 +98,7 @@
 
              <br>
 <center>
-            <input type="submit" value="Ingresa" class="btn solid" />
+            <input type="submit" value="Ingresa" style="color:white;" class="btn solid" />
             </center>
 
 

@@ -12,6 +12,7 @@ require_once "modelo/reglamento.php";
 require_once "modelo/medida.php";
 require_once "modelo/destacados.php";
 require_once "modelo/desarrollocomite.php";
+require_once "modelo/rar.php";
 
 
 class ActaController{
@@ -258,6 +259,40 @@ class ActaController{
         
         
         }
+
+        
+          
+        public function FormCrearRar(){
+
+       
+
+          if(isset($_GET['id'])){
+           
+      
+            $p=$this ->modelo ->Obtener ($_GET['id']);
+            $participantes = new participantes(); //?
+            $parti = $this->modelo->ObtenerParticipantes($_GET["id"]); 
+  
+            $rar = new Rar(); //?
+            $ra = $this->modelo->ObtenerRarr($_GET["id"]); 
+  
+            
+            require_once "Archivoss/rar.php";
+  
+            require_once "vista/admin/footer/footer.php";
+          
+  
+          
+  
+                 
+       
+          
+          }
+      
+      
+          
+          
+          }
 
     public function FormCrearusu(){
 
