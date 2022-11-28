@@ -250,8 +250,8 @@ endforeach;
 </tbody>
 </table>
 <br /><br />
-<bootom id="add" class="bt" style="background-color: #ff671d; color:white;"  >Agregar</bootom>
-<bootom id="del" class="bt" style="background-color: #ff671d; color:white;">Eliminar</bootom>
+<bootom id="add" style="background-color: #39A900; color:white;"  class="bt"  >Agregar</bootom>
+<bootom id="del" style="background-color: #39A900; color:white;"  class="bt">Eliminar</bootom>
 <br /><br />
 
     </div>
@@ -364,9 +364,16 @@ $("#table tr:last").remove();
     </tr>
 
     <tr>
+    <td >  <H5>INDUCCIÓN</H5> </td>
+
+    <?php $j=$this->modelo->ObtenerInduccion($_GET['ficha']) ?>
+    <td><H5><?=$j->INDUCCION ?> </H5>  </td>
+    </tr>
+
+    <tr>
     <td > <H5>SUMA TOTAL</H5></td>
 
-    <td ><H5><?=  $total= $d->Retiro + $c->Cancelado + $b->Formacion + $a->Translado + $e->CONDICIONADO + $h->APLAZADO ?></H5> </td>
+    <td ><H5><?=  $total= $d->Retiro + $c->Cancelado + $b->Formacion + $a->Translado + $e->CONDICIONADO + $h->APLAZADO + $j->INDUCCION ?></H5> </td>
     </tr>
   </tbody>
 </table>
@@ -467,8 +474,8 @@ $("#table tr:last").remove();
 </tbody>
 </table>
 <br /><br />
-<bootom id="add5" class="bt" style="background-color: #ff671d; color:white;"  >Agregar</bootom>
-<bootom id="del5" class="bt" style="background-color: #ff671d; color:white;">Eliminar</bootom>
+<bootom id="add5" style="background-color: #39A900; color:white;"  class="bt"  >Agregar</bootom>
+<bootom id="del5" style="background-color: #39A900; color:white;"  class="bt">Eliminar</bootom>
 <br /><br />
 
     </div>
@@ -696,8 +703,8 @@ $("#table5 tr:last").remove();
 </tbody>
 </table>
 <br>
-<bootom id="add3" class="bt" style="background-color: #ff671d; color:white;" >Agregar</bootom>
-<bootom id="del3" class="bt" style="background-color: #ff671d; color:white;" >Eliminar</bootom>
+<bootom id="add3" style="background-color: #39A900; color:white;"  class="bt">Agregar</bootom>
+<bootom id="del3" style="background-color: #39A900; color:white;"  class="bt" >Eliminar</bootom>
 <br /><br />
 
     </div>
@@ -814,8 +821,8 @@ $("#table3 tr:last").remove();
 </tbody>
 </table>
 <br>
-<bootom id="add4" class="bt"  style="background-color: #ff671d; color:white;" >Agregar</bootom>
-<bootom id="del4" class="bt"  style="background-color: #ff671d; color:white;" >Eliminar</bootom>
+<bootom id="add4" style="background-color: #39A900; color:white;"  class="bt" >Agregar</bootom>
+<bootom id="del4" style="background-color: #39A900; color:white;"  class="bt">Eliminar</bootom>
 <br /><br />
 
     </div>
@@ -986,8 +993,8 @@ $("#table4 tr:last").remove();
 </tbody>
 </table>
 <br>
-<bootom id="add2" class="bt"  style="background-color: #ff671d; color:white;" >Agregar</bootom>
-<bootom id="del2" class="bt"  style="background-color: #ff671d; color:white;" >Eliminar</bootom>
+<bootom id="add2" style="background-color: #39A900; color:white;"  class="bt">Agregar</bootom>
+<bootom id="del2" style="background-color: #39A900; color:white;"  class="bt">Eliminar</bootom>
 <br /><br />
 
     </div>
@@ -1091,7 +1098,7 @@ $("#table2 tr:last").remove();
     <br>
     <center>
      
-    <button type="submit" name="insertar"  style="background-color: #ff671d; color:white;"   onclick='return enviarFormulario();'  class="bt"> Guardar</button>
+    <button type="submit" name="insertar"  style="background-color: #39A900; color:white;"   onclick='return enviarFormulario();'  class="bt"> Guardar</button>
     </center>
     </div>
     </div>

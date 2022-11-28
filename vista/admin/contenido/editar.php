@@ -181,31 +181,55 @@
   
   <tbody>
   <tr>
-    <td> <H5>TRANSLADO</H5>  </td>
+    <td > <H5>TRANSLADO</H5>  </td>
     <?php $a=$this->modelo->ObtenerTranslado($_GET['ficha']) ?>
-    <td ><H5><?=$a->Translado ?></H5></td>
+    <td  ><H5><?=$a->Translado ?></H5></td>
     </tr>
     <tr>
     <td>  <H5>EN FORMACION</H5> </td>
 
     <?php $b=$this->modelo->ObtenerFormacion($_GET['ficha']) ?>
-    <td><H5><?=$b->Formacion ?></H5> 
+    <td ><H5><?=$b->Formacion ?></H5> 
     </tr>
     <tr>
-    <td > <H5> CANCELADO  </H5>   </td>
+    <td s> <H5> CANCELADO  </H5>   </td>
     <?php $c=$this->modelo->ObtenerCancelado($_GET['ficha']) ?>
-    <td ><H5><?=$c->Cancelado ?></H5> </td>
+    <td style="background-color: rgb(255, 255, 255 );"><H5><?=$c->Cancelado ?></H5> </td>
     </tr>
     <tr>
-    <td>  <H5>RETIRO VOLUNTARIO</H5> </td>
+    <td >  <H5>RETIRO VOLUNTARIO</H5> </td>
 
     <?php $d=$this->modelo->ObtenerRetiro($_GET['ficha']) ?>
-    <td ><H5><?=$d->Retiro ?> </H5>  </td>
+    <td><H5><?=$d->Retiro ?> </H5>  </td>
     </tr>
-    <tr>
-    <td> <H5>SUMA TOTAL</H5></td>
 
-    <td><H5><?=  $total=$d->Retiro + $c->Cancelado + $b->Formacion + $a->Translado ?></H5> </td>
+
+    <tr>
+    <td >  <H5>CONDICIONADO</H5> </td>
+
+    <?php $e=$this->modelo->ObtenerCondicionado($_GET['ficha']) ?>
+    <td><H5><?=$e->CONDICIONADO ?> </H5>  </td>
+    </tr>
+
+    
+    <tr>
+    <td >  <H5>APLAZADO</H5> </td>
+
+    <?php $h=$this->modelo->ObtenerAplazado($_GET['ficha']) ?>
+    <td><H5><?=$h->APLAZADO ?> </H5>  </td>
+    </tr>
+
+    <tr>
+    <td >  <H5>INDUCCIÓN</H5> </td>
+
+    <?php $j=$this->modelo->ObtenerInduccion($_GET['ficha']) ?>
+    <td><H5><?=$j->INDUCCION ?> </H5>  </td>
+    </tr>
+
+    <tr>
+    <td > <H5>SUMA TOTAL</H5></td>
+
+    <td ><H5><?=  $total= $d->Retiro + $c->Cancelado + $b->Formacion + $a->Translado + $e->CONDICIONADO + $h->APLAZADO + $j->INDUCCION ?></H5> </td>
     </tr>
   </tbody>
 </table>

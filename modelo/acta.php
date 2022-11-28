@@ -849,6 +849,16 @@ public function ObtenerAplazado($ficha){
 
 
 }
+public function ObtenerInduccion($ficha){
+
+ 
+
+    $consulta=$this->PDO->prepare("SELECT COUNT(Estado) as INDUCCION FROM aprendiz WHERE ficha = $ficha  AND Estado='INDUCCIÓN'");
+    $consulta->execute();
+     return $consulta->fetch(PDO :: FETCH_OBJ);
+
+
+}
 
 //
 

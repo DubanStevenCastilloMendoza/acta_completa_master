@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 24-11-2022 a las 16:54:00
+-- Tiempo de generación: 28-11-2022 a las 18:53:13
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 7.4.29
 
@@ -55,14 +55,6 @@ CREATE TABLE `acta` (
   `privacidad` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Volcado de datos para la tabla `acta`
---
-
-INSERT INTO `acta` (`n_acta`, `acta_no`, `acta_contador`, `nom_rev`, `ciudad`, `fecha`, `hora_in`, `hora_fin`, `lu_en`, `direccion`, `agenda`, `objetivos`, `participantes`, `inf_ficha`, `casos_ant`, `aprendices_dest`, `casos_part`, `hechos_actuales`, `desarrollo`, `informe_vocero`, `descargos_apre`, `conclusion`, `ficha`, `programa`, `privacidad`) VALUES
-(1, 'Na.001', 1, 'Seleccione el comité', 'Bogotá D.C.', '2022-11-25', '11:28', '17:34', 'meet.google.com/xrb-ianu-oba Link: https://forms.gle/PgXL7xqytfwPTFc2A', 'Cl. 15 #31-42', '1.Comité de evaluación y seguimiento aprendices ficha - 2247675 de adsi    ', 'Se reúne el ________________________________________, como instancia competente para investigar y analizar los casos tanto académicos como disciplinarios de los aprendices de la ficha- 2247675 de adsi.', NULL, NULL, NULL, NULL, NULL, 'El instructor jefe de taller Carlos Pérez Álvarez en el mes de mayo 2021 solicitó a coordinación\r\nacadémica comité de evaluación y seguimiento para aprendices de ficha - 2247675 TECNÓLOGO EN\r\nANÁLISIS Y DESARROLLO DE SISTEMAS DE INFORMACIÓN.', NULL, 'El presente informe tratarán los temas referentes al estado de la ficha para el día 22/05/2021 tales\r\ncomo el estado de la misma a nivel general, aspectos académicos a destacar y por último\r\nsugerencias para mejorar dicho estado.\r\n\r\nGD-F-007 V03\r\n\r\nEstado El estado de la ficha a día de hoy se puede calificar como “bueno”, La ficha se encuentra\r\nconformada actualmente por 29 aprendices los cuales salvo contadas excepciones mantienen un\r\nrendimiento académico apropiado para el programa de formación. Algunos aprendices ya han\r\ncompletado sus correspondientes formaciones en el apartado de English dot works 1,2 y 3 dado\r\nque habían cursado el 1 en el colegio o en un programa técnico previo, la mayoría se encuentra por\r\nempezar el English dot word 3, Se destaca que en general la ficha se ha acostumbrado a trabajar de\r\nmanera virtual pese a haberse matriculado en una formación presencial, debido a esto, Algunos\r\nhan decidido tomar su formación mientras realizan otras actividades como hacer una diligencia o\r\ntareas del hogar. Aspectos académicos Por el lado académico la ficha está distribuida en 3 grupos,\r\nel primero está constituido por un aproximado de 5.6 aprendices que entregan todas sus evidencias\r\na tiempo y de forma apropiada. El segundo y más grande está conformado por aproximadamente\r\n18 aprendices que entregan sus evidencias con leves errores y en ocasiones no necesariamente a\r\ntiempo u otro motivo por el que estas pueden en algunos casos considerarse erradas o\r\ninsuficientes. Por último, se encuentra en igual proporción al primero los aprendices que no\r\nentregan sus evidencias a tiempo, no participan en clase, y las evidencias que entregan no suelen\r\nser lo solicitado.', '', NULL, 2247675, ' adsi', 'privada'),
-(2, 'Na.002', 2, 'Comité Académico', 'Bogotá D.C.', '2022-11-15', '17:39', '19:39', 'meet.google.com/xrb-ianu-oba Link: https://forms.gle/PgXL7xqytfwPTFc2A', 'Cl. 15 #31-42', '1.Comité de evaluación y seguimiento aprendices ficha - 2247675 de adsi    ', 'Se reúne el ________________________________________, como instancia competente para investigar y analizar los casos tanto académicos como disciplinarios de los aprendices de la ficha- 2247675 de adsi.', NULL, NULL, NULL, NULL, NULL, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit vestibulum massa ullamcorper volutpat. Aliquam erat volutpat. Aenean id est a eros aliquet molestie. Sed a finibus diam. Curabitur ut urna mauris. Aenean venenatis mollis pellentesque. Donec sed metus nibh. Curabitur ut blandit nisi. Donec sollicitudin urna sed ornare faucibus. Ut ac purus sit amet erat facilisis sollicitudin non eu mi. Sed consequat quam in elit pellentesque condimentum. Ut molestie vulputate odio ac vulputate. Integer accumsan aliquet dui, ut scelerisque nisi vestibulum sed. Cras vel mi vel metus elementum dapibus sit amet id nisl.\r\n\r\nDonec cursus eleifend lorem, eget tempor lorem condimentum in. Duis purus urna, tincidunt a tincidunt quis, bibendum in ligula. Sed in arcu ut libero elementum posuere nec a diam. Integer auctor interdum libero. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent sodales, risus eget auctor dictum, arcu lectus consectetur nibh, quis eleifend risus augue eget nibh. Morbi quis magna enim. Ut orci lectus, gravida eu pharetra in, mattis eget magna. Vestibulum in mollis enim. Vestibulum urna tortor, ultricies eget orci eu, consectetur ultrices risus. Mauris sollicitudin ut metus scelerisque efficitur.', NULL, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit vestibulum massa ullamcorper volutpat. Aliquam erat volutpat. Aenean id est a eros aliquet molestie. Sed a finibus diam. Curabitur ut urna mauris. Aenean venenatis mollis pellentesque. Donec sed metus nibh. Curabitur ut blandit nisi. Donec sollicitudin urna sed ornare faucibus. Ut ac purus sit amet erat facilisis sollicitudin non eu mi. Sed consequat quam in elit pellentesque condimentum. Ut molestie vulputate odio ac vulputate. Integer accumsan aliquet dui, ut scelerisque nisi vestibulum sed. Cras vel mi vel metus elementum dapibus sit amet id nisl.\r\n\r\nDonec cursus eleifend lorem, eget tempor lorem condimentum in. Duis purus urna, tincidunt a tincidunt quis, bibendum in ligula. Sed in arcu ut libero elementum posuere nec a diam. Integer auctor interdum libero. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent sodales, risus eget auctor dictum, arcu lectus consectetur nibh, quis eleifend risus augue eget nibh. Morbi quis magna enim. Ut orci lectus, gravida eu pharetra in, mattis eget magna. Vestibulum in mollis enim. Vestibulum urna tortor, ultricies eget orci eu, consectetur ultrices risus. Mauris sollicitudin ut metus scelerisque efficitur.', '', NULL, 2247675, ' adsi', 'privada');
-
 -- --------------------------------------------------------
 
 --
@@ -75,14 +67,6 @@ CREATE TABLE `aprendices_destacados` (
   `nombre_des` varchar(100) NOT NULL,
   `apellido_des` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `aprendices_destacados`
---
-
-INSERT INTO `aprendices_destacados` (`id_destacados`, `acta_des`, `nombre_des`, `apellido_des`) VALUES
-(1, 1, '', ''),
-(2, 2, 'Hernesto', 'Gonzales');
 
 -- --------------------------------------------------------
 
@@ -97,7 +81,7 @@ CREATE TABLE `aprendiz` (
   `Numero` int(100) NOT NULL,
   `Nombre_aprendiz` varchar(100) NOT NULL,
   `Apellido_aprendiz` varchar(100) NOT NULL,
-  `Celular` int(100) NOT NULL,
+  `Celular` int(100) DEFAULT NULL,
   `Correo` varchar(100) NOT NULL,
   `Estado` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -107,18 +91,469 @@ CREATE TABLE `aprendiz` (
 --
 
 INSERT INTO `aprendiz` (`id_aprendiz`, `ficha`, `Tipo`, `Numero`, `Nombre_aprendiz`, `Apellido_aprendiz`, `Celular`, `Correo`, `Estado`) VALUES
-(4, 2247675, 'CC', 1000623672, 'ZHAILET ALEXANDRA', 'HERNANDEZ ORTEGON', 2147483647, 'zalexh1206@gmail.com', 'Cancelado'),
-(5, 2247675, 'CC', 1000719204, 'JONATHAN DAVID', 'GALINDO ESPINEL', 2147483647, 'davidgalindo044@gmail.com', 'En formacion'),
-(6, 2247675, 'CC', 1000970612, 'JUAN SEBASTIAN', 'MURCIA PINZON', 2147483647, 'sebastianmupi212@gmail.com', 'En formacion'),
-(7, 2247675, 'CC', 1001045371, 'JOHAN MAURICIO', 'MOSQUERA SOLANO', 2147483647, 'johanmosquerasolano@hotmail.com', 'En formacion'),
-(8, 2247675, 'CC', 1001047505, 'DAYRON DANIEL', 'VERGARA NIEVES', 2147483647, 'vergaradairon2@gmail.com', 'En formacion'),
-(9, 2247675, 'CC', 1001054569, 'JUAN SEBASTIAN', 'DELGADO CAMARGO', 2147483647, 'sebas27sd7@gmail.com', 'En formacion'),
-(10, 2247675, 'CC', 1001057872, 'BRANDON ', 'PEÑA VEGA', 2147483647, 'brandonben117@gmail.com', 'Retiro voluntario'),
-(11, 2247675, 'CC', 1001115642, 'ANGIE TATIANA', 'PAEZ LARA', 2147483647, 'paezangie03@gmail.com', 'En formacion'),
-(12, 2247675, 'CC', 1001173919, 'ANDERSON', 'CANO CASTELLANOS', 2147483647, 'canofloo1@gmail.com', 'En formacion'),
-(13, 2247675, 'CC', 1001199707, 'JHON ANDERSON', 'PEREZ VALERO', 2147483647, 'jhooonperez@gmail.com', 'En formacion'),
-(14, 2247675, 'CC', 1001272191, 'ANDRES CAMILO', 'BARRETO ZARATE', 2147483647, 'andresfondo188@gmail.com', 'En formacion'),
-(17, 2247675, 'CC', 1000241054, 'LAURA SOFIA', 'CABALLERO aaaa', 2147483647, 'caballerosofi45556@gmail.com', 'En formacion');
+(1, 2450019, 'CC', 1000049298, 'PAULA ANDREA', 'ARIZA URUEÑA', 2147483647, 'paariza89@misena.edu.co', 'EN FORMACION'),
+(2, 2450019, 'CC', 1000130987, 'MIGUEL ANGEL', 'AGUIRRE CAMARGO', 2147483647, 'angel190aguirre@gmail.com', 'EN FORMACION'),
+(3, 2450019, 'CC', 1000131110, 'DAVID SANTIAGO', 'TORRES GARCIA', 2147483647, 'santy.torresg04@gmail.com', 'RETIRO VOLUNTARIO'),
+(4, 2450019, 'CC', 1000571578, 'JULIETH CAMILA', 'SANCHEZ LOPEZ', 2147483647, 'kmtkm487@gmail.com', 'CANCELADO'),
+(5, 2450019, 'CC', 1000580675, 'ANA MARIA', 'PINEDA VALCARCEL', 2147483647, 'anapdcb@gmail.com', 'EN FORMACION'),
+(6, 2450019, 'CC', 1000774777, 'JULIAN CAMILO', 'MEDINA PRADA', 2147483647, 'juliancamilomedinaprada@gmail.com', 'APLAZADO'),
+(7, 2450019, 'CC', 1000802363, 'NICOLAS', 'ORTIZ LOPEZ', 2147483647, 'nicortizlopez@gmail.com', 'EN FORMACION'),
+(8, 2450019, 'CC', 1000857699, 'DIEGO', 'DIAZ GONZALEZ', 2147483647, 'diego03diaz@outlook.com', 'EN FORMACION'),
+(9, 2450019, 'CC', 1000860444, 'JOHAN SEBASTIAN', 'GORDILLO GONZALEZ', 2147483647, 'sebastiangg1603@gmail.com', 'CANCELADO'),
+(10, 2450019, 'CC', 1000992869, 'ANGEL DAVID', 'RAMIREZ LADINO', 2147483647, 'davidramiladino@gmail.com', 'EN FORMACION'),
+(11, 2450019, 'CC', 1001077312, 'JULIAN FELIPE', 'SOSA SANCHEZ', 2147483647, 'jfsosa21@misena.edu.co', 'EN FORMACION'),
+(12, 2450019, 'CC', 1003661213, 'JUAN NICOLAS', 'SAMACA SILVA', 2147483647, 'nikosamaca54@gmail.com', 'RETIRO VOLUNTARIO'),
+(13, 2450019, 'CC', 1012444993, 'NICOLAS IGNACIO', 'MORENO MOYA', 0, 'nicolasmoreno417@gmail.com', 'EN FORMACION'),
+(14, 2450019, 'CC', 1014278204, 'YONATAN MAURICIO', 'MARTINEZ ROMERO', 2147483647, 'jmnmcmfr@gmail.com', 'EN FORMACION'),
+(15, 2450019, 'CC', 1019982156, 'MARIA JOSE', 'JIMENEZ PASTRAN', 2147483647, 'maria.jimenez128@misena.edu.co', 'EN FORMACION'),
+(16, 2450019, 'CC', 1021663099, 'DANA VALENTINA', 'ROMERO ', 2147483647, 'dvlromero@outlook.com', 'EN FORMACION'),
+(17, 2450019, 'CC', 1022383785, 'HECTOR DAVID', 'RUIZ DUQUE', 2147483647, 'hecoruiz93@gmail.com', 'EN FORMACION'),
+(18, 2450019, 'CC', 1024474219, 'DANIEL FELIPE', 'VIUCHE CAPERA', 2147483647, 'danielviuche62@gmail.com', 'EN FORMACION'),
+(19, 2450019, 'CC', 1026306520, 'JUAN CAMILO', 'MOLINA PARDO', 2147483647, 'molinanimation@gmail.com', 'APLAZADO'),
+(20, 2450019, 'CC', 1030657864, 'SEBASTIAN CAMILO', 'CHAVEZ GOMEZ', 2147483647, 'scchavez4@misena.edu.co', 'EN FORMACION'),
+(21, 2450019, 'CC', 1034656850, 'JOAN STEVEN', 'SAAVEDRA AGUIRRE', 2147483647, 'joansteven2016@gmail.com', 'EN FORMACION'),
+(22, 2450019, 'CC', 1052378762, 'JONNATAN CAMILO', 'CARREÑO SANDOVAL', 2147483647, 'jccarreo26@misena.edu.co', 'EN FORMACION'),
+(23, 2450019, 'CC', 1072747958, 'JUAN DAVID', 'MORA ROMERO', 2147483647, 'juancho.morar@hotmail.com', 'CANCELADO'),
+(24, 2450019, 'CC', 1127342971, 'DIRMAR YARITZA', 'LIZCANO RUIZ', 2147483647, 'dilmar.yaritza.lizcano222@gmail.com', 'CANCELADO'),
+(25, 2450019, 'TI', 1012317155, 'YURY TATIANA', 'CARDENAS TORRES', 2147483647, 'tatianacardenas799@gmail.com', 'CANCELADO'),
+(26, 2450019, 'TI', 1014659083, 'YAZMIN NATALIA', 'MORENO CRUZ', 2147483647, 'natamor365@gmail.com', 'EN FORMACION'),
+(27, 2450019, 'TI', 1019602745, 'ENRIQUE', 'ORJUELA INFANTE', 2147483647, 'eorjuela547@misena.edu.co', 'EN FORMACION'),
+(28, 2450019, 'TI', 1021663919, 'JEISON STEVEN', 'AVELLANEDA GONZALEZ', 2147483647, 'jeison.avellaneda@misena.edu.co', 'EN FORMACION'),
+(29, 2450019, 'TI', 1025525228, 'JUAN CAMILO', 'CARVAJAL FLOREZ', 2147483647, 'camcarflo@gmail.com', 'EN FORMACION'),
+(30, 2450019, 'TI', 1032676594, 'WILLIAM DAVID', 'PERDOMO SANTOS', 2147483647, 'williper7@gmail.com', 'CANCELADO'),
+(31, 2450019, 'TI', 1111193165, 'JHON EDINSON', 'ALVAREZ MORENO', 2147483647, 'jhonylol2019@gmail.com', 'EN FORMACION'),
+(32, 2450052, 'CC', 1000133855, 'JUAN ESTEBAN', 'PADILLA MONTERO', 2147483647, 'Esteban2022padilla@gmail.com', 'CONDICIONADO'),
+(33, 2450052, 'CC', 1000148858, 'BRAYAN STEVEN', 'RUIZ SALAZAR', 2147483647, 'ruizbrayan2727@gmail.com', 'EN FORMACION'),
+(34, 2450052, 'CC', 1000242021, 'JONATHAN STEVEN', 'SEPULVEDA RICO', 2147483647, 'jonathanstevenrico2003@gmail.com', 'CONDICIONADO'),
+(35, 2450052, 'CC', 1000285693, 'LAURA DANIELA', 'MAYORGA GUTIERREZ', 2147483647, 'ldmayorga39@misena.edu.co', 'EN FORMACION'),
+(36, 2450052, 'CC', 1000462214, 'THOMAS SANTIAGO', 'HORTA CRISTANCHO', 2147483647, 'tshorta@misena.edu.co', 'EN FORMACION'),
+(37, 2450052, 'CC', 1000728670, 'DIEGO ALEJANDRO', 'SUAREZ CORTES', 2147483647, 'dasuarez076@misena.edu.co', 'EN FORMACION'),
+(38, 2450052, 'CC', 1000791789, 'DAVID ALEJANDRO', 'GUIZA GONZALEZ', 2147483647, 'davida69079@gmail.com', 'EN FORMACION'),
+(39, 2450052, 'CC', 1000808121, 'MICHAEL STEVEN', 'VELASQUEZ MEDINA', 2147483647, 'maicol.220018@gmail.com', 'RETIRO VOLUNTARIO'),
+(40, 2450052, 'CC', 1001220226, 'ALDAIR', 'SOLANO SOTO', 2147483647, 'asolano62@misena.edu.co', 'EN FORMACION'),
+(41, 2450052, 'CC', 1001286840, 'INGRID KATHERINE', 'CARDOZO CORTES', 2147483647, 'ingrid.cardozo@misena.edu.co', 'EN FORMACION'),
+(42, 2450052, 'CC', 1002652989, 'MANUEL EDUARDO', 'CUBIDES PINEDA', 2147483647, 'mecubides98@misena.edu.co', 'APLAZADO'),
+(43, 2450052, 'CC', 1011080578, 'SOFIA', 'PIEDRAHITA ROZO', 2147483647, 'sofia.piedrahita1@misena.edu.co', 'EN FORMACION'),
+(44, 2450052, 'CC', 1014306018, 'DAVID ALEJANDRO', 'MERCHAN HERRERA', 2147483647, 'daalmehe1999@hotmail.com', 'EN FORMACION'),
+(45, 2450052, 'CC', 1014310276, 'JAISSON DAVID', 'DONOSO LUNA', 2147483647, 'jadadolu@gmail.com', 'CONDICIONADO'),
+(46, 2450052, 'CC', 1018496694, 'HEIMER DUBAN', 'CHACON CARDOZO', 2147483647, 'heimerchaconn@gmail.com', 'EN FORMACION'),
+(47, 2450052, 'CC', 1024597799, 'ANGIE ALEJANDRA', 'FONSECA DAZA', 2147483647, 'aafonseca11@misena.edu.co', 'EN FORMACION'),
+(48, 2450052, 'CC', 1025141433, 'LAURA ESPERANZA', 'GUATAQUIRA PARDO', 2147483647, 'lauraesgua30@gmail.com', 'EN FORMACION'),
+(49, 2450052, 'CC', 1030520400, 'ERIK', 'DEVIA MARTINEZ', 2147483647, 'erikdrm14@outlook.com', 'CANCELADO'),
+(50, 2450052, 'CC', 1032504012, 'BRYGIEDTH NICOLLE', 'BELTRAN CRISTANCHO', 2147483647, 'nicollebeltran1@gmail.com', 'EN FORMACION'),
+(51, 2450052, 'CC', 1032797607, 'MARIA FERNANDA', 'GUTIERREZ PARDO', 2147483647, 'mfgutierrez706@misena.edu.co', 'EN FORMACION'),
+(52, 2450052, 'CC', 1105334029, 'NATALIA NIYIREN', 'RAMIREZ GRACIA', 2147483647, 'nnramrez@misena.edu.co', 'EN FORMACION'),
+(53, 2450052, 'CC', 1193124286, 'ALEJANDRA', 'LESMES BELLO', 2147483647, 'alesmesbello@gmail.com', 'EN FORMACION'),
+(54, 2450052, 'CC', 1233495109, 'YONATHAN ANDRES', 'OSPINA PRECIADO', 2147483647, 'yonaospina@misena.edu.co', 'CANCELADO'),
+(55, 2450052, 'TI', 1011084659, 'SARA JIMENA', 'RUIZ ALVARADO', 2147483647, 'sjruiz956@misena.edu.co', 'EN FORMACION'),
+(56, 2450052, 'TI', 1011201142, 'JUAN DANIEL', 'LONDOÑO CRISTANCHO', 2147483647, 'jdlondoo24@misena.edu.co', 'EN FORMACION'),
+(57, 2450052, 'TI', 1012325178, 'TOMAS SANTIAGO', 'SANCHEZ CASTELLANOS', 2147483647, 'tomasantcastell@gmail.com', 'EN FORMACION'),
+(58, 2450052, 'TI', 1021392183, 'HELEN', 'UMBA CHISABA', 2147483647, 'helenumbalunaazul123@gmail.com', 'EN FORMACION'),
+(59, 2450052, 'TI', 1022931569, 'ANDRES FELIPE', 'GUARIN MOLINA', 2147483647, 'fel1gu4r0@gmail.com', 'EN FORMACION'),
+(60, 2450052, 'TI', 1027150027, 'DIEGO FERNANDO', 'MUÑETON CORREA ', 2147483647, 'diegomfer447@gmail.com', 'EN FORMACION'),
+(61, 2450052, 'TI', 1030521229, 'HENRY ALEXANDER', 'RADA GARZON', 0, 'hradagarzon@gmail.com', 'CONDICIONADO'),
+(62, 2450052, 'TI', 1033097679, 'JUAN SEBASTIAN', 'VARGAS GONZALEZ', 2147483647, 'jsvargas976@misena.edu.co', 'EN FORMACION'),
+(63, 2450052, 'TI', 1034657311, 'MARIA PAULA', 'NIÑO GOMEZ', 2147483647, 'mariapaulang2407@gmail.com', 'RETIRO VOLUNTARIO'),
+(64, 2450052, 'TI', 1070945431, 'DANNA ZHARICK', 'BAHAMON CACERES', 2147483647, 'dannabahamon47@gmail.com', 'EN FORMACION'),
+(65, 2450072, 'CC', 1000150978, 'MICHEL DANIELA', 'MORALES URIZA', 0, 'rouse6423@gmail.com', 'INDUCCION'),
+(66, 2450072, 'CC', 1000183043, 'DENNIS DAYANA', 'PARRA RODRIGUEZ', 2147483647, 'plulu5050@gmail.com', 'EN FORMACION'),
+(67, 2450072, 'CC', 1000241605, 'PAUL SEBASTIAN', 'MENDOZA MORA', 2147483647, 'paulc15.m.2@gmail.com', 'EN FORMACION'),
+(68, 2450072, 'CC', 1000353172, 'KEVIN ANDRES', 'AMAYA ABRIL', 2147483647, 'kevinandresamaya03@gmail.com', 'RETIRO VOLUNTARIO'),
+(69, 2450072, 'CC', 1000462787, 'ANDRES FELIPE', 'CASAS MONTES', 2147483647, 'andresfelipecasasmontes11@gmail.com', 'EN FORMACION'),
+(70, 2450072, 'CC', 1000474266, 'MICHAEL STEVEN', 'BAQUERO BEJARANO', 2147483647, 'bejarano19bach@gmail.com', 'CANCELADO'),
+(71, 2450072, 'CC', 1000522358, 'VALENTINA', 'JAIME CANTILLO', 2147483647, 'vjaimecantillo@gmail.com', 'CANCELADO'),
+(72, 2450072, 'CC', 1000693064, 'ALISON MICHELL', 'AREVALO MORENO', 0, 'alison.arevalo2929@gmail.com', 'EN FORMACION'),
+(73, 2450072, 'CC', 1000731982, 'GERMAN FABIAN', 'RAMOS MUÑOZ', 0, 'fr1631137gg@gmail.com', 'CANCELADO'),
+(74, 2450072, 'CC', 1000857603, 'NICOLAS STEVEN', 'ACOSTA ORTIZ', 2147483647, 'nicolasestivenortiz@gmail.com', 'EN FORMACION'),
+(75, 2450072, 'CC', 1001052097, 'JOHAN SEBASTIAN', 'TORO HERNANDEZ', 2147483647, 'sebastiantron6464@gmail.com', 'EN FORMACION'),
+(76, 2450072, 'CC', 1001117903, 'TATIANA', 'BUITRAGO CRUZ', 2147483647, 'tbuitragoc82@gmail.com', 'CANCELADO'),
+(77, 2450072, 'CC', 1001174335, 'DANIEL RICARDO', 'CASTAÑEDA CASAS', 2147483647, 'ricardillo0131@gmail.com', 'CANCELADO'),
+(78, 2450072, 'CC', 1010004397, 'SEBASTIAN', 'SASTRE RIVERA', 2147483647, 'sebastiansastreicz@gmail.com', 'EN FORMACION'),
+(79, 2450072, 'CC', 1010231754, 'DANIEL FELIPE', 'BUENO PIAMBA', 2147483647, 'felipe123bueno@hotmail.com', 'EN FORMACION'),
+(80, 2450072, 'CC', 1013681513, 'CAMILO', 'ESPAÑA BURGOS', 2147483647, 'cespana9b@gmail.com', 'EN FORMACION'),
+(81, 2450072, 'CC', 1016033632, 'GERMAN ANDRES', 'RAMIREZ PERALTA', 2147483647, 'garamirez236@misena.edu.co', 'EN FORMACION'),
+(82, 2450072, 'CC', 1025522022, 'MIGUEL ANGEL', 'VASCO SANCHEZ', 2147483647, 'mavasco22@misena.edu.co', 'EN FORMACION'),
+(83, 2450072, 'CC', 1034657118, 'LAURA VANESSA', 'MEDINA LOZANO', 2147483647, 'lauravanessamedinalozano@gmail.com', 'EN FORMACION'),
+(84, 2450072, 'CC', 80032209, 'HOBER JAHIR', 'SANCHEZ RIVILLAS', 2147483647, 'kraisler.ancientblack@gmail.com', 'CANCELADO'),
+(85, 2450072, 'TI', 1012330013, 'JUAN SEBASTIAN', 'PACHON ORTIZ', 2147483647, 'sebastianpachon2486@gmail.com', 'EN FORMACION'),
+(86, 2450072, 'TI', 1014977594, 'CRISTHYAN DAVID', 'GOMEZ SIERRA', 2147483647, 'cristiangogo010@gmail.com', 'RETIRO VOLUNTARIO'),
+(87, 2450072, 'TI', 1021512510, 'INUA IOSKEHA', 'CARREÑO GODOY', 2147483647, 'inuaioskeha22@gmail.com', 'EN FORMACION'),
+(88, 2450072, 'TI', 1022923846, 'JUAN ESTEBAN', 'ROJAS BELLO', 2147483647, 'juanrojasbello@gmail.com', 'EN FORMACION'),
+(89, 2450072, 'TI', 1025460950, 'ALEJANDRO', 'HERNANDEZ SUAREZ', 2147483647, 'alejandrohernandezsuarez10@gmail.com', 'EN FORMACION'),
+(90, 2450072, 'TI', 1025524744, 'ALEJANDRO', 'ALVAREZ GOMEZ', 0, 'alvaresalejo3@gmail.com', 'EN FORMACION'),
+(91, 2450072, 'TI', 1027281136, 'DANIELA', 'SANCHEZ SIERRA', 2147483647, 'tatoydanielaxd@gmail.com', 'EN FORMACION'),
+(92, 2450072, 'TI', 1034658564, 'CAMILA', 'SAAVEDRA AGUIRRE', 2147483647, 'aslanbebe760@gmail.com', 'EN FORMACION'),
+(93, 2450072, 'TI', 1077142902, 'BIBIAN NIKOLE', 'TORRES LOPEZ', 2147483647, 'bibiannicol01@gmail.com', 'EN FORMACION'),
+(94, 2450072, 'TI', 1232397546, 'OWEN DANIEL', 'MONCADA ORTIZ', 2147483647, 'owenmoncadaf@gmail.com', 'EN FORMACION'),
+(95, 2469489, 'CC', 1000240483, 'MIGUEL ANGEL', 'PEÑA SALAZAR', 2147483647, 'angel2002pena2@gmail.com', 'EN FORMACION'),
+(96, 2469489, 'CC', 1000320738, 'TOMAS ZALOMON', 'ASCENCIO ALVAREZ', 2147483647, 'tomaszalomonascencio@gmail.com', 'EN FORMACION'),
+(97, 2469489, 'CC', 1000321610, 'SERGIO MAURICIO', 'BERNAL ORTIZ', 2147483647, 'sergiortiz74@gmail.com', 'CANCELADO'),
+(98, 2469489, 'CC', 1000470653, 'CRISTIAN DAVID', 'ESPINOSA GAMBOA', 2147483647, 'crispetayupi16@gmail.com', 'EN FORMACION'),
+(99, 2469489, 'CC', 1000594159, 'DIEGO ANDRES', 'LEON ROJAS', 2147483647, 'dleon1732xd@gmail.com', 'EN FORMACION'),
+(100, 2469489, 'CC', 1000604410, 'SAMIR ESTEBAN', 'SALAYANDIA RODRIGUEZ', 0, 'samir.salayandia@gmail.com', 'TRASLADADO'),
+(101, 2469489, 'CC', 1000985473, 'MICHEL ANDREA', 'YAZO DIAZ', 2147483647, 'michel071215@gmail.com', 'EN FORMACION'),
+(102, 2469489, 'CC', 1003879754, 'JULIAN ESTEBAN', 'BARRIGA LOPEZ', 0, 'julebanbarrigalopez@gmail.com', 'TRASLADADO'),
+(103, 2469489, 'CC', 1004596932, 'CATHERINE ALEJANDRA', 'MONCAYO VALLEJOS', 2147483647, 'catherinemoncayovallejos@gmail.com', 'EN FORMACION'),
+(104, 2469489, 'CC', 1005327542, 'NILSON EDUARDO', 'DELGADO SUAREZ', 2147483647, 'yori180@hotmail.es', 'CANCELADO'),
+(105, 2469489, 'CC', 1010000978, 'PAULA CATALINA', 'APONTE RODRIGUEZ', 2147483647, 'paulaaponte3456@gmail.com', 'EN FORMACION'),
+(106, 2469489, 'CC', 1013097980, 'VIVIANA VALENTINA', 'BELTRAN MENDOZA', 2147483647, 'anatina.mmg.2016@gmail.com', 'TRASLADADO'),
+(107, 2469489, 'CC', 1016067035, 'ANA LORENA', 'FERNANDEZ CASTRO', 2147483647, 'alorenafc@misena.edu.co', 'EN FORMACION'),
+(108, 2469489, 'CC', 1016593381, 'JUAN DAVID', 'TIBAQUIRA ORJUELA', 2147483647, 'juandavidtibaquira04@gmail.com', 'EN FORMACION'),
+(109, 2469489, 'CC', 1018498969, 'DAVID ALEJANDRO', 'TRUJILLO CHEVERRIA', 2147483647, 'alejotrujillo97@gmail.com', 'EN FORMACION'),
+(110, 2469489, 'CC', 1019040167, 'DIGNA IRENE', 'URREA CRUZ', 2147483647, 'dignaireneurreacruz@gmail.com', 'EN FORMACION'),
+(111, 2469489, 'CC', 1019127484, 'ALAN', 'FITZGERALD ARRIETA', 2147483647, 'fitzgeraldalan.97@hotmail.com', 'EN FORMACION'),
+(112, 2469489, 'CC', 1021663878, 'WILLIAM DAVID', 'PAEZ GARZON', 2147483647, 'w.davidpaez.g@gmail.com', 'EN FORMACION'),
+(113, 2469489, 'CC', 1030520904, 'JOAN NICOLAS', 'HERNANDEZ CORREA', 2147483647, 'jcorrea@colegioinmaculadaconcepcion.edu.co', 'EN FORMACION'),
+(114, 2469489, 'CC', 1030694331, 'IVON MICHEL', 'HURTADO TASAMA', 2147483647, 'ahomefigurashi0214@gmail.com', 'EN FORMACION'),
+(115, 2469489, 'CC', 1106454410, 'YAJAIRA', 'ORTIZ GUALTERO', 2147483647, 'yajita2780@gmail.com', 'EN FORMACION'),
+(116, 2469489, 'CC', 1193597103, 'AIDAN SANTIAGO', 'FORERO RICO', 2147483647, 'asforero301@misena.edu.co', 'EN FORMACION'),
+(117, 2469489, 'CC', 52954115, 'LILIANA ANDREA', 'LAGOS BONILLA', 2147483647, 'lagosliliana.b@gmail.com', 'EN FORMACION'),
+(118, 2469489, 'CC', 80216821, 'JUAN CARLOS', 'ALFONSO SILVA', 0, 'juanc_alfonso12@yahoo.com', 'EN FORMACION'),
+(119, 2469489, 'TI', 1007652208, 'JOSE DAVID', 'RIVERA LATORRE', 2147483647, 'joselitorivera001@gmail.com', 'CANCELADO'),
+(120, 2469489, 'TI', 1012318221, 'EILEEN GEOVANNA', 'MONTILLA QUINTANA', 2147483647, 'eileenmontilla92@gmail.com', 'EN FORMACION'),
+(121, 2469489, 'TI', 1012331431, 'INGRID VALENTINA', 'RUIZ ACUÑA', 2147483647, 'ingrid.valentinaruiz@gmail.com', 'RETIRO VOLUNTARIO'),
+(122, 2469489, 'TI', 1014737310, 'JHOJAN SEBASTIAN', 'MUÑOZ RODRIGUEZ', 2147483647, 'johansebmunoz@gmail.com', 'TRASLADADO'),
+(123, 2469489, 'TI', 1025140822, 'DIANA CAROLINA', 'RAMIREZ HERRERA', 2147483647, '1caro.herrera.y@gmail.com', 'APLAZADO'),
+(124, 2469489, 'TI', 1025460869, 'JONATHAN DANIEL', 'PARDO SUAREZ', 2147483647, 'jonathanpardo08@gmail.com', 'EN FORMACION'),
+(125, 2469489, 'TI', 1031802596, 'DAVID SANTIAGO', 'DURAN PEÑA', 2147483647, 'davidsantiagoestudio@gmail.com', 'APLAZADO'),
+(126, 2469489, 'TI', 1031803789, 'JUAN SEBASTIAN', 'SERRANO NIÑO', 2147483647, 'jserranonino34@gmail.com', 'EN FORMACION'),
+(127, 2469489, 'TI', 1034778226, 'DANA VALERIA', 'FORERO PEÑA', 2147483647, 'Valeriaforero230820@gmail.com', 'EN FORMACION'),
+(128, 2469489, 'TI', 1087785092, 'IBIS NATHALIA', 'QUIÑONES ARBOLEDA', 2147483647, 'nathaarboleda2@gmail.com', 'RETIRO VOLUNTARIO'),
+(129, 2502187, 'CC', 1000047289, 'MARIA PAULA', 'DE LA TORRE NIÑO', 2147483647, 'mariapauladelatorren@gmail.com', 'CONDICIONADO'),
+(130, 2502187, 'CC', 1000077197, 'LUNA VALENTINA', 'CHAVEZ SALAZAR', 2147483647, 'lcsalazar2711@gmail.com', 'EN FORMACION'),
+(131, 2502187, 'CC', 1000271169, 'VALENTINA', 'GOMEZ RODRIGUEZ', 2147483647, 'valentinagomezrodriguez2@gmail.com', 'EN FORMACION'),
+(132, 2502187, 'CC', 1000347233, 'MIGUEL ANGEL', 'CAICEDO CRUZ', 2147483647, 'miguelithokiva@gmail.com', 'EN FORMACION'),
+(133, 2502187, 'CC', 1000462844, 'SHIRLEY YOJANNA', 'MORENO MENDEZ', 2147483647, 'shirleymorenosena18@gmail.com', 'CANCELADO'),
+(134, 2502187, 'CC', 1001185285, 'MATEO', 'CRIOLLO CABALLERO', 2147483647, 'matiuscvc@gmail.com', 'CANCELADO'),
+(135, 2502187, 'CC', 1001344943, 'ANGY YECENIA', 'ABREU RODRIGUEZ', 2147483647, 'angyrodrigez123@gmail.com', 'EN FORMACION'),
+(136, 2502187, 'CC', 1001345298, 'AXEL DAVID', 'RUIZ PIRAGUA', 2147483647, 'ruizpiraguaaxeldavid@gmail.com', 'RETIRO VOLUNTARIO'),
+(137, 2502187, 'CC', 1004533631, 'YORMAN STIV', 'LOPEZ ECHEVERRY', 2147483647, 'ystiv580@gmail.com', 'EN FORMACION'),
+(138, 2502187, 'CC', 1010119446, 'JHAN SEBASTIAN', 'VARGAS CUBIDES', 2147483647, 'jhansebastian.18@gmail.com', 'EN FORMACION'),
+(139, 2502187, 'CC', 1013256375, 'TATIANA', 'GOMEZ CARDENAS', 2147483647, 'cardenastatiana2004@icloud.com', 'EN FORMACION'),
+(140, 2502187, 'CC', 1014856437, 'MARIA FERNANDA', 'HERNANDEZ BELTRAN', 2147483647, 'hernandezbeltranmafe@gmail.com', 'EN FORMACION'),
+(141, 2502187, 'CC', 1016028297, 'WILLIAM YESSID', 'PALOMINO CAICEDO', 0, 'willi_dclass@hotmail.com', 'CANCELADO'),
+(142, 2502187, 'CC', 1021512197, 'BRAYHAN SIBEL', 'ROJAS ROJAS', 2147483647, 'bsibel2302@gmail.com', 'CANCELADO'),
+(143, 2502187, 'CC', 1027400322, 'HEIDY SAMANTHA', 'BOLAÑOS PARRA', 2147483647, 'monamora1122@gmail.com', 'EN FORMACION'),
+(144, 2502187, 'CC', 1031801157, 'JUAN PABLO', 'MARTINEZ ARDILA', 2147483647, 'jpmartinezz314@gmail.com', 'EN FORMACION'),
+(145, 2502187, 'CC', 1193594338, 'ESTEFANIA', 'GONZALEZ QUINTERO', 2147483647, 'estefaniagonzalezquintero7@gmail.com', 'EN FORMACION'),
+(146, 2502187, 'CC', 1233688978, 'YUSED ALBERTO', 'GONZALEZ CONTRERAS', 2147483647, 'jhon1857574@gmail.com', 'EN FORMACION'),
+(147, 2502187, 'CC', 80799883, 'EIDER ENRIQUE', 'SALCEDO VARGAS', 0, 'eider_salcedo@yahoo.com', 'EN FORMACION'),
+(148, 2502187, 'TI', 1012326972, 'CARLOS STIVEN', 'SANDOVAL CARDOZO', 2147483647, 'stiven12348765@gmail.com', 'EN FORMACION'),
+(149, 2502187, 'TI', 1014659217, 'MICHAEL SANTIAGO', 'FLOREZ MARTINEZ', 2147483647, 'santiagoflorez499@gmail.com', 'EN FORMACION'),
+(150, 2502187, 'TI', 1019010162, 'LUIS GABRIEL', 'PALACIOS MARTINEZ', 2147483647, 'lgmp5079@gmail.com', 'CONDICIONADO'),
+(151, 2502187, 'TI', 1023364341, 'LAURA ALEJANDRA', 'SALINAS QUINTERO', 2147483647, 'laura.salinaslaura.salinas@gmail.com', 'EN FORMACION'),
+(152, 2502187, 'TI', 1023365383, 'DANIEL SANTIAGO', 'TORRES SIERRA', 2147483647, 'danisanti4568@hotmail.com', 'CANCELADO'),
+(153, 2502187, 'TI', 1025522763, 'LAURA MARCELA', 'HERNANDEZ HERNANDEZ', 2147483647, 'lau.h7015@gmail.com', 'APLAZADO'),
+(154, 2502187, 'TI', 1027522929, 'EMILY YALHANIS', 'CORTES MIRANDA', 2147483647, 'emilycm1125@gmail.com', 'RETIRO VOLUNTARIO'),
+(155, 2502187, 'TI', 1030525458, 'SHARITH VALENTINA', 'ABAUNZA QUIÑONES', 2147483647, 'abaunzasharith@gmail.com', 'EN FORMACION'),
+(156, 2502187, 'TI', 1030533669, 'JUAN PABLO', 'RICO RAMIREZ', 2147483647, 'juanpablorr2017@gmail.com', 'EN FORMACION'),
+(157, 2502187, 'TI', 1031645305, 'KAREN NICOLE', 'SANCHEZ GONZALEZ', 2147483647, 'karennicolesanchez2405@gmail.com', 'CANCELADO'),
+(158, 2502187, 'TI', 1097990481, 'KAREN TATIANA', 'RODRIGUEZ GALINDO', 2147483647, 'tatisflor21@gmail.com', 'RETIRO VOLUNTARIO'),
+(159, 2502187, 'TI', 1109841153, 'SOFIA', 'CARDENAS BRIÑEZ', 2147483647, 'sofiacardenas2901@gmail.com', 'CONDICIONADO'),
+(160, 2502196, 'CC', 1000139868, 'VALENTINA', 'HERNANDEZ ESPINOSA', 2147483647, 'valen.hernandez.e@gmail.com', 'CANCELADO'),
+(161, 2502196, 'CC', 1000216405, 'ANGELA NATHALIA', 'GALEANO ORJUELA', 2147483647, 'nenatha27@gmail.com', 'EN FORMACION'),
+(162, 2502196, 'CC', 1000335355, 'NICOLAI ANDRE', 'NOMESQUE BAUTISTA', 2147483647, 'andrebautista777@gmail.com', 'EN FORMACION'),
+(163, 2502196, 'CC', 1000470942, 'JUAN DAVID', 'LOPEZ LEAL', 2147483647, 'Juanthegamer17@gmail.com', 'EN FORMACION'),
+(164, 2502196, 'CC', 1000728775, 'JHON JAIRO', 'MORALES SODRE', 2147483647, 'j.jmoralesodre132@gmail.com', 'EN FORMACION'),
+(165, 2502196, 'CC', 1000943924, 'JULIAN DAVID', 'ALMEIDA BLANCO', 2147483647, 'juldalmeida@misena.edu.co', 'EN FORMACION'),
+(166, 2502196, 'CC', 1000984541, 'DAVID FERNANDO', 'CUELLAR CASTRILLON', 2147483647, 'david.f-cuellar@outlook.com', 'EN FORMACION'),
+(167, 2502196, 'CC', 1001045606, 'JUAN PABLO', 'BUSTOS PARRA', 2147483647, 'bustosjuanpablo44@gmail.com', 'CANCELADO'),
+(168, 2502196, 'CC', 1001049463, 'ANGELA MAIDEN', 'SANCHEZ GALEANO', 2147483647, 'angela.maidel1601@gmail.com', 'EN FORMACION'),
+(169, 2502196, 'CC', 1001056840, 'SERGIO ANDRES', 'MORA SABOGAL', 2147483647, 'sergiomora85@hotmail.com', 'EN FORMACION'),
+(170, 2502196, 'CC', 1001275855, 'DIEGO ALFONSO', 'ABREU PALACIO', 2147483647, 'abreudiego923@gmail.com', 'EN FORMACION'),
+(171, 2502196, 'CC', 1001348592, 'JHONATAN SANTIAGO', 'ARIAS BUITRAGO', 2147483647, 'sanntiagoarias5@gmail.com', 'CANCELADO'),
+(172, 2502196, 'CC', 1007155628, 'EDITH XIOMARA', 'SALAZAR HERNANDEZ', 2147483647, 'exsalazar@misena.edu.co', 'EN FORMACION'),
+(173, 2502196, 'CC', 1013608884, 'CARLOS EDUARDO', 'FERNANDEZ FUENTES', 0, 'carlosff46@hotmail.com', 'EN FORMACION'),
+(174, 2502196, 'CC', 1013633631, 'DIANA PATRICIA', 'RAMIREZ MARTINEZ', 2147483647, 'diana.rmz5@gmail.com', 'EN FORMACION'),
+(175, 2502196, 'CC', 1018508945, 'JEFFRY STEVEN', 'BARON VELASQUEZ', 0, 'jeffrybaron@gmail.com', 'RETIRO VOLUNTARIO'),
+(176, 2502196, 'CC', 1021662248, 'JUAN SEBASTIAN', 'UNIBIO PEÑA', 2147483647, 'juanunibio0@gmail.com', 'EN FORMACION'),
+(177, 2502196, 'CC', 1022922519, 'YULIETH ALEJANDRA', 'DUARTE CHACON', 2147483647, 'duartejulieth8@gmail.com', 'EN FORMACION'),
+(178, 2502196, 'CC', 1022928651, 'MIGUEL ANGEL', 'HORTA BONILLA', 2147483647, 'maxsoguer645@gmail.com', 'EN FORMACION'),
+(179, 2502196, 'CC', 1023977249, 'JHEIK MICHAEL DUBAN', 'GUEVARA GONZALEZ', 2147483647, 'jheik3@gmail.com', 'EN FORMACION'),
+(180, 2502196, 'CC', 1024460819, 'DIEGO MANUEL', 'ROJAS CASTELLANOS', 2147483647, 'diegomanuelrojas17@gmail.com', 'EN FORMACION'),
+(181, 2502196, 'CC', 1024498362, 'JULIO ANDRES', 'PEREZ ARIAS', 2147483647, 'jperez16@uniminuto.edu.co', 'EN FORMACION'),
+(182, 2502196, 'CC', 1030566798, 'DANIEL ANDRES', 'PINTO CARRILLO', 0, 'pintografo@gmail.com', 'CANCELADO'),
+(183, 2502196, 'CC', 1030609219, 'JEFFERSON STIVE', 'DIAZ GARCIA', 2147483647, 'jeffersonstivediaz@hotmail.com', 'CANCELADO'),
+(184, 2502196, 'CC', 1030642245, 'ANDRES FELIPE', 'RAMIREZ VILLABON', 0, 'andresvillabonvalencia@gmail.com', 'EN FORMACION'),
+(185, 2502196, 'CC', 1105670116, 'SANTIAGO FELIPE', 'PINTO YATE', 0, 'santypinto.1401@gmail.com', 'EN FORMACION'),
+(186, 2502196, 'CC', 1143158928, 'JEAN CARLOS', 'CASTILLO JAIME', 2147483647, 'jeanitsa96@gmail.com', 'EN FORMACION'),
+(187, 2502196, 'CC', 1193273174, 'KATHERYN JOHANA', 'SOLARTE CARDENAS', 2147483647, 'ksolarte@unal.edu.co', 'CANCELADO'),
+(188, 2502196, 'CC', 1233895010, 'SANTIAGO', 'ORTIZ GAMBOA', 2147483647, 'sortiz0105@misena.edu.co', 'EN FORMACION'),
+(189, 2502196, 'TI', 1023302415, 'JUAN DAVID', 'CASTRO GUZMAN', 2147483647, 'castrojuandavid29@gmail.com', 'EN FORMACION'),
+(190, 2502196, 'TI', 1025460744, 'ADRIANA LUCIA', 'GARCIA BUCURU', 2147483647, 'adri36garciabucuruadrianalucia@gmail.com', 'EN FORMACION'),
+(191, 2502196, 'TI', 1032937896, 'KAROL VANESSA', 'NIÑO RODRIGUEZ', 2147483647, 'tarito8923@gmail.com', 'CANCELADO'),
+(192, 2502196, 'TI', 1033097512, 'SARA SOFIA', 'VILLAMIL VALBUENA', 2147483647, 'saritavilla3@gmail.com', 'EN FORMACION'),
+(193, 2502196, 'TI', 1034777523, 'JUAN DAVID', 'CHAUSTRE URREA', 2147483647, 'juandavidchaustreurrea@gmail.com', 'EN FORMACION'),
+(194, 2502199, 'CC', 1000128883, 'JUAN FELIPE', 'MONTAGUT RODRIGUEZ', 0, 'crystaldonkey18@gmail.com', 'TRASLADADO'),
+(195, 2502199, 'CC', 1000240237, 'MANOLO RICARDO', 'ZAPATA ORTIZ', 2147483647, 'mnozapata@gmail.com', 'EN FORMACION'),
+(196, 2502199, 'CC', 1000517493, 'JUAN LUCAS', 'AREVALO AREVALO', 2147483647, 'juanlucasarevaloarevalo@gmail.com', 'CANCELADO'),
+(197, 2502199, 'CC', 1000603202, 'IVAN', 'TRIANA GARCIA', 0, 'ivantricking18@gmail.com', 'EN FORMACION'),
+(198, 2502199, 'CC', 1000786463, 'IRIS DANIELA', 'ROJAS VANEGAS', 2147483647, 'idrojas364@misena.edu.co', 'EN FORMACION'),
+(199, 2502199, 'CC', 1000791070, 'AXEL NICOLAS', 'VERDUGO RAMIREZ', 2147483647, 'ax-nico.03@hotmail.com', 'EN FORMACION'),
+(200, 2502199, 'CC', 1001200160, 'DAVID SANTIAGO', 'RODRIGUEZ GARCIA', 2147483647, 'sebas212010@hotmail.com', 'CANCELADO'),
+(201, 2502199, 'CC', 1001201238, 'SANTIAGO', 'ECHEVERRIA SANCHEZ', 2147483647, 'secheverrias@itifjdecaldas.edu.co', 'EN FORMACION'),
+(202, 2502199, 'CC', 1005151203, 'DANIEL FELIPE', 'PALOMINO CAMACHO', 2147483647, 'danielpalominocamacho19@gmail.com', 'EN FORMACION'),
+(203, 2502199, 'CC', 1007295510, 'SANDY CAROLINA', 'RIVERA SIERRA', 2147483647, 'Yokkotsu011@gmail.com', 'EN FORMACION'),
+(204, 2502199, 'CC', 1007524221, 'JUAN CARLOS', 'MUÑOZ LOPEZ', 2147483647, 'juanca.142001@gmail.com', 'CANCELADO'),
+(205, 2502199, 'CC', 1010208167, 'ELIZABETH ROSE', 'MENDOZA ', 2147483647, 'elizabeth.rose.mendoza@gmail.com', 'APLAZADO'),
+(206, 2502199, 'CC', 1012461308, 'ANDRES FELIPE', 'VILLALOBOS CRUZ', 2147483647, 'andresvlllbs@gmail.com', 'EN FORMACION'),
+(207, 2502199, 'CC', 1013589704, 'ADIELA', 'LOPEZ PEÑA', 2147483647, 'lumos.solem15@gmail.com', 'EN FORMACION'),
+(208, 2502199, 'CC', 1013660622, 'LEIDY KATERIN', 'MONTAÑEZ GUILLEN', 2147483647, 'luloloko97@gmail.com', 'EN FORMACION'),
+(209, 2502199, 'CC', 1013677124, 'MARIA ALEJANDRA', 'PEÑA VELEZ', 2147483647, 'mapena421@misena.edu.co', 'APLAZADO'),
+(210, 2502199, 'CC', 1015435368, 'JEFERSON', 'PEREA CABEZAS', 2147483647, 'JOTAPEREA92@GMAIL.COM', 'CANCELADO'),
+(211, 2502199, 'CC', 1016086698, 'JHON ERICK', 'APONTE MONROY', 2147483647, 'aponte.erick96@gmail.com', 'APLAZADO'),
+(212, 2502199, 'CC', 1018416518, 'FREDY ANTONIO', 'ALVARADO ZABALA', 0, 'fredyantonioalvarado@gmail.com', 'EN FORMACION'),
+(213, 2502199, 'CC', 1018439148, 'LINA MARCELA', 'VELASQUEZ PARRA', 2147483647, 'linavip.1990@gmail.com', 'EN FORMACION'),
+(214, 2502199, 'CC', 1019110240, 'ROLFE HUGO', 'BUITRAGO CARDENAS', 0, 'fitobuitrago@gmail.com', 'RETIRO VOLUNTARIO'),
+(215, 2502199, 'CC', 1032468996, 'JHOON SEBASTIAN', 'BARBOZA OSORIO', 2147483647, 'barbozaosoriojhoon@gmail.com', 'EN FORMACION'),
+(216, 2502199, 'CC', 1033724699, 'CARLOS ANDRES', 'OTAVO BARRIOS', 2147483647, 'caotavo9@misena.edu.co', 'CANCELADO'),
+(217, 2502199, 'CC', 1033808092, 'ANDERSON', 'MIRANDA TAMAYO', 2147483647, 'mllos2010@hotmail.com', 'EN FORMACION'),
+(218, 2502199, 'CC', 1073163690, 'YHESUYS', 'PEREZ QUIROZ', 2147483647, 'yheperezquiroz@gmail.com', 'CANCELADO'),
+(219, 2502199, 'CC', 1125231142, 'FELIPE ANTONIO', 'FIGUEROA ALVAREZ', 2147483647, 'fafigueroa111@misena.edu.co', 'APLAZADO'),
+(220, 2502199, 'CC', 80813350, 'JULIAN MIGUEL', 'GUIO VALBUENA', 2147483647, 'guiojulian@gmail.com', 'APLAZADO'),
+(221, 2502199, 'PEP', 2147483647, 'RONERVIL JOSCAR', 'VALLENILLA GOITIA', 2147483647, 'ronervil@gmail.com', 'EN FORMACION'),
+(222, 2502199, 'TI', 1013258665, 'JULIANA', 'MONTIEL MARTINEZ', 2147483647, 'juliscamila2004@gmail.com', 'EN FORMACION'),
+(223, 2502199, 'TI', 1021666210, 'JESSICA LORENA', 'GONZALEZ MEDINA', 2147483647, 'jessilore08@gmail.com', 'EN FORMACION'),
+(224, 2502199, 'TI', 1066721280, 'DANIELA', 'PETRO TOSCANO', 2147483647, 'petrodaniela461@gmail.com', 'EN FORMACION'),
+(225, 2502202, 'CC', 1000000943, 'CAMILO ANDRES', 'SANCHEZ SOTAQUIRA', 2147483647, 'auremuroi@gmail.com', 'EN FORMACION'),
+(226, 2502202, 'CC', 1000128883, 'JUAN FELIPE', 'MONTAGUT RODRIGUEZ', 0, 'crystaldonkey18@gmail.com', 'EN FORMACION'),
+(227, 2502202, 'CC', 1000455904, 'SANTIAGO', 'CELY MESA', 2147483647, 'celysantiago90@gmail.com', 'EN FORMACION'),
+(228, 2502202, 'CC', 1000732279, 'ALLISON TATIANA', 'TORRES SANCHEZ', 2147483647, 'torresallison239@gmail.com', 'EN FORMACION'),
+(229, 2502202, 'CC', 1000974450, 'BRAYAN ALEJANDRO', 'RAMIREZ TORRES', 2147483647, 'ramirezbrayan406@gmail.com', 'EN FORMACION'),
+(230, 2502202, 'CC', 1001092721, 'MICHELLE CAMILA', 'SANTANA AMADO', 2147483647, 'micho2sa@gmail.com', 'EN FORMACION'),
+(231, 2502202, 'CC', 1001117527, 'LUISA FERNANDA', 'TARAZONA PINTO', 2147483647, 'luisatarazona12@gmail.com', 'EN FORMACION'),
+(232, 2502202, 'CC', 1005910669, 'NICOLE SOFIA', 'VENEGAS GALEANO', 2147483647, 'Nikitolindo@hotmail.es', 'EN FORMACION'),
+(233, 2502202, 'CC', 1010005207, 'DAVIDSON', 'HERNANDEZ MARQUEZ', 2147483647, 'davidsonhernandez1234@gmail.com', 'EN FORMACION'),
+(234, 2502202, 'CC', 1010011321, 'MICHAEL SANTIAGO', 'PAEZ JIMENEZ', 2147483647, 'michaelpaez1520@gmail.com', 'EN FORMACION'),
+(235, 2502202, 'CC', 1016072217, 'SANDRA JULIETH', 'ORTIZ GUTIERREZ', 0, 'Sandris83_94@hotmail.com', 'APLAZADO'),
+(236, 2502202, 'CC', 1016833165, 'VALENTINA', 'ROJAS BAHAMON', 2147483647, 'valesaenzjv@gmail.com', 'EN FORMACION'),
+(237, 2502202, 'CC', 1018504977, 'JUAN PABLO', 'JIMENEZ ARAQUE', 2147483647, 'jpjimenez779@gmail.com', 'EN FORMACION'),
+(238, 2502202, 'CC', 1026305882, 'JUAN DIEGO', 'GUIZA MUÑOZ', 2147483647, 'juan.diego.guiza10@gmail.com', 'EN FORMACION'),
+(239, 2502202, 'CC', 1028780207, 'FEDAN', 'MONTES RUEDA', 2147483647, 'fedanmontesrueda@gmail.com', 'EN FORMACION'),
+(240, 2502202, 'CC', 1030638525, 'JUAN SEBASTIAN', 'ZORRO PALOMA', 2147483647, 'sebasfox94@hotmail.com', 'EN FORMACION'),
+(241, 2502202, 'CC', 1030693277, 'JOHAN STEVEN', 'SUAREZ CAMACHO', 2147483647, 'JOPAC1212@GMAIL.COM', 'EN FORMACION'),
+(242, 2502202, 'CC', 1031174630, 'JUAN CARLOS', 'ARIZA FONTECHA', 2147483647, 'Pereztoon0@gmail.com', 'EN FORMACION'),
+(243, 2502202, 'CC', 1193509694, 'RICHARD DAVID', 'GARZON RINCON', 2147483647, 'RICHARDDAVID22garzonrincon@hotmail.com', 'EN FORMACION'),
+(244, 2502202, 'TI', 1001218682, 'DAVID', 'RODRIGUEZ MANCERA', 2147483647, 'daguez8@hotmail.com', 'EN FORMACION'),
+(245, 2502202, 'TI', 1012916191, 'SANTIAGO', 'GOMEZ BALLEN', 2147483647, 'santigomezballen@gmail.com', 'EN FORMACION'),
+(246, 2502202, 'TI', 1013036813, 'PAULA ANDREA', 'MARIN GUTIERREZ', 2147483647, 'paulamg546@gmail.com', 'EN FORMACION'),
+(247, 2502202, 'TI', 1014857902, 'ANGIE NIKOL', 'ORTIZ ARTUNDUAGA', 2147483647, 'ortiz08nikol@gmail.com', 'EN FORMACION'),
+(248, 2502202, 'TI', 1019983091, 'CHRISTOPHER ANDRES', 'MERCHAN LEON', 2147483647, 'elcristomerchan@gmail.com', 'CANCELADO'),
+(249, 2502202, 'TI', 1019984404, 'KEVIN ALEJANDRO', 'CAMACHO GONZALEZ', 2147483647, 'kevinpro415@gmail.com', 'EN FORMACION'),
+(250, 2502202, 'TI', 1023162530, 'AYLIN NICOLE', 'PEÑA GOMEZ', 2147483647, 'aylinnicolepg12@gmail.com', 'EN FORMACION'),
+(251, 2502217, 'CC', 1000236047, 'DANIEL FELIPE', 'PATAQUIVA HERNANDEZ', 2147483647, 'danimaiden123@gmail.com', 'EN FORMACION'),
+(252, 2502217, 'CC', 1000993184, 'JUAN DIEGO', 'CALDERON PERDOMO', 2147483647, 'diegotem06@gmail.com', 'INDUCCION'),
+(253, 2502217, 'CC', 1001050380, 'ANGIE TATIANA', 'JOYA MARTINEZ', 2147483647, 'tatisjoya312@gmail.com', 'EN FORMACION'),
+(254, 2502217, 'CC', 1003087298, 'JOSE DAVID', 'MORA CARDILES', 2147483647, 'jjjosedaviddd@gmail.com', 'EN FORMACION'),
+(255, 2502217, 'CC', 1010032620, 'CAROL ANGELICA', 'GONZALEZ FORERO', 2147483647, 'peach.00.sf@gmail.com', 'EN FORMACION'),
+(256, 2502217, 'CC', 1012417064, 'HECTOR JAIR', 'VELA SALAZAR', 2147483647, 'jairvela9412@gmail.com', 'EN FORMACION'),
+(257, 2502217, 'CC', 1012425903, 'JOHAN ESTEBAN', 'ROJAS BEJARANO', 2147483647, 'johan.esteban.rojas.07@gmail.com', 'EN FORMACION'),
+(258, 2502217, 'CC', 1012463790, 'EDGAR ALEJANDRO', 'TRIANA ARIAS', 2147483647, 'tributarias.a23@gmail.com', 'EN FORMACION'),
+(259, 2502217, 'CC', 1013651968, 'LISSETTE JHOHANA', 'MARTINEZ ESCOBAR', 2147483647, 'jhohana_9408@hotmail.com', 'EN FORMACION'),
+(260, 2502217, 'CC', 1014215868, 'CINDI JOHANA', 'CIPRIAN DIAZ', 0, 'ciprianjoha@gmail.com', 'EN FORMACION'),
+(261, 2502217, 'CC', 1014316066, 'LUIS DAVID', 'CABALLERO ZUÑIGA', 2147483647, 'luiszuica2@gmail.com', 'RETIRO VOLUNTARIO'),
+(262, 2502217, 'CC', 1015484806, 'OSCAR JAVIER', 'TIQUE MESA', 2147483647, 'crakfamili23344@gmail.com', 'INDUCCION'),
+(263, 2502217, 'CC', 1022931059, 'DANIEL FELIPE', 'DIAZ MORALES', 0, 'diazmoralesdanielfelipe@gmail.com', 'EN FORMACION'),
+(264, 2502217, 'CC', 1023898967, 'LILIANA ANDREA', 'RODRIGUEZ CANCELADO', 2147483647, 'lilus2309@hotmail.com', 'EN FORMACION'),
+(265, 2502217, 'CC', 1032359277, 'KAREN GILLE', 'SILVA GARCIA', 2147483647, 'asuntoskaren@hotmail.com', 'EN FORMACION'),
+(266, 2502217, 'CC', 1057575712, 'DAVID FERNANDO', 'CIFUENTES CARDOZO', 2147483647, 'dafecica@gmail.com', 'EN FORMACION'),
+(267, 2502217, 'CC', 1193544443, 'BRAYAN SEBASTIAN', 'FINO DUEÑAS', 2147483647, 'sebastianfino563@gmail.com', 'RETIRO VOLUNTARIO'),
+(268, 2502217, 'CC', 1193550717, 'HAROL YESID', 'TORRECILLA CAPATAZ', 2147483647, 'torrecillayesid6@gmail.com', 'EN FORMACION'),
+(269, 2502217, 'CC', 52203484, 'SANDRA PATRICIA', 'MARTINEZ SKINNER', 2147483647, 'sandrapmartinez66@gmail.com', 'EN FORMACION'),
+(270, 2502217, 'CC', 79581821, 'LEONARDO', 'PULECIO REYES', 2147483647, 'lpr811@hotmail.com', 'RETIRO VOLUNTARIO'),
+(271, 2502217, 'CC', 79641314, 'JOSE ALFREDO', 'LOSADA MEDINA', 2147483647, 'aerografiartealo@gmail.com', 'APLAZADO'),
+(272, 2502217, 'CC', 79921567, 'GONZALO', 'VALENCIA CAÑON', 2147483647, 'GonzaloVC.1980@outlook.com.com', 'EN FORMACION'),
+(273, 2502217, 'CC', 80171677, 'HERMES WILDER', 'SOLORZANO POLO', 2147483647, 'hermeswsolorzano@gmail.com', 'EN FORMACION'),
+(274, 2502217, 'PEP', 2480230, 'LUISIANNY ELOISA', 'CAMPOS HERNANDEZ', 2147483647, 'luisiannycampos@gmail.com', 'EN FORMACION'),
+(275, 2502217, 'TI', 1022925745, 'BRANDON FELIPE', 'PARRA LOMBANA', 2147483647, 'parralombanabrandon24@gmail.com', 'EN FORMACION'),
+(276, 2502217, 'TI', 1022927838, 'ANAMARIA', 'CANTOR MOLINA', 2147483647, 'anamariacantor19@gmail.com', 'EN FORMACION'),
+(277, 2502217, 'TI', 1031643762, 'MAICOL FABIANNY', 'BUSTOS REY', 2147483647, 'maicolbustos33@gmail.com', 'EN FORMACION'),
+(278, 2502217, 'TI', 1032374785, 'MIGUEL ANGEL', 'MENDEZ ESPITIA', 2147483647, 'miguemendez2810@gmail.com', 'EN FORMACION'),
+(279, 2502217, 'TI', 1032507202, 'ANTHONY JHOSE', 'TORRES ESCOBAR', 0, 'anthonytorresuni@gmail.com', 'EN FORMACION'),
+(280, 2502217, 'TI', 1108206172, 'HEIDY YISELA', 'ALVARADO HERNANDEZ', 2147483647, 'alvarado1323@outlook.com', 'EN FORMACION'),
+(281, 2502223, 'CC', 1000018990, 'ANA SOFIA', 'RAMIREZ SUAREZ', 2147483647, 'anasofiaramirezsuarez9@gmail.com', 'CANCELADO'),
+(282, 2502223, 'CC', 1000120804, 'ANGIE NATALY', 'RICAURTE NOGUERA', 2147483647, 'natalyricaurte0@gmail.com', 'EN FORMACION'),
+(283, 2502223, 'CC', 1000128455, 'KAREN DALLANA', 'CALLE CARDENAS', 2147483647, 'karencalle03102002@gmail.com', 'EN FORMACION'),
+(284, 2502223, 'CC', 1001197865, 'FABIAN CAMILO', 'MURCIA REAL', 2147483647, 'camilo17real@gmail.com', 'CANCELADO'),
+(285, 2502223, 'CC', 1003579217, 'NICOLAS', 'SERRANO ESCOBAR', 2147483647, 'nicolochobass@gmail.com', 'EN FORMACION'),
+(286, 2502223, 'CC', 1010075921, 'JOSE MIGUEL', 'DEVIA FUENTES', 2147483647, 'mkl120216@gmail.com', 'EN FORMACION'),
+(287, 2502223, 'CC', 1010247996, 'FABIO ALEJANDRO', 'BUITRAGO PEÑALOZA', 2147483647, 'fbi.xz@hotmail.com', 'EN FORMACION'),
+(288, 2502223, 'CC', 1012426215, 'JEISON DAVID', 'JIMENEZ RODRIGUEZ', 2147483647, 'david.jimenezr76@gmail.com', 'CANCELADO'),
+(289, 2502223, 'CC', 1013643061, 'YASSER JONES', 'ARIAS BRICEÑO', 2147483647, 'yasser_comandos@hotmail.com', 'EN FORMACION'),
+(290, 2502223, 'CC', 1014196332, 'JANNETH MARCELA', 'DIAZ LEZAMA', 2147483647, 'marcedilezma@gmail.com', 'APLAZADO'),
+(291, 2502223, 'CC', 1014282207, 'MARIA LUCIA', 'ISAZA ROMERO', 2147483647, 'luciaisaza96@gmail.com', 'EN FORMACION'),
+(292, 2502223, 'CC', 1015427806, 'YULY TATIANA', 'CADENA CHAMORRO', 2147483647, 'yuly.tatiana@hotmail.es', 'EN FORMACION'),
+(293, 2502223, 'CC', 1019053047, 'JOSE DAVID', 'SALGUERO VALLEJO', 2147483647, 'oba-k@hotmail.com', 'RETIRO VOLUNTARIO'),
+(294, 2502223, 'CC', 1019075819, 'JOHN STICK', 'DELGADO CERON', 0, 'Jhonstych@gmail.com', 'EN FORMACION'),
+(295, 2502223, 'CC', 1020816671, 'JUAN CAMILO', 'BECERRA ORJUELA', 2147483647, 'camilousky24@gmail.com', 'EN FORMACION'),
+(296, 2502223, 'CC', 1022417604, 'NELSY YAZMIN', 'GAMBA VILLARREAL', 0, 'nelsygamba@gmail.com', 'EN FORMACION'),
+(297, 2502223, 'CC', 1023015280, 'JUAN SEBASTIAN', 'MELO GOMEZ', 2147483647, 'juanmelogomez96@gmail.com', 'EN FORMACION'),
+(298, 2502223, 'CC', 1023082562, 'VALENTINA', 'ANGEL CARO', 2147483647, 'caroruizvalentina@gmail.com', 'EN FORMACION'),
+(299, 2502223, 'CC', 1024539146, 'LINCY BRIGITTE', 'ZAPATA CARDONA', 2147483647, 'juless_anton@hotmail.com', 'EN FORMACION'),
+(300, 2502223, 'CC', 1026302951, 'CRISTHIAN CAMILO', 'MORENO FAJARDO', 2147483647, 'cristhiankkc0923@gmail.com', 'CANCELADO'),
+(301, 2502223, 'CC', 1026562761, 'SINDY CAROLINA', 'SOSA MONTIEL', 2147483647, 'Caromonti07@gmail.com', 'CANCELADO'),
+(302, 2502223, 'CC', 1030647004, 'YIZETH ANDREA', 'APARICIO DONOSO', 0, 'andreadonoso.01@gmail.com', 'EN FORMACION'),
+(303, 2502223, 'CC', 1030658990, 'EDWIN ALEXANDER', 'CULMA RODRIGUEZ', 2147483647, 'edwculma_dem@hotmail.com', 'CANCELADO'),
+(304, 2502223, 'CC', 1032474817, 'HERNAN DARIO', 'FORERO CARMONA', 2147483647, 'hernancho.100@hotmail.com', 'EN FORMACION'),
+(305, 2502223, 'CC', 1033755356, 'NANCY JULIETH', 'ULLOA GUALPA', 2147483647, 'nanjulloa@misena.edu.co', 'EN FORMACION'),
+(306, 2502223, 'CC', 1074809693, 'INGRID DAMARIS', 'MORENO PEREZ', 2147483647, '464perez@gmail.com', 'EN FORMACION'),
+(307, 2502223, 'CC', 1136887174, 'KARLA KATHERINE', 'MOLANO LOPEZ', 2147483647, 'kmolano03@hotmail.com', 'EN FORMACION'),
+(308, 2502223, 'CC', 23351945, 'ANGELICA', 'CARREÑO ROSAS', 2147483647, 'ahancaro1@gmail.com', 'CANCELADO'),
+(309, 2502223, 'CC', 40187538, 'LUZ MERY', 'RODRIGUEZ ', 2147483647, 'donaloconamor2018@gmail.com', 'EN FORMACION'),
+(310, 2502223, 'CC', 80083800, 'HARRY JUNIOR', 'CIFUENTES PARRA', 2147483647, 'dotaborcol@hotmail.com', 'RETIRO VOLUNTARIO'),
+(311, 2502223, 'CC', 80843138, 'DAVID', 'RUIZ GUEVARA', 2147483647, 'metaplasma@gmail.com', 'EN FORMACION'),
+(312, 2502223, 'TI', 1012329063, 'DIEGO ALEJANDRO', 'ALVARADO ROJAS', 2147483647, 'alvarado3453@gmail.com', 'EN FORMACION'),
+(313, 2502223, 'TI', 1031645715, 'ASHLY MARIANA', 'RIVAS DIAZ', 2147483647, 'ashlymariard@gmail.com', 'EN FORMACION'),
+(314, 2502227, 'CC', 1000516690, 'LEIDY YANITH', 'TORREGROSA RAMIREZ', 2147483647, 'leidytorregrosa2@gmail.com', 'RETIRO VOLUNTARIO'),
+(315, 2502227, 'CC', 1000953390, 'JUAN DIEGO', 'SUANCA GUEVARA', 2147483647, 'suancag@gmail.com', 'CANCELADO'),
+(316, 2502227, 'CC', 1001131413, 'RICARDO ANDRES', 'HERNANDEZ CARREÑO', 3096747, 'rahc3900@gmail.com', 'EN FORMACION'),
+(317, 2502227, 'CC', 1006828130, 'ANDRES CAMILO', 'GOMEZ LEYVA', 2147483647, 'gomeztkd2175@gmail.com', 'CONDICIONADO'),
+(318, 2502227, 'CC', 1012460641, 'CHEYYENE LISNEY', 'URUBURO ALFONSO', 2147483647, 'cheyenalfonso99@gmail.com', 'EN FORMACION'),
+(319, 2502227, 'CC', 1021662671, 'MIGUEL MAURICIO', 'SANCHEZ BLANCO', 0, 'mauriyes59@gmail.com', 'EN FORMACION'),
+(320, 2502227, 'CC', 1023940942, 'CRISTIAN ALEJANDRO', 'GUERRERO LESMES', 2147483647, 'cristianguerrero2905@hotmail.com', 'EN FORMACION'),
+(321, 2502227, 'CC', 1025460072, 'KENETH JULIAN', 'ESCOBAR LEON', 2147483647, 'kenethscobar789@gmail.com', 'EN FORMACION'),
+(322, 2502227, 'CC', 1031420705, 'NICOLAS DAVID', 'BAUTISTA SANCHEZ', 2147483647, 'nicolasbautista44@gmail.com', 'EN FORMACION'),
+(323, 2502227, 'CC', 1033697910, 'JORGE ARMANDO', 'SOLER CASTELLANOS', 2147483647, 'soler.182@hotmail.com', 'CANCELADO'),
+(324, 2502227, 'CC', 1033764590, 'JONATHAN SMITH', 'HENAO GUZMAN', 2147483647, 'yagacol1234@gmail.com', 'EN FORMACION'),
+(325, 2502227, 'CC', 1070016776, 'ELKIN EDUARDO', 'GOMEZ RODRIGUEZ', 2147483647, 'elkingomez88@hotmail.com', 'CANCELADO'),
+(326, 2502227, 'CC', 1192744623, 'MONICA LUCIA', 'BEJARANO ALFONSO', 2147483647, 'mbejaranoctmf@gmail.com', 'EN FORMACION'),
+(327, 2502227, 'CC', 1233509342, 'VICTOR DANIEL', 'URQUIZA MENDOZA', 2147483647, 'vika2714@hotmail.com', 'EN FORMACION'),
+(328, 2502227, 'TI', 1014477889, 'ANA MARIA', 'BARBOSA BOSA', 2147483647, 'barbosabosaa@gmail.com', 'EN FORMACION'),
+(329, 2502227, 'TI', 1015997361, 'OLMAN NICOLAS', 'PEREZ SALAMANCA', 0, 'zeynik2004@gmail.com', 'EN FORMACION'),
+(330, 2502227, 'TI', 1019005114, 'LIANA ISABELA', 'ARIZA MARIN', 2147483647, 'isabellamarin229@gmail.com', 'EN FORMACION'),
+(331, 2502227, 'TI', 1023363485, 'JOHAN DAVID', 'GOMEZ YATE', 2147483647, 'd3lt4linxx@gmail.com', 'EN FORMACION'),
+(332, 2502227, 'TI', 1024469100, 'EIMY DANIELA', 'CAÑON CHIVATA', 2147483647, 'eimydaniela2004@gmail.com', 'EN FORMACION'),
+(333, 2502227, 'TI', 1026552779, 'JUAN DAVID', 'JAMAICA GARZON', 2147483647, 'jjuanda1712@hotmail.com', 'EN FORMACION'),
+(334, 2502227, 'TI', 1052379048, 'JESUS ESTEVAN', 'NIQUEPA CHIRIVI', 2147483647, 'jeniquepa@misena.edu.co', 'EN FORMACION'),
+(335, 2502227, 'TI', 1077340156, 'CRISTIAN MATEO', 'VELASQUEZ GOMEZ', 2147483647, 'mateovelasquezg7@gmail.com', 'EN FORMACION'),
+(336, 2525168, 'CC', 1000470249, 'LUISA MARIA', 'MARTINEZ RAMIREZ', 2147483647, 'luisamartinez030503@gmail.com', 'EN FORMACION'),
+(337, 2525168, 'CC', 1000575275, 'ANGEL SANTIAGO', 'ALDANA CHOCONTA', 2147483647, 'asaldana57@misena.edu.co', 'EN FORMACION'),
+(338, 2525168, 'CC', 1000731018, 'CATHERINE', 'SANCHEZ PEÑARANDA', 2147483647, 'splarie005@gmail.com', 'CANCELADO'),
+(339, 2525168, 'CC', 1001095764, 'JUAN ESTEBAN', 'DUQUE RODRIGUEZ', 2147483647, 'estebandu2003@gmail.com', 'EN FORMACION'),
+(340, 2525168, 'CC', 1001095863, 'JHOAN SEBASTIAN', 'ROJAS BARRERA', 2147483647, 'jsrb.2610@gmail.com', 'EN FORMACION'),
+(341, 2525168, 'CC', 1001200020, 'LEIDY KATHERINE', 'PARDO ARIZA', 2147483647, 'anaiswatterson22@gmail.com', 'CANCELADO'),
+(342, 2525168, 'CC', 1001332364, 'VALENTINA', 'RUIZ GARCIA', 2147483647, 'ruizgarcia0409@gmail.com', 'RETIRO VOLUNTARIO'),
+(343, 2525168, 'CC', 1007101124, 'JUAN FELIPE', 'YANTEN ', 2147483647, 'juancul84@gmail.com', 'EN FORMACION'),
+(344, 2525168, 'CC', 1007105520, 'OSCAR JAVIER', 'BARRERA HUERTAS', 2147483647, 'oscarjavierbarrerahuertas@gmail.com', 'EN FORMACION'),
+(345, 2525168, 'CC', 1007652308, 'LUISA FERNANDA', 'MALAGON RODRIGUEZ', 2147483647, 'luisamalagon2002@gmail.com', 'EN FORMACION'),
+(346, 2525168, 'CC', 1010246386, 'JORGE EDUARDO', 'ROJAS TOVAR', 2147483647, 'je.rojast99@hotmail.com', 'EN FORMACION'),
+(347, 2525168, 'CC', 1013098318, 'ANDRES FELIPE', 'GARZON DIAZ', 2147483647, 'andresgarzon1013@gmail.com', 'EN FORMACION'),
+(348, 2525168, 'CC', 1013661566, 'DANIELA', 'MUÑOZ CARO', 2147483647, 'danielacarofotografia@gmail.com', 'CANCELADO'),
+(349, 2525168, 'CC', 1014204337, 'HELMAN STEEVEN', 'MATEUS GRANADOS', 0, 'steevenmateus45@gmail.com', 'EN FORMACION'),
+(350, 2525168, 'CC', 1014308917, 'DANA', 'MONSALVE MOSQUERA', 0, 'danamonsalvr@gmail.com', 'EN FORMACION'),
+(351, 2525168, 'CC', 1015425834, 'YENNY MARCELA', 'PERALTA GUZMAN', 2147483647, 'jeannepe07@gmail.com', 'EN FORMACION'),
+(352, 2525168, 'CC', 1018437883, 'CONSTANZA IVONNE', 'MURCIA ORTIZ', 7162119, 'conyivo@misena.edu.co', 'CANCELADO'),
+(353, 2525168, 'CC', 1021662382, 'SANTIAGO', 'CARDENAS BETANCOURT', 2147483647, 'santiagobetancourt03@gmail.com', 'EN FORMACION'),
+(354, 2525168, 'CC', 1023013092, 'GIOVANNI ESTEBAN', 'ROMERO GAMEZ', 2147483647, 'gio.esteban95@hotmail.com', 'CANCELADO'),
+(355, 2525168, 'CC', 1024472035, 'PAULA LIZETH', 'SUAREZ PASTRANA', 2147483647, 'wilow7843@gmail.com', 'CANCELADO'),
+(356, 2525168, 'CC', 1025140123, 'DAVID SANTIAGO', 'BENAVIDES ANZOLA', 2147483647, 'imagginet555@gmail.com', 'EN FORMACION'),
+(357, 2525168, 'CC', 1025320256, 'JUAN DIEGO', 'QUINTERO RODRIGUEZ', 2147483647, 'juanchoelcrespogames@gmail.com', 'EN FORMACION'),
+(358, 2525168, 'CC', 1026591753, 'DANELI', 'RIVERA PARDO', 2147483647, 'danely.rp@gmail.com', 'EN FORMACION'),
+(359, 2525168, 'CC', 1082946182, 'VERONICA ANDREA', 'VERGARA MINA', 2147483647, 'vavergara2@misena.edu.co', 'EN FORMACION'),
+(360, 2525168, 'CC', 1233512049, 'BRYAM ESTEBAN', 'NOPIA MURCIA', 2147483647, 'bryamest@gmail.com', 'EN FORMACION'),
+(361, 2525168, 'CC', 79753053, 'JAVIER MAURICIO', 'GARCIA JIMENEZ', 2147483647, 'grootsmusica@gmail.com', 'EN FORMACION'),
+(362, 2525168, 'CC', 79897239, 'JOSE GIOVANNY', 'GUASCA VALENCIA', 7143968, 'pincelostudio@gmail.com', 'CANCELADO'),
+(363, 2525168, 'TI', 1014978342, 'JULIAN', 'LOPEZ CARDOZO', 2147483647, 'julianlopezca05@gmail.com', 'EN FORMACION'),
+(364, 2525168, 'TI', 1018404962, 'ANYELO DANIEL', 'VASQUEZ HERNANDEZ', 2147483647, 'anyelodahernandez@gmail.com', 'EN FORMACION'),
+(365, 2525168, 'TI', 1027400649, 'ZULLY MELISSA', 'BONILLA FONSECA', 2147483647, 'zully.bon016@gmail.com', 'EN FORMACION'),
+(366, 2525168, 'TI', 1031644536, 'JINETH TATIANA', 'SOLER CUERVO', 2147483647, 'Jinethtatiana23@gmail.com', 'EN FORMACION'),
+(367, 2525168, 'TI', 1031644788, 'MARIA CAMILA', 'VARGAS ALFONSO', 2147483647, 'mca.vargasa@gmail.com', 'EN FORMACION'),
+(368, 2525168, 'TI', 1031644996, 'SANTIAGO', 'MORENO MORENO', 2147483647, 'wolfwhite071@gmail.com', 'EN FORMACION'),
+(369, 2525168, 'TI', 1073672654, 'JOHAN SEBASTIAN', 'BOLIVAR SALCEDO', 2147483647, 'sebasbolivar2005@gmail.com', 'RETIRO VOLUNTARIO'),
+(370, 2525168, 'TI', 1111262799, 'LAURA SOFIA', 'CASTRO TIQUE', 2147483647, 'lauratique0530@gmail.com', 'EN FORMACION'),
+(371, 2525170, 'CC', 1000519108, 'MIGUEL JESUS', 'NOVOA ARROYO', 2147483647, 'novoa7154@gmail.com', 'EN FORMACION'),
+(372, 2525170, 'CC', 1000621140, 'LAURA ALEJANDRA', 'ALFONSO AVILA', 2147483647, 'lauraalfonso954@gmail.com', 'EN FORMACION'),
+(373, 2525170, 'CC', 1000626908, 'ANA MARIA', 'PUERTO PARDO', 2147483647, 'mariapuertopardo@gmail.com', 'EN FORMACION'),
+(374, 2525170, 'CC', 1000685181, 'CARLOS DANIEL', 'ORTEGA HERRERA', 2147483647, 'dhfilms11@gmail.com', 'APLAZADO'),
+(375, 2525170, 'CC', 1000729901, 'MARIA ELENA', 'BARON APONTE', 2147483647, 'malena.baron@gmail.com', 'EN FORMACION'),
+(376, 2525170, 'CC', 1000856511, 'PAULA TATIANA', 'CUMBA RODRIGUEZ', 2147483647, 'tatianaunicornio18@gmail.com', 'EN FORMACION'),
+(377, 2525170, 'CC', 1000954503, 'DAISSY MICHELLE', 'ORDUZ RODRIGUEZ', 2147483647, 'orduzmichelle@gmail.com', 'EN FORMACION'),
+(378, 2525170, 'CC', 1001174157, 'THALIA', 'PEREZ REMUY', 2147483647, 'perezthalia6@gmail.com', 'EN FORMACION'),
+(379, 2525170, 'CC', 1007770577, 'ALVARO JAVIER', 'VERGARA ROMERO', 2147483647, 'aljaverom17@gmail.com', 'EN FORMACION'),
+(380, 2525170, 'CC', 1012410456, 'JUAN FELIPE', 'DIAZ FINO', 0, 'juandf12@hotmail.com', 'CANCELADO'),
+(381, 2525170, 'CC', 1013687620, 'NICOLAS', 'AGUILAR ZAMBRANO', 2147483647, 'naguilar02@misena.edu.co', 'EN FORMACION'),
+(382, 2525170, 'CC', 1014205603, 'LUIS ARLEY', 'HOYOS PEÑA', 2147483647, 'senderismobogota@gmail.com', 'EN FORMACION'),
+(383, 2525170, 'CC', 1014217449, 'MADELEIN', 'PARRA CRUZ', 2147483647, 'madeleinparrac@gmail.com', 'APLAZADO'),
+(384, 2525170, 'CC', 1014230748, 'ELEN ALEJANDRA', 'MONTAÑA PISCO', 0, 'helandra91@gmail.com', 'RETIRO VOLUNTARIO'),
+(385, 2525170, 'CC', 1014247269, 'ANDRES', 'VARGAS CAÑON', 2147483647, 'andresvargascanon@gmail.com', 'EN FORMACION'),
+(386, 2525170, 'CC', 1018467141, 'LUIS ALEJANDRO', 'MARIÑO FIGUEROA', 2147483647, 'lujanolam@hotmail.com', 'EN FORMACION'),
+(387, 2525170, 'CC', 1019088719, 'MARIA CAMILA', 'CARDENAS ALARCON', 2147483647, 'milacar2493@gmail.com', 'EN FORMACION'),
+(388, 2525170, 'CC', 1023979470, 'SHERITH DAYANA', 'ALVAREZ CORDOBA', 2147483647, 'sherithalvarez@hotmail.com', 'EN FORMACION'),
+(389, 2525170, 'CC', 1026265542, 'CINDY MILENA', 'CASTIBLANCO RAMIREZ', 2147483647, 'cindym1946@hotmail.es', 'EN FORMACION'),
+(390, 2525170, 'CC', 1026304460, 'MIGUEL ANGEL', 'GUTIERREZ CARDENAS', 2147483647, 'mangel.loking23@gmail.com', 'EN FORMACION'),
+(391, 2525170, 'CC', 1030529854, 'LIZETH YURANY', 'MORALES MARTINEZ', 2147483647, 'yurany.lymm@gmail.com', 'EN FORMACION'),
+(392, 2525170, 'CC', 1032356016, 'DUVAN CAMILO', 'CUENCA AYALA', 2147483647, 'dccuenca6@misena.edu.co', 'CANCELADO'),
+(393, 2525170, 'CC', 1033096750, 'PAULA ALEJANDRA', 'HERNANDEZ ROMERO', 2147483647, 'paulitanandez74@gmail.com', 'EN FORMACION'),
+(394, 2525170, 'CC', 1033807513, 'STEVEN ALEXANDER', 'GONZALEZ ACEVEDO', 2147483647, 'stevengonzalez566@gmail.com', 'EN FORMACION'),
+(395, 2525170, 'CC', 1073171685, 'YADITH DANIELA', 'FERNANDEZ LOZANO', 2147483647, 'fernandez.daniela2018@gmail.com', 'APLAZADO'),
+(396, 2525170, 'CC', 1233493634, 'XIOMARA', 'SANCHEZ MORENO', 2147483647, 'xsanchez43@misena.edu.co', 'CANCELADO'),
+(397, 2525170, 'CC', 79571099, 'MANUEL SALVADOR', 'SANCHEZ ALBARRACIN', 2147483647, 'sanalba2001@yahoo.com', 'EN FORMACION'),
+(398, 2525170, 'TI', 1013257766, 'LAURA JIMENA', 'GARZON ROBERTO', 2147483647, 'laurengrz98@gmail.com', 'CANCELADO'),
+(399, 2525170, 'TI', 1024466481, 'ERICK STICK', 'PERUGACHI MUENALA', 2147483647, 'Erickp0244@gmail.com', 'EN FORMACION'),
+(400, 2525170, 'TI', 1031420623, 'MARIA FERNANDA', 'ACOSTA BERMUDEZ', 2147483647, 'mafeacostab@gmail.com', 'EN FORMACION'),
+(401, 2525170, 'TI', 1031420737, 'ANGEL SANTIAGO', 'CAICEDO CONTRERAS', 2147483647, 'santicaicedo402@gmail.com', 'EN FORMACION'),
+(402, 2526800, 'CC', 1000132598, 'DANIEL FELIPE', 'ARJONA BARRIOA', 2147483647, 'danielfelipearjona@gmail.com', 'CANCELADO'),
+(403, 2526800, 'CC', 1001114536, 'NATHALIA STEFANIA', 'BELEÑO ACOSTA', 2147483647, 'nathaliabele1591@gmail.com', 'CANCELADO'),
+(404, 2526800, 'CC', 1003568646, 'DEIVYD SANTIAGO', 'RODRIGUEZ FLOREZ', 2147483647, 'dsantirodriguez12@gmail.com', 'EN FORMACION'),
+(405, 2526800, 'CC', 1012404185, 'MAYCOL STIVEN', 'FRANCO PORRAS', 2147483647, 'maycols.franco@gmail.com', 'CANCELADO'),
+(406, 2526800, 'CC', 1014225353, 'LUIS ALEJANDRO', 'VEGA ALONSO', 2147483647, 'alejandro.vega.91@hotmail.es', 'CANCELADO'),
+(407, 2526800, 'CC', 1016942902, 'SARA MILENA', 'DIAZ LEZAMA', 2147483647, 'diazsaramilena18@gmail.com', 'RETIRO VOLUNTARIO'),
+(408, 2526800, 'CC', 1019034171, 'JEFFERSON CAMILO', 'MEDINA SANCHEZ', 2147483647, 'braviog12@hotmail.com', 'EN FORMACION'),
+(409, 2526800, 'CC', 1019063672, 'LIZETH TATIANA', 'RAMIREZ OLIVARES', 6882013, 'litheri@hotmail.com', 'CANCELADO'),
+(410, 2526800, 'CC', 1022432868, 'OSCAR FELIPE', 'RUBIANO CHIGUASUQUE', 2147483647, 'ofrubianoska8@gmail.com', 'CANCELADO'),
+(411, 2526800, 'CC', 1022446898, 'MIGUEL ANGEL', 'VILABOA DUARTE', 2147483647, 'miguel.vilaboa99@gmail.com', 'CANCELADO'),
+(412, 2526800, 'CC', 1022998658, 'CRISTIAN EDUARDO', 'JIMENEZ ACERO', 2147483647, 'cega.580@gmail.com', 'CANCELADO');
+INSERT INTO `aprendiz` (`id_aprendiz`, `ficha`, `Tipo`, `Numero`, `Nombre_aprendiz`, `Apellido_aprendiz`, `Celular`, `Correo`, `Estado`) VALUES
+(413, 2526800, 'CC', 1023029509, 'FREDY STEVEN', 'NIÑO CORTES', 2147483647, 'fredyninocort@gmail.com', 'CANCELADO'),
+(414, 2526800, 'CC', 1023891557, 'FABIAN ENRIQUE', 'PALACIOS GONZALEZ', 2147483647, 'fabianpalacios89@hotmail.com', 'EN FORMACION'),
+(415, 2526800, 'CC', 1030660373, 'OSCAR LAZARO', 'BAUTISTA ROJAS', 2147483647, 'o_car1995@hotmail.com', 'CANCELADO'),
+(416, 2526800, 'CC', 1031150195, 'YAIR', 'MILLAN RAMOS', 2147483647, 'yairmillan1@gmail.com', 'EN FORMACION'),
+(417, 2526800, 'CC', 1032451904, 'IVAN CAMILO', 'CASALLAS CALLE', 2147483647, 'casallas.ivan@gmail.com', 'EN FORMACION'),
+(418, 2526800, 'CC', 1032484754, 'MARIA PAULA', 'CONTRERAS LOPEZ', 2147483647, 'mpcontrerasl@unal.edu.co', 'RETIRO VOLUNTARIO'),
+(419, 2526800, 'CC', 1032500648, 'EDWIN FERNANDO', 'PIRAJAN AREVALO', 2147483647, 'efpa1998@hotmail.com', 'EN FORMACION'),
+(420, 2526800, 'CC', 1069490623, 'RAFAEL JOSE', 'VEGA NAVARRO', 2147483647, 'rafa.1691.rv@gmail.com', 'CANCELADO'),
+(421, 2526800, 'CC', 10820185, 'HUGO ARMANDO', 'VILLADIEGO ARROYO', 2147483647, 'hugovilladiegoarroyo@gmail.com', 'APLAZADO'),
+(422, 2526800, 'CC', 1088006354, 'ANDRES FELIPE', 'ALVAREZ RAMIREZ', 2147483647, 'afarvf@gmail.com', 'RETIRO VOLUNTARIO'),
+(423, 2526800, 'CC', 1098171649, 'SINDY DAYANA', 'ANTIVAR HERREÑO', 2147483647, 'santivarherreno@gmail.com', 'EN FORMACION'),
+(424, 2526800, 'CC', 1233503254, 'MAICOL STIVEN', 'SANCHEZ VILLA', 2147483647, 'maicolvilla.nigga@hotmail.com', 'CANCELADO'),
+(425, 2526800, 'CC', 19397047, 'JOSE JOAQUIN', 'MUÑOZ GARCIA', 2147483647, 'jmunnoz71960@gmail.com', 'EN FORMACION'),
+(426, 2526800, 'CC', 80227141, 'JAIRO ALBERTO', 'GONZALEZ GUATIBONZA', 0, 'jairin555@gmail.com', 'CANCELADO'),
+(427, 2526800, 'CC', 80658123, 'EDWIN', 'LADINO BALLEN', 2147483647, 'solucionartecomunicacion@gmail.com', 'CANCELADO'),
+(428, 2526800, 'CC', 80819314, 'LUIS JAVIER', 'PARRA ROMERO', 0, 'guacos22@hotmail.com', 'CANCELADO'),
+(429, 2526800, 'TI', 1016713479, 'DANIEL FELIPE', 'GARCIA PAEZ', 2147483647, 'danielfgarciapaez@gmail.com', 'CANCELADO'),
+(430, 2526800, 'TI', 1019012178, 'JUAN DAVID', 'CASTRO MONROY', 2147483647, 'juandavidgiant@gmail.com', 'EN FORMACION'),
+(431, 2526800, 'TI', 1022929426, 'JUAN ESTEBAN', 'GALLO DIAZ', 2147483647, 'esteba35@gmail.com', 'EN FORMACION'),
+(432, 2526800, 'TI', 1105055097, 'MARIA YULIET', 'MORENO CULMA', 2147483647, 'mariajuethmorenoculma@gmail.com', 'CANCELADO'),
+(433, 2530038, 'CC', 1000931088, 'GIOVANY ANDRES', 'VARGAS COLORADO', 2147483647, 'gioteam11@gmail.com', 'CANCELADO'),
+(434, 2530038, 'CC', 1001273448, 'PAULA NATALIA', 'VILLAMIL MORENO', 2147483647, 'aliiavillamil2701@gmail.com', 'EN FORMACION'),
+(435, 2530038, 'CC', 1003765600, 'YIRAL SANDRY', 'MATOMA CASTELLANOS', 2147483647, 'yiralmatomacastellanos@gmail.com', 'TRASLADADO'),
+(436, 2530038, 'CC', 1004302602, 'MIGUEL ANGEL', 'CASATAÑO LOPEZ', 2147483647, 'miguelcastano1509@gmail.com', 'RETIRO VOLUNTARIO'),
+(437, 2530038, 'CC', 1006877389, 'JOHN FREDY', 'BOHORQUEZ PALACIOS', 2147483647, 'palaciosfredy2003@gmail.com', 'EN FORMACION'),
+(438, 2530038, 'CC', 1007652446, 'MARIANA', 'ORTIZ SUAREZ', 2147483647, 'horanmariana234@gmail.com', 'EN FORMACION'),
+(439, 2530038, 'CC', 1014237289, 'DIEGO ARMANDO', 'VELEZ ROJAS', 2147483647, 'dieg.gl.rck@hotmail.com', 'EN FORMACION'),
+(440, 2530038, 'CC', 1031540088, 'PALOMA ANDREA', 'SANCHEZ NIETO', 2147483647, 'pasanchez880@misena.edu.co', 'EN FORMACION'),
+(441, 2530038, 'CC', 1032457918, 'MARCO ALEJANDRO', 'CARDONA PINZON', 2147483647, 'marcocardonamfc@gmail.com', 'CANCELADO'),
+(442, 2530038, 'CC', 51901471, 'DIANA ISABEL', 'PINZON BERNAL', 2147483647, 'somostallercreativo@gmail.com', 'EN FORMACION'),
+(443, 2530038, 'CC', 52117841, 'MARIA DEL PILAR', 'RUIZ MORENO', 2147483647, 'marypilly11@hotmail.com', 'EN FORMACION'),
+(444, 2530038, 'CC', 52167878, 'LILIANA ANDREA', 'VILLALBA NIÑO', 2147483647, 'lavillalba878@misena.edu.co', 'EN FORMACION'),
+(445, 2530038, 'CC', 52208726, 'VERONICA LILIANA', 'ORTIZ SUAREZ', 2147483647, 'verona131173@gmail.com', 'EN FORMACION'),
+(446, 2530038, 'TI', 1012331246, 'LUISA FERNANDA', 'OSMA ROJAS', 2147483647, 'senaosmaluisa@gmail.com', 'RETIRO VOLUNTARIO'),
+(447, 2530038, 'TI', 1048269772, 'JUAN ESTEBAN', 'GONZALEZ CERVANTES', 2147483647, '1048269772@institutotecnisistemas.edu.co', 'CANCELADO'),
+(448, 2530039, 'CC', 1001047828, 'JONATAN DAVID', 'PINEDA SUSPE', 2147483647, 'david62pineda@gmail.com', 'EN FORMACION'),
+(449, 2530039, 'CC', 1003711180, 'LAURA LICETH', 'CELIS PAJOY', 2147483647, 'laurapajoy59@gmail.com', 'EN FORMACION'),
+(450, 2530039, 'CC', 1003765600, 'YIRAL SANDRY', 'MATOMA CASTELLANOS', 2147483647, 'yiralmatomacastellanos@gmail.com', 'EN FORMACION'),
+(451, 2530039, 'CC', 1019081127, 'CRISTIAN SANTIAGO', 'MARIN CANO', 2147483647, 'cristianmarin9310@outlook.es', 'EN FORMACION'),
+(452, 2530039, 'CC', 1022974308, 'JOSE DAVID', 'RISCANEVO OCHOA', 2147483647, 'davidriscanevo@hotmail.com', 'EN FORMACION'),
+(453, 2530039, 'CC', 1023965541, 'CHARLY ERNEY', 'RODRIGUEZ HERNANDEZ', 2147483647, 'charlyrodriguez311@gmail.com', 'EN FORMACION'),
+(454, 2530039, 'CC', 1024553446, 'MARIO', 'RODRIGUEZ VELANDIA', 2147483647, 'mrodriguez6443@misena.edu.co', 'CANCELADO'),
+(455, 2530039, 'CC', 1026579058, 'CESAR DAVID', 'APARICIO TAMAYO', 2147483647, 'davidiciotamayo@gmail.com', 'EN FORMACION'),
+(456, 2530039, 'CC', 1032683093, 'JHON SEBASTIAN', 'LARA CUARTAS', 2147483647, 'jhonlara581@gmail.com', 'EN FORMACION'),
+(457, 2530039, 'CC', 1098692661, 'RENSON SEBASTIAN', 'ZAMBRANO DIAZ', 2147483647, 'sebastian.szd@gmail.com', 'EN FORMACION'),
+(458, 2530039, 'CC', 1106397797, 'SERGIO', 'PADILLA CORTES', 0, 'sergiopc620@gmail.com', 'CANCELADO'),
+(459, 2530039, 'CC', 52861241, 'TYLER BENJAMIN', 'GUZMAN ZAPATA', 2037726, 'windigodelbosque@gmail.com', 'EN FORMACION'),
+(460, 2530039, 'CC', 79219999, 'IVAN DAVID', 'SOLORZANO MESA', 2147483647, 'gafitas9882@gmail.com', 'EN FORMACION'),
+(461, 2530039, 'CC', 80746022, 'JORGE ALEXANDER', 'DIAZ VELASQUEZ', 2147483647, 'alexanderchitivadiaz1023@gmail.com', 'APLAZADO'),
+(462, 2530039, 'CC', 93134685, 'EDWIN ANDRES', 'PRADA GARCIA', 2147483647, 'andresedwin93134@outlook.es', 'EN FORMACION');
 
 -- --------------------------------------------------------
 
@@ -136,14 +571,6 @@ CREATE TABLE `casos_anteriores` (
   `A_descripcion` text NOT NULL,
   `A_cumplimiento` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `casos_anteriores`
---
-
-INSERT INTO `casos_anteriores` (`id`, `A_ficha`, `A_contador`, `A_acta`, `A_aprendiz`, `A_medida`, `A_descripcion`, `A_cumplimiento`) VALUES
-(1, 2247675, 1, 2, 'JUAN SEBASTIAN MURCIA PINZON', '4.PLAN DE MEJORAMIENTO ACADÉMICO', '4.Deberá cumplir con todas las evidencias acordadas desde el inicio del trimestre en el plan de trabajo y evaluación o se incurrirá en plan de mejoramiento Integral.', 'Cumplio'),
-(2, 2247675, 1, 2, 'JOHAN MAURICIO MOSQUERA SOLANO', '4.PLAN DE MEJORAMIENTO ACADÉMICO', '4.Deberá cumplir con todas las evidencias acordadas desde el inicio del trimestre en el plan de trabajo y evaluación o se incurrirá en plan de mejoramiento Integral.', 'No cumplio');
 
 -- --------------------------------------------------------
 
@@ -165,18 +592,6 @@ CREATE TABLE `casos_especiales` (
   `reglamento_c` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Volcado de datos para la tabla `casos_especiales`
---
-
-INSERT INTO `casos_especiales` (`id_casos`, `C_ficha`, `C_acta`, `nombre_aprendiz`, `nombre_its`, `description`, `falta`, `reglamento`, `reglamento_a`, `reglamento_b`, `reglamento_c`) VALUES
-(1, 2247675, 1, 'Juan Sebastián Murcia Pinzón', 'Carlos perez', 'Incumplimiento plan de mejoramiento al no entregarlo o la evidencia entregada no cumple con los\r\níte', 'Académica', '1. Cumplir con todas las actividades propias de su proceso de aprendizaje o del plan de mejoramiento, definidas durante su etapa lectiva y productiva.', 'N/A', 'N/A', 'N/A'),
-(2, 2247675, 1, 'Johan Mauricio Mosquera Solano', 'Carlos perez', 'Incumplimiento plan de mejoramiento al no entregarlo o la evidencia entregada no cumple con los\r\níte', 'Académica', '1. Cumplir con todas las actividades propias de su proceso de aprendizaje o del plan de mejoramiento, definidas durante su etapa lectiva y productiva.', 'N/A', 'N/A', 'N/A'),
-(3, 2247675, 1, 'Angie Tatiana Páez Lara', 'Carlos perez', 'Incumplimiento plan de mejoramiento al no entregarlo o la evidencia entregada no cumple con los\r\níte', 'Académica', '1. Cumplir con todas las actividades propias de su proceso de aprendizaje o del plan de mejoramiento, definidas durante su etapa lectiva y productiva.', 'N/A', 'N/A', 'N/A'),
-(4, 2247675, 2, 'Pedro', 'Pedro', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit vestibulum massa ullamc', 'Académica', '10. Hacer uso apropiado de los ambientes de aprendizaje (infraestructura, equipos, herramientas, recursos didácticos, técnicos, tecnológicos, bibliográficos), disponibles para su proceso de aprendizaje, asumiendo responsabilidad legal en situaciones de utilización inadecuada y uso indebido, que deterioran los ambientes de aprendizaje y generan detrimento patrimonial.', 'N/A', 'N/A', 'N/A'),
-(5, 2247675, 2, 'Pedro', 'Pedro', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit vestibulum massa ullamc', 'Académica', '8. Acatar las decisiones contempladas en el Manual de Convivencia.', 'N/A', 'N/A', 'N/A'),
-(6, 2247675, 2, 'Pedro', 'Pedro', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit vestibulum massa ullamc', 'Académica', '7. Proteger los recursos culturales y naturales del país y velar por la conservación del ambiente sano, vinculándose, apoyando y/o colaborando en las acciones que adelante el Centro de Formación.', 'N/A', 'N/A', 'N/A');
-
 -- --------------------------------------------------------
 
 --
@@ -194,17 +609,6 @@ CREATE TABLE `conclusiones` (
   `cumplimiento` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Volcado de datos para la tabla `conclusiones`
---
-
-INSERT INTO `conclusiones` (`id_conclusion`, `c_contador`, `n_ficha`, `q_acta`, `Aprendiz`, `medida`, `descripcion_m`, `cumplimiento`) VALUES
-(1, 1, 2247675, 1, 'JUAN SEBASTIAN MURCIA PINZON', '4.PLAN DE MEJORAMIENTO ACADÉMICO', '4.Deberá cumplir con todas las evidencias acordadas desde el inicio del trimestre en el plan de trabajo y evaluación o se incurrirá en plan de mejoramiento Integral.', ''),
-(2, 1, 2247675, 1, 'JOHAN MAURICIO MOSQUERA SOLANO', '4.PLAN DE MEJORAMIENTO ACADÉMICO', '4.Deberá cumplir con todas las evidencias acordadas desde el inicio del trimestre en el plan de trabajo y evaluación o se incurrirá en plan de mejoramiento Integral.', ''),
-(3, 2, 2247675, 2, 'pedro', '1.DESERCIÓN', '4.Deberá cumplir con todas las evidencias acordadas desde el inicio del trimestre en el plan de trabajo y evaluación o se incurrirá en plan de mejoramiento Integral.', ''),
-(4, 2, 2247675, 2, 'pedro', '4.PLAN DE MEJORAMIENTO ACADÉMICO', '2.Cuando se trate de hechos que contraríen en menor grado el orden académico o disciplinario, sin afectar los deberes, derechos y prohibiciones, o cuando sea necesario para prevenir la ocurrencia de hechos que vulneren esos deberes, derechos y prohibiciones, el aprendiz podrá recibir un llamado de atención verbal por parte del (los) Instructor, el Coordinador Académico, el(los) responsable(s) de Bienestar, o el subdirector del Centro. Este llamado de atención verbal no constituye una sanción.', ''),
-(5, 2, 2247675, 2, 'pedro', '5.PLAN DE MEJORAMIENTO ACADÉMICO Y DISCIPLINARIO', '4.Deberá cumplir con todas las evidencias acordadas desde el inicio del trimestre en el plan de trabajo y evaluación o se incurrirá en plan de mejoramiento Integral.', '');
-
 -- --------------------------------------------------------
 
 --
@@ -221,28 +625,6 @@ CREATE TABLE `desarrollo_comite` (
   `d_descargos_aprendiz` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Volcado de datos para la tabla `desarrollo_comite`
---
-
-INSERT INTO `desarrollo_comite` (`id_desarrollo`, `d_acta`, `d_nombre_aprendiz`, `d_descargos_its`, `d_descargos_its_b`, `d_descargos_its_c`, `d_descargos_aprendiz`) VALUES
-(1, 1, 'JUAN SEBASTIAN MURCIA PINZON', 'Incumplimiento plan de mejoramiento al no entregarlo o la evidencia entregada no cumple con los\r\nítems necesarios para ser aprobada (técnico - emprendimiento). El instructor indica que el caso de\r\nlos aprendices es similar para todos, no presentan evidencias, se les hace llamados de atención, se\r\nles indica que revisen los comentarios de las evidencias y las mejoren o las entreguen.\r\nEl indicó que el aprendiz incumplió dos planes de mejoramiento, se cumplieron términos de los\r\nplanes o los entregaron de forma inapropiada.\r\nInstructor Javier Ramírez Carvajal indicó que trata de llevar a los aprendices, exigiendoles y\r\nresaltando tiempos de entrega, pero continúan incurriendo en demora en las entregas de\r\nevidencias.\r\nCoordinadora Académica Diana Castro indicó que es importante que los equipos ejecutores estén\r\nen constante comunicación. Los cuadros de excel en la carpeta de la ficha comité están sin\r\ndiligenciar. Reiteró a todos los instructores para que actividades previas se realicen con los equipos\r\nejecutores; es importante estar en la misma sintonía antes del desarrollo del comité de evaluación\r\ny seguimiento.\r\nEl instructor Henry Córdoba mencionó que la ficha es un grupo juicioso, en algunas actividades le\r\ntoca estar encima de ellos para que funcionen, es importante que adquieran cultura de\r\ncumplimiento. Actualmente asisten de forma regular, pero los aprendices se escudan en que no\r\nhablan, no participan,se amparan en fallas de internet, se les sugieren correcciones en actividades\r\npero no las hacen y eso es grave.\r\nCoordinadora Académica Diana Castro indicó que es necesario documentar todo lo que se gestione\r\ndesde el ambiente de formación, es importante tener evidencias, si no se tienen con el debido\r\nproceso, no se le pueden aplicar medidas a aprendices que incumplen; porque no está\r\ndocumentado. Resaltó que en caso de incumplimiento reiterativo sugiere plan de mejoramiento\r\nintegral para el aprendiz.', 'N/A', 'N/A', 'Se le indicó al aprendiz el motivo por el cual se citó al comité. Aprendiz indicó que es la primera vez\r\nen comité, no tiene conocimiento de qué debe hacer.\r\nCoordinadora Académica explicó que debía mostrar evidencias válidas acorde a reglamento del\r\naprendiz, para justificar motivo de su falta.\r\n\r\nGD-F-007 V03\r\n\r\nAprendiz indicó que ha incumplido en entrega de los trabajos que ha dejado instructor Carlos Pérez\r\npor tiempo, se puede decir que es excusa muy barata, pero la cuestión es que le toca hacer\r\nquehaceres de la casa, al mismo tiempo de recibir formación, no recibe ayuda por parte de persona\r\ncon la que vive, primero debe hacer cosas de la casa, y luego debe hacer los trabajos. Es la única\r\nexcusa que tiene, se disculpa con el instructor por no entregar evidencias cuando las pide, depronto\r\nno sabe disponer el tiempo, dividir horas de clase, con cosas que debe hacer en la casa, es como la\r\ndefensa.\r\nAprendiz procedió a retirar se de la sesión.'),
-(2, 1, 'JOHAN MAURICIO MOSQUERA SOLANO', 'Instructor Carlos Pérez\r\nIncumplimiento plan de mejoramiento al no entregarlo o la evidencia entregada no cumple con los\r\nítems necesarios para ser aprobada (técnico - emprendimiento).\r\nLa instructora Sonia Milena Moreno indicó que hasta el momento el aprendiz no tiene\r\ninconvenientes con el aprendiz en la competencia.', 'N/A', 'N/A', 'Aprendiz mencionó que debe hacer cosas en la casa, se le olvidan subir evidencias, le toca salir a\r\ntrabajar para traer de comer a la casa, el problema es que el viernes ingresaron a la casa y le robaron\r\nel computador, actualmente le queda difícil, le prestan un computador empresarial y le queda\r\ndificil descargar cosas porque es corporativo.\r\nCoordinadora Académica Diana Castro mencionó que todo depende de la disciplina y del apoyo de\r\nla familia, la idea es que dediquen tiempo en sesiones, para diferentes actividades del día, el\r\ncumplimiento es vital con un compromiso como este. Si es necesario se realizará acompañamiento\r\npor parte de bienestar con sus familias, es importante definir prioridades, en ocasiones hay algunos\r\nsucesos que son difíciles, frente a novedad como esta se puede dar solución, todo se puede hacer\r\ncon mayor o menor esfuerzo, pero es el futuro que escogieron, los invito a que cumplan con su\r\nproyecto de vida, hay que tomar medidas formativas. Se les ha asignado planes de mejoramiento,\r\nse ha incumplido, se va a asignar plan de mejoramiento sujeto a condicionamiento de matrícula,\r\nhay consecuencias que esto trae, no podrán acceder a contrato de aprendizaje, ni a ningún apoyo,\r\nla invitación es a cumplir plan de mejoramiento, los tiempos serán dados por instructor Carlos\r\nPérez.\r\nAprendiz indicó que le prestan computador empresariales en las noches para hacer las actividades.\r\n\r\nGD-F-007 V03\r\n\r\nCoordinadora Académica Diana Castro mencionó que hay que tomar medidas para el correcto\r\ndesarrollo de la formación.\r\nEl instructor Henry Córdoba mencionó la importancia del cumplimiento en actividades y sugirió a\r\nlos aprendices analizar en su proyecto de vida las prioridades.\r\nEl aprendiz procedió a retirarse de la sesión.'),
-(3, 2, 'pedro', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit vestibulum massa ullamcorper volutpat. Aliquam erat volutpat. Aenean id est a eros aliquet molestie. Sed a finibus diam. Curabitur ut urna mauris. Aenean venenatis mollis pellentesque. Donec sed metus nibh. Curabitur ut blandit nisi. Donec sollicitudin urna sed ornare faucibus. Ut ac purus sit amet erat facilisis sollicitudin non eu mi. Sed consequat quam in elit pellentesque condimentum. Ut molestie vulputate odio ac vulputate. Integer accumsan aliquet dui, ut scelerisque nisi vestibulum sed. Cras vel mi vel metus elementum dapibus sit amet id nisl.\r\n\r\nDonec cursus eleifend lorem, eget tempor lorem condimentum in. Duis purus urna, tincidunt a tincidunt quis, bibendum in ligula. Sed in arcu ut libero elementum posuere nec a diam. Integer auctor interdum libero. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent sodales, risus eget auctor dictum, arcu lectus consectetur nibh, quis eleifend risus augue eget nibh. Morbi quis magna enim. Ut orci lectus, gravida eu pharetra in, mattis eget magna. Vestibulum in mollis enim. Vestibulum urna tortor, ultricies eget orci eu, consectetur ultrices risus. Mauris sollicitudin ut metus scelerisque efficitur.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit vestibulum massa ullamcorper volutpat. Aliquam erat volutpat. Aenean id est a eros aliquet molestie. Sed a finibus diam. Curabitur ut urna mauris. Aenean venenatis mollis pellentesque. Donec sed metus nibh. Curabitur ut blandit nisi. Donec sollicitudin urna sed ornare faucibus. Ut ac purus sit amet erat facilisis sollicitudin non eu mi. Sed consequat quam in elit pellentesque condimentum. Ut molestie vulputate odio ac vulputate. Integer accumsan aliquet dui, ut scelerisque nisi vestibulum sed. Cras vel mi vel metus elementum dapibus sit amet id nisl.\r\n\r\nDonec cursus eleifend lorem, eget tempor lorem condimentum in. Duis purus urna, tincidunt a tincidunt quis, bibendum in ligula. Sed in arcu ut libero elementum posuere nec a diam. Integer auctor interdum libero. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent sodales, risus eget auctor dictum, arcu lectus consectetur nibh, quis eleifend risus augue eget nibh. Morbi quis magna enim. Ut orci lectus, gravida eu pharetra in, mattis eget magna. Vestibulum in mollis enim. Vestibulum urna tortor, ultricies eget orci eu, consectetur ultrices risus. Mauris sollicitudin ut metus scelerisque efficitur.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit vestibulum massa ullamcorper volutpat. Aliquam erat volutpat. Aenean id est a eros aliquet molestie. Sed a finibus diam. Curabitur ut urna mauris. Aenean venenatis mollis pellentesque. Donec sed metus nibh. Curabitur ut blandit nisi. Donec sollicitudin urna sed ornare faucibus. Ut ac purus sit amet erat facilisis sollicitudin non eu mi. Sed consequat quam in elit pellentesque condimentum. Ut molestie vulputate odio ac vulputate. Integer accumsan aliquet dui, ut scelerisque nisi vestibulum sed. Cras vel mi vel metus elementum dapibus sit amet id nisl.\r\n\r\nDonec cursus eleifend lorem, eget tempor lorem condimentum in. Duis purus urna, tincidunt a tincidunt quis, bibendum in ligula. Sed in arcu ut libero elementum posuere nec a diam. Integer auctor interdum libero. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent sodales, risus eget auctor dictum, arcu lectus consectetur nibh, quis eleifend risus augue eget nibh. Morbi quis magna enim. Ut orci lectus, gravida eu pharetra in, mattis eget magna. Vestibulum in mollis enim. Vestibulum urna tortor, ultricies eget orci eu, consectetur ultrices risus. Mauris sollicitudin ut metus scelerisque efficitur.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit vestibulum massa ullamcorper volutpat. Aliquam erat volutpat. Aenean id est a eros aliquet molestie. Sed a finibus diam. Curabitur ut urna mauris. Aenean venenatis mollis pellentesque. Donec sed metus nibh. Curabitur ut blandit nisi. Donec sollicitudin urna sed ornare faucibus. Ut ac purus sit amet erat facilisis sollicitudin non eu mi. Sed consequat quam in elit pellentesque condimentum. Ut molestie vulputate odio ac vulputate. Integer accumsan aliquet dui, ut scelerisque nisi vestibulum sed. Cras vel mi vel metus elementum dapibus sit amet id nisl.\r\n\r\nDonec cursus eleifend lorem, eget tempor lorem condimentum in. Duis purus urna, tincidunt a tincidunt quis, bibendum in ligula. Sed in arcu ut libero elementum posuere nec a diam. Integer auctor interdum libero. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent sodales, risus eget auctor dictum, arcu lectus consectetur nibh, quis eleifend risus augue eget nibh. Morbi quis magna enim. Ut orci lectus, gravida eu pharetra in, mattis eget magna. Vestibulum in mollis enim. Vestibulum urna tortor, ultricies eget orci eu, consectetur ultrices risus. Mauris sollicitudin ut metus scelerisque efficitur.'),
-(4, 2, 'pedro', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit vestibulum massa ullamcorper volutpat. Aliquam erat volutpat. Aenean id est a eros aliquet molestie. Sed a finibus diam. Curabitur ut urna mauris. Aenean venenatis mollis pellentesque. Donec sed metus nibh. Curabitur ut blandit nisi. Donec sollicitudin urna sed ornare faucibus. Ut ac purus sit amet erat facilisis sollicitudin non eu mi. Sed consequat quam in elit pellentesque condimentum. Ut molestie vulputate odio ac vulputate. Integer accumsan aliquet dui, ut scelerisque nisi vestibulum sed. Cras vel mi vel metus elementum dapibus sit amet id nisl.\r\n\r\nDonec cursus eleifend lorem, eget tempor lorem condimentum in. Duis purus urna, tincidunt a tincidunt quis, bibendum in ligula. Sed in arcu ut libero elementum posuere nec a diam. Integer auctor interdum libero. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent sodales, risus eget auctor dictum, arcu lectus consectetur nibh, quis eleifend risus augue eget nibh. Morbi quis magna enim. Ut orci lectus, gravida eu pharetra in, mattis eget magna. Vestibulum in mollis enim. Vestibulum urna tortor, ultricies eget orci eu, consectetur ultrices risus. Mauris sollicitudin ut metus scelerisque efficitur.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit vestibulum massa ullamcorper volutpat. Aliquam erat volutpat. Aenean id est a eros aliquet molestie. Sed a finibus diam. Curabitur ut urna mauris. Aenean venenatis mollis pellentesque. Donec sed metus nibh. Curabitur ut blandit nisi. Donec sollicitudin urna sed ornare faucibus. Ut ac purus sit amet erat facilisis sollicitudin non eu mi. Sed consequat quam in elit pellentesque condimentum. Ut molestie vulputate odio ac vulputate. Integer accumsan aliquet dui, ut scelerisque nisi vestibulum sed. Cras vel mi vel metus elementum dapibus sit amet id nisl.\r\n\r\nDonec cursus eleifend lorem, eget tempor lorem condimentum in. Duis purus urna, tincidunt a tincidunt quis, bibendum in ligula. Sed in arcu ut libero elementum posuere nec a diam. Integer auctor interdum libero. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent sodales, risus eget auctor dictum, arcu lectus consectetur nibh, quis eleifend risus augue eget nibh. Morbi quis magna enim. Ut orci lectus, gravida eu pharetra in, mattis eget magna. Vestibulum in mollis enim. Vestibulum urna tortor, ultricies eget orci eu, consectetur ultrices risus. Mauris sollicitudin ut metus scelerisque efficitur.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit vestibulum massa ullamcorper volutpat. Aliquam erat volutpat. Aenean id est a eros aliquet molestie. Sed a finibus diam. Curabitur ut urna mauris. Aenean venenatis mollis pellentesque. Donec sed metus nibh. Curabitur ut blandit nisi. Donec sollicitudin urna sed ornare faucibus. Ut ac purus sit amet erat facilisis sollicitudin non eu mi. Sed consequat quam in elit pellentesque condimentum. Ut molestie vulputate odio ac vulputate. Integer accumsan aliquet dui, ut scelerisque nisi vestibulum sed. Cras vel mi vel metus elementum dapibus sit amet id nisl.\r\n\r\nDonec cursus eleifend lorem, eget tempor lorem condimentum in. Duis purus urna, tincidunt a tincidunt quis, bibendum in ligula. Sed in arcu ut libero elementum posuere nec a diam. Integer auctor interdum libero. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent sodales, risus eget auctor dictum, arcu lectus consectetur nibh, quis eleifend risus augue eget nibh. Morbi quis magna enim. Ut orci lectus, gravida eu pharetra in, mattis eget magna. Vestibulum in mollis enim. Vestibulum urna tortor, ultricies eget orci eu, consectetur ultrices risus. Mauris sollicitudin ut metus scelerisque efficitur.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit vestibulum massa ullamcorper volutpat. Aliquam erat volutpat. Aenean id est a eros aliquet molestie. Sed a finibus diam. Curabitur ut urna mauris. Aenean venenatis mollis pellentesque. Donec sed metus nibh. Curabitur ut blandit nisi. Donec sollicitudin urna sed ornare faucibus. Ut ac purus sit amet erat facilisis sollicitudin non eu mi. Sed consequat quam in elit pellentesque condimentum. Ut molestie vulputate odio ac vulputate. Integer accumsan aliquet dui, ut scelerisque nisi vestibulum sed. Cras vel mi vel metus elementum dapibus sit amet id nisl.\r\n\r\nDonec cursus eleifend lorem, eget tempor lorem condimentum in. Duis purus urna, tincidunt a tincidunt quis, bibendum in ligula. Sed in arcu ut libero elementum posuere nec a diam. Integer auctor interdum libero. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent sodales, risus eget auctor dictum, arcu lectus consectetur nibh, quis eleifend risus augue eget nibh. Morbi quis magna enim. Ut orci lectus, gravida eu pharetra in, mattis eget magna. Vestibulum in mollis enim. Vestibulum urna tortor, ultricies eget orci eu, consectetur ultrices risus. Mauris sollicitudin ut metus scelerisque efficitur.'),
-(5, 2, 'pedro', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit vestibulum massa ullamcorper volutpat. Aliquam erat volutpat. Aenean id est a eros aliquet molestie. Sed a finibus diam. Curabitur ut urna mauris. Aenean venenatis mollis pellentesque. Donec sed metus nibh. Curabitur ut blandit nisi. Donec sollicitudin urna sed ornare faucibus. Ut ac purus sit amet erat facilisis sollicitudin non eu mi. Sed consequat quam in elit pellentesque condimentum. Ut molestie vulputate odio ac vulputate. Integer accumsan aliquet dui, ut scelerisque nisi vestibulum sed. Cras vel mi vel metus elementum dapibus sit amet id nisl.\r\n\r\nDonec cursus eleifend lorem, eget tempor lorem condimentum in. Duis purus urna, tincidunt a tincidunt quis, bibendum in ligula. Sed in arcu ut libero elementum posuere nec a diam. Integer auctor interdum libero. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent sodales, risus eget auctor dictum, arcu lectus consectetur nibh, quis eleifend risus augue eget nibh. Morbi quis magna enim. Ut orci lectus, gravida eu pharetra in, mattis eget magna. Vestibulum in mollis enim. Vestibulum urna tortor, ultricies eget orci eu, consectetur ultrices risus. Mauris sollicitudin ut metus scelerisque efficitur.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit vestibulum massa ullamcorper volutpat. Aliquam erat volutpat. Aenean id est a eros aliquet molestie. Sed a finibus diam. Curabitur ut urna mauris. Aenean venenatis mollis pellentesque. Donec sed metus nibh. Curabitur ut blandit nisi. Donec sollicitudin urna sed ornare faucibus. Ut ac purus sit amet erat facilisis sollicitudin non eu mi. Sed consequat quam in elit pellentesque condimentum. Ut molestie vulputate odio ac vulputate. Integer accumsan aliquet dui, ut scelerisque nisi vestibulum sed. Cras vel mi vel metus elementum dapibus sit amet id nisl.\r\n\r\nDonec cursus eleifend lorem, eget tempor lorem condimentum in. Duis purus urna, tincidunt a tincidunt quis, bibendum in ligula. Sed in arcu ut libero elementum posuere nec a diam. Integer auctor interdum libero. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent sodales, risus eget auctor dictum, arcu lectus consectetur nibh, quis eleifend risus augue eget nibh. Morbi quis magna enim. Ut orci lectus, gravida eu pharetra in, mattis eget magna. Vestibulum in mollis enim. Vestibulum urna tortor, ultricies eget orci eu, consectetur ultrices risus. Mauris sollicitudin ut metus scelerisque efficitur.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit vestibulum massa ullamcorper volutpat. Aliquam erat volutpat. Aenean id est a eros aliquet molestie. Sed a finibus diam. Curabitur ut urna mauris. Aenean venenatis mollis pellentesque. Donec sed metus nibh. Curabitur ut blandit nisi. Donec sollicitudin urna sed ornare faucibus. Ut ac purus sit amet erat facilisis sollicitudin non eu mi. Sed consequat quam in elit pellentesque condimentum. Ut molestie vulputate odio ac vulputate. Integer accumsan aliquet dui, ut scelerisque nisi vestibulum sed. Cras vel mi vel metus elementum dapibus sit amet id nisl.\r\n\r\nDonec cursus eleifend lorem, eget tempor lorem condimentum in. Duis purus urna, tincidunt a tincidunt quis, bibendum in ligula. Sed in arcu ut libero elementum posuere nec a diam. Integer auctor interdum libero. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent sodales, risus eget auctor dictum, arcu lectus consectetur nibh, quis eleifend risus augue eget nibh. Morbi quis magna enim. Ut orci lectus, gravida eu pharetra in, mattis eget magna. Vestibulum in mollis enim. Vestibulum urna tortor, ultricies eget orci eu, consectetur ultrices risus. Mauris sollicitudin ut metus scelerisque efficitur.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit vestibulum massa ullamcorper volutpat. Aliquam erat volutpat. Aenean id est a eros aliquet molestie. Sed a finibus diam. Curabitur ut urna mauris. Aenean venenatis mollis pellentesque. Donec sed metus nibh. Curabitur ut blandit nisi. Donec sollicitudin urna sed ornare faucibus. Ut ac purus sit amet erat facilisis sollicitudin non eu mi. Sed consequat quam in elit pellentesque condimentum. Ut molestie vulputate odio ac vulputate. Integer accumsan aliquet dui, ut scelerisque nisi vestibulum sed. Cras vel mi vel metus elementum dapibus sit amet id nisl.\r\n\r\nDonec cursus eleifend lorem, eget tempor lorem condimentum in. Duis purus urna, tincidunt a tincidunt quis, bibendum in ligula. Sed in arcu ut libero elementum posuere nec a diam. Integer auctor interdum libero. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent sodales, risus eget auctor dictum, arcu lectus consectetur nibh, quis eleifend risus augue eget nibh. Morbi quis magna enim. Ut orci lectus, gravida eu pharetra in, mattis eget magna. Vestibulum in mollis enim. Vestibulum urna tortor, ultricies eget orci eu, consectetur ultrices risus. Mauris sollicitudin ut metus scelerisque efficitur.');
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `estado`
---
-
-CREATE TABLE `estado` (
-  `id_estado` int(100) NOT NULL,
-  `estado` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
 -- --------------------------------------------------------
 
 --
@@ -255,10 +637,10 @@ CREATE TABLE `ficha` (
   `N_ficha` int(100) NOT NULL,
   `cantidad_apre` int(100) NOT NULL,
   `programa` varchar(100) NOT NULL,
-  `jornada` varchar(100) NOT NULL,
-  `tipo_forma` varchar(100) NOT NULL,
-  `fecha_inicio` date NOT NULL,
-  `fecha_fin` date NOT NULL,
+  `jornada` varchar(100) DEFAULT NULL,
+  `tipo_forma` varchar(100) DEFAULT NULL,
+  `fecha_inicio` date DEFAULT NULL,
+  `fecha_fin` date DEFAULT NULL,
   `actas` int(100) DEFAULT NULL,
   `aprendices` int(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -268,11 +650,22 @@ CREATE TABLE `ficha` (
 --
 
 INSERT INTO `ficha` (`id_ficha`, `ficha_contador`, `N_ficha`, `cantidad_apre`, `programa`, `jornada`, `tipo_forma`, `fecha_inicio`, `fecha_fin`, `actas`, `aprendices`) VALUES
-(1, 3, 2247675, 15, 'adsi', 'Diruna', 'Técnico', '2022-10-10', '2022-10-19', NULL, 0),
-(2, 1, 2184573, 45, 'cine y televisión', 'Nocturna', 'Técnico', '2022-11-04', '2022-10-23', NULL, 0),
-(3, 1, 12, 4, 'Mesa y bar ', 'Nocturna', 'Tecnológo', '2022-10-19', '2022-10-17', NULL, 0),
-(4, 1, 7, 45, 'serigrafia', 'Nocturna', 'Tecnológo', '2022-10-21', '2022-10-20', NULL, 0),
-(6, 1, 445, 12, 'serigrafia', 'Nocturna', 'Técnico', '2022-10-26', '2022-10-12', NULL, 0);
+(1, 1, 2450019, 31, 'ANIMACION 3D', '', '', '0000-00-00', '0000-00-00', NULL, 0),
+(2, 1, 2450052, 33, 'PRODUCCION DE MULTIMEDIA', '', '', '0000-00-00', '0000-00-00', NULL, 0),
+(3, 1, 2450072, 30, 'ANIMACION DIGITAL', '', '', '0000-00-00', '0000-00-00', NULL, 0),
+(4, 1, 2469489, 34, 'PRODUCCION DE MULTIMEDIA', '', '', '0000-00-00', '0000-00-00', NULL, 0),
+(5, 1, 2502187, 31, 'ANIMACION DIGITAL', '', '', '0000-00-00', '0000-00-00', NULL, 0),
+(6, 1, 2502196, 34, 'ANIMACION 3D', '', '', '0000-00-00', '0000-00-00', NULL, 0),
+(7, 1, 2502199, 31, 'ELABORACION DE AUDIOVISUALES', '', '', '0000-00-00', '0000-00-00', NULL, 0),
+(8, 1, 2502202, 26, 'ELABORACION DE AUDIOVISUALES', '', '', '0000-00-00', '0000-00-00', NULL, 0),
+(9, 1, 2502217, 30, 'IMPRESION DIGITAL', '', '', '0000-00-00', '0000-00-00', NULL, 0),
+(10, 1, 2502223, 33, 'IMPRESION SERIGRAFICA', '', '', '0000-00-00', '0000-00-00', NULL, 0),
+(11, 1, 2502227, 22, 'PREPRENSA DIGITAL PARA MEDIOS IMPRESOS', '', '', '0000-00-00', '0000-00-00', NULL, 0),
+(12, 1, 2525168, 35, 'ANIMACION DIGITAL', '', '', '0000-00-00', '0000-00-00', NULL, 0),
+(13, 1, 2525170, 31, 'DESARROLLO DE MEDIOS GRAFICOS VISUALES', '', '', '0000-00-00', '0000-00-00', NULL, 0),
+(14, 1, 2526800, 31, 'PROGRAMACION DE SOFTWARE', '', '', '0000-00-00', '0000-00-00', NULL, 0),
+(15, 1, 2530038, 15, 'PROCESOS DE POSTPRENSA PARA LA INDUSTRIA GRAFICA', '', '', '0000-00-00', '0000-00-00', NULL, 0),
+(16, 1, 2530039, 15, 'IMPRESION FLEXOGRAFICA', '', '', '0000-00-00', '0000-00-00', NULL, 0);
 
 -- --------------------------------------------------------
 
@@ -369,20 +762,6 @@ CREATE TABLE `participantes` (
   `asistencia` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Volcado de datos para la tabla `participantes`
---
-
-INSERT INTO `participantes` (`id`, `n_acta`, `nombre`, `cargo`, `asistencia`) VALUES
-(1, 1, 'Alejandro Acevedo', 'Instructora', 'Asistio'),
-(2, 1, 'Alexander Carvajal', 'Funcionario de apoyo a Bienestar de Aprendices', 'No Asistio'),
-(3, 1, 'Juan Sanchez', 'Instructor', 'Asistio'),
-(4, 1, 'Juan Sanchez', 'Instructor tecnico', 'Asistio'),
-(5, 1, 'Alexander Carvajal', 'Instructora', 'No Asistio'),
-(6, 2, 'Alejandro Acevedo', 'Coordinador de Formación Profesional Integral o quien haga sus veces', 'Asistio'),
-(7, 2, 'Juan Sanchez', 'Coordinador Académico', 'Asistio'),
-(8, 2, 'Julia  Romero', 'Coordinador de Formación Profesional Integral o quien haga sus veces', 'Asistio');
-
 -- --------------------------------------------------------
 
 --
@@ -399,16 +778,21 @@ CREATE TABLE `programa` (
 --
 
 INSERT INTO `programa` (`id_programa`, `programa`) VALUES
-(2, 'adsi'),
-(3, 'serigrafia'),
-(4, 'multimedias'),
-(5, 'cine y televisión'),
-(6, 'impresión offset'),
-(7, 'Adso'),
-(8, 'Mesa y bar '),
-(9, 'Sistemas'),
-(10, 'Cocina'),
-(11, 'mantenimieto de software');
+(1, 'ANIMACION 3D'),
+(2, 'PRODUCCION DE MULTIMEDIA'),
+(3, 'ANIMACION DIGITAL'),
+(4, 'ELABORACION DE AUDIOVISUALES'),
+(5, 'IMPRESION DIGITAL'),
+(6, 'IMPRESION SERIGRAFICA'),
+(7, 'PREPRENSA DIGITAL PARA MEDIOS IMPRESOS'),
+(8, 'DESARROLLO DE MEDIOS GRAFICOS VISUALES'),
+(9, 'PROGRAMACION DE SOFTWARE'),
+(10, 'PROCESOS DE POSTPRENSA PARA LA INDUSTRIA GRAFICA'),
+(11, 'IMPRESION FLEXOGRAFICA'),
+(12, 'ANALISIS Y DESARROLLO DE SOFTWARE'),
+(13, 'SUPERVISION DE PROCESOS GRAFICOS'),
+(14, 'SISTEMAS'),
+(15, 'FOTOGRAFIA Y PROCESOS DIGITALES');
 
 -- --------------------------------------------------------
 
@@ -489,14 +873,6 @@ CREATE TABLE `upload` (
   `name` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Volcado de datos para la tabla `upload`
---
-
-INSERT INTO `upload` (`id`, `acta_rar`, `fname`, `name`) VALUES
-(6, 1, '20221124163609__manual_identidad_corporativa_2022.pdf', '_manual_identidad_corporativa_2022.pdf'),
-(7, 1, '20221124165034_archivos_descarga (2).zip', 'archivos_descarga (2).zip');
-
 -- --------------------------------------------------------
 
 --
@@ -576,12 +952,6 @@ ALTER TABLE `desarrollo_comite`
   ADD PRIMARY KEY (`id_desarrollo`);
 
 --
--- Indices de la tabla `estado`
---
-ALTER TABLE `estado`
-  ADD PRIMARY KEY (`id_estado`);
-
---
 -- Indices de la tabla `ficha`
 --
 ALTER TABLE `ficha`
@@ -654,55 +1024,49 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `acta`
 --
 ALTER TABLE `acta`
-  MODIFY `n_acta` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `n_acta` int(100) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `aprendices_destacados`
 --
 ALTER TABLE `aprendices_destacados`
-  MODIFY `id_destacados` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_destacados` int(100) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `aprendiz`
 --
 ALTER TABLE `aprendiz`
-  MODIFY `id_aprendiz` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id_aprendiz` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=463;
 
 --
 -- AUTO_INCREMENT de la tabla `casos_anteriores`
 --
 ALTER TABLE `casos_anteriores`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `casos_especiales`
 --
 ALTER TABLE `casos_especiales`
-  MODIFY `id_casos` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_casos` int(100) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `conclusiones`
 --
 ALTER TABLE `conclusiones`
-  MODIFY `id_conclusion` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_conclusion` int(100) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `desarrollo_comite`
 --
 ALTER TABLE `desarrollo_comite`
-  MODIFY `id_desarrollo` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- AUTO_INCREMENT de la tabla `estado`
---
-ALTER TABLE `estado`
-  MODIFY `id_estado` int(100) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_desarrollo` int(100) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `ficha`
 --
 ALTER TABLE `ficha`
-  MODIFY `id_ficha` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_ficha` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT de la tabla `funcionario`
@@ -726,13 +1090,13 @@ ALTER TABLE `medida_formativa`
 -- AUTO_INCREMENT de la tabla `participantes`
 --
 ALTER TABLE `participantes`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `programa`
 --
 ALTER TABLE `programa`
-  MODIFY `id_programa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id_programa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT de la tabla `reglamento`
@@ -750,7 +1114,7 @@ ALTER TABLE `rol`
 -- AUTO_INCREMENT de la tabla `upload`
 --
 ALTER TABLE `upload`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `usuario`

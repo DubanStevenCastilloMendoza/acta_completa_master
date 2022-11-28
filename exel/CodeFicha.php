@@ -25,15 +25,16 @@ if(isset($_POST['save_excel_data'])){
 
                 if($count > 0)
                 {
-                    $N_ficha =  $row['0'];
-                    $cantidad_apre = $row['1'];
-                    $programa =$row['2'];
-                    $jornada = $row['3'];
-                    $tipo_forma =$row['4'];
-                    $fecha_inicio =  $row['5'];
-                    $fecha_fin =  $row['6'];
+                    $ficha_contador =  $row['0'];
+                    $N_ficha =  $row['1'];
+                    $cantidad_apre = $row['2'];
+                    $programa =$row['3'];
+                    $jornada = $row['4'];
+                    $tipo_forma =$row['5'];
+                    $fecha_inicio =  $row['6'];
+                    $fecha_fin =  $row['7'];
     
-                  $ficha= "INSERT INTO ficha (N_ficha, cantidad_apre, programa, jornada, tipo_forma, fecha_inicio, fecha_fin) VALUES ('$N_ficha', '$cantidad_apre', '$programa', '$jornada', '$tipo_forma', '$fecha_inicio', '$fecha_fin')";
+                  $ficha= "INSERT INTO ficha (ficha_contador,N_ficha, cantidad_apre, programa, jornada, tipo_forma, fecha_inicio, fecha_fin) VALUES ('$ficha_contador','$N_ficha', '$cantidad_apre', '$programa', '$jornada', '$tipo_forma', '$fecha_inicio', '$fecha_fin')";
                   $result = mysqli_query($con, $ficha);
                   $msg = true;
                 }
