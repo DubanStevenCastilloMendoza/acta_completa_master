@@ -785,7 +785,7 @@ public function ObtenerPrueba($ficha){
 
  
 
-            $consulta=$this->PDO->prepare("SELECT COUNT(Estado) as Translado FROM aprendiz WHERE ficha = $ficha  AND Estado='Transladado'");
+            $consulta=$this->PDO->prepare("SELECT COUNT(Estado) as Translado FROM aprendiz WHERE ficha = $ficha  AND Estado='TRANSLADADO'");
             $consulta->execute();
              return $consulta->fetch(PDO :: FETCH_OBJ);
 
@@ -798,7 +798,7 @@ public function ObtenerCancelado($ficha){
 
  
 
-        $consulta=$this->PDO->prepare("SELECT COUNT(Estado) as Cancelado FROM aprendiz WHERE ficha = $ficha  AND Estado='Cancelado'");
+        $consulta=$this->PDO->prepare("SELECT COUNT(Estado) as Cancelado FROM aprendiz WHERE ficha = $ficha  AND Estado='CANCELADO'");
         $consulta->execute();
          return $consulta->fetch(PDO :: FETCH_OBJ);
 
@@ -809,7 +809,7 @@ public function ObtenerCancelado($ficha){
 
 public function ObtenerFormacion($ficha){
 
-        $consulta=$this->PDO->prepare("SELECT COUNT(Estado) as Formacion FROM aprendiz WHERE ficha = $ficha  AND Estado='En formación'");
+        $consulta=$this->PDO->prepare("SELECT COUNT(Estado) as Formacion FROM aprendiz WHERE ficha = $ficha  AND Estado='EN FORMACIÓN'");
         $consulta->execute();
          return $consulta->fetch(PDO :: FETCH_OBJ);
 
@@ -821,9 +821,31 @@ public function ObtenerRetiro($ficha){
 
  
 
-        $consulta=$this->PDO->prepare("SELECT COUNT(Estado) as Retiro FROM aprendiz WHERE ficha = $ficha  AND Estado='Retiro voluntario'");
+        $consulta=$this->PDO->prepare("SELECT COUNT(Estado) as Retiro FROM aprendiz WHERE ficha = $ficha  AND Estado='RETIRO VOLUNTARIO'");
         $consulta->execute();
          return $consulta->fetch(PDO :: FETCH_OBJ);
+
+
+}
+
+public function ObtenerCondicionado($ficha){
+
+ 
+
+    $consulta=$this->PDO->prepare("SELECT COUNT(Estado) as CONDICIONADO FROM aprendiz WHERE ficha = $ficha  AND Estado='CONDICIONADO'");
+    $consulta->execute();
+     return $consulta->fetch(PDO :: FETCH_OBJ);
+
+
+}
+
+public function ObtenerAplazado($ficha){
+
+ 
+
+    $consulta=$this->PDO->prepare("SELECT COUNT(Estado) as APLAZADO FROM aprendiz WHERE ficha = $ficha  AND Estado='APLAZADO'");
+    $consulta->execute();
+     return $consulta->fetch(PDO :: FETCH_OBJ);
 
 
 }

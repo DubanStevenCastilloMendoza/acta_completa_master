@@ -346,10 +346,27 @@ $("#table tr:last").remove();
     <?php $d=$this->modelo->ObtenerRetiro($_GET['ficha']) ?>
     <td><H5><?=$d->Retiro ?> </H5>  </td>
     </tr>
+
+
+    <tr>
+    <td >  <H5>CONDICIONADO</H5> </td>
+
+    <?php $e=$this->modelo->ObtenerCondicionado($_GET['ficha']) ?>
+    <td><H5><?=$e->CONDICIONADO ?> </H5>  </td>
+    </tr>
+
+    
+    <tr>
+    <td >  <H5>APLAZADO</H5> </td>
+
+    <?php $h=$this->modelo->ObtenerAplazado($_GET['ficha']) ?>
+    <td><H5><?=$h->APLAZADO ?> </H5>  </td>
+    </tr>
+
     <tr>
     <td > <H5>SUMA TOTAL</H5></td>
 
-    <td ><H5><?=  $total=$d->Retiro + $c->Cancelado + $b->Formacion + $a->Translado ?></H5> </td>
+    <td ><H5><?=  $total= $d->Retiro + $c->Cancelado + $b->Formacion + $a->Translado + $e->CONDICIONADO + $h->APLAZADO ?></H5> </td>
     </tr>
   </tbody>
 </table>

@@ -77,10 +77,12 @@
   <label for="">Estado de formación:</label>
   <select name="Estado" id='Estado' type="text" maxlength="25" oninput="maxlengthNumber(this);" required  class="" placeholder="Estado de formación">
   <option selected> Seleccione el estado del aprendiz</option>
-  <option value="En formación">En formación</option>
-  <option value="Transladado">Transladado</option>
-  <option value="Cancelado">Cancelado</option>
-  <option value="Retiro voluntario">Retiro voluntario</option>
+  <option value="EN FORMACIÓN">EN FORMACIÓN</option>
+  <option value="TRANSLADADO">TRANSLADADO</option>
+  <option value="CANCELADO">CANCELADO</option>
+  <option value="RETIRO VOLUNTARIO">RETIRO VOLUNTARIO</option>
+  <option value="CONDICIONADO">CONDICIONADO</option>
+  <option value="APLAZADO">APLAZADO</option>
   </select>
 </div>
 
